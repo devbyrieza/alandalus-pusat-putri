@@ -1,4 +1,4 @@
-export type AppMode = "PUTRA" | "PUTRI";
+﻿export type AppMode = "PUTRA" | "PUTRI";
 export const APP_MODE: AppMode = "PUTRI";
 export const IS_PUTRA = false;
 export const IS_PUTRI = true;
@@ -9,8 +9,8 @@ export const BRANDING = {
   schoolLegalName: "Pesantren Islam Internasional Al-Andalus",
   schoolTagline: "Kaderisasi Umat Rabbani, Cendekia, dan Mandiri",
   schoolNetwork: "Perpaduan Kurikulum Nasional dan Khas Andalus",
-  primaryColor: "#0ea5e9", // Sky Blue
-  secondaryColor: "#f0f9ff",
+  primaryColor: "#f43f5e", // Rose Pink (combined with Emerald accent)
+  secondaryColor: "#fff1f2",
   logoPath: "/images/logo-putri.png",
   faviconPath: "/favicon.ico",
   websiteUrl: "https://pesantren-alandalus.com",
@@ -35,3 +35,4 @@ export const BRANDING = {
   fbUrl: "https://www.facebook.com/pp.alandalus",
   twitterUrl: "#",
 };
+

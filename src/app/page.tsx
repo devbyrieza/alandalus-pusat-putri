@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { BRANDING, IS_PUTRA } from "@/config/branding";
 import {
@@ -60,7 +60,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-// ─── Animated Counter Hook ───────────────────────────────────────────────────
+// â”€â”€â”€ Animated Counter Hook â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function useCountUp(target: number, duration = 2000, start = false) {
   const [count, setCount] = useState(0);
   useEffect(() => {
@@ -78,7 +78,7 @@ function useCountUp(target: number, duration = 2000, start = false) {
   return count;
 }
 
-// ─── Counter Card ─────────────────────────────────────────────────────────────
+// â”€â”€â”€ Counter Card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function StatCard({
   value,
   suffix = "",
@@ -101,8 +101,8 @@ function StatCard({
     return () => clearTimeout(t);
   }, [started, delay]);
   const count = useCountUp(value, 2000, active);
-  const primaryColor = IS_PUTRA ? "text-primary-400" : "text-sky-400";
-  const primaryBg = IS_PUTRA ? "bg-primary-500/10" : "bg-sky-500/10";
+  const primaryColor = IS_PUTRA ? "text-primary-400" : "text-rose-400";
+  const primaryBg = IS_PUTRA ? "bg-primary-500/10" : "bg-rose-500/10";
   return (
     <div className="text-center group">
       <div className={`w-14 h-14 rounded-2xl ${primaryBg} flex items-center justify-center mx-auto mb-4`}>
@@ -118,7 +118,7 @@ function StatCard({
   );
 }
 
-// ─── Infinite Marquee ────────────────────────────────────────────────────────
+// â”€â”€â”€ Infinite Marquee â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const alumniItems = [
   { label: "Universitas Islam Madinah", Icon: FaMosque },
   { label: "Al-Azhar University, Mesir", Icon: FaUniversity },
@@ -137,10 +137,10 @@ const alumniItems = [
 ];
 
 function InfiniteMarquee() {
-  const primaryBorder = IS_PUTRA ? "border-primary-800/60" : "border-sky-800/60";
-  const primaryBg = IS_PUTRA ? "bg-primary-950/60" : "bg-sky-950/60";
-  const primaryText = IS_PUTRA ? "text-primary-300" : "text-sky-300";
-  const iconColor = IS_PUTRA ? "text-primary-500" : "text-sky-500";
+  const primaryBorder = IS_PUTRA ? "border-primary-800/60" : "border-rose-800/60";
+  const primaryBg = IS_PUTRA ? "bg-primary-950/60" : "bg-rose-950/60";
+  const primaryText = IS_PUTRA ? "text-primary-300" : "text-rose-300";
+  const iconColor = IS_PUTRA ? "text-primary-500" : "text-rose-500";
 
   return (
     <div className="relative overflow-hidden py-4" aria-hidden="true">
@@ -159,7 +159,7 @@ function InfiniteMarquee() {
   );
 }
 
-// ─── Main Component ────────────────────────────────────────────────────────
+// â”€â”€â”€ Main Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function Home() {
   const statsRef = useRef<HTMLDivElement>(null);
   const [statsStarted, setStatsStarted] = useState(false);
@@ -181,33 +181,33 @@ export default function Home() {
   }, []);
 
   const c = {
-    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-sky-500 to-blue-700",
-    gradText:   IS_PUTRA ? "from-primary-400 to-primary-600"   : "from-sky-400 to-blue-500",
-    text600:    IS_PUTRA ? "text-primary-600"  : "text-sky-600",
-    text400:    IS_PUTRA ? "text-primary-400"  : "text-sky-400",
-    bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-sky-600",
-    bgHover:    IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-sky-700",
-    shadow:     IS_PUTRA ? "shadow-primary-500/30" : "shadow-sky-500/30",
-    border200:  IS_PUTRA ? "border-primary-200" : "border-sky-200",
-    bg50:       IS_PUTRA ? "bg-primary-50"     : "bg-sky-50",
-    bgDark:     IS_PUTRA ? "bg-primary-950"    : "bg-sky-950",
-    bg950:      IS_PUTRA ? "bg-primary-950"    : "bg-sky-950",
-    ring:       IS_PUTRA ? "ring-primary-500/30" : "ring-sky-500/30",
+    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-rose-500 to-pink-700",
+    gradText:   IS_PUTRA ? "from-primary-400 to-primary-600"   : "from-rose-400 to-pink-500",
+    text600:    IS_PUTRA ? "text-primary-600"  : "text-rose-600",
+    text400:    IS_PUTRA ? "text-primary-400"  : "text-rose-400",
+    bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-rose-600",
+    bgHover:    IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-rose-700",
+    shadow:     IS_PUTRA ? "shadow-primary-500/30" : "shadow-rose-500/30",
+    border200:  IS_PUTRA ? "border-primary-200" : "border-rose-200",
+    bg50:       IS_PUTRA ? "bg-primary-50"     : "bg-rose-50",
+    bgDark:     IS_PUTRA ? "bg-primary-950"    : "bg-rose-950",
+    bg950:      IS_PUTRA ? "bg-primary-950"    : "bg-rose-950",
+    ring:       IS_PUTRA ? "ring-primary-500/30" : "ring-rose-500/30",
   };
 
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
 
-      {/* ═══ ANNOUNCEMENT BAR ═══════════════════════════════════════════════ */}
+      {/* â•â•â• ANNOUNCEMENT BAR â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <div className={`w-full py-2.5 text-center text-xs font-bold text-white ${c.bg600} flex items-center justify-center gap-2`}>
         <Zap className="w-3.5 h-3.5 shrink-0" />
-        <span>Pendaftaran Santri Baru Angkatan IX Telah Dibuka — Kuota Terbatas!</span>
+        <span>Pendaftaran Santri Baru Angkatan IX Telah Dibuka â€” Kuota Terbatas!</span>
         <Link href="/daftar" className="ml-2 underline underline-offset-2 flex items-center gap-1">
           Daftar <ChevronRight className="w-3 h-3" />
         </Link>
       </div>
 
-      {/* ═══ §1 HERO SECTION — SPLIT DARK ═══════════════════════════════════ */}
+      {/* â•â•â• Â§1 HERO SECTION â€” SPLIT DARK â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section
         id="hero"
         className="relative min-h-[calc(100vh-40px)] flex items-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-20 overflow-hidden"
@@ -215,7 +215,7 @@ export default function Home() {
         {/* Animated glows */}
         <div className="absolute inset-0 pointer-events-none">
           <div
-            className={`absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] ${IS_PUTRA ? "bg-primary-700" : "bg-sky-600"}`}
+            className={`absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] ${IS_PUTRA ? "bg-primary-700" : "bg-rose-600"}`}
             style={{ transform: `translateY(${scrollY * 0.08}px)` }}
           />
           <div
@@ -244,7 +244,7 @@ export default function Home() {
                 </span>
                 <FaMosque className={`w-3.5 h-3.5 ${c.text400}`} />
                 <span className="text-white/90 text-xs font-bold uppercase tracking-widest">
-                  Pesantren Islam Internasional · Jonggol, Kabupaten Bogor
+                  Pesantren Islam Internasional Â· Jonggol, Bogor
                 </span>
               </div>
 
@@ -258,9 +258,9 @@ export default function Home() {
                   <br />Berkelas Dunia.
                 </h1>
                 <p className="text-lg text-slate-400 max-w-xl leading-relaxed">
-                  Kurikulum <strong className="text-white">TICE</strong> — Tahfizh Al-Qur'an, Internasional,
+                  Kurikulum <strong className="text-white">TICE</strong> â€” Tahfizh Al-Qur'an, Internasional,
                   Karakter Mulia, dan Entrepreneurship. Bergabung bersama{" "}
-                  <strong className="text-white">300+ santriwati aktif</strong> di lingkungan asrama putri terbaik.
+                  <strong className="text-white">300+ santriwati aktif</strong> di lingkungan asrama terbaik.
                 </p>
               </div>
 
@@ -270,7 +270,7 @@ export default function Home() {
                   href="/daftar"
                   className={`inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-white text-base ${c.bg600} ${c.bgHover} shadow-xl ${c.shadow} transition-all hover:-translate-y-1 hover:shadow-2xl group`}
                 >
-                  Daftar Sekarang
+                  Daftar Sekarang — Putri
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
@@ -291,7 +291,7 @@ export default function Home() {
                   { val: "3", label: "Benua Alumni", Icon: FaGlobeAsia },
                 ].map((s, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    {i > 0 && <span className="text-slate-700">·</span>}
+                    {i > 0 && <span className="text-slate-700">Â·</span>}
                     <s.Icon className={`w-3.5 h-3.5 ${c.text400} shrink-0`} />
                     <span className="text-white font-black text-sm">{s.val}</span>
                     <span className="text-slate-500 text-xs">{s.label}</span>
@@ -321,7 +321,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-white font-bold text-sm">PPDB Putri 2026/2027 Dibuka</p>
-                      <p className="text-slate-400 text-xs">Angkatan IX · Khusus Santriwati</p>
+                      <p className="text-slate-400 text-xs">Angkatan IX Â· Kuota Terbatas</p>
                     </div>
                     <Link
                       href="/daftar"
@@ -346,7 +346,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §2 STATS BAND — Animated Counters ══════════════════════════════ */}
+      {/* â•â•â• Â§2 STATS BAND â€” Animated Counters â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section
         ref={statsRef}
         className="relative py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-y border-white/5"
@@ -369,7 +369,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §3 BENTO GRID — Kurikulum TICE ════════════════════════════════ */}
+      {/* â•â•â• Â§3 BENTO GRID â€” Kurikulum TICE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="program" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-16">
@@ -381,7 +381,7 @@ export default function Home() {
               <span className={`text-transparent bg-clip-text bg-gradient-to-r ${c.grad}`}>
                 TICE
               </span>{" "}
-              — Komprehensif
+              â€” Komprehensif
             </h2>
             <p className="text-slate-500 max-w-xl mx-auto text-lg">
               Empat pilar utama yang membentuk generasi Muslim unggul di dunia dan akhirat.
@@ -389,11 +389,11 @@ export default function Home() {
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* T — Tahfizh (large) */}
+            {/* T â€” Tahfizh (large) */}
             <div className={`md:col-span-2 rounded-3xl p-8 bg-gradient-to-br ${c.grad} text-white relative overflow-hidden group hover:scale-[1.01] transition-transform`}>
               <div className="absolute top-0 right-0 w-56 h-56 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/2 blur-2xl" />
               <FaQuran className="w-10 h-10 mb-6 opacity-90" />
-              <h3 className="text-2xl font-black mb-3">T — Tahfizh Al-Qur'an</h3>
+              <h3 className="text-2xl font-black mb-3">T â€” Tahfizh Al-Qur'an</h3>
               <p className="text-white/80 leading-relaxed mb-6">
                 Program hafalan Al-Qur'an 30 juz dengan metode Itqan yang teruji. Setiap santri mendapatkan
                 bimbingan intensif 26 jam/pekan bersama ustadz hafizh berpengalaman lulusan luar negeri.
@@ -403,10 +403,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* I — Internasional (small) */}
+            {/* I â€” Internasional (small) */}
             <div className="rounded-3xl p-8 bg-slate-900 text-white border border-slate-700 group hover:scale-[1.01] transition-transform">
               <Globe className="w-10 h-10 mb-6 text-amber-400" />
-              <h3 className="text-xl font-black mb-3">I — Internasional</h3>
+              <h3 className="text-xl font-black mb-3">I â€” Internasional</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                 Kurikulum nasional + khas Andalus + persiapan kuliah ke luar negeri (Muadalah).
               </p>
@@ -414,10 +414,10 @@ export default function Home() {
               <div className="text-slate-500 text-xs">Perguruan Tinggi Alumni</div>
             </div>
 
-            {/* C — Karakter (small) */}
+            {/* C â€” Karakter (small) */}
             <div className="rounded-3xl p-8 bg-emerald-50 border border-emerald-100 group hover:scale-[1.01] transition-transform">
               <Heart className="w-10 h-10 mb-6 text-emerald-600" />
-              <h3 className="text-xl font-black mb-3 text-slate-900">C — Karakter Rabbani</h3>
+              <h3 className="text-xl font-black mb-3 text-slate-900">C â€” Karakter Rabbani</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
                 Pembentukan akhlak mulia berdasarkan Al-Qur'an dan As-Sunnah sesuai pemahaman Salafush Shalih.
               </p>
@@ -425,10 +425,10 @@ export default function Home() {
               <div className="text-slate-400 text-xs">Lingkungan Kondusif</div>
             </div>
 
-            {/* E — Entrepreneurship (small) */}
+            {/* E â€” Entrepreneurship (small) */}
             <div className="rounded-3xl p-8 bg-amber-50 border border-amber-100 group hover:scale-[1.01] transition-transform">
               <Briefcase className="w-10 h-10 mb-6 text-amber-600" />
-              <h3 className="text-xl font-black mb-3 text-slate-900">E — Entrepreneurship</h3>
+              <h3 className="text-xl font-black mb-3 text-slate-900">E â€” Entrepreneurship</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
                 Penanaman jiwa kewirausahaan berwawasan global agar santri mandiri dan berdaya sejak dini.
               </p>
@@ -459,7 +459,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §4 PAIN vs SOLUTION TABLE ══════════════════════════════════════ */}
+      {/* â•â•â• Â§4 PAIN vs SOLUTION TABLE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 bg-slate-950">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-16">
@@ -489,7 +489,7 @@ export default function Home() {
 
             {[
               { pain: "Anak jauh dari keluarga dan tidak terpantau", fix: "Laporan berkala via WhatsApp + portal online orang tua" },
-              { pain: "Kurikulum pesantren vs persiapan kuliah?", fix: "Muadalah diakui setara — alumni masuk UI, UGM, ITB, Al-Azhar" },
+              { pain: "Kurikulum pesantren vs persiapan kuliah?", fix: "Muadalah diakui setara â€” alumni masuk UI, UGM, ITB, Al-Azhar" },
               { pain: "Hafalan Qur'an tapi akademik terbengkalai?", fix: "TICE memadukan tahfizh 30 juz + akademik internasional seimbang" },
               { pain: "Fasilitas asrama tidak layak dan tidak nyaman", fix: "Asrama modern, kamar bersih, fasilitas olahraga & lab lengkap" },
               { pain: "Khawatir bullying dan lingkungan teman negatif", fix: "Pembinaan karakter 24/7, guru pengasuh profesional bersertifikat" },
@@ -510,7 +510,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §5 CARA DAFTAR — Step-by-Step ════════════════════════════════ */}
+      {/* â•â•â• Â§5 CARA DAFTAR â€” Step-by-Step â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="cara-daftar" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -556,7 +556,7 @@ export default function Home() {
                 href="/daftar"
                 className={`inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-white ${c.bg600} ${c.bgHover} shadow-xl ${c.shadow} transition-all hover:-translate-y-1 group mt-2`}
               >
-                Mulai Daftar Sekarang
+                Mulai Daftar Sekarang — Putri
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -572,32 +572,32 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 ml-3">
                     <Wifi className="w-3.5 h-3.5 text-slate-500" />
-                    <span className="text-slate-500 text-sm">ppdb-alandalus — status realtime</span>
+                    <span className="text-slate-500 text-sm">ppdb-alandalus â€” status realtime</span>
                   </div>
                 </div>
                 <div className="p-6 font-mono text-sm space-y-2">
                   <p className="text-slate-600">$ cek status PPDB Putri 2026/2027...</p>
                   <p>
-                    <span className={c.text400}>▸</span>{" "}
+                    <span className={c.text400}>â–¸</span>{" "}
                     <span className="text-white">Status Pendaftaran</span>{" "}
-                    <span className="text-green-400 font-bold">✓ DIBUKA</span>
+                    <span className="text-green-400 font-bold">âœ“ DIBUKA</span>
                   </p>
                   <p>
-                    <span className={c.text400}>▸</span>{" "}
+                    <span className={c.text400}>â–¸</span>{" "}
                     <span className="text-white">Angkatan</span>{" "}
-                    <span className="text-amber-400">IX Putri (2026/2027)</span>
+                    <span className="text-amber-400">IX (2026/2027)</span>
                   </p>
                   <p>
-                    <span className={c.text400}>▸</span>{" "}
+                    <span className={c.text400}>â–¸</span>{" "}
                     <span className="text-white">Lokasi</span>{" "}
                     <span className="text-slate-400">Balekambang, Jonggol, Bogor</span>
                   </p>
                   <p>
-                    <span className={c.text400}>▸</span>{" "}
-                    <span className="text-slate-600">kuota terbatas — daftar segera...</span>
+                    <span className={c.text400}>â–¸</span>{" "}
+                    <span className="text-slate-600">kuota terbatas â€” daftar segera...</span>
                   </p>
                   <p>
-                    <span className="text-green-400">✓</span>{" "}
+                    <span className="text-green-400">âœ“</span>{" "}
                     <span className="text-slate-300">Formulir online tersedia 24/7</span>
                   </p>
                 </div>
@@ -634,7 +634,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §6 ALUMNI MARQUEE ══════════════════════════════════════════════ */}
+      {/* â•â•â• Â§6 ALUMNI MARQUEE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className={`py-16 ${c.bg950} border-y border-white/5 overflow-hidden`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
           <span className={`text-xs font-bold uppercase tracking-widest ${c.text400}`}>
@@ -648,7 +648,7 @@ export default function Home() {
         <InfiniteMarquee />
       </section>
 
-      {/* ═══ §7 FEATURE GRID ════════════════════════════════════════════════ */}
+      {/* â•â•â• Â§7 FEATURE GRID â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-16">
@@ -687,7 +687,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §8 SOCIAL PROOF — University Grid ══════════════════════════════ */}
+      {/* â•â•â• Â§8 SOCIAL PROOF â€” University Grid â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className={`py-20 ${c.bg950}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-slate-500 text-xs font-bold uppercase tracking-widest mb-10 flex items-center justify-center gap-2">
@@ -723,7 +723,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §9 GALERI FOTO PESANTREN ═══════════════════════════════════════ */}
+      {/* â•â•â• Â§9 GALERI FOTO PESANTREN â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-12">
@@ -763,10 +763,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ═══ §10 FINAL CTA ══════════════════════════════════════════════════ */}
+      {/* â•â•â• Â§10 FINAL CTA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[100px] ${IS_PUTRA ? "bg-primary-700" : "bg-sky-600"}`} />
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[100px] ${IS_PUTRA ? "bg-primary-700" : "bg-rose-600"}`} />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${c.bg600}/20 border border-white/10 mb-6`}>
@@ -823,3 +823,5 @@ export default function Home() {
     </div>
   );
 }
+
+
