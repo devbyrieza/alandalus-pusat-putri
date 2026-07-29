@@ -1,7 +1,7 @@
 ﻿/* â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-   AL-ANDALUS TEMPLATE â€” GLOBAL STYLES
-   Master Template Â· Brand-Agnostic Â· Fleksibel
-   Mobile-First Â· Linear-Inspired Premium UI
+   AL-ANDALUS TEMPLATE — GLOBAL STYLES
+   Master Template · Brand-Agnostic · Fleksibel
+   Mobile-First · Linear-Inspired Premium UI
    Tailwind CSS v4
    â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 
@@ -26,7 +26,7 @@
     sans-serif;
   --font-arabic: "Amiri", "Traditional Arabic", "Arabic Typesetting", serif;
 
-  /* â”â”â” BRAND COLOR PALETTE â€” LENGKAP SEMUA PESANTREN â”â”â” */
+  /* â”â”â” BRAND COLOR PALETTE — LENGKAP SEMUA PESANTREN â”â”â” */
 
   /* â”€â”€â”€ Biru Cerah (Ulul Albaab Primary) â”€â”€â”€ */
   --color-blue-50: #f0f8ff;
@@ -85,7 +85,7 @@
   --color-cream-500: #c9a84c;  /* lebih gold */
   --color-cream-600: #b8922e;
 
-  /* â”€â”€â”€ Teal Fresh Accent (pai-next spirit â€” untuk keseimbangan cerah) â”€â”€â”€ */
+  /* â”€â”€â”€ Teal Fresh Accent (pai-next spirit — untuk keseimbangan cerah) â”€â”€â”€ */
   --color-teal-accent: #0d9488;
   --color-teal-light: #ccfbf1;
   --color-teal-mid: #14b8a6;
@@ -95,10 +95,10 @@
   --color-surface-50: #F8FAFC;
   --color-surface-100: #F1F5F9;
   --color-surface-200: #e5e7eb;
-  --color-surface-warm: #fdf8f0;  /* Warm tint â€” campuran cream */
+  --color-surface-warm: #fdf8f0;  /* Warm tint — campuran cream */
   --color-surface-maroon: #fdf5f5; /* Maroon tint subtle */
 
-  /* â”€â”€â”€ Ink (Text â€” neutral gray, fresh & clean) â”€â”€â”€ */
+  /* â”€â”€â”€ Ink (Text — neutral gray, fresh & clean) â”€â”€â”€ */
   --color-ink-950: #111827;
   --color-ink-900: #374151;
   --color-ink-800: #374151;
@@ -164,7 +164,7 @@
      Untuk Al Imam: maroon + cream
    â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 
-  /* â”€â”€â”€ Islamic Color Palette â€” Semantic Tokens â”€â”€â”€ */
+  /* â”€â”€â”€ Islamic Color Palette — Semantic Tokens â”€â”€â”€ */
   /* Komponen-komponen UI lain jika ada */
   --color-primary: var(--color-emerald-700);
   /* Maroon utama */
@@ -172,12 +172,12 @@
   /* Maroon muda / background aksen */
   --color-secondary: var(--color-cream-400);
   /* Cream Secondary */
-  --color-background: #fafaf9; /* Warm white â€” lebih segar dari pure white */
+  --color-background: #fafaf9; /* Warm white — lebih segar dari pure white */
   /* Background utama */
   --color-text: #374151;
   /* Teks utama */
 
-  /* â”€â”€â”€ Shadows â€” neutral, tidak condong ke brand mana pun â”€â”€â”€ */
+  /* â”€â”€â”€ Shadows — neutral, tidak condong ke brand mana pun â”€â”€â”€ */
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
   --shadow-sm:
     0 1px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
@@ -190,7 +190,7 @@
   --shadow-2xl:
     0 40px 72px -8px rgba(0, 0, 0, 0.15), 0 16px 32px -8px rgba(0, 0, 0, 0.09);
 
-  /* Premium shadows â€” bias-neutral */
+  /* Premium shadows — bias-neutral */
   --shadow-premium-sm:
     0 2px 10px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow-premium-md:
@@ -202,7 +202,7 @@
   --shadow-premium-2xl:
     0 40px 80px rgba(0, 0, 0, 0.16), 0 16px 36px rgba(0, 0, 0, 0.09);
 
-  /* Colored shadows â€” tersedia untuk semua brand */
+  /* Colored shadows — tersedia untuk semua brand */
   --shadow-blue:
     0 4px 16px -2px rgba(3, 105, 199, 0.32), 0 2px 6px rgba(3, 105, 199, 0.16);
   --shadow-blue-lg:
@@ -226,7 +226,7 @@
   /* Inner shadow */
   --shadow-inner: inset 0 2px 6px rgba(0, 0, 0, 0.06);
 
-  /* â”€â”€â”€ Border Radius â€” Watzap-style Ceria & Rounded â”€â”€â”€ */
+  /* â”€â”€â”€ Border Radius — Watzap-style Ceria & Rounded â”€â”€â”€ */
   --radius-xs: 0.25rem;
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
@@ -241,7 +241,7 @@
   --space-section-y: clamp(4rem, 10vw, 7rem);
   --space-section-y-sm: clamp(3rem, 7vw, 5rem);
 
-  /* â”€â”€â”€ Transitions â€” Linear-style easing â”€â”€â”€ */
+  /* â”€â”€â”€ Transitions — Linear-style easing â”€â”€â”€ */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -334,7 +334,7 @@
     cursor: pointer;
   }
 
-  /* â”€â”€â”€ Fluid Typography â€” Linear-style tight & intentional â”€â”€â”€ */
+  /* â”€â”€â”€ Fluid Typography — Linear-style tight & intentional â”€â”€â”€ */
   h1 {
     font-family: var(--font-display);
     font-weight: 900;
@@ -416,7 +416,7 @@
     overflow-wrap: break-word;
   }
 
-  /* â”€â”€â”€ Selection â€” teal-tinted â”€â”€â”€ */
+  /* â”€â”€â”€ Selection — teal-tinted â”€â”€â”€ */
   ::selection {
     background: var(--color-primary-light);
     color: var(--color-primary);
@@ -452,7 +452,7 @@
     border-radius: var(--radius-sm);
   }
 
-  /* â”€â”€â”€ Touch targets â€” mobile-first â”€â”€â”€ */
+  /* â”€â”€â”€ Touch targets — mobile-first â”€â”€â”€ */
   @media (max-width: 768px) {
 
     button,
@@ -482,7 +482,7 @@
      Template-Demo default: teal/sand
   â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 
-  /* â”€â”€â”€ Primary Maroon (Al Imam â€” overrides template-demo gold default) â”€â”€â”€ */
+  /* â”€â”€â”€ Primary Maroon (Al Imam — overrides template-demo gold default) â”€â”€â”€ */
   .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -534,7 +534,7 @@
     }
   }
 
-  /* â”€â”€â”€ Primary Blue (Ulul Albaab variant â€” kept for compat) â”€â”€â”€ */
+  /* â”€â”€â”€ Primary Blue (Ulul Albaab variant — kept for compat) â”€â”€â”€ */
   .btn-primary-blue {
     display: inline-flex;
     align-items: center;
@@ -1046,7 +1046,7 @@
     }
   }
 
-  /* Dark teal (Template-Demo â€” hero/CTA) */
+  /* Dark teal (Template-Demo — hero/CTA) */
   .card-dark-teal {
     background: linear-gradient(135deg,
         var(--color-emerald-700) 0%,
@@ -1108,7 +1108,7 @@
     }
   }
 
-  /* Dark blue (Ulul Albaab â€” hero/CTA) */
+  /* Dark blue (Ulul Albaab — hero/CTA) */
   .card-dark-blue {
     background: linear-gradient(135deg,
         var(--color-emerald-800) 0%,
@@ -1152,7 +1152,7 @@
     }
   }
 
-  /* Dark maroon (Al Imam â€” hero/CTA) */
+  /* Dark maroon (Al Imam — hero/CTA) */
   .card-maroon {
     background: linear-gradient(135deg,
         var(--color-emerald-900) 0%,
@@ -1670,7 +1670,7 @@
     overflow: hidden;
   }
 
-  /* Dark Hijau Islami (Template-Demo â€” hero/CTA) */
+  /* Dark Hijau Islami (Template-Demo — hero/CTA) */
   .section-dark-teal {
     padding-top: var(--space-section-y);
     padding-bottom: var(--space-section-y);
@@ -1764,7 +1764,7 @@
     }
   }
 
-  /* Legacy â€” backward compat */
+  /* Legacy — backward compat */
   .section-dark {
     @extend .section-dark-teal;
   }
@@ -1932,8 +1932,8 @@
    â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 @layer utilities {
 
-  /* â”€â”€â”€ Text Gradients â€” semua brand â”€â”€â”€ */
-  /* â”€â”€â”€ Text Gradients â€” semua brand â”€â”€â”€ */
+  /* â”€â”€â”€ Text Gradients — semua brand â”€â”€â”€ */
+  /* â”€â”€â”€ Text Gradients — semua brand â”€â”€â”€ */
   .text-gradient-primary {
     background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-900) 100%);
     -webkit-background-clip: text;
@@ -1976,7 +1976,7 @@
     -webkit-text-fill-color: transparent;
   }
 
-  /* â”€â”€â”€ Backgrounds â€” semua brand â”€â”€â”€ */
+  /* â”€â”€â”€ Backgrounds — semua brand â”€â”€â”€ */
   .bg-blue-gradient {
     background: linear-gradient(135deg, var(--color-blue-600) 0%, var(--color-blue-900) 100%);
   }
@@ -2013,7 +2013,7 @@
     background: linear-gradient(135deg, var(--color-emerald-600) 0%, var(--color-emerald-900) 100%);
   }
 
-  /* Fresher bg-maroon-subtle â€” pai-next spirit */
+  /* Fresher bg-maroon-subtle — pai-next spirit */
   .bg-maroon-subtle {
     background: linear-gradient(160deg, var(--color-emerald-50) 0%, #fafaf9 60%, var(--color-cream-50) 100%);
   }
@@ -2091,7 +2091,7 @@
     letter-spacing: -0.04em;
   }
 
-  /* â”€â”€â”€ Animations â€” Linear-style â”€â”€â”€ */
+  /* â”€â”€â”€ Animations — Linear-style â”€â”€â”€ */
   .custom-fade-in-up {
     opacity: 0;
     transform: translateY(24px);
@@ -2391,7 +2391,7 @@
   /* â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
      CIROAI PREMIUM ENTERPRISE AESTHETIC
      Terinspirasi dari UI www.ciroai.us
-     Brand-agnostic â€” Dipakai semua project
+     Brand-agnostic — Dipakai semua project
      â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 
   /* â”€â”€ Section Label Badge (CiroAI "ENTERPRISE DATA INTELLIGENCE" pill) â”€â”€
@@ -2423,7 +2423,7 @@
     }
   }
 
-  /* Teal variant (Template-Demo) â€” mapped to maroon for Al Imam brand */
+  /* Teal variant (Template-Demo) — mapped to maroon for Al Imam brand */
   .section-label-teal {
     background: rgba(128, 0, 0, 0.08);
     color: var(--color-emerald-700);
@@ -2444,7 +2444,7 @@
     border-color: rgba(100, 10, 10, 0.20);
   }
 
-  /* Alias primary â€” untuk kemudahan pakai di Al Imam */
+  /* Alias primary — untuk kemudahan pakai di Al Imam */
   .section-label-primary {
     background: rgba(100, 10, 10, 0.09);
     color: var(--color-emerald-700);
@@ -2558,7 +2558,7 @@
     display: inline;
   }
 
-  /* Gold-warmth gradient (pai-next style â€” maroon to cream/gold) */
+  /* Gold-warmth gradient (pai-next style — maroon to cream/gold) */
   .gradient-text-maroon-gold {
     background: linear-gradient(135deg, var(--color-emerald-700) 0%, var(--color-cream-500) 60%, var(--color-emerald-600) 100%);
     -webkit-background-clip: text;
@@ -2730,9 +2730,9 @@
   }
 
 /* â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-   6. CEKAT.AI INSPIRED â€” PREMIUM ADDITIONS
-   Infinite Marquee Â· Section Numbering
-   Shine Effects Â· Social Proof Strips
+   6. CEKAT.AI INSPIRED — PREMIUM ADDITIONS
+   Infinite Marquee · Section Numbering
+   Shine Effects · Social Proof Strips
    â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” */
 
 /* â”€â”€â”€ Infinite Marquee Keyframes â”€â”€â”€ */

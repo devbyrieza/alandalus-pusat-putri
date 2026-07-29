@@ -201,13 +201,13 @@ export default function Home() {
       {/* â•â•â• ANNOUNCEMENT BAR â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <div className={`w-full py-2.5 text-center text-xs font-bold text-white ${c.bg600} flex items-center justify-center gap-2`}>
         <Zap className="w-3.5 h-3.5 shrink-0" />
-        <span>Pendaftaran Santri Baru Angkatan IX Telah Dibuka â€” Kuota Terbatas!</span>
+        <span>Pendaftaran Santri Baru Angkatan IX Telah Dibuka — Kuota Terbatas!</span>
         <Link href="/daftar" className="ml-2 underline underline-offset-2 flex items-center gap-1">
           Daftar <ChevronRight className="w-3 h-3" />
         </Link>
       </div>
 
-      {/* â•â•â• Â§1 HERO SECTION â€” SPLIT DARK â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+      {/* â•â•â• Â§1 HERO SECTION — SPLIT DARK â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section
         id="hero"
         className="relative min-h-[calc(100vh-40px)] flex items-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 pt-20 overflow-hidden"
@@ -244,7 +244,7 @@ export default function Home() {
                 </span>
                 <FaMosque className={`w-3.5 h-3.5 ${c.text400}`} />
                 <span className="text-white/90 text-xs font-bold uppercase tracking-widest">
-                  Pesantren Islam Internasional Â· Jonggol, Bogor
+                  Pesantren Islam Internasional · Jonggol, Bogor
                 </span>
               </div>
 
@@ -258,7 +258,7 @@ export default function Home() {
                   <br />Berkelas Dunia.
                 </h1>
                 <p className="text-lg text-slate-400 max-w-xl leading-relaxed">
-                  Kurikulum <strong className="text-white">TICE</strong> â€” Tahfizh Al-Qur'an, Internasional,
+                  Kurikulum <strong className="text-white">TICE</strong> — Tahfizh Al-Qur'an, Internasional,
                   Karakter Mulia, dan Entrepreneurship. Bergabung bersama{" "}
                   <strong className="text-white">300+ santriwati aktif</strong> di lingkungan asrama terbaik.
                 </p>
@@ -291,7 +291,7 @@ export default function Home() {
                   { val: "3", label: "Benua Alumni", Icon: FaGlobeAsia },
                 ].map((s, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    {i > 0 && <span className="text-slate-700">Â·</span>}
+                    {i > 0 && <span className="text-slate-700">·</span>}
                     <s.Icon className={`w-3.5 h-3.5 ${c.text400} shrink-0`} />
                     <span className="text-white font-black text-sm">{s.val}</span>
                     <span className="text-slate-500 text-xs">{s.label}</span>
@@ -321,7 +321,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="text-white font-bold text-sm">PPDB Putri 2026/2027 Dibuka</p>
-                      <p className="text-slate-400 text-xs">Angkatan IX Â· Kuota Terbatas</p>
+                      <p className="text-slate-400 text-xs">Angkatan IX · Kuota Terbatas</p>
                     </div>
                     <Link
                       href="/daftar"
@@ -346,7 +346,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* â•â•â• Â§2 STATS BAND â€” Animated Counters â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+      {/* â•â•â• Â§2 STATS BAND — Animated Counters â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section
         ref={statsRef}
         className="relative py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-y border-white/5"
@@ -369,7 +369,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* â•â•â• Â§3 BENTO GRID â€” Kurikulum TICE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+      {/* â•â•â• Â§3 BENTO GRID — Kurikulum TICE â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="program" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <header className="text-center mb-16">
@@ -381,7 +381,7 @@ export default function Home() {
               <span className={`text-transparent bg-clip-text bg-gradient-to-r ${c.grad}`}>
                 TICE
               </span>{" "}
-              â€” Komprehensif
+              — Komprehensif
             </h2>
             <p className="text-slate-500 max-w-xl mx-auto text-lg">
               Empat pilar utama yang membentuk generasi Muslim unggul di dunia dan akhirat.
@@ -389,11 +389,11 @@ export default function Home() {
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* T â€” Tahfizh (large) */}
+            {/* T — Tahfizh (large) */}
             <div className={`md:col-span-2 rounded-3xl p-8 bg-gradient-to-br ${c.grad} text-white relative overflow-hidden group hover:scale-[1.01] transition-transform`}>
               <div className="absolute top-0 right-0 w-56 h-56 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/2 blur-2xl" />
               <FaQuran className="w-10 h-10 mb-6 opacity-90" />
-              <h3 className="text-2xl font-black mb-3">T â€” Tahfizh Al-Qur'an</h3>
+              <h3 className="text-2xl font-black mb-3">T — Tahfizh Al-Qur'an</h3>
               <p className="text-white/80 leading-relaxed mb-6">
                 Program hafalan Al-Qur'an 30 juz dengan metode Itqan yang teruji. Setiap santri mendapatkan
                 bimbingan intensif 26 jam/pekan bersama ustadz hafizh berpengalaman lulusan luar negeri.
@@ -403,10 +403,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* I â€” Internasional (small) */}
+            {/* I — Internasional (small) */}
             <div className="rounded-3xl p-8 bg-slate-900 text-white border border-slate-700 group hover:scale-[1.01] transition-transform">
               <Globe className="w-10 h-10 mb-6 text-amber-400" />
-              <h3 className="text-xl font-black mb-3">I â€” Internasional</h3>
+              <h3 className="text-xl font-black mb-3">I — Internasional</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
                 Kurikulum nasional + khas Andalus + persiapan kuliah ke luar negeri (Muadalah).
               </p>
@@ -414,10 +414,10 @@ export default function Home() {
               <div className="text-slate-500 text-xs">Perguruan Tinggi Alumni</div>
             </div>
 
-            {/* C â€” Karakter (small) */}
+            {/* C — Karakter (small) */}
             <div className="rounded-3xl p-8 bg-emerald-50 border border-emerald-100 group hover:scale-[1.01] transition-transform">
               <Heart className="w-10 h-10 mb-6 text-emerald-600" />
-              <h3 className="text-xl font-black mb-3 text-slate-900">C â€” Karakter Rabbani</h3>
+              <h3 className="text-xl font-black mb-3 text-slate-900">C — Karakter Rabbani</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
                 Pembentukan akhlak mulia berdasarkan Al-Qur'an dan As-Sunnah sesuai pemahaman Salafush Shalih.
               </p>
@@ -425,10 +425,10 @@ export default function Home() {
               <div className="text-slate-400 text-xs">Lingkungan Kondusif</div>
             </div>
 
-            {/* E â€” Entrepreneurship (small) */}
+            {/* E — Entrepreneurship (small) */}
             <div className="rounded-3xl p-8 bg-amber-50 border border-amber-100 group hover:scale-[1.01] transition-transform">
               <Briefcase className="w-10 h-10 mb-6 text-amber-600" />
-              <h3 className="text-xl font-black mb-3 text-slate-900">E â€” Entrepreneurship</h3>
+              <h3 className="text-xl font-black mb-3 text-slate-900">E — Entrepreneurship</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
                 Penanaman jiwa kewirausahaan berwawasan global agar santri mandiri dan berdaya sejak dini.
               </p>
@@ -489,7 +489,7 @@ export default function Home() {
 
             {[
               { pain: "Anak jauh dari keluarga dan tidak terpantau", fix: "Laporan berkala via WhatsApp + portal online orang tua" },
-              { pain: "Kurikulum pesantren vs persiapan kuliah?", fix: "Muadalah diakui setara â€” alumni masuk UI, UGM, ITB, Al-Azhar" },
+              { pain: "Kurikulum pesantren vs persiapan kuliah?", fix: "Muadalah diakui setara — alumni masuk UI, UGM, ITB, Al-Azhar" },
               { pain: "Hafalan Qur'an tapi akademik terbengkalai?", fix: "TICE memadukan tahfizh 30 juz + akademik internasional seimbang" },
               { pain: "Fasilitas asrama tidak layak dan tidak nyaman", fix: "Asrama modern, kamar bersih, fasilitas olahraga & lab lengkap" },
               { pain: "Khawatir bullying dan lingkungan teman negatif", fix: "Pembinaan karakter 24/7, guru pengasuh profesional bersertifikat" },
@@ -510,7 +510,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* â•â•â• Â§5 CARA DAFTAR â€” Step-by-Step â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+      {/* â•â•â• Â§5 CARA DAFTAR — Step-by-Step â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="cara-daftar" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -572,7 +572,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-2 ml-3">
                     <Wifi className="w-3.5 h-3.5 text-slate-500" />
-                    <span className="text-slate-500 text-sm">ppdb-alandalus â€” status realtime</span>
+                    <span className="text-slate-500 text-sm">ppdb-alandalus — status realtime</span>
                   </div>
                 </div>
                 <div className="p-6 font-mono text-sm space-y-2">
@@ -594,7 +594,7 @@ export default function Home() {
                   </p>
                   <p>
                     <span className={c.text400}>â–¸</span>{" "}
-                    <span className="text-slate-600">kuota terbatas â€” daftar segera...</span>
+                    <span className="text-slate-600">kuota terbatas — daftar segera...</span>
                   </p>
                   <p>
                     <span className="text-green-400">âœ“</span>{" "}
@@ -687,7 +687,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* â•â•â• Â§8 SOCIAL PROOF â€” University Grid â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+      {/* â•â•â• Â§8 SOCIAL PROOF — University Grid â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className={`py-20 ${c.bg950}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-slate-500 text-xs font-bold uppercase tracking-widest mb-10 flex items-center justify-center gap-2">
