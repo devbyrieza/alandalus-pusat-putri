@@ -1,9 +1,9 @@
-{
-  "name": "pp-alimam",
+﻿{
+  "name": "alandalus-pusat-putri",
 
   "env": {
-    "NEXT_PUBLIC_APP_NAME": "PPDB Al Andalus Al Imam Islamic Boarding School",
-    "NEXT_PUBLIC_APP_DESCRIPTION": "Sistem PPDB modern untuk Pondok Pesantren Al Andalus Al Imam"
+    "NEXT_PUBLIC_APP_NAME": "Al-Andalus Pusat Putri",
+    "NEXT_PUBLIC_APP_DESCRIPTION": "Website Resmi Al-Andalus Pusat Putri"
   },
   "regions": ["sin1"],
   "functions": {
@@ -23,3 +23,4 @@
     }
   ]
 }
+
