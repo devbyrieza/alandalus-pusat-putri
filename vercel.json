@@ -1,12 +1,6 @@
 {
   "name": "pp-alimam",
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
+
   "env": {
     "NEXT_PUBLIC_APP_NAME": "PPDB Al Andalus Al Imam Islamic Boarding School",
     "NEXT_PUBLIC_APP_DESCRIPTION": "Sistem PPDB modern untuk Pondok Pesantren Al Andalus Al Imam"
