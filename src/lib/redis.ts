@@ -1,26 +1,45 @@
 import Redis from 'ioredis';
 
-// Create a singleton instance of Redis
-const globalForRedis = global as unknown as { redis: Redis };
+const useRedis = process.env.REDIS_HOST && process.env.REDIS_HOST !== '';
 
-export const redis =
-  globalForRedis.redis ||
-  new Redis({
-    host: process.env.REDIS_HOST || "127.0.0.1",
+let redisClient: any;
+
+if (useRedis) {
+  redisClient = new Redis({
+    host: process.env.REDIS_HOST,
     port: parseInt(process.env.REDIS_PORT || "6379"),
     password: process.env.REDIS_PASSWORD || undefined,
-    connectTimeout: 5000, // 5 seconds timeout
-    maxRetriesPerRequest: 1, // Stop trying after 1 failure per request
+    connectTimeout: 5000,
+    maxRetriesPerRequest: 1,
     retryStrategy(times) {
-      if (times > 3) return null; // stop retrying after 3 attempts
+      if (times > 3) return null;
       return Math.min(times * 50, 2000);
     },
   });
+  
+  // Attach error handler to prevent unhandled error event crash
+  redisClient.on('error', (err: any) => {
+    console.warn('Redis Connection Error:', err.message);
+  });
+} else {
+  // Mock Redis
+  redisClient = {
+    set: async () => true,
+    get: async () => null,
+    del: async () => true,
+    incr: async () => 1,
+    expire: async () => true,
+    sadd: async () => 1,
+    sismember: async () => 0,
+    keys: async () => [],
+    on: () => {},
+  };
+}
 
-if (process.env.NODE_ENV !== 'production') globalForRedis.redis = redis;
+export const redis = redisClient;
 
-// Helper to safely stringify and set JSON data
 export async function setCache(key: string, data: any, ttlSeconds: number = 3600) {
+  if (!useRedis) return true;
   try {
     const stringData = JSON.stringify(data);
     await redis.set(key, stringData, 'EX', ttlSeconds);
@@ -31,8 +50,8 @@ export async function setCache(key: string, data: any, ttlSeconds: number = 3600
   }
 }
 
-// Helper to get and parse JSON data
 export async function getCache<T>(key: string): Promise<T | null> {
+  if (!useRedis) return null;
   try {
     const data = await redis.get(key);
     if (!data) return null;
@@ -43,9 +62,8 @@ export async function getCache<T>(key: string): Promise<T | null> {
   }
 }
 
-export default redis;
-
 export async function invalidateAdminPendaftarCache() {
+  if (!useRedis) return true;
   try {
     const keys = await redis.keys('admin_pendaftar_list_*');
     if (keys.length > 0) {
@@ -55,3 +73,5 @@ export async function invalidateAdminPendaftarCache() {
     console.error('Redis Invalidate Error:', error);
   }
 }
+
+export default redis;
