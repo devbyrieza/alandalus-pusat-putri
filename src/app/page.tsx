@@ -181,8 +181,8 @@ export default function Home() {
   }, []);
 
   const c = {
-    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-pink-500 to-purple-400",
-    gradText:   IS_PUTRA ? "from-secondary-400 to-secondary-600"   : "from-pink-400 to-purple-400",
+    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-pink-500 to-pink-300",
+    gradText:   IS_PUTRA ? "from-secondary-400 to-secondary-600"   : "from-pink-500 to-pink-300",
     text600:    IS_PUTRA ? "text-primary-600"  : "text-primary-600",
     text400:    IS_PUTRA ? "text-primary-400"  : "text-primary-400",
     bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-primary-600",
@@ -390,7 +390,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* T — Tahfizh (large) */}
-            <div className={`md:col-span-2 rounded-3xl p-8 bg-gradient-to-br ${c.grad} text-white relative overflow-hidden group hover:scale-[1.01] transition-transform`}>
+            <div className={`md:col-span-2 rounded-3xl p-8 bg-gradient-to-br ${IS_PUTRA ? "from-primary-600 to-primary-800" : "from-pink-500 to-pink-300"} text-white relative overflow-hidden group hover:scale-[1.01] transition-transform`}>
               <div className="absolute top-0 right-0 w-56 h-56 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/2 blur-2xl" />
               <FaQuran className="w-10 h-10 mb-6 opacity-90" />
               <h3 className="text-2xl font-black mb-3">T — Tahfizh Al-Qur'an</h3>
