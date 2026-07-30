@@ -181,8 +181,8 @@ export default function Home() {
   }, []);
 
   const c = {
-    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-pink-500 to-fuchsia-500",
-    gradText:   IS_PUTRA ? "from-secondary-400 to-secondary-600"   : "from-pink-400 to-fuchsia-400",
+    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-pink-500 to-purple-400",
+    gradText:   IS_PUTRA ? "from-secondary-400 to-secondary-600"   : "from-pink-400 to-purple-400",
     text600:    IS_PUTRA ? "text-primary-600"  : "text-primary-600",
     text400:    IS_PUTRA ? "text-primary-400"  : "text-primary-400",
     bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-primary-600",
@@ -215,7 +215,7 @@ export default function Home() {
         {/* Animated glows */}
         <div className="absolute inset-0 pointer-events-none">
           <div
-            className={`absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] ${IS_PUTRA ? "bg-primary-700" : "bg-fuchsia-600"}`}
+            className={`absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] ${IS_PUTRA ? "bg-primary-700" : "bg-pink-600"}`}
             style={{ transform: `translateY(${scrollY * 0.08}px)` }}
           />
           <div
@@ -766,7 +766,7 @@ export default function Home() {
       {/* â•â•â• Â§10 FINAL CTA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[100px] ${IS_PUTRA ? "bg-primary-700" : "bg-fuchsia-600"}`} />
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[100px] ${IS_PUTRA ? "bg-primary-700" : "bg-pink-600"}`} />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${c.bg600}/20 border border-white/10 mb-6`}>

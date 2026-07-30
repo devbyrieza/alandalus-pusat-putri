@@ -1,4 +1,4 @@
-﻿import { BRANDING, IS_PUTRA } from "@/config/branding";
+import { BRANDING, IS_PUTRA } from "@/config/branding";
 import Link from "next/link";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import { FaInstagram, FaYoutube, FaFacebook, FaTiktok } from "react-icons/fa";
@@ -7,9 +7,9 @@ import { HiAcademicCap } from "react-icons/hi2";
 import { PiHandHeartBold } from "react-icons/pi";
 
 export default function Footer() {
-  const primaryColor  = IS_PUTRA ? "text-primary-400"  : "text-rose-400";
-  const primaryBg     = IS_PUTRA ? "bg-primary-600"     : "bg-rose-600";
-  const primaryBgHov  = IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-rose-700";
+  const primaryColor  = IS_PUTRA ? "text-primary-400"  : "text-primary-400";
+  const primaryBg     = IS_PUTRA ? "bg-primary-600"     : "bg-primary-600";
+  const primaryBgHov  = IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-primary-700";
 
   return (
     <footer className="bg-slate-950 border-t border-slate-800 text-slate-400">
