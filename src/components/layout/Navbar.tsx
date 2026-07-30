@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -34,10 +34,10 @@ export default function Navbar() {
 
   const isActive = (path: string) => pathname === path;
 
-  const primaryColor = IS_PUTRA ? "text-primary-600" : "text-rose-600";
-  const primaryBg = IS_PUTRA ? "bg-primary-600" : "bg-rose-600";
-  const primaryBgHover = IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-rose-700";
-  const primaryShadow = IS_PUTRA ? "shadow-primary-500/30" : "shadow-rose-500/30";
+  const primaryColor = IS_PUTRA ? "text-primary-600" : "text-primary-600";
+  const primaryBg = IS_PUTRA ? "bg-primary-600" : "bg-primary-600";
+  const primaryBgHover = IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-primary-700";
+  const primaryShadow = IS_PUTRA ? "shadow-primary-500/30" : "shadow-primary-500/30";
 
   return (
     <>
