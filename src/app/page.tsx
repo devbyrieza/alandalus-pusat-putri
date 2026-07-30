@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { BRANDING, IS_PUTRA } from "@/config/branding";
 import {
@@ -101,8 +101,8 @@ function StatCard({
     return () => clearTimeout(t);
   }, [started, delay]);
   const count = useCountUp(value, 2000, active);
-  const primaryColor = IS_PUTRA ? "text-primary-400" : "text-rose-400";
-  const primaryBg = IS_PUTRA ? "bg-primary-500/10" : "bg-rose-500/10";
+  const primaryColor = IS_PUTRA ? "text-primary-400" : "text-primary-400";
+  const primaryBg = IS_PUTRA ? "bg-primary-500/10" : "bg-primary-500/10";
   return (
     <div className="text-center group">
       <div className={`w-14 h-14 rounded-2xl ${primaryBg} flex items-center justify-center mx-auto mb-4`}>
@@ -137,10 +137,10 @@ const alumniItems = [
 ];
 
 function InfiniteMarquee() {
-  const primaryBorder = IS_PUTRA ? "border-primary-800/60" : "border-rose-800/60";
-  const primaryBg = IS_PUTRA ? "bg-primary-950/60" : "bg-rose-950/60";
-  const primaryText = IS_PUTRA ? "text-primary-300" : "text-rose-300";
-  const iconColor = IS_PUTRA ? "text-primary-500" : "text-rose-500";
+  const primaryBorder = IS_PUTRA ? "border-primary-800/60" : "border-primary-800/60";
+  const primaryBg = IS_PUTRA ? "bg-primary-950/60" : "bg-primary-950/60";
+  const primaryText = IS_PUTRA ? "text-primary-300" : "text-primary-300";
+  const iconColor = IS_PUTRA ? "text-primary-500" : "text-primary-500";
 
   return (
     <div className="relative overflow-hidden py-4" aria-hidden="true">
@@ -181,18 +181,18 @@ export default function Home() {
   }, []);
 
   const c = {
-    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-rose-500 to-pink-700",
-    gradText:   IS_PUTRA ? "from-primary-400 to-primary-600"   : "from-rose-400 to-pink-500",
-    text600:    IS_PUTRA ? "text-primary-600"  : "text-rose-600",
-    text400:    IS_PUTRA ? "text-primary-400"  : "text-rose-400",
-    bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-rose-600",
-    bgHover:    IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-rose-700",
-    shadow:     IS_PUTRA ? "shadow-primary-500/30" : "shadow-rose-500/30",
-    border200:  IS_PUTRA ? "border-primary-200" : "border-rose-200",
-    bg50:       IS_PUTRA ? "bg-primary-50"     : "bg-rose-50",
-    bgDark:     IS_PUTRA ? "bg-primary-950"    : "bg-rose-950",
-    bg950:      IS_PUTRA ? "bg-primary-950"    : "bg-rose-950",
-    ring:       IS_PUTRA ? "ring-primary-500/30" : "ring-rose-500/30",
+    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-pink-500 to-fuchsia-500",
+    gradText:   IS_PUTRA ? "from-secondary-400 to-secondary-600"   : "from-pink-400 to-fuchsia-400",
+    text600:    IS_PUTRA ? "text-primary-600"  : "text-primary-600",
+    text400:    IS_PUTRA ? "text-primary-400"  : "text-primary-400",
+    bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-primary-600",
+    bgHover:    IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-primary-700",
+    shadow:     IS_PUTRA ? "shadow-primary-500/30" : "shadow-primary-500/30",
+    border200:  IS_PUTRA ? "border-primary-200" : "border-primary-200",
+    bg50:       IS_PUTRA ? "bg-primary-50"     : "bg-primary-50",
+    bgDark:     IS_PUTRA ? "bg-primary-950"    : "bg-primary-950",
+    bg950:      IS_PUTRA ? "bg-primary-950"    : "bg-primary-950",
+    ring:       IS_PUTRA ? "ring-primary-500/30" : "ring-primary-500/30",
   };
 
   return (
@@ -215,7 +215,7 @@ export default function Home() {
         {/* Animated glows */}
         <div className="absolute inset-0 pointer-events-none">
           <div
-            className={`absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] ${IS_PUTRA ? "bg-primary-700" : "bg-rose-600"}`}
+            className={`absolute top-0 left-1/3 w-[600px] h-[600px] rounded-full opacity-20 blur-[120px] ${IS_PUTRA ? "bg-primary-700" : "bg-fuchsia-600"}`}
             style={{ transform: `translateY(${scrollY * 0.08}px)` }}
           />
           <div
@@ -766,7 +766,7 @@ export default function Home() {
       {/* â•â•â• Â§10 FINAL CTA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="py-24 bg-gradient-to-br from-slate-900 to-slate-950 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[100px] ${IS_PUTRA ? "bg-primary-700" : "bg-rose-600"}`} />
+          <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[100px] ${IS_PUTRA ? "bg-primary-700" : "bg-fuchsia-600"}`} />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${c.bg600}/20 border border-white/10 mb-6`}>
