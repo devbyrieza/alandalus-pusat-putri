@@ -1,9 +1,9 @@
-﻿import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-// <CheckCircle2 size={20} className="inline-block mr-2" /> IMPORT NAVBAR & FOOTER YANG SUDAH ADA
+// IMPORT NAVBAR & FOOTER
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
@@ -11,10 +11,10 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import SmoothScrollProvider from "@/components/providers/SmoothScrollProvider";
 import ProgressBarProvider from "@/components/providers/ProgressBarProvider";
 
-// â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-// FONT CONFIGURATIONS - Harisenin & Watzap Style
-// â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// FONT CONFIGURATIONS
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+import { Plus_Jakarta_Sans, Inter, Playfair_Display } from "next/font/google";
 import { BRANDING } from "@/config/branding";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -29,8 +29,17 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+// Playfair Display — font serif prestisius untuk hero headline
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
+  style: ["normal", "italic"],
+  weight: ["700", "800", "900"],
+});
+
 // METADATA CONFIGURATION
-// â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 export const metadata: Metadata = {
   metadataBase: new URL(BRANDING.websiteUrl),
 
@@ -41,9 +50,10 @@ export const metadata: Metadata = {
   description: `Pendaftaran Santri Baru ${BRANDING.schoolName}. Pendidikan berbasis Al-Qur'an dan As-Sunnah sesuai pemahaman salafush shalih.`,
   keywords: [
     BRANDING.schoolName,
-    "pesantren sukabumi",
+    "pesantren jonggol",
     "ppdb 2026",
     "pendaftaran santri",
+    "pesantren putri",
     "pesantren salafi",
     "tahfidz quran",
     "pendidikan islam",
@@ -119,9 +129,9 @@ export const metadata: Metadata = {
   classification: "Islamic Education",
 };
 
-// â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-// ROOT LAYOUT COMPONENT (<CheckCircle2 size={20} className="inline-block mr-2" /> DENGAN NAVBAR & FOOTER)
-// â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// ROOT LAYOUT COMPONENT
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -154,7 +164,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakarta.variable} ${inter.variable} font-sans antialiased bg-white text-ink-900 overflow-x-hidden transition-colors duration-500`}
+        className={`${plusJakarta.variable} ${inter.variable} ${playfairDisplay.variable} font-sans antialiased bg-white text-ink-900 overflow-x-hidden transition-colors duration-500`}
         suppressHydrationWarning
       >
         <ProgressBarProvider>
@@ -173,5 +183,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
