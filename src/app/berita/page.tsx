@@ -1,8 +1,6 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import { BRANDING, IS_PUTRA } from "@/config/branding";
 import { Calendar, Play, ImageIcon, FileText } from "lucide-react";
 
@@ -21,7 +19,6 @@ export default function BeritaPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
-      <Navbar />
       <main className="flex-1 pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -43,7 +40,7 @@ export default function BeritaPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all
                   ${activeTab === tab.id 
-                    ? (IS_PUTRA ? "bg-primary-600 text-white shadow-md" : "bg-sky-600 text-white shadow-md") 
+                    ? (IS_PUTRA ? "bg-primary-600 text-white shadow-md" : "bg-pink-600 text-white shadow-md") 
                     : "bg-white text-slate-600 border border-slate-200 hover:bg-slate-50"}`}
               >
                 <tab.icon className="w-4 h-4" />
@@ -60,7 +57,7 @@ export default function BeritaPage() {
                   {item.type === "video" && (
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                        <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                          <Play className={`w-5 h-5 ml-1 ${IS_PUTRA ? "text-primary-600" : "text-sky-600"}`} />
+                          <Play className={`w-5 h-5 ml-1 ${IS_PUTRA ? "text-primary-600" : "text-pink-600"}`} />
                        </div>
                     </div>
                   )}
@@ -72,7 +69,7 @@ export default function BeritaPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 text-xs text-slate-500 mb-3">
-                    <Calendar className={`w-3.5 h-3.5 ${IS_PUTRA ? "text-primary-500" : "text-sky-500"}`} />
+                    <Calendar className={`w-3.5 h-3.5 ${IS_PUTRA ? "text-primary-500" : "text-pink-500"}`} />
                     {item.date}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary-600 transition-colors leading-snug">
@@ -85,7 +82,6 @@ export default function BeritaPage() {
 
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

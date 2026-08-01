@@ -1,6 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import { BRANDING, IS_PUTRA } from "@/config/branding";
+﻿import { BRANDING, IS_PUTRA } from "@/config/branding";
 import { GraduationCap, BookOpen, Globe, Sparkles, CheckCircle2 } from "lucide-react";
 
 export default function ProgramPage() {
@@ -33,7 +31,6 @@ export default function ProgramPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
-      <Navbar />
       <main className="flex-1 pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -46,7 +43,7 @@ export default function ProgramPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {programs.map((prog, i) => (
               <div key={i} className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm ${IS_PUTRA ? "bg-primary-50 text-primary-600" : "bg-sky-50 text-sky-600"}`}>
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 shadow-sm ${IS_PUTRA ? "bg-primary-50 text-primary-600" : "bg-pink-50 text-pink-600"}`}>
                   <prog.icon className="w-7 h-7" />
                 </div>
                 <h2 className="text-2xl font-black text-slate-900 mb-4">{prog.title}</h2>
@@ -54,7 +51,7 @@ export default function ProgramPage() {
                 <ul className="space-y-3">
                   {prog.points.map((pt, idx) => (
                     <li key={idx} className="flex gap-3 items-center">
-                      <CheckCircle2 className={`w-5 h-5 shrink-0 ${IS_PUTRA ? "text-primary-500" : "text-sky-500"}`} />
+                      <CheckCircle2 className={`w-5 h-5 shrink-0 ${IS_PUTRA ? "text-primary-500" : "text-pink-500"}`} />
                       <span className="text-sm font-semibold text-slate-700">{pt}</span>
                     </li>
                   ))}
@@ -73,7 +70,6 @@ export default function ProgramPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
