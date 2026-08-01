@@ -6,9 +6,9 @@ import { Users } from "lucide-react";
 
 // Fallback data (shown while API loads or if DB is empty)
 const FALLBACK_ACTIVITIES = [
-  { name: "Aisyah R.", city: "Jakarta", program: "7 MTs" },
-  { name: "Fatimah Z.", city: "Depok", program: "IL (I'dad Lughowi)" },
-  { name: "Khadijah S.", city: "Tangerang", program: "10 MA" },
+  { name: "Ahmad F.", city: "Jakarta", program: "7 MTs" },
+  { name: "Fathur R.", city: "Bekasi", program: "IL (I'dad Lughowi)" },
+  { name: "Zaid A.", city: "Bogor", program: "10 MA" },
 ];
 
 interface Activity {
@@ -43,11 +43,11 @@ export default function LiveActivityToast() {
   }, [activities.length]);
 
   useEffect(() => {
-    // First toast after 8s
+    // First toast setelah 25s — staggered setelah WA tooltip selesai (18s+5s=23s)
     const initial = setTimeout(() => {
       setVisible(true);
       setTimeout(() => setVisible(false), 4500);
-    }, 8000);
+    }, 25000);
 
     // Repeat every 25s
     const interval = setInterval(showNext, 25000);
