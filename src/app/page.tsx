@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { BRANDING, IS_PUTRA } from "@/config/branding";
 import {
@@ -158,6 +158,16 @@ function InfiniteMarquee() {
     </div>
   );
 }
+
+// --- Testimonials Data ---
+const TESTIMONIALS = [
+  { initial: "A", name: "Bapak Ahmad F.", role: "Orang Tua Santriwati \u00b7 Jakarta", quote: "Putri saya yang dulu pendiam kini jauh lebih percaya diri, santun, dan mandiri. Perubahan yang sungguh tidak kami bayangkan sebelumnya." },
+  { initial: "D", name: "Ibu Dewi N.", role: "Orang Tua Santriwati \u00b7 Semarang", quote: "Awalnya putri kami tidak mau mondok. Tapi sekarang dia sendiri yang bilang tidak mau pindah dari pesantren ini. Itu bukti terbaik." },
+  { initial: "R", name: "Bapak Ridwan K.", role: "Orang Tua Santriwati \u00b7 Malang", quote: "Hafalannya sudah 12 juz dalam setahun. Saat liburan, dia yang ngimami sholat dan mengajar adik-adiknya mengaji. Luar biasa." },
+  { initial: "N", name: "Ibu Nur H.", role: "Orang Tua Santriwati \u00b7 Yogyakarta", quote: "Pembinaan akhlak di sini sangat terasa nyata. Cara bertutur kata putri kami berubah total menjadi lebih lembut, sopan, dan penuh adab." },
+  { initial: "F", name: "Bapak Fajar M.", role: "Orang Tua Santriwati \u00b7 Palembang", quote: "Saya awalnya takut fasilitas asrama putri kurang layak. Ternyata sangat bersih, aman, dan pengawasannya ketat. Alhamdulillah." },
+  { initial: "L", name: "Ibu Lestari W.", role: "Orang Tua Santriwati \u00b7 Depok", quote: "Bu ustadzahnya sangat sabar dan dekat dengan para santriwati. Saya yakin putri saya ada di tangan yang tepat dan penuh amanah." },
+];
 
 // â”€â”€â”€ Main Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function Home() {
@@ -391,7 +401,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* T — Tahfizh (large) */}
-            <div className="md:col-span-2 rounded-3xl p-8 bg-gradient-to-br from-[#9d174d] to-[#701a75] text-white relative overflow-hidden group hover:scale-[1.01] transition-transform">
+            <div className="md:col-span-2 rounded-3xl p-8 bg-gradient-to-br from-[#9d174d] to-[#701a75] text-white relative overflow-hidden group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
               <div className="absolute top-0 right-0 w-56 h-56 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/2 blur-2xl" />
               <FaQuran className="w-10 h-10 mb-6 opacity-90" />
               <h3 className="text-2xl font-black mb-3">T — Tahfizh Al-Qur'an</h3>
@@ -405,7 +415,7 @@ export default function Home() {
             </div>
 
             {/* I — Internasional (small) */}
-            <div className="rounded-3xl p-8 bg-slate-900 text-white border border-slate-700 group hover:scale-[1.01] transition-transform">
+            <div className="rounded-3xl p-8 bg-slate-900 text-white border border-slate-700 group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
               <Globe className="w-10 h-10 mb-6 text-amber-400" />
               <h3 className="text-xl font-black mb-3">I — Internasional</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-4">
@@ -416,7 +426,7 @@ export default function Home() {
             </div>
 
             {/* C — Karakter (small) */}
-            <div className="rounded-3xl p-8 bg-emerald-50 border border-emerald-100 group hover:scale-[1.01] transition-transform">
+            <div className="rounded-3xl p-8 bg-emerald-50 border border-emerald-100 group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
               <Heart className="w-10 h-10 mb-6 text-emerald-600" />
               <h3 className="text-xl font-black mb-3 text-slate-900">C — Karakter Rabbani</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
@@ -427,7 +437,7 @@ export default function Home() {
             </div>
 
             {/* E — Entrepreneurship (small) */}
-            <div className="rounded-3xl p-8 bg-amber-50 border border-amber-100 group hover:scale-[1.01] transition-transform">
+            <div className="rounded-3xl p-8 bg-amber-50 border border-amber-100 group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
               <Briefcase className="w-10 h-10 mb-6 text-amber-600" />
               <h3 className="text-xl font-black mb-3 text-slate-900">E — Entrepreneurship</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
@@ -438,7 +448,7 @@ export default function Home() {
             </div>
 
             {/* Trilingual (large) */}
-            <div className="rounded-3xl p-8 bg-slate-50 border border-slate-200 group hover:scale-[1.01] transition-transform">
+            <div className="rounded-3xl p-8 bg-slate-50 border border-slate-200 group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
               <Languages className="w-10 h-10 mb-6 text-slate-700" />
               <h3 className="text-xl font-black mb-3 text-slate-900">Trilingual Excellence</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
@@ -765,6 +775,51 @@ export default function Home() {
       </section>
 
       {/* â•â•â• Â§10 FINAL CTA â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
+
+      {/* §9.5 TESTIMONIAL — Suara Orang Tua */}
+      <section className="py-24 bg-[#0f172a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <header className="text-center mb-16">
+            <span className={`text-xs font-bold uppercase tracking-widest ${c.text400}`}>
+              Suara Orang Tua
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-black text-white mt-3 mb-4 text-balance px-4 sm:px-0">
+              Mereka Sudah{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fbbf24] to-[#d97706] pr-1">
+                Membuktikannya
+              </span>
+            </h2>
+            <p className="text-slate-400 max-w-xl mx-auto">
+              Dengarkan langsung dari para orang tua yang telah mempercayakan pendidikan putri mereka kepada Al-Andalus.
+            </p>
+          </header>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {TESTIMONIALS.map((t, idx) => (
+              <div key={idx}
+                className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:-translate-y-2 hover:shadow-2xl hover:bg-white/[0.08] transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-2xl flex items-center justify-center text-white font-black text-lg shrink-0"
+                    style={{ background: "linear-gradient(135deg, #9d174d, #701a75)" }}
+                  >
+                    {t.initial}
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-sm leading-tight">{t.name}</p>
+                    <p className="text-slate-400 text-xs mt-0.5">{t.role}</p>
+                  </div>
+                </div>
+                <div className="flex gap-0.5 mb-3">
+                  {[...Array(5)].map((_, j) => (
+                    <FaStar key={j} className="w-3.5 h-3.5 text-amber-400" />
+                  ))}
+                </div>
+                <p className="text-slate-300 text-sm leading-relaxed">&ldquo;{t.quote}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="py-24 bg-[#0f172a] relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full opacity-20 blur-[100px] ${IS_PUTRA ? "bg-primary-700" : "bg-pink-600"}`} />
