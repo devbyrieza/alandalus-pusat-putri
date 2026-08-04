@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -28,6 +28,25 @@ export default function AdminTambahPendaftar() {
     catatan_pindahan: "",
   });
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("andalus_putri_admin_tambah_pendaftar_draft");
+      if (saved) {
+        try {
+          setFormData((prev) => ({ ...prev, ...JSON.parse(saved) }));
+        } catch (e) {
+          console.error("Error parsing saved draft:", e);
+        }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("andalus_putri_admin_tambah_pendaftar_draft", JSON.stringify(formData));
+    }
+  }, [formData]);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -53,6 +72,10 @@ export default function AdminTambahPendaftar() {
 
       if (!res.ok) {
         throw new Error(data.error || "Terjadi kesalahan");
+      }
+
+      if (typeof window !== "undefined") {
+        localStorage.removeItem("andalus_putri_admin_tambah_pendaftar_draft");
       }
 
       Swal.fire({

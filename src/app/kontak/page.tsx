@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -123,6 +123,25 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("andalus_putri_kontak_draft");
+      if (saved) {
+        try {
+          setFormData((prev) => ({ ...prev, ...JSON.parse(saved) }));
+        } catch (e) {
+          console.error("Error parsing saved contact draft", e);
+        }
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("andalus_putri_kontak_draft", JSON.stringify(formData));
+    }
+  }, [formData]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -137,6 +156,9 @@ export default function ContactPage() {
     // Simulate API call
     setTimeout(() => {
       setShowSuccess(true);
+      if (typeof window !== "undefined") {
+        localStorage.removeItem("andalus_putri_kontak_draft");
+      }
       setFormData({ nama: "", email: "", telepon: "", pesan: "" });
       setIsSubmitting(false);
       setTimeout(() => setShowSuccess(false), 5000);

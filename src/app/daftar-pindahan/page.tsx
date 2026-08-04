@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
@@ -108,7 +108,7 @@ export default function DaftarPindahanPage() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const savedData = sessionStorage.getItem("pendaftaran_pindahan_form");
+      const savedData = localStorage.getItem("andalus_putri_daftar_pindahan_draft");
       if (savedData) {
         try {
           const parsed = JSON.parse(savedData);
@@ -133,7 +133,7 @@ export default function DaftarPindahanPage() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const timeoutId = setTimeout(() => {
-        sessionStorage.setItem("pendaftaran_pindahan_form", JSON.stringify(formData));
+        localStorage.setItem("andalus_putri_daftar_pindahan_draft", JSON.stringify(formData));
       }, 500);
       return () => clearTimeout(timeoutId);
     }
@@ -357,7 +357,7 @@ export default function DaftarPindahanPage() {
                         });
 
                         if (result.isConfirmed) {
-                          sessionStorage.removeItem("pendaftaran_pindahan_form");
+                          localStorage.removeItem("andalus_putri_daftar_pindahan_draft");
                           setFormData({
                             nik: "",
                             nama_lengkap: "",
