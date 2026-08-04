@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect, useMemo } from "react";
 import {
@@ -817,7 +817,7 @@ export default function JadwalPengujiPage() {
         const start = new Date(slot.start_time);
         const end = new Date(slot.end_time);
         const hhmm = `${String(start.getHours()).padStart(2, "0")}:${String(start.getMinutes()).padStart(2, "0")}`;
-        const label = `${String(start.getHours()).padStart(2, "0")}.${String(start.getMinutes()).padStart(2, "0")} – ${String(end.getHours()).padStart(2, "0")}.${String(end.getMinutes()).padStart(2, "0")}`;
+        const label = `${String(start.getHours()).padStart(2, "0")}.${String(start.getMinutes()).padStart(2, "0")} � ${String(end.getHours()).padStart(2, "0")}.${String(end.getMinutes()).padStart(2, "0")}`;
         if (!map.has(hhmm)) map.set(hhmm, { hhmm, label, count: 0 });
         map.get(hhmm)!.count++;
         return map;
@@ -1278,7 +1278,7 @@ export default function JadwalPengujiPage() {
                             </span>
                           </div>
                           <h3 className="text-lg md:text-2xl font-black text-primary-950 font-display leading-tight mb-2">
-                            {item.pendaftar.nama_lengkap}
+                            {item?.pendaftar?.nama_lengkap}
                           </h3>
                           <div className="flex items-center gap-2 text-xs text-ink-500 font-bold">
                             <div className="w-2 h-2 rounded-full bg-primary-600 animate-pulse" />
@@ -1358,7 +1358,7 @@ export default function JadwalPengujiPage() {
                                   onClick={() => handleCompleteExam(item.id)}
                                   className="w-full py-4 bg-primary-600 hover:bg-primary-700 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-2xl transition-all active:scale-95 shadow-lg shadow-primary-600/20"
                                 >
-                                  ✓ Tandai Wawancara Calon Santri Selesai
+                                  ? Tandai Wawancara Calon Santri Selesai
                                 </button>
                               ))}
                             {userId &&
@@ -1373,7 +1373,7 @@ export default function JadwalPengujiPage() {
                                   onClick={() => handleCompleteExam(item.id)}
                                   className="w-full py-4 bg-primary-600 hover:bg-primary-700 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-2xl transition-all active:scale-95 shadow-lg shadow-primary-600/20"
                                 >
-                                  ✓ Tandai Seleksi Al Qur'an Selesai
+                                  ? Tandai Seleksi Al Qur'an Selesai
                                 </button>
                               ))}
                             {userId &&
@@ -1388,7 +1388,7 @@ export default function JadwalPengujiPage() {
                                   onClick={() => handleCompleteExam(item.id)}
                                   className="w-full py-4 bg-primary-600 hover:bg-primary-700 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-2xl transition-all active:scale-95 shadow-lg shadow-primary-600/20"
                                 >
-                                  ✓ Tandai Seleksi Wawancara Orang Tua Selesai
+                                  ? Tandai Seleksi Wawancara Orang Tua Selesai
                                 </button>
                               ))}
                             {/* Bottom row: Lihat Data + Batalkan */}
@@ -1406,7 +1406,7 @@ export default function JadwalPengujiPage() {
                                 onClick={() =>
                                   handleCancelAssignment(
                                     item.id,
-                                    item.pendaftar.nama_lengkap,
+                                    item?.pendaftar?.nama_lengkap,
                                   )
                                 }
                                 className="px-4 py-4 border border-red-100 text-red-500 hover:bg-red-50 rounded-2xl transition-all flex items-center justify-center active:scale-95 shadow-sm"
@@ -1648,7 +1648,7 @@ export default function JadwalPengujiPage() {
                       <Clock className="w-4 h-4 text-primary-600 shrink-0" />
                       {formatTime(slot.start_time)}
                       {slot.end_time
-                        ? ` – ${formatTime(slot.end_time)}`
+                        ? ` � ${formatTime(slot.end_time)}`
                         : ""}{" "}
                       WIB
                     </div>
@@ -1725,7 +1725,7 @@ export default function JadwalPengujiPage() {
                   Edit Massal
                 </h3>
                 <p className="text-[10px] text-ink-300 font-bold uppercase tracking-widest mt-1.5">
-                  {selectedSlotIds.size} sesi dipilih — centang yang ingin
+                  {selectedSlotIds.size} sesi dipilih � centang yang ingin
                   diubah
                 </p>
               </div>
@@ -2130,7 +2130,7 @@ export default function JadwalPengujiPage() {
                   </label>
                   <div className="w-full px-4 py-3 bg-primary-50/50 border border-primary-100 rounded-xl text-primary-900 font-black flex items-center gap-2 shadow-inner">
                     <div className="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></div>
-                    {slotForm.title || "—"}
+                    {slotForm.title || "�"}
                   </div>
                   <p className="text-[10px] text-ink-300 italic mt-2">
                     *Jenis ujian otomatis sesuai role akun Anda.
@@ -2191,7 +2191,7 @@ export default function JadwalPengujiPage() {
                 </div>
               </div>
               <p className="text-[10px] text-ink-300 italic -mt-4">
-                ⏱ Durasi sesi: {getDurationFromTitle(slotForm.title)} menit.
+                ? Durasi sesi: {getDurationFromTitle(slotForm.title)} menit.
               </p>
 
               {/* Alerts */}
@@ -2199,7 +2199,7 @@ export default function JadwalPengujiPage() {
                 <div className="bg-primary-600 rounded-2xl p-4 shadow-lg shadow-primary-950/20 text-white flex items-start gap-3 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10 blur-xl"></div>
                   <div className="w-8 h-8 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center shrink-0">
-                    <span className="text-sm">✨</span>
+                    <span className="text-sm">?</span>
                   </div>
                   <div>
                     <p className="text-[10px] text-primary-100 font-black uppercase tracking-widest mb-0.5">
@@ -2491,7 +2491,7 @@ export default function JadwalPengujiPage() {
                     <Trophy className="w-5 h-5 text-gold-300" />
                   </div>
                   <p className="text-2xl font-black tracking-tight text-white">
-                    {bulkForm.title || "—"}
+                    {bulkForm.title || "�"}
                   </p>
                 </div>
               </div>
