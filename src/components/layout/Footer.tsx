@@ -7,9 +7,9 @@ import { HiAcademicCap } from "react-icons/hi2";
 import { PiHandHeartBold } from "react-icons/pi";
 
 export default function Footer() {
-  const primaryColor  = IS_PUTRA ? "text-primary-400"  : "text-primary-400";
-  const primaryBg     = IS_PUTRA ? "bg-primary-600"     : "bg-primary-600";
-  const primaryBgHov  = IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-primary-700";
+  const primaryColor  = IS_PUTRA ? "text-primary-400"  : "text-sky-400";
+  const primaryBg     = IS_PUTRA ? "bg-primary-600"     : "bg-sky-600";
+  const primaryBgHov  = IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-sky-700";
 
   return (
     <footer className="bg-slate-950 border-t border-slate-800 text-slate-400">
@@ -135,7 +135,7 @@ export default function Footer() {
       <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-600 text-xs">
-            Â© {new Date().getFullYear()} {BRANDING.schoolName}. All rights reserved.
+            © {new Date().getFullYear()} {BRANDING.schoolName}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link href="/ppdb"  className="text-xs text-slate-600 hover:text-slate-400 transition-colors">Info PPDB</Link>
@@ -150,4 +150,3 @@ export default function Footer() {
     </footer>
   );
 }
-

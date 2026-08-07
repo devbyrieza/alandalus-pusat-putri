@@ -1,8 +1,8 @@
 // app/send-otp/page.tsx
 "use client";
 
-import { useState, useEffect } from "react";
-import { Send, Mail, MessageSquare, Smartphone, ArrowLeft } from "lucide-react";
+import { useState } from "react";
+import { Send, Mail, MessageSquare, Smartphone, ArrowLeft, Check } from "lucide-react";
 import BackToHomeButton from "@/components/common/BackToHomeButton";
 
 interface ApiResponse {
@@ -22,37 +22,6 @@ export default function SendOtpPage() {
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-
-  // Autosave draft to localStorage
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      try {
-        const saved = localStorage.getItem("alandalus_alimam_send_otp_draft");
-        if (saved) {
-          const parsed = JSON.parse(saved);
-          if (parsed.selectedChannel) setSelectedChannel(parsed.selectedChannel);
-          if (parsed.email) setEmail(parsed.email);
-          if (parsed.telegram) setTelegram(parsed.telegram);
-          if (parsed.phone) setPhone(parsed.phone);
-        }
-      } catch (e) {
-        console.warn("Failed to load send-otp draft:", e);
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      try {
-        localStorage.setItem(
-          "alandalus_alimam_send_otp_draft",
-          JSON.stringify({ selectedChannel, email, telegram, phone })
-        );
-      } catch (e) {
-        console.warn("Failed to save send-otp draft:", e);
-      }
-    }
-  }, [selectedChannel, email, telegram, phone]);
 
   const handleSendOtp = async () => {
     // Reset messages
@@ -275,8 +244,9 @@ export default function SendOtpPage() {
                   </p>
                   {selectedChannel === "email" && (
                     <div className="mt-2 p-2 bg-gold-100 border border-gold-200 rounded-lg">
-                      <p className="text-[11px] text-primary-800 font-bold">
-                        ✓ Akan dikirim ke: {email}
+                      <p className="text-[11px] text-primary-800 font-bold flex items-center gap-1">
+                        <Check className="w-3 h-3 text-primary-700" />
+                        <span>Akan dikirim ke: {email}</span>
                       </p>
                     </div>
                   )}
@@ -392,7 +362,7 @@ export default function SendOtpPage() {
             <div className="mb-4 p-4 bg-primary-50 border border-primary-200 text-primary-800 rounded-[1rem] shadow-sm">
               <div className="flex items-center">
                 <div className="w-5 h-5 rounded-full bg-primary-500 flex items-center justify-center mr-2">
-                  <span className="text-white text-xs">✓</span>
+                  <Check className="w-3 h-3 text-white" />
                 </div>
                 <span className="font-bold text-sm">{successMessage}</span>
               </div>

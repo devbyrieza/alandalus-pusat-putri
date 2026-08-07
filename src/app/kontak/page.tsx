@@ -21,6 +21,7 @@ import {
   Award,
   ShieldCheck,
   GraduationCap,
+  Sparkles,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -123,25 +124,6 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem("andalus_putri_kontak_draft");
-      if (saved) {
-        try {
-          setFormData((prev) => ({ ...prev, ...JSON.parse(saved) }));
-        } catch (e) {
-          console.error("Error parsing saved contact draft", e);
-        }
-      }
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("andalus_putri_kontak_draft", JSON.stringify(formData));
-    }
-  }, [formData]);
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -156,9 +138,6 @@ export default function ContactPage() {
     // Simulate API call
     setTimeout(() => {
       setShowSuccess(true);
-      if (typeof window !== "undefined") {
-        localStorage.removeItem("andalus_putri_kontak_draft");
-      }
       setFormData({ nama: "", email: "", telepon: "", pesan: "" });
       setIsSubmitting(false);
       setTimeout(() => setShowSuccess(false), 5000);
@@ -470,9 +449,9 @@ export default function ContactPage() {
               </div>
 
               {/* Trust microcopy */}
-              <p className="mt-6 text-[11px] text-primary-300 font-bold uppercase tracking-widest">
-                ✦ Pendaftaran Gratis&nbsp;&nbsp;•&nbsp;&nbsp;Proses
-                Mudah&nbsp;&nbsp;•&nbsp;&nbsp;Langsung Konfirmasi
+              <p className="mt-6 text-[11px] text-primary-300 font-bold uppercase tracking-widest flex items-center justify-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-gold-300" />
+                <span>Pendaftaran Gratis&nbsp;&nbsp;•&nbsp;&nbsp;Proses Mudah&nbsp;&nbsp;•&nbsp;&nbsp;Langsung Konfirmasi</span>
               </p>
 
               {/* Legalitas badges */}
