@@ -32,67 +32,67 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "1",
-    src: "/images/galeri/gedung-baru-putra.jpg",
-    title: "Gedung Baru Pesantren (Diresmikan 2024)",
+    src: "/images/galeri/masjid-putri-1.jpg",
+    title: "Masjid Jami' Al-Andalus Putri",
     category: "gedung",
     categoryLabel: "Gedung & Kampus",
-    description: "Bangunan 3 lantai dengan fasilitas modern untuk kegiatan santri.",
+    description: "Pusat kegiatan ibadah, kajian, dan tarbiyah santriwati.",
   },
   {
     id: "2",
-    src: "/images/masjid.webp",
-    title: "Masjid Jami' Al-Andalus",
-    category: "gedung",
-    categoryLabel: "Gedung & Kampus",
-    description: "Pusat peribadahan dan kajian Al-Qur'an santri.",
+    src: "/images/galeri/asrama-putri-1.jpg",
+    title: "Gedung Asrama Santriwati",
+    category: "asrama",
+    categoryLabel: "Asrama & Kamar",
+    description: "Gedung asrama bertingkat dengan lingkungan yang aman dan asri.",
   },
   {
     id: "3",
-    src: "/images/galeri/kamar-santri-1.jpg",
-    title: "Kamar Asrama & Ranjang Susun",
+    src: "/images/galeri/asrama-putri-2.jpg",
+    title: "Area Halaman & Kompleks Asrama",
     category: "asrama",
     categoryLabel: "Asrama & Kamar",
-    description: "Kamar asrama bersih dan nyaman untuk 10-20 santri per kamar.",
+    description: "Halaman asrama yang luas untuk kegiatan rutin dan ukhuwah santriwati.",
   },
   {
     id: "4",
-    src: "/images/galeri/kamar-santri-2.jpg",
-    title: "Kamar Santri & Lemari Pribadi",
-    category: "asrama",
-    categoryLabel: "Asrama & Kamar",
-    description: "Lemari pribadi kunci masing-masing santri untuk menjaga kerapihan.",
+    src: "/images/galeri/kelas-putri-1.jpg",
+    title: "Gedung Pembelajaran & Ruang Kelas",
+    category: "belajar",
+    categoryLabel: "Ruang Belajar",
+    description: "Fasilitas kelas modern ber-AC pendukung Kurikulum TICE.",
   },
   {
     id: "5",
-    src: "/images/galeri/ruang-kelas.jpg",
-    title: "Ruang Kelas Pembelajaran Modern",
+    src: "/images/galeri/kelas-putri-2.jpg",
+    title: "Ruang Kelas & Halaqah Al-Qur'an",
     category: "belajar",
     categoryLabel: "Ruang Belajar",
-    description: "Kelas individual teratur dengan pencahayaan dan ventilasi maksimal.",
+    description: "Ruang bimbingan tahfidz intensif dan kajian syar'i santriwati.",
   },
   {
     id: "6",
-    src: "/images/galeri/lab-komputer.jpg",
-    title: "Laboratorium Komputer Ber-AC",
-    category: "belajar",
-    categoryLabel: "Ruang Belajar",
-    description: "Lab IT dengan perangkat komputer modern pendukung sains & IT.",
+    src: "/images/galeri/kamar-santri-1.jpg",
+    title: "Kamar Santriwati & Ranjang Susun",
+    category: "asrama",
+    categoryLabel: "Asrama & Kamar",
+    description: "Kamar bersih dan tertata rapi untuk kenyamanan istirahat santriwati.",
   },
   {
     id: "7",
-    src: "/images/galeri/lapangan-basket.jpg",
-    title: "Lapangan Basket Outdoor",
-    category: "olahraga",
-    categoryLabel: "Sarana Olahraga",
-    description: "Fasilitas olahraga outdoor standar untuk kesehatan fisik santri.",
+    src: "/images/galeri/lab-komputer.jpg",
+    title: "Laboratorium Komputer",
+    category: "belajar",
+    categoryLabel: "Ruang Belajar",
+    description: "Fasilitas IT terpadu untuk pembelajaran akademik dan riset.",
   },
   {
     id: "8",
-    src: "/images/galeri/lapangan-futsal.jpg",
-    title: "Lapangan Futsal & Badminton",
+    src: "/images/galeri/lapangan-basket.jpg",
+    title: "Sarana Olahraga Terbuka",
     category: "olahraga",
     categoryLabel: "Sarana Olahraga",
-    description: "Sarana olahraga serbaguna pendukung ekstrakurikuler santri.",
+    description: "Lapangan olahraga indoor/outdoor khusus area santriwati.",
   },
   {
     id: "9",
@@ -100,31 +100,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     title: "Ruang Restorasi (Makan Bersama)",
     category: "restorasi",
     categoryLabel: "Restorasi & Layanan",
-    description: "Ruang makan luas dengan meja panjang untuk makan sehat teratur.",
-  },
-  {
-    id: "10",
-    src: "/images/gedung-utama.webp",
-    title: "Gedung Utama Pesantren",
-    category: "gedung",
-    categoryLabel: "Gedung & Kampus",
-    description: "Gedung administrasi dan pusat pelayanan santri dan wali murid.",
-  },
-  {
-    id: "11",
-    src: "/images/asrama.webp",
-    title: "Kompleks Asrama Santri",
-    category: "asrama",
-    categoryLabel: "Asrama & Kamar",
-    description: "Lingkungan asrama asri yang mendukung ukhuwah islamiyah.",
-  },
-  {
-    id: "12",
-    src: "/images/tahfidz.webp",
-    title: "Halaqah Tahfidz Al-Qur'an",
-    category: "belajar",
-    categoryLabel: "Ruang Belajar",
-    description: "Kegiatan setoran hafalan rutin di bawah bimbingan asatidz berpengalaman.",
+    description: "Ruang makan higienis dengan sajian menu gizi seimbang harian.",
   },
 ];
 
@@ -154,10 +130,10 @@ export default function GaleriPage() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-sm font-semibold tracking-wide"
           >
             <Sparkles className="w-4 h-4" />
-            <span>DOKUMENTASI KOLEKSI FOTO</span>
+            <span>DOKUMENTASI FOTO AL-ANDALUS PUTRI</span>
           </motion.div>
 
           <motion.h1
@@ -166,9 +142,9 @@ export default function GaleriPage() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-extrabold tracking-tight text-white"
           >
-            Galeri Fasilitas & Kegiatan <br />
-            <span className="bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text text-transparent">
-              {BRANDING.schoolShortName}
+            Galeri Kampus & Fasilitas <br />
+            <span className="bg-gradient-to-r from-rose-400 to-pink-300 bg-clip-text text-transparent">
+              {BRANDING.schoolName}
             </span>
           </motion.h1>
 
@@ -178,7 +154,7 @@ export default function GaleriPage() {
             transition={{ delay: 0.2 }}
             className="text-slate-300 text-lg"
           >
-            Lihat langsung suasana sarana prasarana, ruang belajar, asrama, dan lingkungan indah di {BRANDING.schoolName}.
+            Dokumentasi resmi lingkungan asrama, ruang kelas, masjid, dan sarana prasarana khusus santriwati.
           </motion.p>
         </div>
 
@@ -193,7 +169,7 @@ export default function GaleriPage() {
                 onClick={() => setActiveCategory(cat.key)}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition-all duration-300 border ${
                   isActive
-                    ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-lg shadow-emerald-500/25 scale-105"
+                    ? "bg-rose-500 text-white border-rose-400 shadow-lg shadow-rose-500/25 scale-105"
                     : "bg-slate-900/80 text-slate-300 border-slate-800 hover:border-slate-700 hover:bg-slate-800"
                 }`}
               >
@@ -219,7 +195,7 @@ export default function GaleriPage() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setSelectedImage(item)}
-                className="group relative cursor-pointer rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-emerald-500/50 shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative cursor-pointer rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-rose-500/50 shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
                   <Image
@@ -231,7 +207,7 @@ export default function GaleriPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-800 text-xs font-semibold text-emerald-400">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-800 text-xs font-semibold text-rose-400">
                     {item.categoryLabel}
                   </div>
 
@@ -241,7 +217,7 @@ export default function GaleriPage() {
                 </div>
 
                 <div className="p-5 space-y-1">
-                  <h3 className="font-bold text-lg text-white group-hover:text-emerald-400 transition-colors">
+                  <h3 className="font-bold text-lg text-white group-hover:text-rose-400 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-slate-400 text-sm line-clamp-2">
@@ -254,17 +230,17 @@ export default function GaleriPage() {
         </motion.div>
 
         {/* CTA BOTTOM SECTION */}
-        <div className="mt-20 p-8 rounded-3xl bg-gradient-to-r from-emerald-950/60 via-slate-900 to-teal-950/60 border border-emerald-500/30 text-center space-y-6">
+        <div className="mt-20 p-8 rounded-3xl bg-gradient-to-r from-rose-950/60 via-slate-900 to-pink-950/60 border border-rose-500/30 text-center space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white">
-            Ingin Melihat Langsung Lingkungan Pesantren Kami?
+            Ingin Kunjungan Langsung ke Kampus Putri?
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto">
-            Daftar PPDB Online sekarang atau hubungi tim administrasi kami untuk mengonfirmasi jadwal kunjungan ke kampus.
+            Daftar PPDB Online sekarang atau hubungi tim administrasi kami untuk mengonfirmasi jadwal kunjungan santriwati.
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link
               href="/daftar"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold shadow-lg shadow-emerald-500/25 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-rose-500 hover:bg-rose-400 text-white font-bold shadow-lg shadow-rose-500/25 transition-all"
             >
               <span>Daftar PPDB Sekarang</span>
               <ArrowRight className="w-4 h-4" />
@@ -298,7 +274,7 @@ export default function GaleriPage() {
             >
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-10 p-3 rounded-full bg-slate-950/80 hover:bg-emerald-500 text-white hover:text-slate-950 transition-colors"
+                className="absolute top-4 right-4 z-10 p-3 rounded-full bg-slate-950/80 hover:bg-rose-500 text-white hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -314,7 +290,7 @@ export default function GaleriPage() {
               </div>
 
               <div className="p-6 bg-slate-900 border-t border-slate-800 space-y-2">
-                <div className="inline-block px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold">
+                <div className="inline-block px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-semibold">
                   {selectedImage.categoryLabel}
                 </div>
                 <h3 className="text-2xl font-bold text-white">
