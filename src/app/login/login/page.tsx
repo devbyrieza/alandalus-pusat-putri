@@ -325,8 +325,8 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen bg-primary-950 bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 flex items-center justify-center p-6 relative overflow-hidden">
       {/* Background Decor - Deep Blue & Gold Glows */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary-500/20 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-full max-w-[600px] h-[600px] bg-secondary-500/20 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full max-w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3 pointer-events-none" />
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10 mix-blend-overlay pointer-events-none" />
 
       <Container className="relative z-10 flex flex-col items-center">
@@ -345,7 +345,7 @@ export default function LoginPage() {
               />
             </div>
           </Link>
-          <h1 className="text-3xl md:text-5xl font-display font-black text-white mb-2 tracking-tight drop-shadow-md">
+          <h1 className="text-3xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-black text-white mb-2 tracking-tight drop-shadow-md">
             Portal{" "}
             <span className="text-secondary-400 font-black drop-shadow-md">
               {BRANDING.schoolShortName}

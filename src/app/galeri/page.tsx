@@ -140,7 +140,7 @@ export default function GaleriPage() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold tracking-tight text-white"
+            className="text-4xl md:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
           >
             Galeri Pesantren & Fasilitas <br />
             <span className="bg-gradient-to-r from-rose-400 to-pink-300 bg-clip-text text-transparent">

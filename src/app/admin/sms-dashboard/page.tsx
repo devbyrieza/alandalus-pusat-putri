@@ -121,7 +121,7 @@ export default function AdminSMSDashboard() {
               <ClipboardList className="w-5 h-5 text-rose-600" />
               Instruksi Pengiriman:
             </h3>
-            <ol className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium text-rose-800">
+            <ol className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-medium text-rose-800">
               <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-rose-100/50">
                 <span className="w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
                 <span>Salin nomor HP dan kode OTP dari daftar di bawah</span>
