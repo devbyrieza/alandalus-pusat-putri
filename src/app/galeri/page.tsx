@@ -142,7 +142,7 @@ export default function GaleriPage() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-extrabold tracking-tight text-white"
           >
-            Galeri Kampus & Fasilitas <br />
+            Galeri Pesantren & Fasilitas <br />
             <span className="bg-gradient-to-r from-rose-400 to-pink-300 bg-clip-text text-transparent">
               {BRANDING.schoolName}
             </span>
@@ -232,7 +232,7 @@ export default function GaleriPage() {
         {/* CTA BOTTOM SECTION */}
         <div className="mt-20 p-8 rounded-3xl bg-gradient-to-r from-rose-950/60 via-slate-900 to-pink-950/60 border border-rose-500/30 text-center space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white">
-            Ingin Kunjungan Langsung ke Kampus Putri?
+            Ingin Kunjungan Langsung ke Pesantren Putri?
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto">
             Daftar PPDB Online sekarang atau hubungi tim administrasi kami untuk mengonfirmasi jadwal kunjungan santriwati.
