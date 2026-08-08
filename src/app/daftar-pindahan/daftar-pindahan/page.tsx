@@ -194,7 +194,7 @@ export default function DaftarPindahanPage() {
         "Mohon maaf, pendaftaran Santri Putri dilakukan melalui Pesantren Ulul Albaab.";
     } else if (formData.jenis_kelamin === "L") {
       errors.jenis_kelamin =
-        "Mohon maaf, pendaftaran Santri Pindahan Al-Imam Belum Dibuka.";
+        "Mohon maaf, pendaftaran Santri Pindahan Al-Andalus Putri Belum Dibuka.";
     }
 
     if (!formData.jenjang) {
