@@ -222,7 +222,7 @@ export default function PengaturanPage() {
                 Tahun Ajaran Aktif
               </h4>
               {activeTahunAjaran ? (
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-200 rounded-xl p-4 flex items-center justify-between">
+                <div className="bg-gradient-to-r from-green-50 to-rose-50 border-2 border-green-200 rounded-xl p-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <Star className="w-6 h-6 text-green-600 fill-green-600" />
                     <div>

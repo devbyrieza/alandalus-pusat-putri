@@ -54,7 +54,7 @@ const ROLE_INFO: Record<
     label: "Admin Keuangan",
     icon: Coins,
     desc: "Verifikasi pembayaran",
-    color: "from-emerald-50 to-primary-50 border-emerald-200",
+    color: "from-rose-50 to-primary-50 border-emerald-200",
   },
   pewawancara_cawalsan: {
     label: "Pewawancara Cawalsan",
@@ -78,7 +78,7 @@ const ROLE_INFO: Record<
     label: "Penguji Hafalan",
     icon: BookOpen,
     desc: "Penguji tes Hafalan Al-Qur'an",
-    color: "from-teal-50 to-emerald-50 border-teal-200",
+    color: "from-teal-50 to-rose-50 border-teal-200",
   },
   penguji_bahasa_arab: {
     label: "Penguji Lisan B. Arab",
@@ -326,7 +326,7 @@ export default function LoginPage() {
     <main className="min-h-screen bg-[#db2777] bg-gradient-to-br from-[#9d174d] via-[#db2777] to-[#be185d] flex items-center justify-center p-6 relative overflow-hidden">
       {/* Background Decor - Pink & Rose Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-rose-400/20 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-300/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-rose-300/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3 pointer-events-none" />
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10 mix-blend-overlay pointer-events-none" />
 
       <Container className="relative z-10 flex flex-col items-center">

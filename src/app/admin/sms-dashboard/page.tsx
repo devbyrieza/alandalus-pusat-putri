@@ -71,7 +71,7 @@ export default function AdminSMSDashboard() {
     return (
       <div className="min-h-screen bg-slate-50/50 flex items-center justify-center p-6 md:p-10">
         <div className="text-center p-8 bg-white rounded-3xl shadow-xl border border-slate-100 max-w-sm w-full">
-          <RefreshCw className="w-10 h-10 animate-spin mx-auto text-emerald-600 mb-4" />
+          <RefreshCw className="w-10 h-10 animate-spin mx-auto text-rose-600 mb-4" />
           <p className="text-slate-700 font-bold text-base">Memuat data SMS...</p>
         </div>
       </div>
@@ -84,12 +84,12 @@ export default function AdminSMSDashboard() {
         {/* Main Card */}
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-6 md:p-10 border border-slate-100 relative overflow-hidden">
           {/* Decorative Top Bar */}
-          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-emerald-500 via-teal-500 to-amber-500" />
+          <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-rose-500 via-teal-500 to-amber-500" />
 
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 border border-emerald-100 flex items-center justify-center shadow-xs">
+              <div className="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 border border-rose-100 flex items-center justify-center shadow-xs">
                 <Smartphone className="w-7 h-7" />
               </div>
               <div>
@@ -108,7 +108,7 @@ export default function AdminSMSDashboard() {
 
             <button
               onClick={fetchPendingSMS}
-              className="inline-flex items-center gap-2 px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg shadow-emerald-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-5 py-3 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-2xl shadow-lg shadow-rose-600/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               <RefreshCw className="w-4 h-4" />
               Refresh Data
@@ -116,26 +116,26 @@ export default function AdminSMSDashboard() {
           </div>
 
           {/* Instructions Banner */}
-          <div className="bg-emerald-50/60 border border-emerald-100 rounded-3xl p-6 mb-8">
-            <h3 className="font-black text-emerald-900 text-base mb-3 flex items-center gap-2">
-              <ClipboardList className="w-5 h-5 text-emerald-600" />
+          <div className="bg-rose-50/60 border border-rose-100 rounded-3xl p-6 mb-8">
+            <h3 className="font-black text-rose-900 text-base mb-3 flex items-center gap-2">
+              <ClipboardList className="w-5 h-5 text-rose-600" />
               Instruksi Pengiriman:
             </h3>
-            <ol className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium text-emerald-800">
-              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-emerald-100/50">
-                <span className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
+            <ol className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm font-medium text-rose-800">
+              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-rose-100/50">
+                <span className="w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center shrink-0">1</span>
                 <span>Salin nomor HP dan kode OTP dari daftar di bawah</span>
               </li>
-              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-emerald-100/50">
-                <span className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0">2</span>
+              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-rose-100/50">
+                <span className="w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center shrink-0">2</span>
                 <span>Kirim SMS dari HP Admin ke nomor tujuan</span>
               </li>
-              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-emerald-100/50">
-                <span className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0">3</span>
+              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-rose-100/50">
+                <span className="w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center shrink-0">3</span>
                 <span>Format: "PPDB AL-IMAM: Kode OTP: [OTP] untuk [NAMA]"</span>
               </li>
-              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-emerald-100/50">
-                <span className="w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center shrink-0">4</span>
+              <li className="flex items-start gap-2.5 bg-white/80 p-3 rounded-2xl border border-rose-100/50">
+                <span className="w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center shrink-0">4</span>
                 <span>Klik tombol "Sudah Dikirim" untuk memperbarui status</span>
               </li>
             </ol>
@@ -144,7 +144,7 @@ export default function AdminSMSDashboard() {
           {/* Section Header */}
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg font-black text-slate-900 flex items-center gap-2">
-              <MessageCircle className="w-5 h-5 text-emerald-600" />
+              <MessageCircle className="w-5 h-5 text-rose-600" />
               Daftar SMS Antrean ({pendingSMS.length})
             </h2>
           </div>
@@ -152,7 +152,7 @@ export default function AdminSMSDashboard() {
           {/* SMS List */}
           {pendingSMS.length === 0 ? (
             <div className="text-center py-16 px-4 bg-slate-50/50 rounded-3xl border border-dashed border-slate-200">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 border border-emerald-200">
+              <div className="w-16 h-16 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mx-auto mb-4 border border-emerald-200">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
               <h4 className="text-lg font-black text-slate-900 mb-1">
@@ -171,7 +171,7 @@ export default function AdminSMSDashboard() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="flex items-center gap-3.5 bg-white p-4 rounded-2xl border border-slate-100 shadow-xs">
-                      <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
+                      <div className="p-3 bg-rose-50 text-rose-600 rounded-xl">
                         <Smartphone className="w-5 h-5" />
                       </div>
                       <div>
@@ -205,7 +205,7 @@ export default function AdminSMSDashboard() {
 
                   <div className="bg-slate-900 text-slate-100 rounded-2xl p-5 shadow-inner">
                     <p className="text-xs text-slate-400 font-bold uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                      <MessageSquare className="w-3.5 h-3.5 text-emerald-400" /> Pratinjau Pesan:
+                      <MessageSquare className="w-3.5 h-3.5 text-rose-400" /> Pratinjau Pesan:
                     </p>
                     <pre className="font-mono text-sm leading-relaxed whitespace-pre-wrap">
                       {`PPDB AL-IMAM
@@ -220,7 +220,7 @@ Hubungi 0851-1152-4441 jika ada masalah.`}
                   <div className="flex flex-col sm:flex-row gap-3 pt-2">
                     <button
                       onClick={() => markAsSent(item.id)}
-                      className="flex-1 py-3.5 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2"
+                      className="flex-1 py-3.5 px-6 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-2xl shadow-md shadow-rose-600/20 transition-all flex items-center justify-center gap-2"
                     >
                       <CheckCircle2 className="w-5 h-5" />
                       Tandai Sudah Dikirim
@@ -243,13 +243,13 @@ Hubungi 0851-1152-4441 jika ada masalah.`}
         {/* System Status Section */}
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-6 md:p-8 border border-slate-100">
           <h3 className="font-black text-slate-900 text-lg mb-6 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5 text-emerald-600" /> Status Layanan & Integrasi
+            <BarChart3 className="w-5 h-5 text-rose-600" /> Status Layanan & Integrasi
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-emerald-50/50 border border-emerald-100 p-5 rounded-2xl">
-              <p className="text-xs text-emerald-700 font-bold uppercase tracking-wider mb-1">SMS Service</p>
-              <p className="text-xl font-black text-emerald-950 flex items-center gap-1.5">
-                <Sparkles className="w-4 h-4 text-emerald-600" /> Simulation
+            <div className="bg-rose-50/50 border border-rose-100 p-5 rounded-2xl">
+              <p className="text-xs text-rose-700 font-bold uppercase tracking-wider mb-1">SMS Service</p>
+              <p className="text-xl font-black text-rose-950 flex items-center gap-1.5">
+                <Sparkles className="w-4 h-4 text-rose-600" /> Simulation
               </p>
             </div>
             <div className="bg-teal-50/50 border border-teal-100 p-5 rounded-2xl">

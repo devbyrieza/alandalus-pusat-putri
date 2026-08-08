@@ -688,7 +688,7 @@ export default function ExaminerDashboard() {
               <div className="flex flex-wrap gap-2 w-full lg:w-auto">
                 <Button
                   onClick={handleExportExcel}
-                  className="btn-secondary flex items-center gap-2 bg-emerald-50 text-emerald-700 border-emerald-100 hover:bg-emerald-100 rounded-xl font-bold py-2"
+                  className="btn-secondary flex items-center gap-2 bg-rose-50 text-rose-700 border-rose-100 hover:bg-rose-100 rounded-xl font-bold py-2"
                 >
                   <Download className="w-4 h-4" /> Export Excel
                 </Button>
@@ -1499,18 +1499,18 @@ export default function ExaminerDashboard() {
                   </Button>
                 </div>
 
-                <div className="p-6 bg-emerald-50/30 rounded-3xl border border-emerald-100/50 hover:bg-emerald-50 transition-colors">
-                  <h4 className="font-black text-emerald-900 mb-2">
+                <div className="p-6 bg-rose-50/30 rounded-3xl border border-rose-100/50 hover:bg-rose-50 transition-colors">
+                  <h4 className="font-black text-rose-900 mb-2">
                     Kirim Paksa Antrean (Flush)
                   </h4>
-                  <p className="text-xs text-emerald-700/70 mb-6 font-medium leading-relaxed">
+                  <p className="text-xs text-rose-700/70 mb-6 font-medium leading-relaxed">
                     Jalankan pemicu manual untuk mengirim pesan yang sedang
                     tertahan di antrean ke server provider WhatsApp (Wablas).
                   </p>
                   <Button
                     onClick={handleFlushQueue}
                     disabled={isProcessingQueue || !queueStats?.pending}
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl py-6 font-black text-base shadow-lg shadow-emerald-600/20 disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
+                    className="w-full bg-rose-600 hover:bg-rose-700 text-white rounded-2xl py-6 font-black text-base shadow-lg shadow-rose-600/20 disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
                   >
                     {isProcessingQueue
                       ? `Mengirim (${flushProgress}%)...`

@@ -248,7 +248,7 @@ export default function DaftarUlangTab() {
             }`}
           >
             {totalDaftarUlangPaid >= expectedUangPangkal && (
-              <span className="absolute top-2 right-2 bg-emerald-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full">
+              <span className="absolute top-2 right-2 bg-rose-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full">
                 ✓ LUNAS
               </span>
             )}
@@ -288,7 +288,7 @@ export default function DaftarUlangTab() {
             }`}
           >
             {totalSppPaid >= expectedSpp && (
-              <span className="absolute top-2 right-2 bg-emerald-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full">
+              <span className="absolute top-2 right-2 bg-rose-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded-full">
                 ✓ LUNAS
               </span>
             )}
@@ -325,7 +325,7 @@ export default function DaftarUlangTab() {
             <span
               className={`px-3 py-1.5 rounded-full text-xs font-black border ${
                 isTabLunas
-                  ? "bg-emerald-100 text-emerald-700 border-emerald-200"
+                  ? "bg-rose-100 text-rose-700 border-emerald-200"
                   : totalPaid > 0
                   ? "bg-primary-100 text-primary-700 border-primary-200"
                   : "bg-slate-100 text-slate-700 border-slate-200"
@@ -340,7 +340,7 @@ export default function DaftarUlangTab() {
           <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest block mb-1">
             Sudah Dibayarkan
           </span>
-          <span className="text-2xl font-black text-emerald-600 mt-2">
+          <span className="text-2xl font-black text-rose-600 mt-2">
             {formatCurrency(totalPaid)}
           </span>
           <p className="text-[10px] text-slate-400 mt-3 font-medium">
@@ -408,7 +408,7 @@ export default function DaftarUlangTab() {
                   <span
                     className={`text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full border ${
                       p.status_pembayaran === "verified"
-                        ? "bg-emerald-100 text-emerald-700 border-emerald-200"
+                        ? "bg-rose-100 text-rose-700 border-emerald-200"
                         : p.status_pembayaran === "rejected"
                         ? "bg-rose-100 text-rose-700 border-rose-200"
                         : "bg-amber-100 text-amber-700 border-amber-200 animate-pulse"
@@ -444,7 +444,7 @@ export default function DaftarUlangTab() {
               <span className="font-bold text-ink-800">Rp 7.500.000</span>
             </div>
             {potonganUP > 0 && (
-              <div className="flex justify-between items-center text-sm text-emerald-600">
+              <div className="flex justify-between items-center text-sm text-rose-600">
                 <span>Potongan Keringanan:</span>
                 <span className="font-bold">- {formatCurrency(potonganUP)}</span>
               </div>
@@ -511,7 +511,7 @@ export default function DaftarUlangTab() {
                     className="p-2 hover:bg-primary-50 text-primary-600 rounded-lg transition-colors flex flex-col items-center gap-1 group"
                   >
                     {copied ? (
-                      <CheckCircle className="w-5 h-5 text-emerald-500" />
+                      <CheckCircle className="w-5 h-5 text-rose-500" />
                     ) : (
                       <Copy className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     )}
@@ -538,7 +538,7 @@ export default function DaftarUlangTab() {
                 SPP bulan pertama wajib lunas{" "}
                 <strong>sebelum Juli 2026</strong>.
               </li>
-              <li className="text-emerald-700 font-bold">
+              <li className="text-rose-700 font-bold">
                 Tersedia kebijakan <strong>Keringanan Khusus</strong> bagi wali
                 santri yang membutuhkan.
               </li>
@@ -553,7 +553,7 @@ export default function DaftarUlangTab() {
                 href="https://wa.me/6281220636945?text=Assalamualaikum%20Admin%20Finance%2C%20saya%20wali%20dari%20calon%20santri%20ingin%20berkonsultasi%2Fmengajukan%20keringanan%20terkait%20biaya%20Daftar%20Ulang."
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-[11px] sm:text-xs transition-all shadow-md hover:shadow-lg active:scale-95 group"
+                className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold text-[11px] sm:text-xs transition-all shadow-md hover:shadow-lg active:scale-95 group"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -589,21 +589,21 @@ export default function DaftarUlangTab() {
       )}
 
       {message && message.type === "success" && (
-        <div className="p-5 bg-emerald-50 border border-emerald-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-sm">
-          <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-            <MessageCircle className="w-6 h-6 text-emerald-600" />
+        <div className="p-5 bg-rose-50 border border-emerald-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-sm">
+          <div className="w-12 h-12 bg-rose-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+            <MessageCircle className="w-6 h-6 text-rose-600" />
           </div>
           <div className="text-center sm:text-left flex-1">
-            <h4 className="font-black text-emerald-900 mb-1 text-base">
+            <h4 className="font-black text-rose-900 mb-1 text-base">
               Ingin Verifikasi Lebih Cepat?
             </h4>
-            <p className="text-emerald-700 text-sm leading-relaxed">
+            <p className="text-rose-700 text-sm leading-relaxed">
               Hubungi CS di nomor{" "}
               <a
                 href="https://wa.me/6285111524441"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-black underline hover:text-emerald-900 transition-colors"
+                className="font-black underline hover:text-rose-900 transition-colors"
               >
                 0851-1152-4441
               </a>{" "}
@@ -615,13 +615,13 @@ export default function DaftarUlangTab() {
 
       {/* Form Upload — Sembunyikan jika tab sudah LUNAS */}
       {isTabLunas ? (
-        <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center shadow-sm">
-          <CheckCircle className="w-14 h-14 text-emerald-500 mx-auto mb-3" />
-          <h3 className="font-black text-emerald-900 text-xl mb-2">
+        <div className="bg-rose-50 border border-emerald-200 rounded-2xl p-8 text-center shadow-sm">
+          <CheckCircle className="w-14 h-14 text-rose-500 mx-auto mb-3" />
+          <h3 className="font-black text-rose-900 text-xl mb-2">
             {subTab === "uang_pangkal" ? "Uang Pangkal" : "SPP Bulan Pertama"}{" "}
             Sudah Lunas!
           </h3>
-          <p className="text-emerald-700 text-sm font-medium">
+          <p className="text-rose-700 text-sm font-medium">
             Pembayaran{" "}
             {subTab === "uang_pangkal" ? "uang pangkal" : "SPP bulan pertama"}{" "}
             Anda sudah terverifikasi dan dinyatakan lunas.
@@ -799,7 +799,7 @@ export default function DaftarUlangTab() {
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-black border ${
                       tipeBayar === "LUNAS"
-                        ? "bg-emerald-100 text-emerald-700 border-emerald-200"
+                        ? "bg-rose-100 text-rose-700 border-emerald-200"
                         : tipeBayar.includes("50% ATAU LEBIH")
                         ? "bg-primary-100 text-primary-700 border-primary-200"
                         : "bg-secondary-100 text-secondary-700 border-secondary-200"

@@ -1144,7 +1144,7 @@ function AdminPendaftarContent() {
       },
       docs_verified: {
         label: "Berkas Lengkap",
-        color: "bg-emerald-50 text-emerald-800 border border-emerald-100",
+        color: "bg-rose-50 text-rose-800 border border-rose-100",
       },
       selection: {
         label: "Proses Seleksi",
@@ -1174,11 +1174,11 @@ function AdminPendaftarContent() {
         label: "Cadangan",
         color: "bg-gold-100 text-gold-800 border border-gold-200",
       },
-      accepted: { label: "Diterima", color: "bg-emerald-600 text-white" },
+      accepted: { label: "Diterima", color: "bg-rose-600 text-white" },
       rejected: { label: "Ditolak", color: "bg-rose-600 text-white" },
       enrolled: {
         label: "Proses Daftar Ulang",
-        color: "bg-emerald-100 text-emerald-800",
+        color: "bg-rose-100 text-rose-800",
       },
       enrolled_full: {
         label: "Lunas Daftar Ulang",
@@ -1310,7 +1310,7 @@ function AdminPendaftarContent() {
             <button
               onClick={() => handleExport("excel")}
               disabled={exporting}
-              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition-colors disabled:opacity-50 text-sm"
+              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg transition-colors disabled:opacity-50 text-sm"
               title="Download Excel"
             >
               {exporting ? (
@@ -1833,7 +1833,7 @@ function AdminPendaftarContent() {
                     return p && (p.status_pendaftaran === "announced" || p.status_pendaftaran === "cadangan");
                   }))}
                   disabled={isPromotingCadangan}
-                  className="flex items-center justify-center gap-2 px-5 md:px-8 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-emerald-600/20 active:scale-95 text-sm"
+                  className="flex items-center justify-center gap-2 px-5 md:px-8 py-2.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-black transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-rose-600/20 active:scale-95 text-sm"
                 >
                   {isPromotingCadangan ? (
                     <>

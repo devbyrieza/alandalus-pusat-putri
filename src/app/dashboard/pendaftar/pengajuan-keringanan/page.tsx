@@ -170,7 +170,7 @@ export default function PengajuanKeringananPage() {
           <div
             className={`w-24 h-24 rounded-[2rem] flex items-center justify-center mb-6 shadow-sm border ${
               pengajuan.status === "approved"
-                ? "bg-emerald-50 text-emerald-600 border-emerald-100"
+                ? "bg-rose-50 text-rose-600 border-rose-100"
                 : pengajuan.status === "rejected"
                 ? "bg-rose-50 text-rose-600 border-rose-100"
                 : "bg-amber-50 text-amber-600 border-amber-100"
@@ -206,7 +206,7 @@ export default function PengajuanKeringananPage() {
               <span
                 className={`px-3 py-1 rounded-full text-xs font-black border ${
                   pengajuan.status === "approved"
-                    ? "bg-emerald-100 text-emerald-700 border-emerald-200"
+                    ? "bg-rose-100 text-rose-700 border-emerald-200"
                     : pengajuan.status === "rejected"
                     ? "bg-rose-100 text-rose-700 border-rose-200"
                     : "bg-amber-100 text-amber-700 border-amber-200"
@@ -231,10 +231,10 @@ export default function PengajuanKeringananPage() {
             {pengajuan.nominal_disetujui > 0 &&
               pengajuan.status === "approved" && (
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-bold text-emerald-600 uppercase tracking-wider">
+                  <span className="text-sm font-bold text-rose-600 uppercase tracking-wider">
                     Nilai Potongan Disetujui
                   </span>
-                  <span className="font-black text-emerald-700 text-lg">
+                  <span className="font-black text-rose-700 text-lg">
                     Rp{" "}
                     {pengajuan.nominal_disetujui.toLocaleString("id-ID")}
                   </span>

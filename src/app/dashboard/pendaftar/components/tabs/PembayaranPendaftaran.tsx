@@ -111,8 +111,8 @@ const STATUS_CONFIG: Record<
   },
   verified: {
     label: "Pembayaran Terverifikasi",
-    color: "text-emerald-700",
-    bgColor: "bg-emerald-50",
+    color: "text-rose-700",
+    bgColor: "bg-rose-50",
     borderColor: "border-emerald-200",
     icon: CheckCircle,
     description: "Alhamdulillah! Pembayaran Anda telah terverifikasi",
@@ -204,8 +204,8 @@ function CopyButton({ text, label }: { text: string; label: string }) {
     >
       {copied ? (
         <>
-          <Check className="w-3.5 h-3.5 text-emerald-500" />
-          <span className="text-emerald-600">Disalin</span>
+          <Check className="w-3.5 h-3.5 text-rose-500" />
+          <span className="text-rose-600">Disalin</span>
         </>
       ) : (
         <>
@@ -268,7 +268,7 @@ function PaymentTimeline({ paymentStatus }: { paymentStatus: PaymentStatus }) {
           let statusColor = "bg-surface-100 border-surface-300 text-ink-300"; // default upcoming
           if (step.status === "completed")
             statusColor =
-              "bg-emerald-500 border-emerald-500 text-white shadow-emerald-500/30";
+              "bg-rose-500 border-rose-500 text-white shadow-rose-500/30";
           if (step.status === "current")
             statusColor =
               "bg-white border-primary-600 text-primary-700 shadow-lg shadow-primary-600/20";
@@ -781,7 +781,7 @@ export default function PembayaranPendaftaranTab({
         <div
           className={`fixed top-6 right-6 z-50 px-6 py-4 rounded-2xl shadow-clay-lg flex items-center gap-3 animate-in slide-in-from-right duration-300 ${
             toast.type === "success"
-              ? "bg-emerald-500"
+              ? "bg-rose-500"
               : toast.type === "error"
                 ? "bg-red-500"
                 : "bg-primary-500"
@@ -816,7 +816,7 @@ export default function PembayaranPendaftaranTab({
               <h1 className="text-2xl md:text-3xl font-black mb-2 tracking-tight text-white">
                 {isStatusOnly ? "Status Pembayaran" : "Pembayaran Pendaftaran"}
               </h1>
-              <p className="text-emerald-50 font-medium max-w-lg">
+              <p className="text-rose-50 font-medium max-w-lg">
                 {isStatusOnly
                   ? "Lihat status verifikasi pembayaran Anda dan riwayat bukti transfer."
                   : "Selesaikan pembayaran untuk membuka akses pengisian data santri lengkap."}
@@ -888,21 +888,21 @@ export default function PembayaranPendaftaranTab({
             </div>
             <PaymentTimeline paymentStatus={data.status} />
             {isPaymentPending && (
-              <div className="mt-8 p-5 bg-emerald-50 border border-emerald-200 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-4">
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
-                  <MessageCircle className="w-6 h-6 text-emerald-600" />
+              <div className="mt-8 p-5 bg-rose-50 border border-emerald-200 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                <div className="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-6 h-6 text-rose-600" />
                 </div>
                 <div className="text-center sm:text-left flex-1">
-                  <h4 className="font-black text-emerald-900 mb-1 text-base">
+                  <h4 className="font-black text-rose-900 mb-1 text-base">
                     Ingin Verifikasi Lebih Cepat?
                   </h4>
-                  <p className="text-emerald-700 text-sm leading-relaxed">
+                  <p className="text-rose-700 text-sm leading-relaxed">
                     Anda bisa menghubungi CS di nomor{" "}
                     <a
                       href="https://wa.me/6285111524441"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-black underline hover:text-emerald-900 transition-colors"
+                      className="font-black underline hover:text-rose-900 transition-colors"
                     >
                       0851-1152-4441
                     </a>{" "}
@@ -1208,14 +1208,14 @@ export default function PembayaranPendaftaranTab({
 
           {/* Success View (hanya di halaman Pembayaran) */}
           {!isStatusOnly && isPaymentCompleted && (
-            <div className="bg-emerald-50 border border-emerald-200 rounded-[2rem] p-5 md:p-8 text-center">
-              <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-in zoom-in duration-300">
-                <CheckCircle className="w-10 h-10 text-emerald-600" />
+            <div className="bg-rose-50 border border-emerald-200 rounded-[2rem] p-5 md:p-8 text-center">
+              <div className="w-20 h-20 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-in zoom-in duration-300">
+                <CheckCircle className="w-10 h-10 text-rose-600" />
               </div>
-              <h3 className="text-2xl font-black text-emerald-900 mb-2">
+              <h3 className="text-2xl font-black text-rose-900 mb-2">
                 Pembayaran Lunas
               </h3>
-              <p className="text-emerald-700 max-w-md mx-auto mb-8">
+              <p className="text-rose-700 max-w-md mx-auto mb-8">
                 Terima kasih telah melakukan pembayaran. Anda sekarang dapat
                 melanjutkan ke tahap berikutnya yaitu mengisi formulir data diri
                 lengkap.
@@ -1223,7 +1223,7 @@ export default function PembayaranPendaftaranTab({
               <div className="flex justify-center">
                 <a
                   href="/dashboard/pendaftar/isi-data-lengkap"
-                  className="px-5 md:px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold shadow-lg shadow-emerald-600/20 transition-all hover:scale-105 flex items-center gap-2"
+                  className="px-5 md:px-8 py-4 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold shadow-lg shadow-rose-600/20 transition-all hover:scale-105 flex items-center gap-2"
                 >
                   <span>Lanjut Isi Data Diri</span>
                 </a>

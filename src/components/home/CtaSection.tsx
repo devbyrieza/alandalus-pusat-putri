@@ -57,7 +57,7 @@ export default function CtaSection() {
             {/* ── Legalitas Badges ── */}
             <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 w-full max-w-2xl">
               <div className="flex items-center gap-2 text-secondary-50/70">
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <ShieldCheck className="w-4 h-4 text-rose-400" />
                 <span className="text-[0.6rem] font-bold uppercase tracking-[0.1em]">
                   Terakreditasi A — BAN-PDM
                 </span>
@@ -69,7 +69,7 @@ export default function CtaSection() {
                 </span>
               </div>
               <div className="flex items-center gap-2 text-secondary-50/70">
-                <Award className="w-4 h-4 text-emerald-300" />
+                <Award className="w-4 h-4 text-rose-300" />
                 <span className="text-[0.6rem] font-bold uppercase tracking-[0.1em]">
                   {BRANDING.schoolNetwork}
                 </span>

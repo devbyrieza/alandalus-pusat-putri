@@ -82,8 +82,8 @@ export default function PengujiDashboardPage() {
       value: stats.selesai_dinilai,
       icon: CheckCircle,
       accent: "emerald",
-      bgColor: "bg-emerald-50",
-      iconColor: "text-emerald-600",
+      bgColor: "bg-rose-50",
+      iconColor: "text-rose-600",
     },
     {
       title: "Belum Dinilai",

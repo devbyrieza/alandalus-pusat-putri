@@ -426,13 +426,13 @@ export default function Home() {
             </div>
 
             {/* C — Karakter (small) */}
-            <div className="rounded-3xl p-8 bg-emerald-50 border border-emerald-100 group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-              <Heart className="w-10 h-10 mb-6 text-emerald-600" />
+            <div className="rounded-3xl p-8 bg-rose-50 border border-rose-100 group hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+              <Heart className="w-10 h-10 mb-6 text-rose-600" />
               <h3 className="text-xl font-black mb-3 text-slate-900">C — Karakter Rabbani</h3>
               <p className="text-slate-500 text-sm leading-relaxed mb-4">
                 Pembentukan akhlak mulia berdasarkan Al-Qur'an dan As-Sunnah sesuai pemahaman Salafush Shalih.
               </p>
-              <div className="text-emerald-600 font-black text-2xl">24/7</div>
+              <div className="text-rose-600 font-black text-2xl">24/7</div>
               <div className="text-slate-400 text-xs">Lingkungan Kondusif</div>
             </div>
 

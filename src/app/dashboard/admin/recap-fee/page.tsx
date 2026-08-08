@@ -216,7 +216,7 @@ export default function RecapFeePage() {
           <div className="flex gap-2 md:gap-3">
             <Button
               onClick={exportToExcel}
-              className="flex-1 md:flex-none bg-emerald-50 text-emerald-700 border-emerald-100 hover:bg-emerald-100 rounded-2xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm"
+              className="flex-1 md:flex-none bg-rose-50 text-rose-700 border-rose-100 hover:bg-rose-100 rounded-2xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm"
             >
               <Download className="w-4 h-4 mr-1.5" /> Excel
             </Button>
@@ -452,7 +452,7 @@ export default function RecapFeePage() {
                         <span className="text-lg font-black text-primary-700 leading-none">
                           {formatCurrency(calculateTotalFee(item))}
                         </span>
-                        <span className="text-[9px] font-bold text-emerald-600 uppercase tracking-tighter mt-1.5 flex items-center gap-1">
+                        <span className="text-[9px] font-bold text-rose-600 uppercase tracking-tighter mt-1.5 flex items-center gap-1">
                           <TrendingUp className="w-3 h-3" /> Total Honor
                         </span>
                       </div>

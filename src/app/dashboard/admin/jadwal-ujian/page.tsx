@@ -364,7 +364,7 @@ export default function JadwalUjianPage() {
                 Manajemen{" "}
                 <span className="text-purple-600">Jadwal Seleksi</span>
               </h1>
-              <p className="text-emerald-900/60 font-medium">
+              <p className="text-rose-900/60 font-medium">
                 Panel Pengaturan Jadwal Seleksi PPDB Al-Andalus Putri
               </p>
             </div>
@@ -411,8 +411,8 @@ export default function JadwalUjianPage() {
           </div>
         </div>
         <div className="bg-white rounded-2xl p-6 border border-indigo-100 shadow-clay-md flex items-center gap-6">
-          <div className="p-4 bg-emerald-50 rounded-2xl border border-emerald-100">
-            <Calendar className="w-8 h-8 text-emerald-600" />
+          <div className="p-4 bg-rose-50 rounded-2xl border border-rose-100">
+            <Calendar className="w-8 h-8 text-rose-600" />
           </div>
           <div>
             <p className="text-sm font-bold text-ink-400 uppercase tracking-widest">
@@ -422,7 +422,7 @@ export default function JadwalUjianPage() {
               {availStats.totalAvailableSlots}{" "}
               <span className="text-lg text-ink-400">Sesi</span>
             </h3>
-            <p className="text-xs mt-2 text-emerald-600 font-bold flex items-center gap-1">
+            <p className="text-xs mt-2 text-rose-600 font-bold flex items-center gap-1">
               <CheckCircle2 className="w-3 h-3" /> Siap untuk diumumkan
             </p>
           </div>
@@ -484,7 +484,7 @@ export default function JadwalUjianPage() {
                       <button
                         onClick={() => handleAssign(s.id)}
                         disabled={assigning || s.booked_count >= s.quota}
-                        className="w-full md:w-auto px-6 py-3 bg-gradient-to-br from-primary-600 to-emerald-600 text-white rounded-xl font-black shadow-lg shadow-primary-600/20 hover:scale-105 transition-all flex items-center justify-center gap-2 "
+                        className="w-full md:w-auto px-6 py-3 bg-gradient-to-br from-primary-600 to-rose-600 text-white rounded-xl font-black shadow-lg shadow-primary-600/20 hover:scale-105 transition-all flex items-center justify-center gap-2 "
                       >
                         {assigning ? (
                           <Loader2 className="w-4 h-4 animate-spin" />

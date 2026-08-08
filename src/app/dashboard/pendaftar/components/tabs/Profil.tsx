@@ -102,7 +102,7 @@ export default function ProfilTab() {
       rejected: { label: "Ditolak", color: "bg-red-100 text-red-700" },
       enrolled: {
         label: "Terdaftar",
-        color: "bg-emerald-100 text-emerald-700",
+        color: "bg-rose-100 text-rose-700",
       },
     };
     const statusInfo = statusMap[status] || {

@@ -127,7 +127,7 @@ export default function RekapFeePengujiPage() {
           </Button>
           <Button
             onClick={handleExportExcel}
-            className="rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-black shadow-lg shadow-emerald-600/20 h-11"
+            className="rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-black shadow-lg shadow-rose-600/20 h-11"
           >
             <Download className="w-4 h-4 mr-2" />
             Export Excel
@@ -195,7 +195,7 @@ export default function RekapFeePengujiPage() {
                   <th className="px-6 py-4 text-xs font-black text-primary-600 uppercase tracking-wider text-center bg-primary-50/30">
                     Total Sesi
                   </th>
-                  <th className="px-6 py-4 text-xs font-black text-emerald-600 uppercase tracking-wider text-right bg-emerald-50/30">
+                  <th className="px-6 py-4 text-xs font-black text-rose-600 uppercase tracking-wider text-right bg-rose-50/30">
                     Fee (Rp)
                   </th>
                 </tr>
@@ -239,7 +239,7 @@ export default function RekapFeePengujiPage() {
                       <td className="px-6 py-4 text-center font-black text-primary-700 bg-primary-50/30">
                         {item.total_sesi}
                       </td>
-                      <td className="px-6 py-4 text-right font-black text-emerald-700 bg-emerald-50/30 text-base">
+                      <td className="px-6 py-4 text-right font-black text-rose-700 bg-rose-50/30 text-base">
                         {item.total_fee.toLocaleString("id-ID")}
                       </td>
                     </tr>

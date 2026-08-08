@@ -320,14 +320,14 @@ export default function UndanganSeleksiTab() {
     return (
       <div className="space-y-6">
         {/* Header */}
-        <div className="bg-linear-to-r from-emerald-700 to-emerald-900 rounded-2xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
+        <div className="bg-linear-to-r from-rose-700 to-rose-900 rounded-2xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
           <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-2">
-              <CheckCircle className="w-7 h-7 text-emerald-300" />
+              <CheckCircle className="w-7 h-7 text-rose-300" />
               <h1 className="text-2xl font-black text-white">Seleksi Selesai!</h1>
             </div>
-            <p className="text-emerald-100 text-sm md:text-base">
+            <p className="text-rose-100 text-sm md:text-base">
               Alhamdulillah — proses seleksi Ananda telah selesai. Cek hasil dan langkah selanjutnya.
             </p>
           </div>
@@ -337,12 +337,12 @@ export default function UndanganSeleksiTab() {
         <div className="bg-white rounded-xl border border-stone-200 p-5 shadow-sm">
           <div className="flex items-center justify-between mb-3">
             <h3 className="font-bold text-ink-800 text-sm">Progress Seleksi</h3>
-            <span className="text-sm font-black text-emerald-600">6/6 Tahap ✓</span>
+            <span className="text-sm font-black text-rose-600">6/6 Tahap ✓</span>
           </div>
           <div className="w-full h-3 bg-surface-100 rounded-full overflow-hidden">
-            <div className="h-full bg-linear-to-r from-emerald-500 to-emerald-700 rounded-full w-full shadow-lg shadow-emerald-500/20" />
+            <div className="h-full bg-linear-to-r from-rose-500 to-rose-700 rounded-full w-full shadow-lg shadow-rose-500/20" />
           </div>
-          <p className="text-xs text-emerald-600 mt-2 font-medium">100% selesai — Semua tahapan seleksi telah dilalui ✓</p>
+          <p className="text-xs text-rose-600 mt-2 font-medium">100% selesai — Semua tahapan seleksi telah dilalui ✓</p>
         </div>
 
         {/* Next Steps Cards */}
@@ -371,17 +371,17 @@ export default function UndanganSeleksiTab() {
 
           {/* Card Daftar Ulang */}
           {data.current_status === "enrolled" ? (
-            <div className="bg-emerald-50 rounded-2xl border-2 border-emerald-200 p-6 shadow-sm">
+            <div className="bg-rose-50 rounded-2xl border-2 border-emerald-200 p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-emerald-600" />
+                <div className="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center">
+                  <CheckCircle className="w-6 h-6 text-rose-600" />
                 </div>
                 <div>
-                  <h3 className="font-black text-emerald-900">Daftar Ulang ✓</h3>
-                  <p className="text-xs text-emerald-700">Pembayaran daftar ulang telah diterima</p>
+                  <h3 className="font-black text-rose-900">Daftar Ulang ✓</h3>
+                  <p className="text-xs text-rose-700">Pembayaran daftar ulang telah diterima</p>
                 </div>
               </div>
-              <p className="text-sm text-emerald-800 font-medium">
+              <p className="text-sm text-rose-800 font-medium">
                 Alhamdulillah, proses daftar ulang telah selesai. Ananda resmi menjadi santri baru.
               </p>
             </div>
@@ -497,24 +497,24 @@ export default function UndanganSeleksiTab() {
                 key={key}
                 className={`bg-white rounded-xl border-2 p-5 transition-all ${
                   item.completed
-                    ? "border-emerald-200 bg-emerald-50/50"
+                    ? "border-emerald-200 bg-rose-50/50"
                     : "border-stone-100 hover:border-primary-200 hover:shadow-md"
                 }`}
               >
                 <div className="flex items-start justify-between mb-3">
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center ${
-                      item.completed ? "bg-emerald-100" : "bg-primary-50"
+                      item.completed ? "bg-rose-100" : "bg-primary-50"
                     }`}
                   >
                     <Icon
                       className={`w-5 h-5 ${
-                        item.completed ? "text-emerald-600" : "text-primary-600"
+                        item.completed ? "text-rose-600" : "text-primary-600"
                       }`}
                     />
                   </div>
                   {item.completed ? (
-                    <span className="flex items-center gap-1 px-2.5 py-1 bg-emerald-100 text-emerald-700 text-xs font-black rounded-full">
+                    <span className="flex items-center gap-1 px-2.5 py-1 bg-rose-100 text-rose-700 text-xs font-black rounded-full">
                       <CheckCircle className="w-3 h-3" /> Selesai
                     </span>
                   ) : (
@@ -529,7 +529,7 @@ export default function UndanganSeleksiTab() {
                 </h3>
 
                 {item.completed ? (
-                  <p className="text-xs text-emerald-600 font-medium">
+                  <p className="text-xs text-rose-600 font-medium">
                     Tes telah diselesaikan ✓
                   </p>
                 ) : (
@@ -566,13 +566,13 @@ export default function UndanganSeleksiTab() {
         {/* Condition: Already booked schedules */}
         {data.grupB.booked.length > 0 && (
           <div className="space-y-3">
-              <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-xl flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+              <div className="bg-rose-50 border border-emerald-200 p-4 rounded-xl flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-rose-600 flex-shrink-0" />
                 <div>
-                  <h3 className="font-bold text-emerald-900 text-sm">
+                  <h3 className="font-bold text-rose-900 text-sm">
                     Jadwal Terkonfirmasi & Riwayat Seleksi
                   </h3>
-                  <p className="text-xs text-emerald-700">
+                  <p className="text-xs text-rose-700">
                     Berikut sesi ujian yang telah Anda pilih atau sudah dikerjakan
                   </p>
                 </div>
@@ -703,7 +703,7 @@ export default function UndanganSeleksiTab() {
                   <div className="text-center py-12 bg-white rounded-2xl border-2 border-dashed border-stone-200">
                     {isAllBooked ? (
                       <>
-                        <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto mb-4" />
+                        <CheckCircle className="w-12 h-12 text-rose-500 mx-auto mb-4" />
                         <h3 className="font-black text-ink-950 mb-2">
                           Semua Jadwal Terpilih
                         </h3>

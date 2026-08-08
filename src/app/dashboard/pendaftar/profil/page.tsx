@@ -152,7 +152,7 @@ export default function ProfilPage() {
               requestStatus.status === "pending"
                 ? "bg-secondary-50 border border-secondary-200 text-secondary-800"
                 : requestStatus.status === "approved_to_edit"
-                  ? "bg-gradient-to-r from-emerald-50 to-pine-50 border border-pine-200 text-pine-800"
+                  ? "bg-gradient-to-r from-rose-50 to-pine-50 border border-pine-200 text-pine-800"
                   : requestStatus.status === "submitted"
                     ? "bg-primary-50 border border-primary-200 text-primary-800"
                     : requestStatus.status === "rejected"

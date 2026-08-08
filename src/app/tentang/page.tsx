@@ -30,16 +30,16 @@ export default function TentangPage() {
     <main className="bg-white min-h-screen">
       {/* 1. HERO SECTION */}
       <section className="section-std pb-0 relative overflow-hidden py-16">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-100/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rose-100/50 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-50/40 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
         <Container className="relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-emerald-200 text-rose-800 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm"
           >
-            <Sparkles className="w-4 h-4 text-emerald-600" />
+            <Sparkles className="w-4 h-4 text-rose-600" />
             <span>PROFIL RESMI {BRANDING.schoolShortName.toUpperCase()}</span>
           </motion.div>
 
@@ -50,7 +50,7 @@ export default function TentangPage() {
             className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto mb-6"
           >
             Mencetak Generasi <br />
-            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-rose-600 to-teal-600 bg-clip-text text-transparent">
               Rabbani, Cendekia, dan Mandiri
             </span>
           </motion.h1>
@@ -81,7 +81,7 @@ export default function TentangPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-8 text-left">
               <div className="text-white space-y-1">
                 <h3 className="text-2xl font-bold">{BRANDING.schoolName}</h3>
-                <p className="text-emerald-300 text-sm font-medium">{BRANDING.address}</p>
+                <p className="text-rose-300 text-sm font-medium">{BRANDING.address}</p>
               </div>
             </div>
           </motion.div>
@@ -102,7 +102,7 @@ export default function TentangPage() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold">
+              <div className="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center font-bold">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900">Visi Utama</h3>
@@ -118,15 +118,15 @@ export default function TentangPage() {
               <h3 className="text-2xl font-bold text-slate-900">Misi Utama</h3>
               <ul className="space-y-3 text-slate-600">
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
                   <span>Menyelenggarakan program Tahfidz Al-Qur'an 30 Juz bermutu dan mutqin.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
                   <span>Menerapkan kurikulum TICE (Tahfidz, International, Character, Entrepreneurship).</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
                   <span>Membina karakter beradab, berdisiplin, dan berjiwa kepemimpinan tinggi.</span>
                 </li>
               </ul>
@@ -136,11 +136,11 @@ export default function TentangPage() {
       </section>
 
       {/* 3. CTA FOOTER */}
-      <section className="py-16 bg-gradient-to-r from-emerald-900 to-teal-900 text-white text-center">
+      <section className="py-16 bg-gradient-to-r from-rose-900 to-teal-900 text-white text-center">
         <Container>
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-3xl font-bold">Bergabunglah Bersama Keluarga Besar {BRANDING.schoolShortName}</h2>
-            <p className="text-emerald-100 text-lg">Pendaftaran Santri Baru Tahun Ajaran 2026/2027 Telah Dibuka. Kuota Terbatas!</p>
+            <p className="text-rose-100 text-lg">Pendaftaran Santri Baru Tahun Ajaran 2026/2027 Telah Dibuka. Kuota Terbatas!</p>
             <div className="pt-2">
               <Link
                 href="/daftar"

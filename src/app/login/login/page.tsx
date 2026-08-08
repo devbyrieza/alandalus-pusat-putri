@@ -54,7 +54,7 @@ const ROLE_INFO: Record<
     label: "Admin Keuangan",
     icon: Coins,
     desc: "Verifikasi pembayaran",
-    color: "from-emerald-50 to-primary-50 border-emerald-200",
+    color: "from-rose-50 to-primary-50 border-emerald-200",
   },
   pewawancara_cawalsan: {
     label: "Pewawancara Cawalsan",
@@ -78,7 +78,7 @@ const ROLE_INFO: Record<
     label: "Penguji Hafalan",
     icon: BookOpen,
     desc: "Penguji tes Hafalan Al-Qur'an",
-    color: "from-teal-50 to-emerald-50 border-teal-200",
+    color: "from-teal-50 to-rose-50 border-teal-200",
   },
   penguji_bahasa_arab: {
     label: "Penguji Lisan B. Arab",

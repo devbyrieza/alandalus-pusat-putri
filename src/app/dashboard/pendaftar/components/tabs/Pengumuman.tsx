@@ -170,17 +170,17 @@ export default function PengumumanTab() {
       ) : pengumuman.status_kelulusan === "diterima" ? (
         <div className="space-y-6">
           {/* Success Card */}
-          <div className="bg-linear-to-r from-emerald-500 to-emerald-700 rounded-[2rem] p-5 md:p-8 md:p-10 text-white shadow-xl shadow-emerald-500/20 relative overflow-hidden app-card">
+          <div className="bg-linear-to-r from-rose-500 to-rose-700 rounded-[2rem] p-5 md:p-8 md:p-10 text-white shadow-xl shadow-rose-500/20 relative overflow-hidden app-card">
             <div className="absolute -top-10 -right-10 p-5 md:p-8 opacity-10 transform rotate-12">
               <Trophy className="w-64 h-64" />
             </div>
             <div className="relative z-10">
               <div className="flex items-center gap-5 mb-8">
                 <div className="p-4 bg-white/20 backdrop-blur-md rounded-[1.5rem] shadow-sm border border-white/20">
-                  <CheckCircle className="w-10 h-10 text-emerald-50" />
+                  <CheckCircle className="w-10 h-10 text-rose-50" />
                 </div>
                 <div>
-                  <p className="text-emerald-100 font-bold tracking-widest uppercase text-sm mb-1">
+                  <p className="text-rose-100 font-bold tracking-widest uppercase text-sm mb-1">
                     Alhamdulillah
                   </p>
                   <h2 className="text-3xl md:text-4xl font-black font-display tracking-tight text-white">
@@ -188,7 +188,7 @@ export default function PengumumanTab() {
                   </h2>
                 </div>
               </div>
-              <p className="text-emerald-50/90 mb-10 max-w-xl text-lg leading-relaxed">
+              <p className="text-rose-50/90 mb-10 max-w-xl text-lg leading-relaxed">
                 Berdasarkan hasil seleksi, Anda dinyatakan{" "}
                 <strong>DITERIMA</strong> sebagai santri baru PP Al
                 Andalus Al-Andalus Putri.

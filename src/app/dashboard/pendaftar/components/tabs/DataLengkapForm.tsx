@@ -320,7 +320,7 @@ function SectionHeader({
         <div
           className={`w-12 h-12 rounded-xl flex items-center justify-center transition-colors ${
             isCompleted
-              ? "bg-emerald-100 text-emerald-600"
+              ? "bg-rose-100 text-rose-600"
               : isOpen
                 ? "bg-secondary-100 text-primary-700"
                 : "bg-surface-200 text-ink-600"
@@ -345,7 +345,7 @@ function SectionHeader({
       </div>
       <div className="flex items-center gap-3">
         {isCompleted && (
-          <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-lg uppercase tracking-wide">
+          <span className="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-lg uppercase tracking-wide">
             Lengkap
           </span>
         )}
@@ -915,7 +915,7 @@ export default function DataLengkapForm({
         <div
           className={`fixed top-6 right-6 z-50 px-6 py-4 rounded-2xl shadow-clay-lg flex items-center gap-3 animate-in slide-in-from-right duration-300 ${
             toastMessage.type === "success"
-              ? "bg-emerald-500 text-white shadow-emerald-500/20"
+              ? "bg-rose-500 text-white shadow-rose-500/20"
               : "bg-red-500 text-white shadow-red-500/20"
           }`}
         >
@@ -932,16 +932,16 @@ export default function DataLengkapForm({
 
       {/* Info Box */}
       {isEditMode ? (
-        <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 shadow-sm">
+        <div className="bg-rose-50 border border-emerald-200 rounded-2xl p-5 shadow-sm">
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center shrink-0">
-              <CheckCircle className="w-6 h-6 text-emerald-600" />
+            <div className="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center shrink-0">
+              <CheckCircle className="w-6 h-6 text-rose-600" />
             </div>
             <div>
-              <p className="text-sm text-emerald-800 font-bold mb-1">
+              <p className="text-sm text-rose-800 font-bold mb-1">
                 Mode Edit Aktif
               </p>
-              <p className="text-sm text-emerald-700 leading-relaxed">
+              <p className="text-sm text-rose-700 leading-relaxed">
                 Anda diizinkan admin untuk mengubah data. Silakan perbaiki data
                 yang salah, lalu klik tombol{" "}
                 <strong>"Simpan & Ajukan Verifikasi"</strong> di bawah.
@@ -969,7 +969,7 @@ export default function DataLengkapForm({
                   href="https://wa.me/6281234567801?text=Bismillah,%20saya%20ingin%20mengajukan%20perubahan%20data%20pendaftaran%20untuk%20nomor%20pendaftaran:%20"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-xl text-xs font-bold shadow-sm hover:bg-emerald-600 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-rose-500 text-white rounded-xl text-xs font-bold shadow-sm hover:bg-rose-600 transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 text-white" />
                   Admin Pendaftaran 1
@@ -978,7 +978,7 @@ export default function DataLengkapForm({
                   href="https://wa.me/6281234567899?text=Bismillah,%20saya%20ingin%20mengajukan%20perubahan%20data%20pendaftaran%20untuk%20nomor%20pendaftaran:%20"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white rounded-xl text-xs font-bold shadow-sm hover:bg-emerald-600 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-rose-500 text-white rounded-xl text-xs font-bold shadow-sm hover:bg-rose-600 transition-colors"
                 >
                   <Phone className="w-3.5 h-3.5 text-white" />
                   Admin Pendaftaran 2

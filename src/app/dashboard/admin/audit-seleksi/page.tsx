@@ -161,7 +161,7 @@ export default function AuditSeleksiPage() {
       grade = parsedScore >= 80 ? "A" : parsedScore >= 65 ? "B" : "C";
     }
 
-    if (grade === "A") color = "bg-emerald-500";
+    if (grade === "A") color = "bg-rose-500";
     else if (grade === "B") color = "bg-sky-500";
 
     return { label: grade, color };
@@ -308,7 +308,7 @@ export default function AuditSeleksiPage() {
           <Button
             onClick={() => handleBatchPublish("accepted")}
             disabled={selectedIds.length === 0 || isPublishing}
-            className="flex-1 lg:flex-none bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-emerald-200 transition-all active:scale-95"
+            className="flex-1 lg:flex-none bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-emerald-200 transition-all active:scale-95"
           >
             DITERIMA ({selectedIds.length})
           </Button>
@@ -463,7 +463,7 @@ export default function AuditSeleksiPage() {
                         {(() => {
                           const s = c.status_pendaftaran || "";
                           const labels: any = {
-                            accepted: { l: "DITERIMA", c: "text-emerald-700 bg-emerald-100 border-emerald-200" },
+                            accepted: { l: "DITERIMA", c: "text-rose-700 bg-rose-100 border-emerald-200" },
                             announced: { l: "PUBLISHED", c: "text-sky-700 bg-sky-100 border-sky-200" },
                             rejected: { l: "DITOLAK", c: "text-rose-700 bg-rose-100 border-rose-200" },
                             cadangan: { l: "CADANGAN", c: "text-secondary-700 bg-secondary-100 border-secondary-200" },
@@ -498,8 +498,8 @@ export default function AuditSeleksiPage() {
             </h3>
             <div className="space-y-3 text-sm font-medium leading-relaxed">
               <p className="flex items-start gap-2 !text-white">
-                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0 shadow-sm shadow-emerald-900/50" />
-                <span><b className="font-extrabold text-emerald-400">DITERIMA:</b> Quran Grade A, maksimal satu Grade C di komponen pendukung.</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0 shadow-sm shadow-rose-900/50" />
+                <span><b className="font-extrabold text-rose-400">DITERIMA:</b> Quran Grade A, maksimal satu Grade C di komponen pendukung.</span>
               </p>
               <p className="flex items-start gap-2 !text-white">
                 <div className="w-1.5 h-1.5 rounded-full bg-secondary-400 mt-1.5 shrink-0 shadow-sm shadow-secondary-900/50" />

@@ -11,7 +11,7 @@ import { BRANDING } from "@/config/branding";
 const StatWidget = ({ label, value, icon: Icon, color, trend, breakdown, highlighted, onDownload, isDownloading, onPromote, isPromoting }: any) => {
     const colorMap: any = {
     blue: "from-primary-600 to-primary-800",
-    emerald: "from-emerald-500 to-emerald-600",
+    emerald: "from-rose-500 to-rose-600",
     amber: "from-amber-500 to-amber-600",
     purple: "from-primary-500 to-primary-700",
     rose: "from-rose-500 to-rose-600",
@@ -38,8 +38,8 @@ const StatWidget = ({ label, value, icon: Icon, color, trend, breakdown, highlig
           {trend && (
             <div className={`flex items-center gap-1.5 text-[10px] font-black px-3 py-1.5 rounded-full border ${
               highlighted
-                ? "text-emerald-400 bg-white/5 border-white/10"
-                : "text-emerald-600 bg-emerald-50 border-emerald-100"
+                ? "text-rose-400 bg-white/5 border-white/10"
+                : "text-rose-600 bg-rose-50 border-rose-100"
             }`}>
               <TrendingUp className="w-3.5 h-3.5" />
               <span className="uppercase tracking-wider">{trend}</span>
@@ -68,8 +68,8 @@ const StatWidget = ({ label, value, icon: Icon, color, trend, breakdown, highlig
                   title="Unduh Excel"
                   className={`p-2 rounded-xl border transition-all hover:scale-105 duration-300 ${
                     highlighted 
-                      ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400 hover:bg-emerald-500/20" 
-                      : "bg-emerald-50 border-emerald-100 text-emerald-600 hover:bg-emerald-100"
+                      ? "bg-rose-500/10 border-rose-500/20 text-rose-400 hover:bg-rose-500/20" 
+                      : "bg-rose-50 border-rose-100 text-rose-600 hover:bg-rose-100"
                   }`}
                 >
                   {isDownloading === "excel" ? (
@@ -104,7 +104,7 @@ const StatWidget = ({ label, value, icon: Icon, color, trend, breakdown, highlig
             <button
               onClick={(e) => { e.stopPropagation(); onPromote(); }}
               disabled={isPromoting}
-              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-lg shadow-emerald-600/20 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-black text-xs uppercase tracking-widest transition-all shadow-lg shadow-rose-600/20 hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isPromoting ? (
                 <>
@@ -421,7 +421,7 @@ export default function AdminDashboardPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full lg:w-auto">
              <div className="bg-white/10 backdrop-blur-xl p-4 sm:p-6 lg:p-5 md:p-8 rounded-[1.5rem] sm:rounded-[2rem] border border-white/20 shadow-xl flex flex-col items-center group hover:bg-white/15 transition-all">
                 <p className="text-[9px] sm:text-[10px] font-black text-white/80 uppercase tracking-widest mb-2 sm:mb-4 text-center group-hover:text-white transition-colors">Diterima</p>
-                <p className="text-2xl sm:text-2xl md:text-4xl font-black text-emerald-300 drop-shadow-md">{stats.diterima}</p>
+                <p className="text-2xl sm:text-2xl md:text-4xl font-black text-rose-300 drop-shadow-md">{stats.diterima}</p>
              </div>
              <div className="bg-white/10 backdrop-blur-xl p-4 sm:p-6 lg:p-5 md:p-8 rounded-[1.5rem] sm:rounded-[2rem] border border-white/20 shadow-xl flex flex-col items-center group hover:bg-white/15 transition-all">
                 <p className="text-[9px] sm:text-[10px] font-black text-white/80 uppercase tracking-widest mb-2 sm:mb-4 text-center group-hover:text-white transition-colors">Proses Daftar Ulang</p>
@@ -429,7 +429,7 @@ export default function AdminDashboardPage() {
              </div>
              <div className="bg-white/10 backdrop-blur-xl p-4 sm:p-6 lg:p-5 md:p-8 rounded-[1.5rem] sm:rounded-[2rem] border border-white/20 shadow-xl flex flex-col items-center group hover:bg-white/15 transition-all md:col-span-2">
                 <p className="text-[9px] sm:text-[10px] font-black text-white/80 uppercase tracking-widest mb-2 sm:mb-4 text-center group-hover:text-white transition-colors">Lunas Daftar Ulang</p>
-                <p className="text-2xl sm:text-2xl md:text-4xl font-black text-emerald-300 drop-shadow-md">{stats.daftar_ulang_selesai}</p>
+                <p className="text-2xl sm:text-2xl md:text-4xl font-black text-rose-300 drop-shadow-md">{stats.daftar_ulang_selesai}</p>
              </div>
           </div>
         </div>
@@ -494,13 +494,13 @@ export default function AdminDashboardPage() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-primary-200/60 uppercase tracking-widest mb-2">Tingkat Kelulusan</p>
-                  <p className="text-2xl sm:text-2xl md:text-4xl font-black text-emerald-400">
+                  <p className="text-2xl sm:text-2xl md:text-4xl font-black text-rose-400">
                     {stats.total_pendaftar > 0 ? Math.round((stats.diterima / stats.total_pendaftar) * 100) : 0}%
                   </p>
                 </div>
                 <div>
                   <p className="text-[10px] font-black text-primary-200/60 uppercase tracking-widest mb-2">Lunas Daftar Ulang</p>
-                  <p className="text-2xl sm:text-2xl md:text-4xl font-black text-emerald-400">{stats.daftar_ulang_selesai}</p>
+                  <p className="text-2xl sm:text-2xl md:text-4xl font-black text-rose-400">{stats.daftar_ulang_selesai}</p>
                 </div>
               </div>
             </div>
@@ -531,7 +531,7 @@ export default function AdminDashboardPage() {
               </div>
               <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 bg-secondary-50 rounded-2xl sm:rounded-3xl border border-secondary-200 hover:border-emerald-200 transition-all cursor-default group/item gap-4">
                 <div className="flex items-center gap-4 sm:gap-5">
-                  <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-emerald-600 transition-transform group-hover/item:scale-110 shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-rose-600 transition-transform group-hover/item:scale-110 shrink-0">
                     <Wallet className="w-6 h-6" />
                   </div>
                   <div>

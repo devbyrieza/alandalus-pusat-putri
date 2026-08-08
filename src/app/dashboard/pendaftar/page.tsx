@@ -216,8 +216,8 @@ function StatusGrid({ status, statusLabel, pengumuman }: any) {
       val: (pengumuman && isFinalStatus) ? pengumuman.status_kelulusan : "Belum Dirilis",
       desc: "Hasil penerimaan santri",
       icon: CheckCircle,
-      color: "text-emerald-600",
-      bg: "bg-emerald-50",
+      color: "text-rose-600",
+      bg: "bg-rose-50",
     },
   ];
 

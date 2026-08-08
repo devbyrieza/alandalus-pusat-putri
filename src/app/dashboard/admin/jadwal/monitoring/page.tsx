@@ -235,7 +235,7 @@ export default function MonitoringJadwalPage() {
                 <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-green-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Selesai Al-Qur&apos;an</p>
-                    <p className="text-2xl md:text-3xl font-black text-emerald-600 relative z-10">{selesaiQuran}</p>
+                    <p className="text-2xl md:text-3xl font-black text-rose-600 relative z-10">{selesaiQuran}</p>
                 </div>
                 <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-indigo-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
@@ -376,7 +376,7 @@ export default function MonitoringJadwalPage() {
                                                     {s.pendaftar.nomor}
                                                 </span>
                                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase ${
-                                                    s.pendaftar.jenjang === 'MTs' ? 'bg-purple-100 text-purple-600' : 'bg-emerald-100 text-emerald-600'
+                                                    s.pendaftar.jenjang === 'MTs' ? 'bg-purple-100 text-purple-600' : 'bg-rose-100 text-rose-600'
                                                 }`}>
                                                     {s.pendaftar.jenjang}
                                                 </span>
@@ -418,7 +418,7 @@ export default function MonitoringJadwalPage() {
                                                     </div>
                                                 </div>
                                                 <span className={`text-[9px] font-black uppercase px-2 py-0.5 rounded-full ${
-                                                    stat.status === 'completed' ? 'bg-emerald-100 text-emerald-700' :
+                                                    stat.status === 'completed' ? 'bg-rose-100 text-rose-700' :
                                                     stat.status === 'absent' ? 'bg-rose-100 text-rose-700' :
                                                     'bg-primary-100 text-primary-700'
                                                 }`}>
@@ -504,7 +504,7 @@ export default function MonitoringJadwalPage() {
                                                         <div className="flex flex-col">
                                                             <span className={`text-xs font-bold ${conflicts.some(c => c.name === s.ustadz.ortu && c.time === new Date(s.sesi.start).getTime()) ? 'text-rose-600' : 'text-slate-700'}`}>{s.ustadz.ortu}</span>
                                                             <span className={`text-[10px] font-bold uppercase tracking-tight ${
-                                                                s.status.ortu === 'completed' ? 'text-emerald-600' : 'text-slate-400'
+                                                                s.status.ortu === 'completed' ? 'text-rose-600' : 'text-slate-400'
                                                             }`}>{s.status.ortu === 'completed' ? 'Selesai' : s.status.ortu === 'absent' ? 'Alpa' : 'Menunggu'}</span>
                                                         </div>
                                                     </div>
@@ -549,7 +549,7 @@ export default function MonitoringJadwalPage() {
                                                         <span className={`px-2.5 py-0.5 rounded-md font-bold text-[10px] uppercase tracking-wide ${
                                                             item.role === 'Quran' ? 'bg-orange-100 text-orange-600' :
                                                             item.role === 'W. Santri' ? 'bg-indigo-100 text-indigo-600' :
-                                                            'bg-emerald-100 text-emerald-600'
+                                                            'bg-rose-100 text-rose-600'
                                                         }`}>
                                                             {item.role}
                                                         </span>
