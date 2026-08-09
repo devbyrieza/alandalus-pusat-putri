@@ -17,18 +17,18 @@ export const BRANDING = {
   dashboardTitle: "Panel Admin PPDB Putri",
   
   contact: {
-    whatsapp: "+62 838-1151-5951",
+    whatsapp: "+62 811-2802-1035",
     whatsapp2: "+62 811-3920-135",
     facebook: "https://www.facebook.com/pp.alandalus",
     instagram: "https://www.instagram.com/pp_alandalus/",
     youtube: "https://www.youtube.com/andalustv",
     tiktok: "https://www.tiktok.com/@pp.alandalus",
-    address: "Jl. Raya Menteng KM.6, Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
+    address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
   },
   
   // Properties required by PPDB dashboard & layout backward compatibility
-  address: "Jl. Raya Menteng KM.6, Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
-  phone: "+62 838-1151-5951",
+  address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
+  phone: "+62 811-2802-1035",
   email: "info@pesantren-alandalus.com",
   igUrl: "https://www.instagram.com/pp_alandalus/",
   ytUrl: "https://www.youtube.com/andalustv",
