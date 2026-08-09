@@ -388,7 +388,7 @@ export default function Home() {
             <span className={`text-xs font-bold uppercase tracking-widest ${c.text600}`}>
               Sistem Pendidikan
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mt-3 mb-4 text-balance">
+            <h2 className="text-2xl sm:text-3xl lg:text-2xl font-black text-slate-900 mt-3 mb-4 text-balance">
               Kurikulum{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#059669] to-[#064e3b] pr-1">
                 TICE
@@ -478,7 +478,7 @@ export default function Home() {
             <span className={`text-xs font-bold uppercase tracking-widest ${c.text400}`}>
               Kekhawatiran Orang Tua
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-2xl font-black text-white mt-3 mb-4">
               Kami Pahami Setiap Keresahan Anda
             </h2>
             <p className="text-slate-400 max-w-xl mx-auto">
@@ -532,7 +532,7 @@ export default function Home() {
               <span className={`text-xs font-bold uppercase tracking-widest ${c.text600}`}>
                 Proses Pendaftaran
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mt-3 mb-8 md:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl font-black text-slate-900 mt-3 mb-8 md:mb-12">
                 Daftar dalam{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#166534] to-[#14532d]">
                   4 Langkah
@@ -784,7 +784,7 @@ export default function Home() {
             <span className={`text-xs font-bold uppercase tracking-widest ${c.text400}`}>
               Suara Orang Tua
             </span>
-            <h2 className="text-3xl sm:text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-black text-white mt-3 mb-4 text-balance px-4 sm:px-0">
+            <h2 className="text-3xl sm:text-2xl lg:text-2xl font-black text-white mt-3 mb-4 text-balance px-4 sm:px-0">
               Mereka Sudah{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#fbbf24] to-[#d97706] pr-1">
                 Membuktikannya
