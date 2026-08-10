@@ -324,7 +324,7 @@ export default function Home() {
                 {/* Image Container */}
                 <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/50 w-full">
                   <Image
-                    src="/images/halaman-dekat-masjid.webp"
+                    src="/images/gedung-utama-dan-lapangan-basket.webp"
                     alt="Kampus Pesantren Al-Andalus Jonggol"
                     width={600}
                     height={420}
