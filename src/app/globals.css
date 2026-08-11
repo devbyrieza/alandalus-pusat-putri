@@ -141,20 +141,20 @@
   --color-primary-light: var(--color-emerald-50);
   --color-primary-dark: var(--color-emerald-800);
 
-  --color-secondary-50: #fffdf5;
-  --color-secondary-100: #fef8dd;
-  --color-secondary-200: #fcf1ca;
-  --color-secondary-300: #fae1a2;
-  --color-secondary-400: #f7c96a;
-  --color-secondary-500: #f3b137;
-  --color-secondary-600: #db931d;
-  --color-secondary-700: #b87413;
-  --color-secondary-800: #965910;
-  --color-secondary-900: #78420b;
-  --color-secondary-950: #552906;
-  --color-secondary: #f7c96a;
-  --color-secondary-light: #fef8dd;
-  --color-secondary-dark: #db931d;
+  --color-secondary-50: var(--color-andalus-gold-50);
+  --color-secondary-100: var(--color-andalus-gold-100);
+  --color-secondary-200: var(--color-andalus-gold-200);
+  --color-secondary-300: var(--color-andalus-gold-300);
+  --color-secondary-400: var(--color-andalus-gold-400);
+  --color-secondary-500: var(--color-andalus-gold-500);
+  --color-secondary-600: var(--color-andalus-gold-600);
+  --color-secondary-700: var(--color-andalus-gold-700);
+  --color-secondary-800: var(--color-andalus-gold-800);
+  --color-secondary-900: var(--color-andalus-gold-900);
+  --color-secondary-950: var(--color-andalus-gold-950);
+  --color-secondary: var(--color-andalus-gold-400);
+  --color-secondary-light: var(--color-andalus-gold-100);
+  --color-secondary-dark: var(--color-andalus-gold-600);
 
   /* â”€â”€â”€ Status Colors â”€â”€â”€ */
   --color-success-500: #16a34a;
