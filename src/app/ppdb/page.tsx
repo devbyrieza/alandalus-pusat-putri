@@ -136,7 +136,7 @@ function PPDBContent() {
   const timeline = [
     {
       phase: "Registrasi Online",
-      date: "Mulai 28 Agustus 2026",
+      date: "25 Jan - 7 Feb 2026",
       desc: "Buat akun pendaftar dan isi formulir awal melalui website resmi.",
       status: "active",
     },
@@ -154,7 +154,175 @@ function PPDBContent() {
     },
     {
       phase: "Ujian Seleksi",
-      date: "Jadwal Dipilih",
+      date: "Ahad, 8 Februari 2026",
+      desc: "Tes Lisan (Tahfidz/Bacaan Al-Qur'an), Tes Tertulis (Pengetahuan Dasar Agama & Akademik), serta Seleksi Wawancara Calon Santri & Orang Tua.",
+      status: "upcoming",
+    },
+    {
+      phase: "Pengumuman Hasil",
+      date: "7 Hari Setelah Tes",
+      desc: "Hasil seleksi diumumkan melalui Dashboard Pendaftar dan Notifikasi WhatsApp.",
+      status: "upcoming",
+    },
+    {
+      phase: "Daftar Ulang",
+"use client";
+
+import { Suspense, useEffect } from "react";
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import {
+  Calendar,
+  Users,
+  GraduationCap,
+  Award,
+  BookOpen,
+  CheckCircle,
+  FileText,
+  Sparkles,
+  ArrowRight,
+  Loader2,
+  Check,
+  HelpCircle,
+  Download,
+  CreditCard,
+  ChevronRight,
+  Phone,
+  Target,
+  Shield,
+  Star,
+  MapPin,
+  Clock,
+} from "lucide-react";
+import { Container } from "@/components/layout/Container";
+import { motion, AnimatePresence } from "framer-motion";
+
+// ========================================
+// REUSABLE COMPONENTS
+// ========================================
+
+const StatCard = ({
+  icon: Icon,
+  value,
+  label,
+  delay = 0,
+}: {
+  icon: any;
+  value: string;
+  label: string;
+  delay?: number;
+}) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay, duration: 0.5 }}
+    className="bg-white p-6 sm:p-5 md:p-8 rounded-2xl sm:rounded-[2rem] border border-surface-100 shadow-premium-sm hover:shadow-premium-md transition-all text-center group"
+  >
+    <div className="w-14 h-14 mx-auto bg-surface-50 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-premium-xs">
+      <Icon className="w-7 h-7 text-primary-600" />
+    </div>
+    <div className="font-display font-black text-lg sm:text-2xl md:text-3xl text-ink-950 mb-1 leading-tight break-words">
+      {value}
+    </div>
+    <div className="text-[10px] font-black text-ink-400 uppercase tracking-widest leading-tight">
+      {label}
+    </div>
+  </motion.div>
+);
+
+const TimelineItem = ({ item, index }: { item: any; index: number }) => (
+  <motion.div
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ delay: index * 0.1, duration: 0.5 }}
+    className="relative pl-12 md:pl-20 pb-12 last:pb-0"
+  >
+    {/* Line */}
+    <div className="absolute left-[23px] md:left-[31px] top-0 bottom-0 w-0.5 bg-surface-100" />
+
+    {/* Dot */}
+    <div
+      className={`absolute left-0 top-0 w-12 h-12 md:w-16 md:h-16 rounded-2xl md:rounded-3xl border-4 flex items-center justify-center bg-white z-10 shadow-premium-sm transition-all duration-500
+      ${item.status === "active" ? "border-primary-600 text-primary-600" : "border-surface-100 text-ink-300"}`}
+    >
+      <span className="text-xl md:text-2xl font-display font-black">
+        {index + 1}
+      </span>
+      {item.status === "active" && (
+        <motion.span
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full border-2 border-white"
+        />
+      )}
+    </div>
+
+    {/* Card */}
+    <div className="bg-white p-5 sm:p-5 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border border-surface-100 shadow-premium-sm hover:shadow-premium-md transition-all">
+      <div className="flex flex-wrap items-center gap-4 mb-3">
+        <h3 className="text-xl md:text-2xl font-display font-black text-ink-950">
+          {item.phase}
+        </h3>
+        <span
+          className={`px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest ${
+            item.status === "active"
+              ? "bg-primary-50 text-primary-700"
+              : "bg-surface-50 text-ink-400"
+          }`}
+        >
+          {item.date}
+        </span>
+      </div>
+      <p className="text-lg text-ink-600 leading-relaxed font-bold text-left">
+        {item.desc}
+      </p>
+    </div>
+  </motion.div>
+);
+
+// ========================================
+// CONTENT COMPONENT
+// ========================================
+
+function PPDBContent() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const searchParams = useSearchParams();
+  const jenjang = searchParams.get("jenjang");
+
+  const stats = [
+    { label: "Akreditasi A", value: "Unggul", icon: Award },
+    { label: "Sebaran Alumni", value: "3 Benua", icon: Users },
+    { label: "Asatidz", value: "Lulusan Terbaik", icon: GraduationCap },
+    { label: "Target", value: "TimTeng & PTN", icon: Target },
+  ];
+
+  const timeline = [
+    {
+      phase: "Registrasi Online",
+      date: "25 Jan - 7 Feb 2026",
+      desc: "Buat akun pendaftar dan isi formulir awal melalui website resmi.",
+      status: "active",
+    },
+    {
+      phase: "Pembayaran Registrasi",
+      date: "Setelah Daftar",
+      desc: "Lakukan pembayaran biaya pendaftaran via Transfer Manual BSI yang tersedia di dashboard.",
+      status: "upcoming",
+    },
+    {
+      phase: "Lengkapi Data & Berkas",
+      date: "Setelah Bayar",
+      desc: "Lengkapi profil santri, data orang tua/wali, dan upload dokumen persyaratan.",
+      status: "upcoming",
+    },
+    {
+      phase: "Ujian Seleksi",
+      date: "Ahad, 8 Februari 2026",
       desc: "Tes Lisan (Tahfidz/Bacaan Al-Qur'an), Tes Tertulis (Pengetahuan Dasar Agama & Akademik), serta Seleksi Wawancara Calon Santri & Orang Tua.",
       status: "upcoming",
     },
@@ -177,25 +345,22 @@ function PPDBContent() {
       title: "Dokumen Persyaratan",
       icon: FileText,
       items: [
-        { name: "Scan Kartu Keluarga", type: "Wajib" },
-        { name: "Scan Akte Kelahiran", type: "Wajib" },
-        { name: "Scan Rapor 2 Semester Terakhir", type: "Wajib" },
-        { name: "Scan Nomor Induk Siswa Nasional (NISN)", type: "Wajib" },
-        { name: "Foto Setengah Badan", type: "Wajib" },
+        { name: "Scan Akta Kelahiran", type: "Wajib" },
+        { name: "Scan Rapor 4 Semester Terakhir, SD/MI Kelas 4 & 5 atau SMP/MTS Kelas 7 & 8", type: "Wajib" },
+        { name: "Scan Kartu Keluarga (KK)", type: "Wajib" },
+        { name: "Scan Nomor Induk Siswa Nasional (NISN) atau Surat Keterangan NISN", type: "Wajib" },
+        { name: "Foto Setengah Badan (Putri: background merah, berpakaian putih, berjilbab, tanpa kacamata)", type: "Wajib" },
+        { name: "Scan Hasil Tes Lab HBsAg (Hepatitis B)", type: "Wajib" },
       ],
     },
     {
       title: "Dokumen Pendukung",
       icon: CheckCircle,
-      note: "Ketiga format dokumen di atas dapat di-unduh melalui akun Dashboard pendaftar saat Anda sudah berada di tahap upload berkas.",
+      note: "Format dokumen di bawah dapat di-unduh (DOWNLOAD) melalui akun Dashboard pendaftar saat Anda sudah berada di tahap upload berkas.",
       items: [
-        { name: "Surat Keterangan Sehat (Format Panitia)", type: "Wajib" },
-        { name: "Scan Pakta Integritas Calon Santri (Format Panitia)", type: "Wajib" },
-        { name: "Scan Pakta Integritas Calon Orangtua/Wali Santri (Format Panitia)", type: "Wajib" },
-        {
-          name: "Scan Pernyataan Bebas Perilaku Negatif (Format Panitia)",
-          type: "Wajib",
-        },
+        { name: "Surat Keterangan Sehat (Format Bebas, dari RS/Klinik)", type: "Wajib" },
+        { name: "Scan Pakta Integritas (Format Panitia)", type: "Wajib" },
+        { name: "Scan Pernyataan Bebas Perilaku Negatif (Format Panitia)", type: "Wajib" },
       ],
     },
   ];
@@ -222,7 +387,7 @@ function PPDBContent() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-surface-200 text-primary-700 text-xs font-black uppercase tracking-widest mb-10 shadow-premium-sm"
             >
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Penerimaan Santri Baru T.A 2027-2028</span>
+              <span>Penerimaan Santri Baru T.A 2026-2027</span>
             </motion.div>
 
             <motion.h1
@@ -377,7 +542,7 @@ function PPDBContent() {
             </div>
             <div>
               <p className="text-lg text-primary-900 font-bold leading-relaxed">
-                Catatan Penting: Uang Pangkal TA. 2027-2028 sebesar Rp 35.000.000 dapat dicicil maksimal 3x pembayaran. Skema: <strong>50% (Rp 17.500.000)</strong> dibayar 1 pekan setelah pengumuman kelulusan, <strong>25%</strong> paling lambat 1 Maret 2027, dan <strong>25%</strong> sisanya lunas pada 1 Juli 2027. Uang pangkal dikembalikan 100% jika mengundurkan diri dalam 14 hari setelah pengumuman.
+                Catatan Penting: Uang Pangkal TA. 2026-2027 sebesar Rp 35.000.000 dapat dicicil maksimal 3x pembayaran. Skema: <strong>50% (Rp 17.500.000)</strong> dibayar 1 pekan setelah pengumuman kelulusan, <strong>25%</strong> paling lambat 1 Maret 2026, dan <strong>25%</strong> sisanya lunas pada 1 Juli 2026. Uang pangkal dikembalikan 100% jika mengundurkan diri dalam 14 hari setelah pengumuman.
               </p>
             </div>
           </motion.div>
@@ -518,7 +683,7 @@ function PPDBContent() {
                     },
                     {
                       q: "Kapan batas akhir pendaftaran?",
-                      a: "Pendaftaran PPDB Tahun Ajaran 2027-2028 dibuka mulai tanggal 10 Februari sampai dengan 7 Juni 2026. Namun, pendaftaran dapat ditutup lebih awal jika kuota santri baru sudah terpenuhi.",
+                      a: "Pendaftaran PPDB Tahun Ajaran 2026-2027 dibuka mulai tanggal 25 Januari sampai dengan 7 Februari 2026. Namun, pendaftaran dapat ditutup lebih awal jika kuota santri baru sudah terpenuhi.",
                     },
                     {
                       q: "Bagaimana sistem kurikulumnya?",
@@ -645,3 +810,4 @@ export default function PPDBPage() {
     </Suspense>
   );
 }
+
