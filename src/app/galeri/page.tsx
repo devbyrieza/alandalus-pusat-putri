@@ -239,7 +239,7 @@ export default function GaleriPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link
-              href="/daftar"
+              href="/ppdb"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-rose-500 hover:bg-rose-400 text-white font-bold shadow-lg shadow-rose-500/25 transition-all"
             >
               <span>Daftar PPDB Sekarang</span>
