@@ -66,7 +66,7 @@ export default function KontakPage() {
 
           {/* EMAIL */}
           <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm text-center space-y-4 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-sky-500/10 text-sky-600 flex items-center justify-center mx-auto font-bold">
+            <div className="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center mx-auto font-bold">
               <Mail className="w-7 h-7" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">Email Resmi</h3>

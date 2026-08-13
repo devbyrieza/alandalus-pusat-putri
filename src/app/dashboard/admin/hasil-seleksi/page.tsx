@@ -361,7 +361,7 @@ export default function HasilSeleksiPage() {
                       grade === "A"
                         ? "bg-green-500"
                         : grade === "B"
-                          ? "bg-sky-400"
+                          ? "bg-rose-400"
                           : "bg-secondary-400";
                     return (
                       <span

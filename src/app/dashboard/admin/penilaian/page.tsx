@@ -711,7 +711,7 @@ export default function ExaminerDashboard() {
                       Swal.fire("Error", "Gagal menghitung ulang", "error");
                     }
                   }}
-                  className="btn-secondary flex items-center gap-2 bg-purple-50 text-purple-700 border-purple-100 hover:bg-purple-100 rounded-xl font-bold py-2"
+                  className="btn-secondary flex items-center gap-2 bg-rose-50 text-rose-700 border-rose-100 hover:bg-rose-100 rounded-xl font-bold py-2"
                 >
                   <RefreshCcw className="w-4 h-4" /> Hitung Ulang
                 </Button>
@@ -877,7 +877,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-sky-400"
+                                  ? "bg-rose-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -916,7 +916,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-sky-400"
+                                  ? "bg-rose-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -955,7 +955,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-sky-400"
+                                  ? "bg-rose-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -1016,7 +1016,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-sky-400"
+                                  ? "bg-rose-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -1055,7 +1055,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-sky-400"
+                                  ? "bg-rose-400"
                                   : "bg-secondary-400";
                             return (
                               <span

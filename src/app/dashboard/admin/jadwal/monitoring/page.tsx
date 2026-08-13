@@ -243,9 +243,9 @@ export default function MonitoringJadwalPage() {
                     <p className="text-2xl md:text-3xl font-black text-indigo-600 relative z-10">{selesaiWSantri}</p>
                 </div>
                 <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 w-12 h-12 bg-purple-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
+                    <div className="absolute top-0 right-0 w-12 h-12 bg-rose-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Selesai W. Orang Tua</p>
-                    <p className="text-2xl md:text-3xl font-black text-purple-600 relative z-10">{selesaiWOrangTua}</p>
+                    <p className="text-2xl md:text-3xl font-black text-rose-600 relative z-10">{selesaiWOrangTua}</p>
                 </div>
             </div>
 
@@ -376,7 +376,7 @@ export default function MonitoringJadwalPage() {
                                                     {s.pendaftar.nomor}
                                                 </span>
                                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase ${
-                                                    s.pendaftar.jenjang === 'MTs' ? 'bg-purple-100 text-purple-600' : 'bg-rose-100 text-rose-600'
+                                                    s.pendaftar.jenjang === 'MTs' ? 'bg-rose-100 text-rose-600' : 'bg-rose-100 text-rose-600'
                                                 }`}>
                                                     {s.pendaftar.jenjang}
                                                 </span>

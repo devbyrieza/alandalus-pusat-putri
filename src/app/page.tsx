@@ -106,7 +106,7 @@ function StatCard({
     return () => clearTimeout(t);
   }, [started, delay]);
   const count = useCountUp(value, 2000, active);
-  const primaryColor = IS_PUTRA ? "text-primary-400" : "text-sky-400";
+  const primaryColor = IS_PUTRA ? "text-primary-400" : "text-rose-400";
   const primaryBg = IS_PUTRA ? "bg-primary-500/10" : "bg-pink-500/10";
   return (
     <div className="text-center group">
@@ -145,9 +145,9 @@ const alumniItems = [
 ];
 
 function InfiniteMarquee() {
-  const primaryBorder = IS_PUTRA ? "border-primary-800/60" : "border-sky-800/60";
-  const primaryBg = IS_PUTRA ? "bg-primary-950/60" : "bg-sky-950/60";
-  const primaryText = IS_PUTRA ? "text-primary-300" : "text-sky-300";
+  const primaryBorder = IS_PUTRA ? "border-primary-800/60" : "border-rose-800/60";
+  const primaryBg = IS_PUTRA ? "bg-primary-950/60" : "bg-rose-950/60";
+  const primaryText = IS_PUTRA ? "text-primary-300" : "text-rose-300";
   const iconColor = IS_PUTRA ? "text-primary-500" : "text-pink-500";
 
   return (
@@ -199,18 +199,18 @@ export default function Home() {
   }, []);
 
   const c = {
-    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-sky-500 to-blue-700",
+    grad:       IS_PUTRA ? "from-primary-600 to-primary-800"   : "from-rose-600 to-rose-800",
     gradText:   "from-secondary-400 to-secondary-600",
-    text600:    IS_PUTRA ? "text-primary-600"  : "text-pink-600",
-    text400:    IS_PUTRA ? "text-primary-400"  : "text-sky-400",
-    bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-pink-600",
-    bgHover:    IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-sky-700",
-    shadow:     IS_PUTRA ? "shadow-primary-500/30" : "shadow-sky-500/30",
-    border200:  IS_PUTRA ? "border-primary-200" : "border-pink-200",
-    bg50:       IS_PUTRA ? "bg-primary-50"     : "bg-pink-50",
-    bgDark:     IS_PUTRA ? "bg-primary-950"    : "bg-sky-950",
-    bg950:      IS_PUTRA ? "bg-primary-950"    : "bg-sky-950",
-    ring:       IS_PUTRA ? "ring-primary-500/30" : "ring-sky-500/30",
+    text600:    IS_PUTRA ? "text-primary-600"  : "text-rose-600",
+    text400:    IS_PUTRA ? "text-primary-400"  : "text-rose-400",
+    bg600:      IS_PUTRA ? "bg-primary-600"    : "bg-rose-600",
+    bgHover:    IS_PUTRA ? "hover:bg-primary-700" : "hover:bg-rose-700",
+    shadow:     IS_PUTRA ? "shadow-primary-500/30" : "shadow-rose-500/30",
+    border200:  IS_PUTRA ? "border-primary-200" : "border-rose-200",
+    bg50:       IS_PUTRA ? "bg-primary-50"     : "bg-rose-50",
+    bgDark:     IS_PUTRA ? "bg-primary-950"    : "bg-rose-950",
+    bg950:      IS_PUTRA ? "bg-primary-950"    : "bg-rose-950",
+    ring:       IS_PUTRA ? "ring-primary-500/30" : "ring-rose-500/30",
   };
 
   return (
@@ -259,8 +259,8 @@ export default function Home() {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
                 <span className="relative flex h-2.5 w-2.5 shrink-0">
-                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${IS_PUTRA ? "bg-primary-400" : "bg-pink-400"}`} />
-                  <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${IS_PUTRA ? "bg-primary-400" : "bg-pink-400"}`} />
+                  <span className={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${IS_PUTRA ? "bg-primary-400" : "bg-rose-400"}`} />
+                  <span className={`relative inline-flex rounded-full h-2.5 w-2.5 ${IS_PUTRA ? "bg-primary-400" : "bg-rose-400"}`} />
                 </span>
                 <FaMosque className={`w-3.5 h-3.5 ${c.text400}`} />
                 <span className="text-white/90 text-xs font-bold uppercase tracking-widest">

@@ -333,7 +333,7 @@ export default function ProfilPage() {
                     {data?.santri?.no_hp || "-"}
                   </span>
                 </div>
-                <div className="flex items-center gap-3 px-4 py-2 bg-purple-50 text-purple-700 rounded-lg border border-purple-100">
+                <div className="flex items-center gap-3 px-4 py-2 bg-rose-50 text-rose-700 rounded-lg border border-rose-100">
                   <Mail className="w-4 h-4" />
                   <span className="font-bold text-sm">
                     {data?.santri?.email || "-"}

@@ -60,7 +60,7 @@ export default function LaporanHarianPage() {
               type="date" 
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="bg-white border border-slate-200 font-bold text-slate-700 rounded-xl py-2 pl-10 pr-4 focus:outline-none focus:border-maroon-500"
+              className="bg-white border border-slate-200 font-bold text-slate-700 rounded-xl py-2 pl-10 pr-4 focus:outline-none focus:border-rose-500"
             />
           </div>
           <button 
@@ -102,18 +102,18 @@ export default function LaporanHarianPage() {
             </div>
           </div>
 
-          <div className="bg-maroon-50 p-6 rounded-2xl border border-maroon-100">
-            <h3 className="text-sm font-bold text-maroon-700 uppercase mb-4 flex items-center gap-2">
+          <div className="bg-rose-50 p-6 rounded-2xl border border-rose-100">
+            <h3 className="text-sm font-bold text-rose-700 uppercase mb-4 flex items-center gap-2">
               <FileText className="w-4 h-4" /> Operasional Kantin (E-Money)
             </h3>
             <div className="space-y-3">
-              <div className="flex justify-between items-center border-b border-maroon-200 pb-2">
-                <span className="font-medium text-maroon-800">Jumlah Transaksi (Struk)</span>
-                <span className="font-black text-maroon-900">{ringkasan.totalTransaksi} Trx</span>
+              <div className="flex justify-between items-center border-b border-rose-200 pb-2">
+                <span className="font-medium text-rose-800">Jumlah Transaksi (Struk)</span>
+                <span className="font-black text-rose-900">{ringkasan.totalTransaksi} Trx</span>
               </div>
-              <div className="flex justify-between items-center border-b border-maroon-200 pb-2">
-                <span className="font-medium text-maroon-800">Total Omzet Kantin Hari Ini</span>
-                <span className="font-black text-maroon-900 text-xl">Rp {ringkasan.totalNominal.toLocaleString('id-ID')}</span>
+              <div className="flex justify-between items-center border-b border-rose-200 pb-2">
+                <span className="font-medium text-rose-800">Total Omzet Kantin Hari Ini</span>
+                <span className="font-black text-rose-900 text-xl">Rp {ringkasan.totalNominal.toLocaleString('id-ID')}</span>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ export default function LaporanHarianPage() {
             <tfoot>
               <tr>
                 <td colSpan={3} className="p-4 text-right font-black text-slate-800 uppercase">Total Akhir Omzet Kantin:</td>
-                <td className="p-4 text-right font-black text-maroon-700 text-xl">Rp {ringkasan.totalNominal.toLocaleString('id-ID')}</td>
+                <td className="p-4 text-right font-black text-rose-700 text-xl">Rp {ringkasan.totalNominal.toLocaleString('id-ID')}</td>
               </tr>
             </tfoot>
           </table></div>

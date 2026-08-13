@@ -258,10 +258,10 @@ Hubungi 0851-1152-4441 jika ada masalah.`}
                 <CheckCircle2 className="w-4 h-4 text-teal-600" /> Ready
               </p>
             </div>
-            <div className="bg-sky-50/50 border border-sky-100 p-5 rounded-2xl">
-              <p className="text-xs text-sky-700 font-bold uppercase tracking-wider mb-1">Email</p>
-              <p className="text-xl font-black text-sky-950 flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-sky-600" /> Ready
+            <div className="bg-rose-50/50 border border-rose-100 p-5 rounded-2xl">
+              <p className="text-xs text-rose-700 font-bold uppercase tracking-wider mb-1">Email</p>
+              <p className="text-xl font-black text-rose-950 flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-rose-600" /> Ready
               </p>
             </div>
             <div className="bg-amber-50/50 border border-amber-100 p-5 rounded-2xl">

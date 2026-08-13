@@ -869,15 +869,15 @@ export default function PendaftarDetailPage() {
       },
       scheduled: {
         label: "Proses Seleksi",
-        color: "bg-purple-50 text-purple-800 border border-purple-100",
+        color: "bg-rose-50 text-rose-800 border border-rose-100",
       },
       testing: {
         label: "Proses Seleksi",
-        color: "bg-purple-50 text-purple-800 border border-purple-100",
+        color: "bg-rose-50 text-rose-800 border border-rose-100",
       },
       selection: {
         label: "Proses Seleksi",
-        color: "bg-purple-50 text-purple-800 border border-purple-100",
+        color: "bg-rose-50 text-rose-800 border border-rose-100",
       },
       tested: {
         label: "Proses Seleksi",
@@ -1281,7 +1281,7 @@ export default function PendaftarDetailPage() {
               <>
                 <button
                   onClick={handleUbahJenjang}
-                  className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs font-black transition-all flex items-center gap-1.5 shadow-sm active:scale-95 border border-purple-500 mr-2"
+                  className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-xs font-black transition-all flex items-center gap-1.5 shadow-sm active:scale-95 border border-rose-500 mr-2"
                 >
                   <School className="w-3.5 h-3.5" />
                   Ubah Jenjang
@@ -1494,7 +1494,7 @@ export default function PendaftarDetailPage() {
                     <a
                       href={`/dashboard/pendaftar/ujian/kepribadian?pendaftarId=${pendaftar.id}`}
                       target="_blank"
-                      className="px-3 py-1.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-[11px] font-bold transition-colors shadow-sm"
+                      className="px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-[11px] font-bold transition-colors shadow-sm"
                     >
                       Buka CBT Kepribadian
                     </a>
@@ -1649,9 +1649,9 @@ export default function PendaftarDetailPage() {
 
 
                 {(pendaftar?.jenjang?.toLowerCase() || "").includes("ma") && (
-                  <div className="bg-sky-50/50 p-4 rounded-xl border border-sky-100 flex flex-col justify-between">
+                  <div className="bg-rose-50/50 p-4 rounded-xl border border-rose-100 flex flex-col justify-between">
                     <div>
-                      <span className="block text-xs text-sky-600 font-bold uppercase tracking-wide mb-1">
+                      <span className="block text-xs text-rose-600 font-bold uppercase tracking-wide mb-1">
                         Lisan B. Arab
                       </span>
                       {!pendaftar.nilai_ujian ? (
@@ -1661,17 +1661,17 @@ export default function PendaftarDetailPage() {
                       ) : pendaftar.nilai_ujian?.nilai_tes_lisan_arab || (pendaftar.nilai_ujian as any)?.score_lisan_arab ? (
                         <div className="flex flex-col mt-2 space-y-1">
                           <div className="flex items-baseline gap-2">
-                            <span className="text-3xl font-black text-sky-900">
+                            <span className="text-3xl font-black text-rose-900">
                               {pendaftar.nilai_ujian?.score_lisan_arab != null
                                 ? Number(pendaftar.nilai_ujian.score_lisan_arab).toFixed(1).replace(".0", "")
                                 : pendaftar.nilai_ujian?.nilai_tes_lisan_arab != null
                                   ? Number(pendaftar.nilai_ujian.nilai_tes_lisan_arab).toFixed(1).replace(".0", "")
                                   : "-"}
                             </span>
-                            <span className="text-sm text-sky-400 font-medium">/ 100</span>
+                            <span className="text-sm text-rose-400 font-medium">/ 100</span>
                           </div>
                           {(pendaftar.nilai_ujian as any)?.detail_lisan_arab?.rekomendasi && (
-                            <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded inline-block max-w-full break-words whitespace-normal ${(pendaftar.nilai_ujian as any).detail_lisan_arab.rekomendasi === "Diterima" ? "bg-sky-100 text-sky-700" : "bg-red-100 text-red-700"}`}>
+                            <span className={`text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded inline-block max-w-full break-words whitespace-normal ${(pendaftar.nilai_ujian as any).detail_lisan_arab.rekomendasi === "Diterima" ? "bg-rose-100 text-rose-700" : "bg-red-100 text-red-700"}`}>
                               {(pendaftar.nilai_ujian as any).detail_lisan_arab.rekomendasi}
                             </span>
                           )}
@@ -1683,7 +1683,7 @@ export default function PendaftarDetailPage() {
                       )}
                     </div>
                     {pendaftar.nilai_ujian?.catatan_lisan_arab && (
-                      <div className="mt-3 text-[10px] text-stone-500 line-clamp-3 italic border-t border-sky-200/50 pt-2 leading-relaxed">
+                      <div className="mt-3 text-[10px] text-stone-500 line-clamp-3 italic border-t border-rose-200/50 pt-2 leading-relaxed">
                         "`${pendaftar.nilai_ujian.catatan_lisan_arab}`"
                       </div>
                     )}
@@ -1782,7 +1782,7 @@ export default function PendaftarDetailPage() {
                 <div className="mt-4 flex justify-end">
                   <Link
                     href={`/dashboard/penguji/input-nilai?search=${pendaftar.nomor_pendaftaran}`}
-                    className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors shadow hover:shadow-md font-bold text-sm"
+                    className="flex items-center gap-2 px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 transition-colors shadow hover:shadow-md font-bold text-sm"
                   >
                     <Edit className="w-4 h-4" />
                     Input / Lengkapi Edit Nilai

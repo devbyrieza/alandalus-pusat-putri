@@ -1148,23 +1148,23 @@ function AdminPendaftarContent() {
       },
       selection: {
         label: "Proses Seleksi",
-        color: "bg-purple-50 text-purple-800 border border-purple-100",
+        color: "bg-rose-50 text-rose-800 border border-rose-100",
       },
       scheduled: {
         label: "Proses Seleksi",
-        color: "bg-purple-50 text-purple-800 border border-purple-100",
+        color: "bg-rose-50 text-rose-800 border border-rose-100",
       },
       testing: {
         label: "Proses Seleksi",
-        color: "bg-purple-50 text-purple-800 border border-purple-100",
+        color: "bg-rose-50 text-rose-800 border border-rose-100",
       },
       tested: {
         label: "Proses Seleksi",
-        color: "bg-purple-100 text-purple-800 border border-purple-200 shadow-sm",
+        color: "bg-rose-100 text-rose-800 border border-rose-200 shadow-sm",
       },
       exam_completed: {
         label: "Proses Seleksi",
-        color: "bg-purple-100 text-purple-800 border border-purple-200 shadow-sm",
+        color: "bg-rose-100 text-rose-800 border border-rose-200 shadow-sm",
       },
       announced: {
         label: "Cadangan",
@@ -1371,7 +1371,7 @@ function AdminPendaftarContent() {
               </Link>
               <Link
                 href="/dashboard/admin/pendaftar/tambah?type=PINDAHAN"
-                className="flex items-center gap-2 px-3 md:px-4 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-bold shadow-sm shadow-purple-600/20 transition-all text-sm"
+                className="flex items-center gap-2 px-3 md:px-4 py-2.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold shadow-sm shadow-purple-600/20 transition-all text-sm"
                 title="Daftarkan Santri Pindahan"
               >
                 <Shuffle className="w-4 h-4" />
@@ -1467,7 +1467,7 @@ function AdminPendaftarContent() {
                   <optgroup label="--- Ujian & Wawancara ---">
                     <option
                       value="terjadwal_ujian"
-                      className={isPenguji ? "font-bold bg-purple-50" : ""}
+                      className={isPenguji ? "font-bold bg-rose-50" : ""}
                     >
                       Terjadwal Ujian {isPenguji ? "(PRIORITAS)" : ""}
                     </option>
@@ -1734,18 +1734,18 @@ function AdminPendaftarContent() {
 
       {/* Bulk Actions */}
       {selectedIds.length > 0 && (
-        <div className="bg-gradient-to-r from-purple-50 to-primary-50 rounded-xl shadow-lg p-4 border-2 border-purple-200">
+        <div className="bg-gradient-to-r from-rose-50 to-primary-50 rounded-xl shadow-lg p-4 border-2 border-rose-200">
           <div className="flex items-center justify-between flex-wrap gap-4">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <CheckSquare className="w-5 h-5 text-purple-600" />
-                <span className="font-bold text-purple-900">
+                <CheckSquare className="w-5 h-5 text-rose-600" />
+                <span className="font-bold text-rose-900">
                   {selectedIds.length} item terpilih
                 </span>
               </div>
               <button
                 onClick={() => setSelectedIds([])}
-                className="text-sm text-purple-600 hover:text-purple-800 underline"
+                className="text-sm text-rose-600 hover:text-rose-800 underline"
               >
                 Batalkan pilihan
               </button>
@@ -1755,7 +1755,7 @@ function AdminPendaftarContent() {
               <select
                 value={bulkStatus}
                 onChange={(e) => setBulkStatus(e.target.value)}
-                className="w-full sm:w-64 px-4 py-2.5 bg-white border-2 border-purple-200 rounded-xl focus:border-purple-500 focus:outline-none font-bold text-purple-900"
+                className="w-full sm:w-64 px-4 py-2.5 bg-white border-2 border-rose-200 rounded-xl focus:border-rose-500 focus:outline-none font-bold text-rose-900"
               >
                 <option value="" disabled={bulkStatus !== ""}>
                   Pilih status baru...
@@ -1780,7 +1780,7 @@ function AdminPendaftarContent() {
               <button
                 onClick={handleBulkUpdate}
                 disabled={!bulkStatus || bulkUpdating}
-                className="flex items-center justify-center gap-2 px-5 md:px-8 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-black transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-purple-600/20 active:scale-95 text-sm"
+                className="flex items-center justify-center gap-2 px-5 md:px-8 py-2.5 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-black transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-purple-600/20 active:scale-95 text-sm"
               >
                 {bulkUpdating ? (
                   <>
@@ -1900,12 +1900,12 @@ function AdminPendaftarContent() {
               {pendaftar.map((item) => (
                 <div
                   key={item.id}
-                  className={`p-5 ${selectedIds.includes(item.id) ? "bg-purple-50" : "bg-white"}`}
+                  className={`p-5 ${selectedIds.includes(item.id) ? "bg-rose-50" : "bg-white"}`}
                 >
                   <div className="flex items-start gap-3">
                     <button
                       onClick={() => handleSelectOne(item.id)}
-                      className="mt-1 shrink-0 text-purple-600"
+                      className="mt-1 shrink-0 text-rose-600"
                     >
                       {selectedIds.includes(item.id) ? (
                         <CheckSquare className="w-5 h-5" />
@@ -1918,7 +1918,7 @@ function AdminPendaftarContent() {
                         <span className="font-mono text-xs font-bold text-primary-700 bg-primary-50 px-2 py-0.5 rounded">
                           {item.nomor_pendaftaran}
                         </span>
-                        <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 bg-purple-100 text-purple-700 rounded-full">
+                        <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 bg-rose-100 text-rose-700 rounded-full">
                           {item.jenjang}
                         </span>
                       </div>
@@ -2091,13 +2091,13 @@ function AdminPendaftarContent() {
                     <tr
                       key={item.id}
                       className={`group hover:bg-primary-50 transition-colors ${
-                        selectedIds.includes(item.id) ? "bg-purple-50" : ""
+                        selectedIds.includes(item.id) ? "bg-rose-50" : ""
                       }`}
                     >
                       <td className="px-4 py-3 text-center">
                         <button
                           onClick={() => handleSelectOne(item.id)}
-                          className="text-purple-600 hover:text-purple-800"
+                          className="text-rose-600 hover:text-rose-800"
                         >
                           {selectedIds.includes(item.id) ? (
                             <CheckSquare className="w-5 h-5" />
@@ -2154,7 +2154,7 @@ function AdminPendaftarContent() {
                         </td>
                       )}
                       <td className="px-4 py-3">
-                        <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold">
+                        <span className="px-3 py-1 bg-rose-100 text-rose-700 rounded-full text-xs font-bold">
                           {item.jenjang}
                         </span>
                       </td>

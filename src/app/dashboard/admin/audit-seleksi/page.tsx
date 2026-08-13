@@ -162,7 +162,7 @@ export default function AuditSeleksiPage() {
     }
 
     if (grade === "A") color = "bg-rose-500";
-    else if (grade === "B") color = "bg-sky-500";
+    else if (grade === "B") color = "bg-rose-500";
 
     return { label: grade, color };
   };
@@ -464,7 +464,7 @@ export default function AuditSeleksiPage() {
                           const s = c.status_pendaftaran || "";
                           const labels: any = {
                             accepted: { l: "DITERIMA", c: "text-rose-700 bg-rose-100 border-emerald-200" },
-                            announced: { l: "PUBLISHED", c: "text-sky-700 bg-sky-100 border-sky-200" },
+                            announced: { l: "PUBLISHED", c: "text-rose-700 bg-rose-100 border-rose-200" },
                             rejected: { l: "DITOLAK", c: "text-rose-700 bg-rose-100 border-rose-200" },
                             cadangan: { l: "CADANGAN", c: "text-secondary-700 bg-secondary-100 border-secondary-200" },
                             tested: { l: "SIAP AUDIT", c: "text-ink-600 bg-ink-100 border-ink-200" },

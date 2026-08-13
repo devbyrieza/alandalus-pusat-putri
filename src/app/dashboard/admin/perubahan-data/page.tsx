@@ -173,7 +173,7 @@ export default function PerubahanDataPage() {
                                                     "approved_to_edit"
                                                   ? "bg-primary-100 text-primary-700"
                                                   : req.status === "submitted"
-                                                    ? "bg-purple-100 text-purple-700"
+                                                    ? "bg-rose-100 text-rose-700"
                                                     : "bg-rose-100 text-rose-700"
                                             }
                                         `}

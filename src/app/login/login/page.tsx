@@ -60,7 +60,7 @@ const ROLE_INFO: Record<
     label: "Pewawancara Cawalsan",
     icon: Mic,
     desc: "Wawancara calon orangtua/wali santri",
-    color: "from-purple-50 to-violet-50 border-purple-200",
+    color: "from-rose-50 to-violet-50 border-rose-200",
   },
   pewawancara_calsan: {
     label: "Pewawancara Calon Santri",
@@ -84,7 +84,7 @@ const ROLE_INFO: Record<
     label: "Penguji Lisan B. Arab",
     icon: Languages,
     desc: "Penguji tes Lisan Bahasa Arab",
-    color: "from-sky-50 to-blue-50 border-pink-200",
+    color: "from-rose-50 to-blue-50 border-pink-200",
   },
   admin: {
     label: "Admin",

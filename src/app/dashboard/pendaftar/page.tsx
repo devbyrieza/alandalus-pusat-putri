@@ -208,8 +208,8 @@ function StatusGrid({ status, statusLabel, pengumuman }: any) {
         : "Menunggu",
       desc: "Jadwal dan hasil ujian",
       icon: Target,
-      color: "text-purple-600",
-      bg: "bg-purple-50",
+      color: "text-rose-600",
+      bg: "bg-rose-50",
     },
     {
       label: "Hasil Akhir",

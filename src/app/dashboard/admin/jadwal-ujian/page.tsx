@@ -353,16 +353,16 @@ export default function JadwalUjianPage() {
     <div className="space-y-6 max-w-7xl mx-auto">
       {/* Header */}
       <div className="bg-white rounded-2xl shadow-clay-lg p-5 md:p-8 border border-white/40 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 bg-rose-500/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
         <div className="relative flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="flex items-center gap-6">
-            <div className="p-4 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl shadow-lg shadow-purple-500/20">
+            <div className="p-4 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-2xl shadow-lg shadow-purple-500/20">
               <Calendar className="w-8 h-8 text-white" />
             </div>
             <div>
               <h1 className="text-3xl font-black text-ink-900 tracking-tight">
                 Manajemen{" "}
-                <span className="text-purple-600">Jadwal Seleksi</span>
+                <span className="text-rose-600">Jadwal Seleksi</span>
               </h1>
               <p className="text-rose-900/60 font-medium">
                 Panel Pengaturan Jadwal Seleksi PPDB Al-Andalus Putri
@@ -379,7 +379,7 @@ export default function JadwalUjianPage() {
             </button>
             <button
               onClick={() => setShowAddSession(true)}
-              className="flex items-center gap-3 px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl font-black shadow-lg shadow-purple-600/20 transition-all hover:-translate-y-0.5"
+              className="flex items-center gap-3 px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white rounded-2xl font-black shadow-lg shadow-purple-600/20 transition-all hover:-translate-y-0.5"
             >
               <Plus className="w-5 h-5" />
               Sesi Baru
@@ -390,7 +390,7 @@ export default function JadwalUjianPage() {
 
       {/* Broadcast Info Card */}
       <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6">
-        <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl p-6 text-white shadow-lg overflow-hidden relative">
+        <div className="bg-gradient-to-br from-indigo-600 to-rose-700 rounded-2xl p-6 text-white shadow-lg overflow-hidden relative">
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 blur-xl"></div>
           <div className="relative flex items-center gap-6">
             <div className="p-4 bg-white/20 rounded-2xl backdrop-blur-md">
@@ -433,14 +433,14 @@ export default function JadwalUjianPage() {
         {/* Left Column: Sessions List */}
         <div className="lg:col-span-8 space-y-4">
           <h2 className="font-black text-ink-900 text-lg flex items-center gap-2 px-2">
-            <Clock className="w-5 h-5 text-purple-600" />
+            <Clock className="w-5 h-5 text-rose-600" />
             Daftar Sesi Ujian
           </h2>
 
           <div className="grid grid-cols-1 gap-4">
             {loading ? (
               <div className="bg-white rounded-2xl p-6 md:p-12 text-center border border-white/40">
-                <Loader2 className="w-8 h-8 animate-spin text-purple-500 mx-auto" />
+                <Loader2 className="w-8 h-8 animate-spin text-rose-500 mx-auto" />
               </div>
             ) : sessions.length === 0 ? (
               <div className="bg-white rounded-2xl p-6 md:p-12 text-center border-2 border-dashed border-ink-100">
@@ -453,10 +453,10 @@ export default function JadwalUjianPage() {
               sessions.map((s) => (
                 <div
                   key={s.id}
-                  className={`group bg-white rounded-2xl shadow-clay-md border border-white/40 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all ${selectedPendaftarId ? "ring-2 ring-purple-100 hover:ring-purple-200" : ""}`}
+                  className={`group bg-white rounded-2xl shadow-clay-md border border-white/40 p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all ${selectedPendaftarId ? "ring-2 ring-rose-100 hover:ring-rose-200" : ""}`}
                 >
                   <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 shadow-inner">
+                    <div className="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600 shadow-inner">
                       <Clock className="w-7 h-7" />
                     </div>
                     <div>
@@ -471,7 +471,7 @@ export default function JadwalUjianPage() {
                           <MapPin className="w-3.5 h-3.5" />
                           {s.location || "Pesantren Islam Internasional Al-Andalus Putri"}
                         </span>
-                        <span className="flex items-center gap-1.5 text-xs font-bold text-purple-600 uppercase tracking-wider">
+                        <span className="flex items-center gap-1.5 text-xs font-bold text-rose-600 uppercase tracking-wider">
                           <Users className="w-3.5 h-3.5" />
                           {s.booked_count} / {s.quota} Peserta
                         </span>
@@ -495,7 +495,7 @@ export default function JadwalUjianPage() {
                       <div className="flex flex-col gap-3 w-full md:w-64 items-end">
                         <div className="w-full bg-secondary-100 h-2.5 rounded-full overflow-hidden border border-white">
                           <div
-                            className="h-full bg-gradient-to-r from-purple-500 to-indigo-600"
+                            className="h-full bg-gradient-to-r from-rose-500 to-indigo-600"
                             style={{
                               width: `${(s.booked_count / s.quota) * 100}%`,
                             }}
@@ -506,7 +506,7 @@ export default function JadwalUjianPage() {
                             handleBulkAssign(s.id, s.title || "Sesi Ini")
                           }
                           disabled={assigning}
-                          className="text-xs font-bold text-purple-600 hover:text-purple-800 hover:bg-purple-50 px-3 py-1.5 rounded-lg transition-all flex items-center gap-2"
+                          className="text-xs font-bold text-rose-600 hover:text-rose-800 hover:bg-rose-50 px-3 py-1.5 rounded-lg transition-all flex items-center gap-2"
                         >
                           <Send className="w-3.5 h-3.5" />
                           Broadcast Link (Massal)
@@ -603,7 +603,7 @@ export default function JadwalUjianPage() {
               <div className="p-5 md:p-8 space-y-6">
                 <div className="flex items-center justify-between">
                   <h2 className="text-2xl font-black text-ink-900">
-                    Buat Sesi <span className="text-purple-600">Baru</span>
+                    Buat Sesi <span className="text-rose-600">Baru</span>
                   </h2>
                   <button
                     type="button"
@@ -626,7 +626,7 @@ export default function JadwalUjianPage() {
                         setNewSession({ ...newSession, title: e.target.value })
                       }
                       placeholder="Contoh: Gelombang 1 - Sesi Pagi"
-                      className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-purple-500/10 outline-none font-bold"
+                      className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-rose-500/10 outline-none font-bold"
                     />
                   </div>
 
@@ -645,7 +645,7 @@ export default function JadwalUjianPage() {
                             start_time: e.target.value,
                           })
                         }
-                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-purple-500/10 outline-none font-bold"
+                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-rose-500/10 outline-none font-bold"
                       />
                     </div>
                     <div>
@@ -662,7 +662,7 @@ export default function JadwalUjianPage() {
                             end_time: e.target.value,
                           })
                         }
-                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-purple-500/10 outline-none font-bold"
+                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-rose-500/10 outline-none font-bold"
                       />
                     </div>
                   </div>
@@ -682,7 +682,7 @@ export default function JadwalUjianPage() {
                             quota: parseInt(e.target.value),
                           })
                         }
-                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-purple-500/10 outline-none font-bold"
+                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-rose-500/10 outline-none font-bold"
                       />
                     </div>
                     <div>
@@ -699,18 +699,18 @@ export default function JadwalUjianPage() {
                           })
                         }
                         placeholder="Contoh: Ruang CBT atau Online"
-                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-purple-500/10 outline-none font-bold"
+                        className="w-full bg-secondary-50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-rose-500/10 outline-none font-bold"
                       />
                     </div>
                   </div>
 
-                  <div className="bg-purple-50 rounded-xl p-4 border border-purple-100 flex items-start gap-3">
-                    <AlertCircle className="w-5 h-5 text-purple-600 shrink-0 mt-0.5" />
+                  <div className="bg-rose-50 rounded-xl p-4 border border-rose-100 flex items-start gap-3">
+                    <AlertCircle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-xs font-bold text-purple-900 uppercase tracking-wider mb-1">
+                      <p className="text-xs font-bold text-rose-900 uppercase tracking-wider mb-1">
                         Informasi Otomatis
                       </p>
-                      <p className="text-[11px] text-purple-700 leading-relaxed">
+                      <p className="text-[11px] text-rose-700 leading-relaxed">
                         Sistem akan otomatis menyertakan <b>Link Google Meet</b>{" "}
                         dari profil Anda (pembuat sesi) saat mengirim notifikasi
                         ke pendaftar. Pastikan profil Anda sudah memiliki data
@@ -730,7 +730,7 @@ export default function JadwalUjianPage() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-[2] py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-2xl font-black shadow-lg shadow-purple-600/20 transition-all"
+                  className="flex-[2] py-4 bg-rose-600 hover:bg-rose-700 text-white rounded-2xl font-black shadow-lg shadow-purple-600/20 transition-all"
                 >
                   Simpan Sesi
                 </button>
@@ -744,7 +744,7 @@ export default function JadwalUjianPage() {
       {sendingProgress.active && (
         <div className="fixed inset-0 z-[60] flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center p-4 bg-ink-900/80 backdrop-blur-sm overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
           <div className="bg-white rounded-3xl w-full max-w-md shadow-2xl border border-white p-5 md:p-8 text-center animate-pulse">
-            <Loader2 className="w-12 h-12 text-purple-600 animate-spin mx-auto mb-4" />
+            <Loader2 className="w-12 h-12 text-rose-600 animate-spin mx-auto mb-4" />
             <h2 className="text-2xl font-black text-ink-900 mb-2">
               Mengirim Notifikasi...
             </h2>
@@ -754,7 +754,7 @@ export default function JadwalUjianPage() {
 
             <div className="w-full bg-secondary-100 h-4 rounded-full overflow-hidden mb-4 border border-ink-100">
               <div
-                className="h-full bg-gradient-to-r from-purple-500 to-indigo-600 transition-all duration-500 ease-out"
+                className="h-full bg-gradient-to-r from-rose-500 to-indigo-600 transition-all duration-500 ease-out"
                 style={{
                   width: `${(sendingProgress.curr / sendingProgress.total) * 100}%`,
                 }}

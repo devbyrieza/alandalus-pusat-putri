@@ -57,7 +57,7 @@ export default function BeritaPage() {
                   {item.type === "video" && (
                     <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
                        <div className="w-12 h-12 bg-white/90 rounded-full flex items-center justify-center">
-                          <Play className={`w-5 h-5 ml-1 ${IS_PUTRA ? "text-primary-600" : "text-pink-600"}`} />
+                          <Play className={`w-5 h-5 ml-1 ${IS_PUTRA ? "text-primary-600" : "text-rose-600"}`} />
                        </div>
                     </div>
                   )}
