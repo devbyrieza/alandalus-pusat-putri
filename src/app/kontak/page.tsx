@@ -29,8 +29,8 @@ export default function KontakPage() {
       <Container>
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-700 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-4 h-4 text-rose-600" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-700 text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-4 h-4 text-primary-600" />
             <span>LAYANAN INFORMASI & KONTAK</span>
           </div>
 
@@ -47,7 +47,7 @@ export default function KontakPage() {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
           {/* ADDRESS */}
           <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm text-center space-y-4 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center mx-auto font-bold">
+            <div className="w-14 h-14 rounded-2xl bg-primary-500/10 text-primary-600 flex items-center justify-center mx-auto font-bold">
               <MapPin className="w-7 h-7" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">Alamat Kampus</h3>
@@ -60,13 +60,13 @@ export default function KontakPage() {
               <Phone className="w-7 h-7" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">Customer Service / WA</h3>
-            <p className="text-rose-700 font-bold text-lg">{BRANDING.phone}</p>
+            <p className="text-primary-700 font-bold text-lg">{BRANDING.phone}</p>
             <p className="text-slate-400 text-xs">Senin - Sabtu: 08.00 - 16.00 WIB</p>
           </div>
 
           {/* EMAIL */}
           <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm text-center space-y-4 hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center mx-auto font-bold">
+            <div className="w-14 h-14 rounded-2xl bg-primary-500/10 text-primary-600 flex items-center justify-center mx-auto font-bold">
               <Mail className="w-7 h-7" />
             </div>
             <h3 className="text-xl font-bold text-slate-900">Email Resmi</h3>
@@ -113,7 +113,7 @@ export default function KontakPage() {
               href={`https://wa.me/${BRANDING.phone.replace(/[^0-9]/g, "")}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-rose-600 hover:bg-rose-500 text-white font-bold shadow-lg transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-primary-600 hover:bg-primary-500 text-white font-bold shadow-lg transition-all"
             >
               <MessageSquare className="w-5 h-5" />
               <span>Chat WhatsApp Panitia</span>

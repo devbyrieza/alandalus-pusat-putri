@@ -207,7 +207,7 @@ export default function AdminUploadPaymentModal({
               <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Nominal */}
                 <div className="space-y-1.5">
-                  <label className="text-sm font-bold text-stone-700">Nominal Transfer (Rp) <span className="text-rose-500">*</span></label>
+                  <label className="text-sm font-bold text-stone-700">Nominal Transfer (Rp) <span className="text-primary-500">*</span></label>
                   <input
                     type="number"
                     required
@@ -221,7 +221,7 @@ export default function AdminUploadPaymentModal({
 
                 {/* File Upload */}
                 <div className="space-y-1.5">
-                  <label className="text-sm font-bold text-stone-700">Bukti Transfer <span className="text-rose-500">*</span></label>
+                  <label className="text-sm font-bold text-stone-700">Bukti Transfer <span className="text-primary-500">*</span></label>
                   <div className="flex items-center gap-2">
                     <button
                       type="button"

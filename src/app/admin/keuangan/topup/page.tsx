@@ -102,7 +102,7 @@ export default function FinanceTopupPage() {
             placeholder="Cari nama atau No. Reg..." 
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-white border border-slate-200 rounded-xl py-2.5 pl-10 pr-4 focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20"
+            className="w-full bg-white border border-slate-200 rounded-xl py-2.5 pl-10 pr-4 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
           />
         </div>
       </div>
@@ -112,7 +112,7 @@ export default function FinanceTopupPage() {
         <div className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-[600px]">
           <div className="bg-slate-50 p-4 border-b border-slate-200 flex justify-between items-center">
             <h3 className="font-bold text-slate-700">Daftar Santri Aktif</h3>
-            <button onClick={fetchSantri} className="text-slate-400 hover:text-rose-600 transition-colors" title="Refresh Data">
+            <button onClick={fetchSantri} className="text-slate-400 hover:text-primary-600 transition-colors" title="Refresh Data">
               <RefreshCcw className="w-5 h-5" />
             </button>
           </div>
@@ -120,7 +120,7 @@ export default function FinanceTopupPage() {
           <div className="flex-1 overflow-y-auto p-2">
             {loading ? (
               <div className="flex justify-center items-center h-full">
-                <Loader2 className="w-8 h-8 animate-spin text-rose-500" />
+                <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
               </div>
             ) : filteredSantri.length === 0 ? (
               <div className="flex justify-center items-center h-full text-slate-400 font-medium">
@@ -132,10 +132,10 @@ export default function FinanceTopupPage() {
                   <div 
                     key={santri.id}
                     onClick={() => setSelectedSantri(santri)}
-                    className={`flex items-center justify-between p-3 rounded-xl cursor-pointer transition-all ${selectedSantri?.id === santri.id ? 'bg-rose-50 border border-rose-200' : 'hover:bg-slate-50 border border-transparent'}`}
+                    className={`flex items-center justify-between p-3 rounded-xl cursor-pointer transition-all ${selectedSantri?.id === santri.id ? 'bg-primary-50 border border-primary-200' : 'hover:bg-slate-50 border border-transparent'}`}
                   >
                     <div>
-                      <p className={`font-bold ${selectedSantri?.id === santri.id ? 'text-rose-800' : 'text-slate-800'}`}>{santri.nama_lengkap}</p>
+                      <p className={`font-bold ${selectedSantri?.id === santri.id ? 'text-primary-800' : 'text-slate-800'}`}>{santri.nama_lengkap}</p>
                       <p className="text-xs text-slate-500 mt-0.5">{santri.nomor_pendaftaran} • {santri.jenjang}</p>
                     </div>
                     <div className="text-right">
@@ -153,7 +153,7 @@ export default function FinanceTopupPage() {
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 relative overflow-hidden">
           {/* Header Panel */}
           <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-            <div className="w-10 h-10 bg-rose-100 text-rose-700 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center">
               <Wallet className="w-5 h-5" />
             </div>
             <div>
@@ -191,7 +191,7 @@ export default function FinanceTopupPage() {
                     value={nominal}
                     onChange={(e) => setNominal(e.target.value)}
                     placeholder="Contoh: 500000"
-                    className="w-full font-bold text-lg text-slate-900 bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-rose-500 focus:ring-2 focus:ring-rose-500/20"
+                    className="w-full font-bold text-lg text-slate-900 bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
                   />
                 </div>
 
@@ -215,7 +215,7 @@ export default function FinanceTopupPage() {
                     value={keterangan}
                     onChange={(e) => setKeterangan(e.target.value)}
                     placeholder="BSI M-Banking - Bpk Hasan"
-                    className="w-full text-sm font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-rose-500"
+                    className="w-full text-sm font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 focus:outline-none focus:border-primary-500"
                   />
                 </div>
               </div>
@@ -230,7 +230,7 @@ export default function FinanceTopupPage() {
               <button
                 onClick={handleTopup}
                 disabled={!nominal || isProcessing}
-                className="w-full mt-6 bg-rose-600 hover:bg-rose-700 disabled:bg-slate-200 disabled:text-slate-400 text-white font-black py-4 rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-2"
+                className="w-full mt-6 bg-primary-600 hover:bg-primary-700 disabled:bg-slate-200 disabled:text-slate-400 text-white font-black py-4 rounded-xl shadow-md transition-all active:scale-95 flex items-center justify-center gap-2"
               >
                 {isProcessing ? <Loader2 className="w-5 h-5 animate-spin" /> : "Tambahkan Saldo"}
               </button>

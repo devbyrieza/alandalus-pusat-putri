@@ -170,9 +170,9 @@ export default function PengajuanKeringananPage() {
           <div
             className={`w-24 h-24 rounded-[2rem] flex items-center justify-center mb-6 shadow-sm border ${
               pengajuan.status === "approved"
-                ? "bg-rose-50 text-rose-600 border-rose-100"
+                ? "bg-primary-50 text-primary-600 border-primary-100"
                 : pengajuan.status === "rejected"
-                ? "bg-rose-50 text-rose-600 border-rose-100"
+                ? "bg-primary-50 text-primary-600 border-primary-100"
                 : "bg-amber-50 text-amber-600 border-amber-100"
             }`}
           >
@@ -206,9 +206,9 @@ export default function PengajuanKeringananPage() {
               <span
                 className={`px-3 py-1 rounded-full text-xs font-black border ${
                   pengajuan.status === "approved"
-                    ? "bg-rose-100 text-rose-700 border-emerald-200"
+                    ? "bg-primary-100 text-primary-700 border-emerald-200"
                     : pengajuan.status === "rejected"
-                    ? "bg-rose-100 text-rose-700 border-rose-200"
+                    ? "bg-primary-100 text-primary-700 border-primary-200"
                     : "bg-amber-100 text-amber-700 border-amber-200"
                 }`}
               >
@@ -231,10 +231,10 @@ export default function PengajuanKeringananPage() {
             {pengajuan.nominal_disetujui > 0 &&
               pengajuan.status === "approved" && (
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-bold text-rose-600 uppercase tracking-wider">
+                  <span className="text-sm font-bold text-primary-600 uppercase tracking-wider">
                     Nilai Potongan Disetujui
                   </span>
-                  <span className="font-black text-rose-700 text-lg">
+                  <span className="font-black text-primary-700 text-lg">
                     Rp{" "}
                     {pengajuan.nominal_disetujui.toLocaleString("id-ID")}
                   </span>
@@ -284,7 +284,7 @@ export default function PengajuanKeringananPage() {
             <div>
               <label className="block text-sm font-bold text-slate-700 mb-2">
                 Kesanggupan Bayar (Rp){" "}
-                <span className="text-rose-500">*</span>
+                <span className="text-primary-500">*</span>
               </label>
               <div className="relative">
                 <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">
@@ -307,7 +307,7 @@ export default function PengajuanKeringananPage() {
             <div>
               <label className="block text-sm font-bold text-slate-700 mb-2">
                 Penjelasan / Alasan Pengajuan{" "}
-                <span className="text-rose-500">*</span>
+                <span className="text-primary-500">*</span>
               </label>
               <textarea
                 value={alasan}
@@ -345,7 +345,7 @@ export default function PengajuanKeringananPage() {
               <div className="border border-slate-200 rounded-xl p-4 bg-slate-50">
                 <label className="block text-sm font-bold text-slate-800 mb-1">
                   SKTM (Surat Keterangan Tidak Mampu){" "}
-                  <span className="text-rose-500">*</span>
+                  <span className="text-primary-500">*</span>
                 </label>
                 <p className="text-[10px] text-slate-500 mb-3">
                   Dari RT/RW atau Kelurahan setempat.
@@ -369,7 +369,7 @@ export default function PengajuanKeringananPage() {
               <div className="border border-slate-200 rounded-xl p-4 bg-slate-50">
                 <label className="block text-sm font-bold text-slate-800 mb-1">
                   Surat Permohonan Keringanan Biaya{" "}
-                  <span className="text-rose-500">*</span>
+                  <span className="text-primary-500">*</span>
                 </label>
                 <p className="text-[10px] text-slate-500 mb-3">
                   Menyebutkan jenis biaya, jumlah sanggup bayar, dan/atau

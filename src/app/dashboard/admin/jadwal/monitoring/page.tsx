@@ -235,7 +235,7 @@ export default function MonitoringJadwalPage() {
                 <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-green-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Selesai Al-Qur&apos;an</p>
-                    <p className="text-2xl md:text-3xl font-black text-rose-600 relative z-10">{selesaiQuran}</p>
+                    <p className="text-2xl md:text-3xl font-black text-primary-600 relative z-10">{selesaiQuran}</p>
                 </div>
                 <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-indigo-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
@@ -243,9 +243,9 @@ export default function MonitoringJadwalPage() {
                     <p className="text-2xl md:text-3xl font-black text-indigo-600 relative z-10">{selesaiWSantri}</p>
                 </div>
                 <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 w-12 h-12 bg-rose-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
+                    <div className="absolute top-0 right-0 w-12 h-12 bg-primary-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Selesai W. Orang Tua</p>
-                    <p className="text-2xl md:text-3xl font-black text-rose-600 relative z-10">{selesaiWOrangTua}</p>
+                    <p className="text-2xl md:text-3xl font-black text-primary-600 relative z-10">{selesaiWOrangTua}</p>
                 </div>
             </div>
 
@@ -254,23 +254,23 @@ export default function MonitoringJadwalPage() {
                 <motion.div 
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
-                    className="bg-rose-50 border border-rose-200 rounded-2xl p-5 flex items-start gap-4 shadow-sm shadow-rose-100"
+                    className="bg-primary-50 border border-primary-200 rounded-2xl p-5 flex items-start gap-4 shadow-sm shadow-primary-100"
                 >
-                    <div className="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center text-rose-600 shrink-0">
+                    <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 shrink-0">
                         <XCircle className="w-6 h-6" />
                     </div>
                     <div className="flex-1">
-                        <h3 className="text-sm font-black text-rose-900 uppercase tracking-tight">Terdeteksi Bentrokan Jadwal ({conflicts.length})</h3>
-                        <p className="text-xs text-rose-700 font-bold mt-1">Satu penguji terdeteksi menangani beberapa santri di jam yang sama. Mohon segera kroscek data berikut:</p>
+                        <h3 className="text-sm font-black text-primary-900 uppercase tracking-tight">Terdeteksi Bentrokan Jadwal ({conflicts.length})</h3>
+                        <p className="text-xs text-primary-700 font-bold mt-1">Satu penguji terdeteksi menangani beberapa santri di jam yang sama. Mohon segera kroscek data berikut:</p>
                         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                             {conflicts.map((c, i) => (
-                                <div key={i} className="bg-white/60 border border-rose-100 rounded-xl p-3 text-[11px]">
-                                    <p className="font-black text-rose-800 uppercase tracking-wider">{c.name}</p>
-                                    <p className="text-rose-500 font-bold mt-0.5">{formatDateTime(new Date(c.time).toISOString())}</p>
+                                <div key={i} className="bg-white/60 border border-primary-100 rounded-xl p-3 text-[11px]">
+                                    <p className="font-black text-primary-800 uppercase tracking-wider">{c.name}</p>
+                                    <p className="text-primary-500 font-bold mt-0.5">{formatDateTime(new Date(c.time).toISOString())}</p>
                                     <div className="mt-2 space-y-1">
                                         {c.items.map((item: any, j: number) => (
                                             <div key={j} className="flex items-center gap-2 text-slate-600 font-medium">
-                                                <div className="w-1 h-1 bg-rose-400 rounded-full" />
+                                                <div className="w-1 h-1 bg-primary-400 rounded-full" />
                                                 <span>{item.student} ({item.pendaftarId})</span>
                                             </div>
                                         ))}
@@ -376,7 +376,7 @@ export default function MonitoringJadwalPage() {
                                                     {s.pendaftar.nomor}
                                                 </span>
                                                 <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase ${
-                                                    s.pendaftar.jenjang === 'MTs' ? 'bg-rose-100 text-rose-600' : 'bg-rose-100 text-rose-600'
+                                                    s.pendaftar.jenjang === 'MTs' ? 'bg-primary-100 text-primary-600' : 'bg-primary-100 text-primary-600'
                                                 }`}>
                                                     {s.pendaftar.jenjang}
                                                 </span>
@@ -418,8 +418,8 @@ export default function MonitoringJadwalPage() {
                                                     </div>
                                                 </div>
                                                 <span className={`text-[9px] font-black uppercase px-2 py-0.5 rounded-full ${
-                                                    stat.status === 'completed' ? 'bg-rose-100 text-rose-700' :
-                                                    stat.status === 'absent' ? 'bg-rose-100 text-rose-700' :
+                                                    stat.status === 'completed' ? 'bg-primary-100 text-primary-700' :
+                                                    stat.status === 'absent' ? 'bg-primary-100 text-primary-700' :
                                                     'bg-primary-100 text-primary-700'
                                                 }`}>
                                                     {stat.status === 'completed' ? 'Selesai' : stat.status === 'absent' ? 'Absen' : 'Menunggu'}
@@ -480,7 +480,7 @@ export default function MonitoringJadwalPage() {
                                                     <div className="flex items-center gap-3">
                                                         {getStatusIcon(s.status.quran)}
                                                         <div className="flex flex-col">
-                                                            <span className={`text-xs font-bold ${conflicts.some(c => c.name === s.ustadz.quran && c.time === new Date(s.sesi.start).getTime()) ? 'text-rose-600' : 'text-slate-700'}`}>{s.ustadz.quran}</span>
+                                                            <span className={`text-xs font-bold ${conflicts.some(c => c.name === s.ustadz.quran && c.time === new Date(s.sesi.start).getTime()) ? 'text-primary-600' : 'text-slate-700'}`}>{s.ustadz.quran}</span>
                                                             <span className={`text-[10px] font-bold uppercase tracking-tight ${
                                                                 s.status.quran === 'completed' ? 'text-green-600' : 'text-slate-400'
                                                             }`}>{s.status.quran === 'completed' ? 'Selesai' : s.status.quran === 'absent' ? 'Alpa' : 'Menunggu'}</span>
@@ -491,7 +491,7 @@ export default function MonitoringJadwalPage() {
                                                     <div className="flex items-center gap-3">
                                                         {getStatusIcon(s.status.santri)}
                                                         <div className="flex flex-col">
-                                                            <span className={`text-xs font-bold ${conflicts.some(c => c.name === s.ustadz.santri && c.time === new Date(s.sesi.start).getTime()) ? 'text-rose-600' : 'text-slate-700'}`}>{s.ustadz.santri}</span>
+                                                            <span className={`text-xs font-bold ${conflicts.some(c => c.name === s.ustadz.santri && c.time === new Date(s.sesi.start).getTime()) ? 'text-primary-600' : 'text-slate-700'}`}>{s.ustadz.santri}</span>
                                                             <span className={`text-[10px] font-bold uppercase tracking-tight ${
                                                                 s.status.santri === 'completed' ? 'text-indigo-600' : 'text-slate-400'
                                                             }`}>{s.status.santri === 'completed' ? 'Selesai' : s.status.santri === 'absent' ? 'Alpa' : 'Menunggu'}</span>
@@ -502,9 +502,9 @@ export default function MonitoringJadwalPage() {
                                                     <div className="flex items-center gap-3">
                                                         {getStatusIcon(s.status.ortu)}
                                                         <div className="flex flex-col">
-                                                            <span className={`text-xs font-bold ${conflicts.some(c => c.name === s.ustadz.ortu && c.time === new Date(s.sesi.start).getTime()) ? 'text-rose-600' : 'text-slate-700'}`}>{s.ustadz.ortu}</span>
+                                                            <span className={`text-xs font-bold ${conflicts.some(c => c.name === s.ustadz.ortu && c.time === new Date(s.sesi.start).getTime()) ? 'text-primary-600' : 'text-slate-700'}`}>{s.ustadz.ortu}</span>
                                                             <span className={`text-[10px] font-bold uppercase tracking-tight ${
-                                                                s.status.ortu === 'completed' ? 'text-rose-600' : 'text-slate-400'
+                                                                s.status.ortu === 'completed' ? 'text-primary-600' : 'text-slate-400'
                                                             }`}>{s.status.ortu === 'completed' ? 'Selesai' : s.status.ortu === 'absent' ? 'Alpa' : 'Menunggu'}</span>
                                                         </div>
                                                     </div>
@@ -549,7 +549,7 @@ export default function MonitoringJadwalPage() {
                                                         <span className={`px-2.5 py-0.5 rounded-md font-bold text-[10px] uppercase tracking-wide ${
                                                             item.role === 'Quran' ? 'bg-orange-100 text-orange-600' :
                                                             item.role === 'W. Santri' ? 'bg-indigo-100 text-indigo-600' :
-                                                            'bg-rose-100 text-rose-600'
+                                                            'bg-primary-100 text-primary-600'
                                                         }`}>
                                                             {item.role}
                                                         </span>

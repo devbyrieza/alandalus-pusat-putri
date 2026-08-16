@@ -62,13 +62,13 @@ export default function ManajemenTagihanPage() {
               placeholder="Cari santri..." 
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-white border border-slate-200 rounded-xl py-2 pl-10 pr-4 focus:outline-none focus:border-rose-500"
+              className="w-full bg-white border border-slate-200 rounded-xl py-2 pl-10 pr-4 focus:outline-none focus:border-primary-500"
             />
           </div>
           <button 
             onClick={handleGenerateSPP}
             disabled={isGenerating}
-            className="bg-rose-600 hover:bg-rose-700 disabled:bg-slate-300 text-white font-bold py-2 px-4 rounded-xl flex items-center gap-2 transition-all shadow-sm whitespace-nowrap"
+            className="bg-primary-600 hover:bg-primary-700 disabled:bg-slate-300 text-white font-bold py-2 px-4 rounded-xl flex items-center gap-2 transition-all shadow-sm whitespace-nowrap"
           >
             {isGenerating ? <Loader2 className="w-5 h-5 animate-spin" /> : <Plus className="w-5 h-5" />}
             Generate SPP
@@ -100,7 +100,7 @@ export default function ManajemenTagihanPage() {
               {loading ? (
                 <tr>
                   <td colSpan={6} className="p-8 text-center">
-                    <Loader2 className="w-8 h-8 animate-spin text-rose-500 mx-auto" />
+                    <Loader2 className="w-8 h-8 animate-spin text-primary-500 mx-auto" />
                   </td>
                 </tr>
               ) : tagihan.map((t: any) => (
@@ -129,7 +129,7 @@ export default function ManajemenTagihanPage() {
                   </td>
                   <td className="p-4 text-center">
                      {t.status === 'pending' && (
-                       <button className="text-xs font-bold text-rose-600 hover:text-rose-800 hover:underline">
+                       <button className="text-xs font-bold text-primary-600 hover:text-primary-800 hover:underline">
                          Verifikasi Bayar
                        </button>
                      )}

@@ -33,7 +33,7 @@ export default function DashboardEksekutifPage() {
   if (loading || !dashboardData) {
     return (
       <div className="flex items-center justify-center h-full min-h-[500px]">
-        <div className="animate-spin w-8 h-8 border-4 border-rose-500 border-t-transparent rounded-full"></div>
+        <div className="animate-spin w-8 h-8 border-4 border-primary-500 border-t-transparent rounded-full"></div>
       </div>
     );
   }
@@ -71,7 +71,7 @@ export default function DashboardEksekutifPage() {
         </div>
 
         <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex items-center gap-4">
-          <div className="w-14 h-14 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-600 shrink-0">
+          <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center text-primary-600 shrink-0">
             <ShoppingBag className="w-7 h-7" />
           </div>
           <div>

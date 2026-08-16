@@ -222,7 +222,7 @@ export default function VerifikasiManualPage() {
                   ) : (
                     <button
                       onClick={() => sendSmsAuto(item.id, item.no_hp)}
-                      className="px-4 py-2 bg-rose-600 text-white rounded-lg hover:bg-rose-700 flex items-center gap-2"
+                      className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
                       Kirim via Wablas

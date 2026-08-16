@@ -1245,7 +1245,7 @@ export default function JadwalPengujiPage() {
                   {filteredAssignments.map((item) => (
                     <div
                       key={item.id}
-                      className={`bg-white rounded-3xl p-5 md:p-8 border transition-all app-card ${isToday(item.tanggal_ujian) ? "border-emerald-200 shadow-md ring-4 ring-rose-50" : "border-secondary-200 shadow-sm hover:border-primary-200 hover:shadow-md"}`}
+                      className={`bg-white rounded-3xl p-5 md:p-8 border transition-all app-card ${isToday(item.tanggal_ujian) ? "border-emerald-200 shadow-md ring-4 ring-primary-50" : "border-secondary-200 shadow-sm hover:border-primary-200 hover:shadow-md"}`}
                     >
                       {/* Top section: Date badge + Name */}
                       <div className="flex items-start gap-5 mb-6">
@@ -2213,15 +2213,15 @@ export default function JadwalPengujiPage() {
                   </div>
                 </div>
 
-                <div className="bg-rose-50 rounded-2xl p-4 border border-rose-100 flex items-start gap-3">
-                  <div className="w-8 h-8 bg-rose-100 rounded-xl flex items-center justify-center shrink-0 text-rose-600">
+                <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 flex items-start gap-3">
+                  <div className="w-8 h-8 bg-primary-100 rounded-xl flex items-center justify-center shrink-0 text-primary-600">
                     <Users className="w-4 h-4" />
                   </div>
                   <div>
-                    <p className="text-[10px] text-rose-800 font-black uppercase tracking-widest mb-0.5">
+                    <p className="text-[10px] text-primary-800 font-black uppercase tracking-widest mb-0.5">
                       Kapasitas
                     </p>
-                    <p className="text-[11px] text-rose-700 leading-relaxed font-medium">
+                    <p className="text-[11px] text-primary-700 leading-relaxed font-medium">
                       Setiap sesi memiliki <b>Kuota 1 Santri</b> (Private /
                       1-on-1).
                     </p>
@@ -2528,7 +2528,7 @@ export default function JadwalPengujiPage() {
                       >
                         {day.label}
                         {isSelected && !isActive && (
-                          <div className="absolute -top-1 -right-1 w-3 h-3 bg-rose-500 rounded-full border-2 border-white shadow-sm" />
+                          <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary-500 rounded-full border-2 border-white shadow-sm" />
                         )}
                         {isActive && (
                           <div className="mt-1 w-5 h-1 bg-gold-400 rounded-full"></div>
@@ -2630,7 +2630,7 @@ export default function JadwalPengujiPage() {
                       <button
                         type="button"
                         onClick={() => removeTimeSlot(index)}
-                        className="p-3 text-stone-300 hover:text-rose-600 hover:bg-rose-50 rounded-2xl transition-all"
+                        className="p-3 text-stone-300 hover:text-primary-600 hover:bg-primary-50 rounded-2xl transition-all"
                       >
                         <Trash2 className="w-5 h-5" />
                       </button>
@@ -2658,7 +2658,7 @@ export default function JadwalPengujiPage() {
                   <p className="text-[11px] text-primary-900 leading-relaxed font-bold">
                     Semua sesi yang dibuat massal akan otomatis diset sebagai{" "}
                     <span className="text-primary-600">Online</span> dan memiliki{" "}
-                    <span className="text-rose-600">Kuota 1 Santri</span>.
+                    <span className="text-primary-600">Kuota 1 Santri</span>.
                   </p>
                 </div>
               </div>

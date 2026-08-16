@@ -79,7 +79,7 @@ export default function DaftarUlangPage() {
                   Rp {item.sisa.toLocaleString('id-ID')}
                 </td>
                 <td className="p-4 text-center">
-                  <button className="text-xs font-bold text-rose-600 hover:text-rose-800 underline">
+                  <button className="text-xs font-bold text-primary-600 hover:text-primary-800 underline">
                     Lihat Detail
                   </button>
                 </td>

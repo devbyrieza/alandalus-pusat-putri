@@ -68,8 +68,8 @@ const SCHEDULE_ITEMS = [
     time: "Sore",
     label: "Ekskul & Olahraga",
     icon: Target,
-    iconBg: "bg-rose-50",
-    iconColor: "text-rose-600",
+    iconBg: "bg-primary-50",
+    iconColor: "text-primary-600",
   },
   {
     time: "Malam",

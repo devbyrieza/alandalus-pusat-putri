@@ -144,7 +144,7 @@ export default function AdminTambahPendaftar() {
                   <span className="text-xs text-stone-500 mt-1">Untuk calon santri baru masuk di awal jenjang</span>
                 </div>
               </label>
-              <label className={`relative flex cursor-pointer rounded-xl border-2 p-4 transition-all ${formData.tipe_pendaftaran === 'PINDAHAN' ? 'border-rose-500 bg-rose-50' : 'border-stone-200 hover:border-stone-300'}`}>
+              <label className={`relative flex cursor-pointer rounded-xl border-2 p-4 transition-all ${formData.tipe_pendaftaran === 'PINDAHAN' ? 'border-primary-500 bg-primary-50' : 'border-stone-200 hover:border-stone-300'}`}>
                 <input type="radio" name="tipe_pendaftaran" value="PINDAHAN" className="sr-only" checked={formData.tipe_pendaftaran === 'PINDAHAN'} onChange={handleChange} />
                 <div className="flex flex-col">
                   <span className="text-sm font-bold text-stone-900">Pendaftar Pindahan</span>
@@ -207,12 +207,12 @@ export default function AdminTambahPendaftar() {
 
           {/* Data Pindahan (Jika Memilih Pindahan) */}
           {formData.tipe_pendaftaran === "PINDAHAN" && (
-            <div className="space-y-4 bg-rose-50 p-6 rounded-xl border border-rose-100">
-              <h3 className="text-lg font-bold text-rose-900 border-b border-rose-200 pb-2">Informasi Santri Pindahan</h3>
+            <div className="space-y-4 bg-primary-50 p-6 rounded-xl border border-primary-100">
+              <h3 className="text-lg font-bold text-primary-900 border-b border-primary-200 pb-2">Informasi Santri Pindahan</h3>
               <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-rose-900">Kelas Tujuan Masuk <span className="text-red-500">*</span></label>
-                  <select required name="kelas_masuk" value={formData.kelas_masuk} onChange={handleChange} className="w-full px-4 py-2.5 rounded-xl border-2 border-rose-200 focus:border-rose-500 focus:ring-4 focus:ring-rose-500/20 outline-none transition-all appearance-none bg-white">
+                  <label className="text-sm font-bold text-primary-900">Kelas Tujuan Masuk <span className="text-red-500">*</span></label>
+                  <select required name="kelas_masuk" value={formData.kelas_masuk} onChange={handleChange} className="w-full px-4 py-2.5 rounded-xl border-2 border-primary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/20 outline-none transition-all appearance-none bg-white">
                     <option value="">Pilih Kelas...</option>
                     {[1,2,3,4,5,6,7,8,9,10,11,12].map(kelas => (
                       <option key={kelas} value={kelas}>Kelas {kelas}</option>
@@ -220,20 +220,20 @@ export default function AdminTambahPendaftar() {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-rose-900">Asal Institusi / Sekolah <span className="text-red-500">*</span></label>
-                  <input required type="text" name="asal_institusi" value={formData.asal_institusi} onChange={handleChange} placeholder="Nama sekolah asal..." className="w-full px-4 py-2.5 rounded-xl border-2 border-rose-200 focus:border-rose-500 focus:ring-4 focus:ring-rose-500/20 outline-none transition-all" />
+                  <label className="text-sm font-bold text-primary-900">Asal Institusi / Sekolah <span className="text-red-500">*</span></label>
+                  <input required type="text" name="asal_institusi" value={formData.asal_institusi} onChange={handleChange} placeholder="Nama sekolah asal..." className="w-full px-4 py-2.5 rounded-xl border-2 border-primary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/20 outline-none transition-all" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-rose-900">NISN (Nomor Induk Siswa Nasional) <span className="text-red-500">*</span></label>
-                  <input required type="text" name="nisn" value={formData.nisn} onChange={handleChange} placeholder="NISN santri..." className="w-full px-4 py-2.5 rounded-xl border-2 border-rose-200 focus:border-rose-500 focus:ring-4 focus:ring-rose-500/20 outline-none transition-all" />
+                  <label className="text-sm font-bold text-primary-900">NISN (Nomor Induk Siswa Nasional) <span className="text-red-500">*</span></label>
+                  <input required type="text" name="nisn" value={formData.nisn} onChange={handleChange} placeholder="NISN santri..." className="w-full px-4 py-2.5 rounded-xl border-2 border-primary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/20 outline-none transition-all" />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-rose-900">NPSN Sekolah Asal <span className="text-red-500">*</span></label>
-                  <input required type="text" name="npsn" value={formData.npsn} onChange={handleChange} placeholder="NPSN asal sekolah..." className="w-full px-4 py-2.5 rounded-xl border-2 border-rose-200 focus:border-rose-500 focus:ring-4 focus:ring-rose-500/20 outline-none transition-all" />
+                  <label className="text-sm font-bold text-primary-900">NPSN Sekolah Asal <span className="text-red-500">*</span></label>
+                  <input required type="text" name="npsn" value={formData.npsn} onChange={handleChange} placeholder="NPSN asal sekolah..." className="w-full px-4 py-2.5 rounded-xl border-2 border-primary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/20 outline-none transition-all" />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <label className="text-sm font-bold text-rose-900">Alasan Pindah (Opsional)</label>
-                  <textarea name="catatan_pindahan" value={formData.catatan_pindahan} onChange={handleChange} rows={2} className="w-full px-4 py-2.5 rounded-xl border-2 border-rose-200 focus:border-rose-500 focus:ring-4 focus:ring-rose-500/20 outline-none transition-all resize-none"></textarea>
+                  <label className="text-sm font-bold text-primary-900">Alasan Pindah (Opsional)</label>
+                  <textarea name="catatan_pindahan" value={formData.catatan_pindahan} onChange={handleChange} rows={2} className="w-full px-4 py-2.5 rounded-xl border-2 border-primary-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-500/20 outline-none transition-all resize-none"></textarea>
                 </div>
               </div>
             </div>

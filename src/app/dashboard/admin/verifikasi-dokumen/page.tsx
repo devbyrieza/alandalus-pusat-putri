@@ -258,7 +258,7 @@ function VerifikasiDokumenContent() {
             <button
               onClick={() => handleExport("excel")}
               disabled={exporting}
-              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white rounded-xl font-bold transition-all disabled:opacity-50 text-sm"
+              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary-50 text-primary-600 hover:bg-primary-600 hover:text-white rounded-xl font-bold transition-all disabled:opacity-50 text-sm"
             >
               <FileSpreadsheet className="w-4 h-4" />
               Excel
@@ -266,7 +266,7 @@ function VerifikasiDokumenContent() {
             <button
               onClick={() => handleExport("pdf")}
               disabled={exporting}
-              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-rose-50 text-rose-600 hover:bg-rose-600 hover:text-white rounded-xl font-bold transition-all disabled:opacity-50 text-sm"
+              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary-50 text-primary-600 hover:bg-primary-600 hover:text-white rounded-xl font-bold transition-all disabled:opacity-50 text-sm"
             >
               <FileText className="w-4 h-4" />
               PDF
@@ -422,7 +422,7 @@ function VerifikasiDokumenContent() {
                         </div>
                         <div className="flex items-center gap-4">
                           <div className="flex items-center gap-1.5">
-                            <div className="w-2 h-2 rounded-full bg-rose-500 shadow-sm shadow-rose-500/50" />
+                            <div className="w-2 h-2 rounded-full bg-primary-500 shadow-sm shadow-primary-500/50" />
                             <span className="text-xs font-bold text-ink-600">
                               {verifiedCount} Terverifikasi
                             </span>
@@ -442,7 +442,7 @@ function VerifikasiDokumenContent() {
                           <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </div>
                         {percentage === 100 ? (
-                          <CheckCircle className="w-6 h-6 text-rose-500" />
+                          <CheckCircle className="w-6 h-6 text-primary-500" />
                         ) : (
                           <Clock className="w-5 h-5 text-primary-500 animate-pulse" />
                         )}

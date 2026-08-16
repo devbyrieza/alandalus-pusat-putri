@@ -166,7 +166,7 @@ export default function TrashPage() {
       <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 border-2 border-red-100">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="flex items-center gap-3 md:gap-4">
-            <div className="p-2.5 md:p-3 bg-gradient-to-br from-red-500 to-rose-600 rounded-xl flex-shrink-0">
+            <div className="p-2.5 md:p-3 bg-gradient-to-br from-red-500 to-primary-600 rounded-xl flex-shrink-0">
               <Trash2 className="w-6 h-6 md:w-8 md:h-8 text-white" />
             </div>
             <div>
@@ -237,7 +237,7 @@ export default function TrashPage() {
           <>
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gradient-to-r from-red-50 to-rose-50 border-b-2 border-red-200">
+                <thead className="bg-gradient-to-r from-red-50 to-primary-50 border-b-2 border-red-200">
                   <tr>
                     <th className="px-4 py-3 text-left text-xs font-bold text-red-900 uppercase tracking-wider">
                       No. Pendaftaran

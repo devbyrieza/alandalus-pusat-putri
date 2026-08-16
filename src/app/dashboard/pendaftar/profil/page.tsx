@@ -152,7 +152,7 @@ export default function ProfilPage() {
               requestStatus.status === "pending"
                 ? "bg-secondary-50 border border-secondary-200 text-secondary-800"
                 : requestStatus.status === "approved_to_edit"
-                  ? "bg-gradient-to-r from-rose-50 to-pine-50 border border-pine-200 text-pine-800"
+                  ? "bg-gradient-to-r from-primary-50 to-pine-50 border border-pine-200 text-pine-800"
                   : requestStatus.status === "submitted"
                     ? "bg-primary-50 border border-primary-200 text-primary-800"
                     : requestStatus.status === "rejected"
@@ -333,7 +333,7 @@ export default function ProfilPage() {
                     {data?.santri?.no_hp || "-"}
                   </span>
                 </div>
-                <div className="flex items-center gap-3 px-4 py-2 bg-rose-50 text-rose-700 rounded-lg border border-rose-100">
+                <div className="flex items-center gap-3 px-4 py-2 bg-primary-50 text-primary-700 rounded-lg border border-primary-100">
                   <Mail className="w-4 h-4" />
                   <span className="font-bold text-sm">
                     {data?.santri?.email || "-"}

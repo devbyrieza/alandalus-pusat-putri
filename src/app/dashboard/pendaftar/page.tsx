@@ -208,16 +208,16 @@ function StatusGrid({ status, statusLabel, pengumuman }: any) {
         : "Menunggu",
       desc: "Jadwal dan hasil ujian",
       icon: Target,
-      color: "text-rose-600",
-      bg: "bg-rose-50",
+      color: "text-primary-600",
+      bg: "bg-primary-50",
     },
     {
       label: "Hasil Akhir",
       val: (pengumuman && isFinalStatus) ? pengumuman.status_kelulusan : "Belum Dirilis",
       desc: "Hasil penerimaan santri",
       icon: CheckCircle,
-      color: "text-rose-600",
-      bg: "bg-rose-50",
+      color: "text-primary-600",
+      bg: "bg-primary-50",
     },
   ];
 

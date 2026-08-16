@@ -130,7 +130,7 @@ export default function GaleriPage() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-sm font-semibold tracking-wide"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-sm font-semibold tracking-wide"
           >
             <Sparkles className="w-4 h-4" />
             <span>DOKUMENTASI FOTO AL-ANDALUS PUTRI</span>
@@ -143,7 +143,7 @@ export default function GaleriPage() {
             className="text-4xl md:text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-white"
           >
             Galeri Pesantren & Fasilitas <br />
-            <span className="bg-gradient-to-r from-rose-400 to-pink-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-pink-300 bg-clip-text text-transparent">
               {BRANDING.schoolName}
             </span>
           </motion.h1>
@@ -169,7 +169,7 @@ export default function GaleriPage() {
                 onClick={() => setActiveCategory(cat.key)}
                 className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition-all duration-300 border ${
                   isActive
-                    ? "bg-rose-500 text-white border-rose-400 shadow-lg shadow-rose-500/25 scale-105"
+                    ? "bg-primary-500 text-white border-primary-400 shadow-lg shadow-primary-500/25 scale-105"
                     : "bg-slate-900/80 text-slate-300 border-slate-800 hover:border-slate-700 hover:bg-slate-800"
                 }`}
               >
@@ -195,7 +195,7 @@ export default function GaleriPage() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setSelectedImage(item)}
-                className="group relative cursor-pointer rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-rose-500/50 shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative cursor-pointer rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-primary-500/50 shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
                   <Image
@@ -207,7 +207,7 @@ export default function GaleriPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-800 text-xs font-semibold text-rose-400">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-800 text-xs font-semibold text-primary-400">
                     {item.categoryLabel}
                   </div>
 
@@ -217,7 +217,7 @@ export default function GaleriPage() {
                 </div>
 
                 <div className="p-5 space-y-1">
-                  <h3 className="font-bold text-lg text-white group-hover:text-rose-400 transition-colors">
+                  <h3 className="font-bold text-lg text-white group-hover:text-primary-400 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-slate-400 text-sm line-clamp-2">
@@ -230,7 +230,7 @@ export default function GaleriPage() {
         </motion.div>
 
         {/* CTA BOTTOM SECTION */}
-        <div className="mt-20 p-8 rounded-3xl bg-gradient-to-r from-rose-950/60 via-slate-900 to-pink-950/60 border border-rose-500/30 text-center space-y-6">
+        <div className="mt-20 p-8 rounded-3xl bg-gradient-to-r from-primary-950/60 via-slate-900 to-pink-950/60 border border-primary-500/30 text-center space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white">
             Ingin Kunjungan Langsung ke Pesantren Putri?
           </h2>
@@ -240,7 +240,7 @@ export default function GaleriPage() {
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Link
               href="/ppdb"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-rose-500 hover:bg-rose-400 text-white font-bold shadow-lg shadow-rose-500/25 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary-500 hover:bg-primary-400 text-white font-bold shadow-lg shadow-primary-500/25 transition-all"
             >
               <span>Daftar PPDB Sekarang</span>
               <ArrowRight className="w-4 h-4" />
@@ -274,7 +274,7 @@ export default function GaleriPage() {
             >
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 z-10 p-3 rounded-full bg-slate-950/80 hover:bg-rose-500 text-white hover:text-white transition-colors"
+                className="absolute top-4 right-4 z-10 p-3 rounded-full bg-slate-950/80 hover:bg-primary-500 text-white hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -290,7 +290,7 @@ export default function GaleriPage() {
               </div>
 
               <div className="p-6 bg-slate-900 border-t border-slate-800 space-y-2">
-                <div className="inline-block px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-semibold">
+                <div className="inline-block px-3 py-1 rounded-full bg-primary-500/10 border border-primary-500/30 text-primary-400 text-xs font-semibold">
                   {selectedImage.categoryLabel}
                 </div>
                 <h3 className="text-2xl font-bold text-white">

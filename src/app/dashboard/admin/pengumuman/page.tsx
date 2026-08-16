@@ -231,7 +231,7 @@ export default function PengumumanPage() {
                   grade === "A"
                     ? "bg-green-500"
                     : grade === "B"
-                      ? "bg-rose-400"
+                      ? "bg-primary-400"
                       : "bg-secondary-400";
                 return (
                   <span
@@ -386,7 +386,7 @@ export default function PengumumanPage() {
                       grade === "A"
                         ? "bg-green-500"
                         : grade === "B"
-                          ? "bg-rose-400"
+                          ? "bg-primary-400"
                           : "bg-secondary-400";
                     return (
                       <span

@@ -161,8 +161,8 @@ export default function AuditSeleksiPage() {
       grade = parsedScore >= 80 ? "A" : parsedScore >= 65 ? "B" : "C";
     }
 
-    if (grade === "A") color = "bg-rose-500";
-    else if (grade === "B") color = "bg-rose-500";
+    if (grade === "A") color = "bg-primary-500";
+    else if (grade === "B") color = "bg-primary-500";
 
     return { label: grade, color };
   };
@@ -308,7 +308,7 @@ export default function AuditSeleksiPage() {
           <Button
             onClick={() => handleBatchPublish("accepted")}
             disabled={selectedIds.length === 0 || isPublishing}
-            className="flex-1 lg:flex-none bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-emerald-200 transition-all active:scale-95"
+            className="flex-1 lg:flex-none bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-emerald-200 transition-all active:scale-95"
           >
             DITERIMA ({selectedIds.length})
           </Button>
@@ -322,7 +322,7 @@ export default function AuditSeleksiPage() {
           <Button
             onClick={() => handleBatchPublish("rejected")}
             disabled={selectedIds.length === 0 || isPublishing}
-            className="flex-1 lg:flex-none bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-rose-200 transition-all active:scale-95"
+            className="flex-1 lg:flex-none bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-primary-200 transition-all active:scale-95"
           >
             TOLAK
           </Button>
@@ -463,9 +463,9 @@ export default function AuditSeleksiPage() {
                         {(() => {
                           const s = c.status_pendaftaran || "";
                           const labels: any = {
-                            accepted: { l: "DITERIMA", c: "text-rose-700 bg-rose-100 border-emerald-200" },
-                            announced: { l: "PUBLISHED", c: "text-rose-700 bg-rose-100 border-rose-200" },
-                            rejected: { l: "DITOLAK", c: "text-rose-700 bg-rose-100 border-rose-200" },
+                            accepted: { l: "DITERIMA", c: "text-primary-700 bg-primary-100 border-emerald-200" },
+                            announced: { l: "PUBLISHED", c: "text-primary-700 bg-primary-100 border-primary-200" },
+                            rejected: { l: "DITOLAK", c: "text-primary-700 bg-primary-100 border-primary-200" },
                             cadangan: { l: "CADANGAN", c: "text-secondary-700 bg-secondary-100 border-secondary-200" },
                             tested: { l: "SIAP AUDIT", c: "text-ink-600 bg-ink-100 border-ink-200" },
                           };
@@ -498,16 +498,16 @@ export default function AuditSeleksiPage() {
             </h3>
             <div className="space-y-3 text-sm font-medium leading-relaxed">
               <p className="flex items-start gap-2 !text-white">
-                <div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0 shadow-sm shadow-rose-900/50" />
-                <span><b className="font-extrabold text-rose-400">DITERIMA:</b> Quran Grade A, maksimal satu Grade C di komponen pendukung.</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-400 mt-1.5 shrink-0 shadow-sm shadow-primary-900/50" />
+                <span><b className="font-extrabold text-primary-400">DITERIMA:</b> Quran Grade A, maksimal satu Grade C di komponen pendukung.</span>
               </p>
               <p className="flex items-start gap-2 !text-white">
                 <div className="w-1.5 h-1.5 rounded-full bg-secondary-400 mt-1.5 shrink-0 shadow-sm shadow-secondary-900/50" />
                 <span><b className="font-extrabold text-secondary-400">CADANGAN:</b> Quran Grade B, atau Wawancara Santri Grade B.</span>
               </p>
               <p className="flex items-start gap-2 !text-white">
-                <div className="w-1.5 h-1.5 rounded-full bg-rose-400 mt-1.5 shrink-0 shadow-sm shadow-rose-900/50" />
-                <span><b className="font-extrabold text-rose-400">DITOLAK:</b> Terdapat Grade D/E, atau Quran/Wawancara Santri Grade C.</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-400 mt-1.5 shrink-0 shadow-sm shadow-primary-900/50" />
+                <span><b className="font-extrabold text-primary-400">DITOLAK:</b> Terdapat Grade D/E, atau Quran/Wawancara Santri Grade C.</span>
               </p>
             </div>
             <div className="mt-8 flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.2em] text-white/80">

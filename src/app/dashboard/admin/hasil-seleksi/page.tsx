@@ -171,19 +171,19 @@ export default function HasilSeleksiPage() {
           </div>
           <div className="absolute -right-4 -bottom-4 bg-secondary-200/50 w-24 h-24 rounded-full blur-xl"></div>
         </div>
-        <div className="bg-rose-50 p-6 rounded-xl shadow-sm border border-rose-100 relative overflow-hidden">
-          <p className="text-rose-600 text-sm font-bold tracking-wider uppercase mb-1">
+        <div className="bg-primary-50 p-6 rounded-xl shadow-sm border border-primary-100 relative overflow-hidden">
+          <p className="text-primary-600 text-sm font-bold tracking-wider uppercase mb-1">
             Ditolak
           </p>
           <div className="flex items-end gap-2">
-            <h3 className="text-2xl md:text-4xl font-black text-rose-700">
+            <h3 className="text-2xl md:text-4xl font-black text-primary-700">
               {stats.total_gagal}
             </h3>
-            <span className="text-rose-600/70 font-medium mb-1 pl-1">
+            <span className="text-primary-600/70 font-medium mb-1 pl-1">
               Santri
             </span>
           </div>
-          <div className="absolute -right-4 -bottom-4 bg-rose-200/50 w-24 h-24 rounded-full blur-xl"></div>
+          <div className="absolute -right-4 -bottom-4 bg-primary-200/50 w-24 h-24 rounded-full blur-xl"></div>
         </div>
       </div>
 
@@ -287,7 +287,7 @@ export default function HasilSeleksiPage() {
                         CADANGAN
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-100 text-rose-700 text-[10px] font-black uppercase border border-rose-200">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-100 text-primary-700 text-[10px] font-black uppercase border border-primary-200">
                         DITOLAK
                       </span>
                     )}
@@ -361,7 +361,7 @@ export default function HasilSeleksiPage() {
                       grade === "A"
                         ? "bg-green-500"
                         : grade === "B"
-                          ? "bg-rose-400"
+                          ? "bg-primary-400"
                           : "bg-secondary-400";
                     return (
                       <span
@@ -440,7 +440,7 @@ export default function HasilSeleksiPage() {
                             CADANGAN
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-100 text-rose-700 text-xs font-bold border border-rose-200">
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-100 text-primary-700 text-xs font-bold border border-primary-200">
                             DITOLAK
                           </span>
                         )}

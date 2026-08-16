@@ -88,7 +88,7 @@ type ActiveTab = "pendaftaran" | "uang-pangkal" | "spp";
 
 function StatusBadge({ status, color }: { status: string; color: string }) {
   const colorMap: Record<string, string> = {
-    green: "bg-rose-100 text-rose-700 border-emerald-200",
+    green: "bg-primary-100 text-primary-700 border-emerald-200",
     orange: "bg-secondary-100 text-secondary-700 border-secondary-200",
     red: "bg-red-100 text-red-600 border-red-200",
     gray: "bg-slate-100 text-slate-500 border-slate-200",
@@ -470,7 +470,7 @@ export default function KeuanganPage() {
               <select
                 value={selectedTahunAjaranId}
                 onChange={(e) => setSelectedTahunAjaranId(e.target.value)}
-                className="bg-slate-100 text-slate-700 text-xs font-bold rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-rose-500 cursor-pointer hover:bg-slate-200 transition-all border-none"
+                className="bg-slate-100 text-slate-700 text-xs font-bold rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-primary-500 cursor-pointer hover:bg-slate-200 transition-all border-none"
               >
                 {tahunAjaranList.map((ta: any) => (
                   <option key={ta.id} value={ta.id}>
@@ -493,13 +493,13 @@ export default function KeuanganPage() {
             </button>
             <button
               onClick={() => handleExport("excel")}
-            className="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 font-bold shadow-md transition-colors"
+            className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 font-bold shadow-md transition-colors"
           >
             <Download className="w-4 h-4" /> Export Excel
           </button>
           <button
             onClick={() => handleExport("pdf")}
-            className="bg-rose-600 hover:bg-rose-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 font-bold shadow-md transition-colors"
+            className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 font-bold shadow-md transition-colors"
           >
             <Download className="w-4 h-4" /> Export PDF
           </button>
@@ -565,14 +565,14 @@ export default function KeuanganPage() {
                   {pendaftaranSummary.total}
                 </p>
               </div>
-              <div className="bg-rose-50 rounded-xl p-4 border border-rose-100 shadow-sm">
+              <div className="bg-primary-50 rounded-xl p-4 border border-primary-100 shadow-sm">
                 <div className="flex items-center gap-1.5 mb-1">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-rose-600" />
-                  <p className="text-xs text-rose-700 font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-primary-600" />
+                  <p className="text-xs text-primary-700 font-medium">
                     Terverifikasi
                   </p>
                 </div>
-                <p className="text-2xl font-black text-rose-700">
+                <p className="text-2xl font-black text-primary-700">
                   {pendaftaranSummary.terverifikasi}
                 </p>
               </div>
@@ -780,7 +780,7 @@ export default function KeuanganPage() {
                                 <span
                                   className={`px-2 py-1 rounded-md text-xs font-bold border ${
                                     tipeCicilan === "LUNAS"
-                                      ? "bg-rose-100 text-rose-700 border-emerald-200"
+                                      ? "bg-primary-100 text-primary-700 border-emerald-200"
                                       : tipeCicilan === "BELUM_BAYAR"
                                         ? "bg-red-50 text-red-600 border-red-100"
                                         : "bg-primary-50 text-primary-600 border-primary-100"
@@ -854,7 +854,7 @@ export default function KeuanganPage() {
                                           <div className="space-y-1.5">
                                             <div className="flex justify-between"><span className="text-slate-400">Nama:</span> <strong className="text-slate-800 text-right">{row.ortu.nama_ayah || "-"}</strong></div>
                                             <div className="flex justify-between"><span className="text-slate-400">Pekerjaan:</span> <strong className="text-slate-700 text-right">{row.ortu.pekerjaan_ayah || "-"}</strong></div>
-                                            <div className="flex justify-between"><span className="text-slate-400">Penghasilan:</span> <strong className="text-rose-700 text-right">{row.ortu.penghasilan_ayah || "-"}</strong></div>
+                                            <div className="flex justify-between"><span className="text-slate-400">Penghasilan:</span> <strong className="text-primary-700 text-right">{row.ortu.penghasilan_ayah || "-"}</strong></div>
                                             <div className="flex justify-between items-center"><span className="text-slate-400">No. HP Ayah:</span>{" "}
                                               {row.ortu.no_hp_ayah && row.ortu.no_hp_ayah !== "-" ? (
                                                 <a href={`https://wa.me/${row.ortu.no_hp_ayah.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 hover:underline font-bold inline-flex items-center gap-1">
@@ -872,7 +872,7 @@ export default function KeuanganPage() {
                                           <div className="space-y-1.5">
                                             <div className="flex justify-between"><span className="text-slate-400">Nama:</span> <strong className="text-slate-800 text-right">{row.ortu.nama_ibu || "-"}</strong></div>
                                             <div className="flex justify-between"><span className="text-slate-400">Pekerjaan:</span> <strong className="text-slate-700 text-right">{row.ortu.pekerjaan_ibu || "-"}</strong></div>
-                                            <div className="flex justify-between"><span className="text-slate-400">Penghasilan:</span> <strong className="text-rose-700 text-right">{row.ortu.penghasilan_ibu || "-"}</strong></div>
+                                            <div className="flex justify-between"><span className="text-slate-400">Penghasilan:</span> <strong className="text-primary-700 text-right">{row.ortu.penghasilan_ibu || "-"}</strong></div>
                                             <div className="flex justify-between items-center"><span className="text-slate-400">No. HP Ibu:</span>{" "}
                                               {row.ortu.no_hp_ibu && row.ortu.no_hp_ibu !== "-" ? (
                                                 <a href={`https://wa.me/${row.ortu.no_hp_ibu.replace(/[^0-9]/g, "")}`} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700 hover:underline font-bold inline-flex items-center gap-1">
@@ -977,7 +977,7 @@ export default function KeuanganPage() {
                                                       <span
                                                         className={`px-1.5 py-0.5 rounded-full text-[9px] font-bold border ${
                                                           pay.status_pembayaran === "verified"
-                                                            ? "bg-rose-50 text-rose-700 border-rose-100"
+                                                            ? "bg-primary-50 text-primary-700 border-primary-100"
                                                             : pay.status_pembayaran === "rejected"
                                                               ? "bg-red-50 text-red-600 border-red-100"
                                                               : "bg-amber-50 text-amber-700 border-amber-100"

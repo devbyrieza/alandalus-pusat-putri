@@ -425,7 +425,7 @@ export default function UserManagementPage() {
               </div>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="text-stone-300 hover:text-rose-600 transition-colors p-2 bg-stone-100 rounded-full hover:bg-rose-50"
+                className="text-stone-300 hover:text-primary-600 transition-colors p-2 bg-stone-100 rounded-full hover:bg-primary-50"
               >
                 <XCircle className="w-10 h-10" />
               </button>

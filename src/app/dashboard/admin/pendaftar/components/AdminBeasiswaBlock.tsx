@@ -330,7 +330,7 @@ function AdminBerkasSection({
                     <p className="text-xs font-bold text-ink-900 leading-tight">
                       {item.label}
                       {item.required && (
-                        <span className="text-rose-500 ml-0.5">*</span>
+                        <span className="text-primary-500 ml-0.5">*</span>
                       )}
                     </p>
                     <p className="text-[10px] text-stone-500 mt-0.5">{item.desc}</p>
@@ -354,7 +354,7 @@ function AdminBerkasSection({
                         type="button"
                         onClick={() => handleDelete(item.fieldKey)}
                         disabled={isLoading}
-                        className="p-1.5 text-rose-500 hover:bg-rose-100 rounded-lg transition-colors disabled:opacity-40"
+                        className="p-1.5 text-primary-500 hover:bg-primary-100 rounded-lg transition-colors disabled:opacity-40"
                         title="Hapus berkas"
                       >
                         {isDeleting ? (
@@ -631,19 +631,19 @@ export default function AdminBeasiswaBlock({
       {current ? (
         <div
           className={`rounded-xl p-4 border ${
-            isKeduanya ? "bg-primary-50 border-primary-200" : hasBeasiswa ? "bg-rose-50 border-emerald-200" : "bg-amber-50 border-amber-200"
+            isKeduanya ? "bg-primary-50 border-primary-200" : hasBeasiswa ? "bg-primary-50 border-emerald-200" : "bg-amber-50 border-amber-200"
           }`}
         >
           <div className="flex items-center gap-2 mb-3">
             {isKeduanya ? (
               <HandCoins className="w-5 h-5 text-primary-600" />
             ) : hasBeasiswa ? (
-              <GraduationCap className="w-5 h-5 text-rose-600" />
+              <GraduationCap className="w-5 h-5 text-primary-600" />
             ) : (
               <Coins className="w-5 h-5 text-amber-600" />
             )}
             <span
-              className={`text-xs font-black uppercase tracking-widest ${isKeduanya ? "text-primary-700" : hasBeasiswa ? "text-rose-700" : "text-amber-700"}`}
+              className={`text-xs font-black uppercase tracking-widest ${isKeduanya ? "text-primary-700" : hasBeasiswa ? "text-primary-700" : "text-amber-700"}`}
             >
               {isKeduanya ? "✓ BEASISWA & KERINGANAN AKTIF" : hasBeasiswa ? "✓ Beasiswa Aktif" : "✓ Keringanan Aktif"}
             </span>
@@ -651,7 +651,7 @@ export default function AdminBeasiswaBlock({
 
           <p
             className={`text-sm font-bold mb-3 ${
-              isKeduanya ? "text-primary-900" : hasBeasiswa ? "text-rose-900" : "text-amber-900"
+              isKeduanya ? "text-primary-900" : hasBeasiswa ? "text-primary-900" : "text-amber-900"
             }`}
           >
             Cakupan: {cakupanLabel(cakupanActive as CakupanBantuan)}
@@ -666,7 +666,7 @@ export default function AdminBeasiswaBlock({
                     Uang Pangkal
                   </span>
                 </div>
-                <p className={`font-black text-lg ${isBeasiswaUP ? "text-rose-700" : "text-amber-700"}`}>
+                <p className={`font-black text-lg ${isBeasiswaUP ? "text-primary-700" : "text-amber-700"}`}>
                   {isBeasiswaUP ? "GRATIS" : `- ${formatCurrency(pUPActive)}`}
                 </p>
                 {isBeasiswaUP && (
@@ -684,7 +684,7 @@ export default function AdminBeasiswaBlock({
                     SPP Bulan Pertama
                   </span>
                 </div>
-                <p className={`font-black text-lg ${isBeasiswaSPP ? "text-rose-700" : "text-amber-700"}`}>
+                <p className={`font-black text-lg ${isBeasiswaSPP ? "text-primary-700" : "text-amber-700"}`}>
                   {isBeasiswaSPP ? "GRATIS" : `- ${formatCurrency(pSPPActive)}`}
                 </p>
                 {isBeasiswaSPP && (
@@ -709,7 +709,7 @@ export default function AdminBeasiswaBlock({
           
           <button
             onClick={handleDelete}
-            className="w-full mt-2 bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 py-2.5 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2"
+            className="w-full mt-2 bg-primary-50 hover:bg-primary-100 text-primary-600 border border-primary-200 py-2.5 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2"
           >
             <Trash2 className="w-4 h-4" />
             Hapus Bantuan
@@ -761,9 +761,9 @@ export default function AdminBeasiswaBlock({
                   <input type="radio" name="up_type" checked={tipeUP === "KERINGANAN"} onChange={() => setTipeUP("KERINGANAN")} className="text-primary-600 focus:ring-primary-500" />
                   <span className="text-xs font-bold text-stone-700">Keringanan (Sebagian)</span>
                 </label>
-                <label className="flex items-center gap-2 p-2 rounded-lg border border-stone-100 cursor-pointer hover:bg-rose-50 transition-colors">
-                  <input type="radio" name="up_type" checked={tipeUP === "BEASISWA"} onChange={() => { setTipeUP("BEASISWA"); setPotonganUP(""); }} className="text-rose-600 focus:ring-rose-500" />
-                  <span className="text-xs font-bold text-rose-700">Beasiswa Penuh (Gratis)</span>
+                <label className="flex items-center gap-2 p-2 rounded-lg border border-stone-100 cursor-pointer hover:bg-primary-50 transition-colors">
+                  <input type="radio" name="up_type" checked={tipeUP === "BEASISWA"} onChange={() => { setTipeUP("BEASISWA"); setPotonganUP(""); }} className="text-primary-600 focus:ring-primary-500" />
+                  <span className="text-xs font-bold text-primary-700">Beasiswa Penuh (Gratis)</span>
                 </label>
               </div>
 
@@ -806,9 +806,9 @@ export default function AdminBeasiswaBlock({
                   <input type="radio" name="spp_type" checked={tipeSPP === "KERINGANAN"} onChange={() => setTipeSPP("KERINGANAN")} className="text-primary-600 focus:ring-primary-500" />
                   <span className="text-xs font-bold text-stone-700">Keringanan (Sebagian)</span>
                 </label>
-                <label className="flex items-center gap-2 p-2 rounded-lg border border-stone-100 cursor-pointer hover:bg-rose-50 transition-colors">
-                  <input type="radio" name="spp_type" checked={tipeSPP === "BEASISWA"} onChange={() => { setTipeSPP("BEASISWA"); setPotonganSPP(""); }} className="text-rose-600 focus:ring-rose-500" />
-                  <span className="text-xs font-bold text-rose-700">Beasiswa Penuh (Gratis)</span>
+                <label className="flex items-center gap-2 p-2 rounded-lg border border-stone-100 cursor-pointer hover:bg-primary-50 transition-colors">
+                  <input type="radio" name="spp_type" checked={tipeSPP === "BEASISWA"} onChange={() => { setTipeSPP("BEASISWA"); setPotonganSPP(""); }} className="text-primary-600 focus:ring-primary-500" />
+                  <span className="text-xs font-bold text-primary-700">Beasiswa Penuh (Gratis)</span>
                 </label>
               </div>
 

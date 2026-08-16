@@ -660,15 +660,15 @@ export default function ExaminerDashboard() {
             </div>
             <div className="absolute -right-4 -bottom-4 bg-secondary-200/50 w-24 h-24 rounded-full blur-xl"></div>
           </div>
-          <div className="bg-rose-50 p-6 rounded-xl shadow-sm border border-rose-100 relative overflow-hidden">
-            <p className="text-rose-600 text-sm font-bold tracking-wider uppercase mb-1">Ditolak</p>
+          <div className="bg-primary-50 p-6 rounded-xl shadow-sm border border-primary-100 relative overflow-hidden">
+            <p className="text-primary-600 text-sm font-bold tracking-wider uppercase mb-1">Ditolak</p>
             <div className="flex items-end gap-2">
-              <h3 className="text-2xl md:text-4xl font-black text-rose-700">
+              <h3 className="text-2xl md:text-4xl font-black text-primary-700">
                 {students.filter(c => c.status_pendaftaran === "rejected").length}
               </h3>
-              <span className="text-rose-600/70 font-medium mb-1 pl-1">Santri</span>
+              <span className="text-primary-600/70 font-medium mb-1 pl-1">Santri</span>
             </div>
-            <div className="absolute -right-4 -bottom-4 bg-rose-200/50 w-24 h-24 rounded-full blur-xl"></div>
+            <div className="absolute -right-4 -bottom-4 bg-primary-200/50 w-24 h-24 rounded-full blur-xl"></div>
           </div>
         </div>
       
@@ -688,7 +688,7 @@ export default function ExaminerDashboard() {
               <div className="flex flex-wrap gap-2 w-full lg:w-auto">
                 <Button
                   onClick={handleExportExcel}
-                  className="btn-secondary flex items-center gap-2 bg-rose-50 text-rose-700 border-rose-100 hover:bg-rose-100 rounded-xl font-bold py-2"
+                  className="btn-secondary flex items-center gap-2 bg-primary-50 text-primary-700 border-primary-100 hover:bg-primary-100 rounded-xl font-bold py-2"
                 >
                   <Download className="w-4 h-4" /> Export Excel
                 </Button>
@@ -711,7 +711,7 @@ export default function ExaminerDashboard() {
                       Swal.fire("Error", "Gagal menghitung ulang", "error");
                     }
                   }}
-                  className="btn-secondary flex items-center gap-2 bg-rose-50 text-rose-700 border-rose-100 hover:bg-rose-100 rounded-xl font-bold py-2"
+                  className="btn-secondary flex items-center gap-2 bg-primary-50 text-primary-700 border-primary-100 hover:bg-primary-100 rounded-xl font-bold py-2"
                 >
                   <RefreshCcw className="w-4 h-4" /> Hitung Ulang
                 </Button>
@@ -877,7 +877,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-rose-400"
+                                  ? "bg-primary-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -916,7 +916,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-rose-400"
+                                  ? "bg-primary-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -955,7 +955,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-rose-400"
+                                  ? "bg-primary-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -1016,7 +1016,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-rose-400"
+                                  ? "bg-primary-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -1055,7 +1055,7 @@ export default function ExaminerDashboard() {
                               grade === "A"
                                 ? "bg-green-500"
                                 : grade === "B"
-                                  ? "bg-rose-400"
+                                  ? "bg-primary-400"
                                   : "bg-secondary-400";
                             return (
                               <span
@@ -1410,15 +1410,15 @@ export default function ExaminerDashboard() {
             </div>
             <div className="absolute -right-4 -bottom-4 bg-secondary-200/50 w-24 h-24 rounded-full blur-xl"></div>
           </div>
-          <div className="bg-rose-50 p-6 rounded-xl shadow-sm border border-rose-100 relative overflow-hidden">
-            <p className="text-rose-600 text-sm font-bold tracking-wider uppercase mb-1">Ditolak</p>
+          <div className="bg-primary-50 p-6 rounded-xl shadow-sm border border-primary-100 relative overflow-hidden">
+            <p className="text-primary-600 text-sm font-bold tracking-wider uppercase mb-1">Ditolak</p>
             <div className="flex items-end gap-2">
-              <h3 className="text-2xl md:text-4xl font-black text-rose-700">
+              <h3 className="text-2xl md:text-4xl font-black text-primary-700">
                 {students.filter(c => c.status_pendaftaran === "rejected").length}
               </h3>
-              <span className="text-rose-600/70 font-medium mb-1 pl-1">Santri</span>
+              <span className="text-primary-600/70 font-medium mb-1 pl-1">Santri</span>
             </div>
-            <div className="absolute -right-4 -bottom-4 bg-rose-200/50 w-24 h-24 rounded-full blur-xl"></div>
+            <div className="absolute -right-4 -bottom-4 bg-primary-200/50 w-24 h-24 rounded-full blur-xl"></div>
           </div>
         </div>
       
@@ -1499,18 +1499,18 @@ export default function ExaminerDashboard() {
                   </Button>
                 </div>
 
-                <div className="p-6 bg-rose-50/30 rounded-3xl border border-rose-100/50 hover:bg-rose-50 transition-colors">
-                  <h4 className="font-black text-rose-900 mb-2">
+                <div className="p-6 bg-primary-50/30 rounded-3xl border border-primary-100/50 hover:bg-primary-50 transition-colors">
+                  <h4 className="font-black text-primary-900 mb-2">
                     Kirim Paksa Antrean (Flush)
                   </h4>
-                  <p className="text-xs text-rose-700/70 mb-6 font-medium leading-relaxed">
+                  <p className="text-xs text-primary-700/70 mb-6 font-medium leading-relaxed">
                     Jalankan pemicu manual untuk mengirim pesan yang sedang
                     tertahan di antrean ke server provider WhatsApp (Wablas).
                   </p>
                   <Button
                     onClick={handleFlushQueue}
                     disabled={isProcessingQueue || !queueStats?.pending}
-                    className="w-full bg-rose-600 hover:bg-rose-700 text-white rounded-2xl py-6 font-black text-base shadow-lg shadow-rose-600/20 disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
+                    className="w-full bg-primary-600 hover:bg-primary-700 text-white rounded-2xl py-6 font-black text-base shadow-lg shadow-primary-600/20 disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
                   >
                     {isProcessingQueue
                       ? `Mengirim (${flushProgress}%)...`

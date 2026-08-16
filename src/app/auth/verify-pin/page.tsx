@@ -149,7 +149,7 @@ function VerifyPinContent() {
                   className={`w-12 h-16 sm:w-14 sm:h-18 text-center text-2xl sm:text-3xl font-black bg-stone-50 border-2 rounded-2xl transition-all duration-300 outline-none
                                         ${
                                           success
-                                            ? "border-rose-500 text-rose-600 bg-rose-50"
+                                            ? "border-primary-500 text-primary-600 bg-primary-50"
                                             : error
                                               ? "border-red-300 bg-red-50 text-red-600 focus:border-red-500"
                                               : "border-stone-100 focus:border-indigo-500 focus:bg-white focus:shadow-md"
@@ -167,7 +167,7 @@ function VerifyPinContent() {
             )}
 
             {success && (
-              <div className="flex items-center justify-center gap-2 text-rose-600 font-bold text-base mb-6 animate-pulse">
+              <div className="flex items-center justify-center gap-2 text-primary-600 font-bold text-base mb-6 animate-pulse">
                 <CheckCircle2 className="w-5 h-5" />
                 Akses Diterima! Mengalihkan...
               </div>

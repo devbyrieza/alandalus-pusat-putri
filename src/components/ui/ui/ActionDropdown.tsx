@@ -97,7 +97,7 @@ export function ActionDropdown({ items }: ActionDropdownProps) {
               let colorClass = "text-stone-700 hover:bg-stone-50 hover:text-stone-900";
               if (item.variant === "danger") colorClass = "text-red-600 hover:bg-red-50 hover:text-red-700";
               if (item.variant === "warning") colorClass = "text-amber-600 hover:bg-amber-50 hover:text-amber-700";
-              if (item.variant === "success") colorClass = "text-rose-600 hover:bg-rose-50 hover:text-rose-700";
+              if (item.variant === "success") colorClass = "text-primary-600 hover:bg-primary-50 hover:text-primary-700";
 
               return (
                 <button

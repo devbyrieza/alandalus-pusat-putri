@@ -92,7 +92,7 @@ function getFileIcon(fileType: string | null) {
 function getStatusColor(status: DokumenStatus) {
   switch (status) {
     case "verified":
-      return "text-rose-600 bg-rose-50";
+      return "text-primary-600 bg-primary-50";
     case "uploaded":
       return "text-primary-600 bg-primary-50";
     case "rejected":
@@ -334,8 +334,8 @@ function DokumenCard({
               )}
 
               {dokumen.status === "verified" && dokumen.verified_at && (
-                <div className="mt-3 p-3 bg-rose-50 border border-emerald-200 rounded-lg">
-                  <p className="text-sm text-rose-700 font-medium">
+                <div className="mt-3 p-3 bg-primary-50 border border-emerald-200 rounded-lg">
+                  <p className="text-sm text-primary-700 font-medium">
                     ✓ Diverifikasi pada{" "}
                     {new Date(dokumen.verified_at).toLocaleDateString("id-ID", {
                       day: "numeric",
@@ -731,7 +731,7 @@ export default function KelengkapanBerkasTab() {
         <div
           className={`fixed top-6 right-6 z-50 px-6 py-4 rounded-2xl shadow-clay-lg flex items-center gap-3 animate-in slide-in-from-right duration-300 ${
             toast.type === "success"
-              ? "bg-rose-500 text-white shadow-rose-500/20"
+              ? "bg-primary-500 text-white shadow-primary-500/20"
               : "bg-red-500 text-white shadow-red-500/20"
           }`}
         >
@@ -984,7 +984,7 @@ export default function KelengkapanBerkasTab() {
                             Data Ayah
                           </h4>
                           <span
-                            className={`px-2 py-0.5 rounded text-[10px] font-bold ${dataPendaftaran.data_lengkap?.ayah?.status_hidup === "Masih Hidup" ? "bg-rose-100 text-rose-700" : "bg-stone-200 text-stone-600"}`}
+                            className={`px-2 py-0.5 rounded text-[10px] font-bold ${dataPendaftaran.data_lengkap?.ayah?.status_hidup === "Masih Hidup" ? "bg-primary-100 text-primary-700" : "bg-stone-200 text-stone-600"}`}
                           >
                             {dataPendaftaran.data_lengkap?.ayah?.status_hidup ||
                               "Masih Hidup"}
@@ -1057,7 +1057,7 @@ export default function KelengkapanBerkasTab() {
                             Data Ibu
                           </h4>
                           <span
-                            className={`px-2 py-0.5 rounded text-[10px] font-bold ${dataPendaftaran.data_lengkap?.ibu?.status_hidup === "Masih Hidup" ? "bg-rose-100 text-rose-700" : "bg-stone-200 text-stone-600"}`}
+                            className={`px-2 py-0.5 rounded text-[10px] font-bold ${dataPendaftaran.data_lengkap?.ibu?.status_hidup === "Masih Hidup" ? "bg-primary-100 text-primary-700" : "bg-stone-200 text-stone-600"}`}
                           >
                             {dataPendaftaran.data_lengkap?.ibu?.status_hidup ||
                               "Masih Hidup"}
@@ -1223,18 +1223,18 @@ export default function KelengkapanBerkasTab() {
                   </div>
                 </div>
               ) : (
-                <div className="p-4 bg-rose-50 border border-emerald-200 rounded-xl flex gap-3">
-                  <CheckCircle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
+                <div className="p-4 bg-primary-50 border border-emerald-200 rounded-xl flex gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-sm font-bold text-rose-800">
+                    <p className="text-sm font-bold text-primary-800">
                       Verifikasi Data Anda
                     </p>
-                    <p className="text-sm text-rose-700 mt-1">
+                    <p className="text-sm text-primary-700 mt-1">
                       Silakan pastikan semua data di atas sudah benar. Jika
                       sudah yakin, silakan klik tombol konfirmasi di bawah untuk
                       membuka menu <strong>Upload Berkas</strong>.
                       <br />
-                      <span className="text-xs text-rose-600 mt-2 block italic">
+                      <span className="text-xs text-primary-600 mt-2 block italic">
                         * Setelah dikonfirmasi, data tidak bisa diubah lagi
                         kecuali melalui Admin Support.
                       </span>

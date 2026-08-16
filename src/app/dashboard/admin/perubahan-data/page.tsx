@@ -173,8 +173,8 @@ export default function PerubahanDataPage() {
                                                     "approved_to_edit"
                                                   ? "bg-primary-100 text-primary-700"
                                                   : req.status === "submitted"
-                                                    ? "bg-rose-100 text-rose-700"
-                                                    : "bg-rose-100 text-rose-700"
+                                                    ? "bg-primary-100 text-primary-700"
+                                                    : "bg-primary-100 text-primary-700"
                                             }
                                         `}
                       >
@@ -239,7 +239,7 @@ export default function PerubahanDataPage() {
                       <button
                         onClick={() => handleAction(req.id, "complete")}
                         disabled={processing === req.id}
-                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-rose-600 text-white rounded-xl text-sm font-bold shadow-lg shadow-rose-500/20 hover:bg-rose-700 transition-all disabled:opacity-50"
+                        className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-xl text-sm font-bold shadow-lg shadow-primary-500/20 hover:bg-primary-700 transition-all disabled:opacity-50"
                       >
                         {processing === req.id ? (
                           <Loader2 className="w-4 h-4 animate-spin" />
@@ -255,7 +255,7 @@ export default function PerubahanDataPage() {
                     req.status === "rejected") && (
                     <div className="text-ink-400 text-xs font-bold uppercase tracking-widest flex items-center gap-2 h-12 px-4 italic">
                       <CheckCircle
-                        className={`w-4 h-4 ${req.status === "completed" ? "text-rose-500" : "text-red-500"}`}
+                        className={`w-4 h-4 ${req.status === "completed" ? "text-primary-500" : "text-red-500"}`}
                       />
                       Sudah Diproses
                     </div>

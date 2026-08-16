@@ -178,7 +178,7 @@ export default function AkademikTestPage() {
     return (
       <div className="max-w-lg mx-auto p-5 md:p-8 text-center mt-10">
         <div className="bg-white rounded-2xl shadow-lg border p-6 md:p-10">
-          <CheckCircle className="w-16 h-16 text-rose-500 mx-auto mb-4" />
+          <CheckCircle className="w-16 h-16 text-primary-500 mx-auto mb-4" />
           <h2 className="text-xl font-bold mb-2">Tes Sudah Dikerjakan</h2>
           <p className="text-stone-600 mb-6">
             Anda sudah menyelesaikan Seleksi Akademik sebelumnya.

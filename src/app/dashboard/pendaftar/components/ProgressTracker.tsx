@@ -106,7 +106,7 @@ export default function ProgressTracker({
               POSISI SEKARANG
             </p>
             <p className="font-black text-primary-900 flex items-center gap-2 justify-end">
-              <span className="w-2 h-2 rounded-full bg-rose-500" />
+              <span className="w-2 h-2 rounded-full bg-primary-500" />
               {statusInfo.label}
             </p>
           </div>
@@ -161,7 +161,7 @@ export default function ProgressTracker({
                       <div
                         className={`absolute -top-2 -right-2 w-7 h-7 rounded-full flex items-center justify-center text-[10px] font-black border-2 ${
                           isCompleted
-                            ? "bg-rose-500 border-white text-white"
+                            ? "bg-primary-500 border-white text-white"
                             : isCurrent
                               ? "bg-primary-700 border-white text-white"
                               : "bg-stone-200 border-white text-stone-500"

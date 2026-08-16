@@ -357,7 +357,7 @@ export default function RekapSeragamPage() {
                         </td>
                         <td className="px-6 py-4 text-center">
                           {item.ukuran_seragam_celana ? (
-                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-rose-50 text-rose-700 font-black text-xs border border-rose-100">
+                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary-50 text-primary-700 font-black text-xs border border-primary-100">
                               {item.ukuran_seragam_celana}
                             </span>
                           ) : (
@@ -366,7 +366,7 @@ export default function RekapSeragamPage() {
                         </td>
                         <td className="px-6 py-4 text-center">
                           {item.ukuran_seragam_almamater ? (
-                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-rose-50 text-rose-700 font-black text-xs border border-rose-100">
+                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary-50 text-primary-700 font-black text-xs border border-primary-100">
                               {item.ukuran_seragam_almamater}
                             </span>
                           ) : (

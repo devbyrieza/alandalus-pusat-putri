@@ -344,13 +344,13 @@ export default function WelcomeDayPage() {
           href="/documents/Surat Pemberitahuan Kedatangan Santri Baru 2026-2027.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 bg-white hover:bg-rose-50 rounded-2xl p-4 border border-ink-100 hover:border-emerald-200 transition-all shadow-sm group"
+          className="flex items-center gap-3 bg-white hover:bg-primary-50 rounded-2xl p-4 border border-ink-100 hover:border-emerald-200 transition-all shadow-sm group"
         >
-          <div className="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
             <Download className="w-5 h-5" />
           </div>
           <div>
-            <p className="font-black text-ink-900 text-sm group-hover:text-rose-800 transition-colors">Surat Pemberitahuan</p>
+            <p className="font-black text-ink-900 text-sm group-hover:text-primary-800 transition-colors">Surat Pemberitahuan</p>
             <p className="text-xs text-ink-500 font-medium">Informasi & tata tertib kedatangan</p>
           </div>
         </a>
@@ -430,7 +430,7 @@ export default function WelcomeDayPage() {
 
           {/* Status badge jika sudah submit */}
           {!isEditing && (
-            <div className="ml-auto hidden sm:flex items-center gap-2 bg-gradient-to-r from-rose-50 to-rose-100 text-rose-700 text-xs font-black px-4 py-2 rounded-xl border border-emerald-200/50 shadow-sm">
+            <div className="ml-auto hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 text-xs font-black px-4 py-2 rounded-xl border border-emerald-200/50 shadow-sm">
               <CheckCircle2 className="w-4 h-4" />
               Sudah Dikonfirmasi
             </div>
@@ -461,16 +461,16 @@ export default function WelcomeDayPage() {
                     onClick={() => setFormData({ ...formData, statusKehadiran: "HADIR" })}
                     className={`p-5 rounded-2xl border-2 text-left transition-all duration-300 flex items-center gap-4 group ${
                       formData.statusKehadiran === "HADIR"
-                        ? "bg-gradient-to-br from-rose-500 to-rose-600 border-rose-500 text-white shadow-lg shadow-rose-500/25 scale-[1.02]"
-                        : "bg-white border-ink-200 hover:border-rose-300 hover:shadow-md hover:bg-rose-50/30"
+                        ? "bg-gradient-to-br from-primary-500 to-primary-600 border-primary-500 text-white shadow-lg shadow-primary-500/25 scale-[1.02]"
+                        : "bg-white border-ink-200 hover:border-primary-300 hover:shadow-md hover:bg-primary-50/30"
                     }`}
                   >
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${formData.statusKehadiran === "HADIR" ? "bg-white/20" : "bg-rose-100 group-hover:bg-emerald-200"}`}>
-                      <CheckCircle2 className={`w-6 h-6 ${formData.statusKehadiran === "HADIR" ? "text-white" : "text-rose-600"}`} />
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${formData.statusKehadiran === "HADIR" ? "bg-white/20" : "bg-primary-100 group-hover:bg-emerald-200"}`}>
+                      <CheckCircle2 className={`w-6 h-6 ${formData.statusKehadiran === "HADIR" ? "text-white" : "text-primary-600"}`} />
                     </div>
                     <div>
                       <p className={`font-black text-base ${formData.statusKehadiran === "HADIR" ? "text-white" : "text-ink-900"}`}>Ya, Kami Akan Hadir</p>
-                      <p className={`text-xs font-medium mt-1 ${formData.statusKehadiran === "HADIR" ? "text-rose-50" : "text-ink-500"}`}>
+                      <p className={`text-xs font-medium mt-1 ${formData.statusKehadiran === "HADIR" ? "text-primary-50" : "text-ink-500"}`}>
                         Kami siap hadir pada 18 Juli 2025
                       </p>
                     </div>
@@ -480,16 +480,16 @@ export default function WelcomeDayPage() {
                     onClick={() => setFormData({ ...formData, statusKehadiran: "TIDAK_HADIR" })}
                     className={`p-5 rounded-2xl border-2 text-left transition-all duration-300 flex items-center gap-4 group ${
                       formData.statusKehadiran === "TIDAK_HADIR"
-                        ? "bg-gradient-to-br from-rose-500 to-rose-600 border-rose-500 text-white shadow-lg shadow-rose-500/25 scale-[1.02]"
-                        : "bg-white border-ink-200 hover:border-rose-300 hover:shadow-md hover:bg-rose-50/30"
+                        ? "bg-gradient-to-br from-primary-500 to-primary-600 border-primary-500 text-white shadow-lg shadow-primary-500/25 scale-[1.02]"
+                        : "bg-white border-ink-200 hover:border-primary-300 hover:shadow-md hover:bg-primary-50/30"
                     }`}
                   >
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${formData.statusKehadiran === "TIDAK_HADIR" ? "bg-white/20" : "bg-rose-100 group-hover:bg-rose-200"}`}>
-                      <XCircle className={`w-6 h-6 ${formData.statusKehadiran === "TIDAK_HADIR" ? "text-white" : "text-rose-600"}`} />
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${formData.statusKehadiran === "TIDAK_HADIR" ? "bg-white/20" : "bg-primary-100 group-hover:bg-primary-200"}`}>
+                      <XCircle className={`w-6 h-6 ${formData.statusKehadiran === "TIDAK_HADIR" ? "text-white" : "text-primary-600"}`} />
                     </div>
                     <div>
                       <p className={`font-black text-base ${formData.statusKehadiran === "TIDAK_HADIR" ? "text-white" : "text-ink-900"}`}>Berhalangan Hadir</p>
-                      <p className={`text-xs font-medium mt-1 ${formData.statusKehadiran === "TIDAK_HADIR" ? "text-rose-50" : "text-ink-500"}`}>
+                      <p className={`text-xs font-medium mt-1 ${formData.statusKehadiran === "TIDAK_HADIR" ? "text-primary-50" : "text-ink-500"}`}>
                         Ada halangan & tidak bisa hadir
                       </p>
                     </div>
@@ -830,20 +830,20 @@ export default function WelcomeDayPage() {
       
       {/* ─── INFOGRAFIS & PANDUAN VISUAL ─── */}
       <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden mb-6">
-        <div className="px-6 py-4 border-b border-rose-100 bg-rose-50 flex items-center gap-3">
-          <div className="w-9 h-9 bg-rose-100 rounded-xl flex items-center justify-center">
-            <Calendar className="w-5 h-5 text-rose-700" />
+        <div className="px-6 py-4 border-b border-primary-100 bg-primary-50 flex items-center gap-3">
+          <div className="w-9 h-9 bg-primary-100 rounded-xl flex items-center justify-center">
+            <Calendar className="w-5 h-5 text-primary-700" />
           </div>
           <div>
-            <h2 className="font-black text-rose-950 text-base">Infografis & Panduan Visual</h2>
-            <p className="text-xs text-rose-600 font-bold">Panduan lengkap pelaksanaan Welcome Day</p>
+            <h2 className="font-black text-primary-950 text-base">Infografis & Panduan Visual</h2>
+            <p className="text-xs text-primary-600 font-bold">Panduan lengkap pelaksanaan Welcome Day</p>
           </div>
         </div>
         <div className="p-5 space-y-6">
           {/* Alur Kedatangan */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center font-black text-xs shadow-sm">
+              <div className="w-6 h-6 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center font-black text-xs shadow-sm">
                 1
               </div>
               <h3 className="font-black text-ink-900 text-sm">Alur Kedatangan</h3>
@@ -865,7 +865,7 @@ export default function WelcomeDayPage() {
                 target="_blank" 
                 rel="noopener noreferrer" 
                 download
-                className="flex items-center gap-2 text-xs font-bold text-rose-600 hover:text-rose-700 hover:underline transition-colors"
+                className="flex items-center gap-2 text-xs font-bold text-primary-600 hover:text-primary-700 hover:underline transition-colors"
               >
                 <Download className="w-4 h-4" /> Lihat Resolusi Penuh (Banner)
               </a>
@@ -875,7 +875,7 @@ export default function WelcomeDayPage() {
           {/* Rundown Acara */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center font-black text-xs shadow-sm">
+              <div className="w-6 h-6 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center font-black text-xs shadow-sm">
                 2
               </div>
               <h3 className="font-black text-ink-900 text-sm">Rundown Acara</h3>
@@ -1000,21 +1000,21 @@ export default function WelcomeDayPage() {
 
       {/* ─── CHECKLIST BARANG BAWAAN ─── */}
       <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden mt-6">
-        <div className="px-6 py-5 border-b border-ink-100 bg-rose-50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="px-6 py-5 border-b border-ink-100 bg-primary-50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 bg-rose-100 rounded-xl flex items-center justify-center">
-              <Package className="w-5 h-5 text-rose-700" />
+            <div className="w-9 h-9 bg-primary-100 rounded-xl flex items-center justify-center">
+              <Package className="w-5 h-5 text-primary-700" />
             </div>
             <div>
-              <h2 className="font-black text-rose-950 text-base">Daftar Perlengkapan Santri</h2>
-              <p className="text-xs text-rose-600 font-bold">Ketuk kategori untuk melihat rincian</p>
+              <h2 className="font-black text-primary-950 text-base">Daftar Perlengkapan Santri</h2>
+              <p className="text-xs text-primary-600 font-bold">Ketuk kategori untuk melihat rincian</p>
             </div>
           </div>
           <a
             href="https://ppdb.pesantren-alimam.com/berkas/Daftar%20Perlengkapan%20Santri%20Baru.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white text-xs font-black px-4 py-2.5 rounded-xl transition-colors"
+            className="flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white text-xs font-black px-4 py-2.5 rounded-xl transition-colors"
           >
             <Download className="w-4 h-4" />
             Unduh PDF Resmi
@@ -1184,7 +1184,7 @@ export default function WelcomeDayPage() {
             href={lightbox} 
             download 
             onClick={(e) => e.stopPropagation()}
-            className="mt-6 flex items-center gap-2 bg-rose-600 text-white px-6 py-3 rounded-full font-bold hover:bg-rose-500 transition-colors shadow-lg active:scale-95"
+            className="mt-6 flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-500 transition-colors shadow-lg active:scale-95"
           >
             <Download className="w-5 h-5" /> Download Gambar
           </a>
