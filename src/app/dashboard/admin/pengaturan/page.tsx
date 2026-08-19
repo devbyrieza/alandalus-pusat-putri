@@ -287,7 +287,7 @@ export default function PengaturanPage() {
             </div>
 
             {/* Add 2027-2028 Button */}
-            {!has2026 && (
+            {!has2027 && (
               <div className="mb-6">
                 <button
                   onClick={handleSeed2026}
@@ -510,3 +510,4 @@ export default function PengaturanPage() {
     </div>
   );
 }
+
