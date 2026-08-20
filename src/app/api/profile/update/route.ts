@@ -21,7 +21,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { full_name, phone, username } = body;
+    const { full_name, phone, username, target_id } = body;
 
     if (!full_name) {
       return NextResponse.json(
@@ -30,52 +30,78 @@ export async function POST(request: Request) {
       );
     }
 
-    if (username) {
-      if (!/^[a-zA-Z0-9._]{4,}$/.test(username)) {
+    // Determine which profile to update:
+    // - admin_super can update ANY profile by providing target_id
+    // - other roles can only update themselves
+    let profileId = session.id;
+    if (target_id && target_id !== session.id) {
+      if (session.role !== "admin_super") {
         return NextResponse.json(
-          { error: "Username tidak valid (hanya huruf, angka, titik, underscore, minimal 4 karakter)" },
-          { status: 400 }
+          { error: "Hanya Admin Super yang dapat mengubah data akun lain" },
+          { status: 403 },
         );
       }
-      const existingUsername = await prisma.profile.findFirst({
-        where: { username, id: { not: session.id } }
+      profileId = target_id;
+    }
+
+    if (username) {
+      if (username.length < 4) {
+        return NextResponse.json(
+          { error: "Username minimal 4 karakter" },
+          { status: 400 },
+        );
+      }
+      if (!/^[a-zA-Z0-9._]+$/.test(username)) {
+        return NextResponse.json(
+          { error: "Username hanya boleh berisi huruf, angka, titik, atau underscore" },
+          { status: 400 },
+        );
+      }
+      const existing = await prisma.profile.findFirst({
+        where: { username, id: { not: profileId } },
       });
-      if (existingUsername) {
-        return NextResponse.json({ error: "Username sudah digunakan" }, { status: 400 });
+      if (existing) {
+        return NextResponse.json(
+          { error: "Username sudah digunakan" },
+          { status: 400 },
+        );
       }
     }
 
-    // Update profile using the ID from the session
-    // In this system, profile.id is stored in session.id for interviewers/admins
     const updatedProfile = await prisma.profile.update({
-      where: { id: session.id },
+      where: { id: profileId },
       data: {
         full_name,
-        phone: phone || "",
+        phone: phone || "-",
         username: username || null,
       },
     });
 
-    // Update the session cookie with new info
-    const newSession = {
-      ...session,
-      full_name: updatedProfile.full_name,
-      phone: updatedProfile.phone,
-      username: updatedProfile.username,
-    };
+    // Only update session cookie if editing own profile
+    if (profileId === session.id) {
+      const newSession = {
+        ...session,
+        full_name: updatedProfile.full_name,
+        phone: updatedProfile.phone,
+        username: updatedProfile.username,
+      };
 
-    const cookieStore = await cookies();
-    cookieStore.set("app_session", JSON.stringify(newSession), {
-      path: "/",
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-    });
+      const cookieStore = await cookies();
+      cookieStore.set("app_session", JSON.stringify(newSession), {
+        path: "/",
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        domain: process.env.NEXT_PUBLIC_COOKIE_DOMAIN || undefined,
+        maxAge: 60 * 60 * 24 * 90,
+      });
+    }
 
     return NextResponse.json({
       success: true,
-      message: "Profil Anda berhasil diperbarui.",
+      message: profileId === session.id
+        ? "Profil Anda berhasil diperbarui."
+        : `Profil ${updatedProfile.full_name} berhasil diperbarui.`,
       data: updatedProfile,
     });
   } catch (error: any) {
