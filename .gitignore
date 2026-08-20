@@ -177,6 +177,7 @@ fix-502-commands.md
 *.jpeg
 !public/**
 !src/**
+!scripts/**
 !prisma/**
 temp*/
 temp_*/
