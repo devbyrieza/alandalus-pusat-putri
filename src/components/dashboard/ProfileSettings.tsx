@@ -27,6 +27,7 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
   const [fullName, setFullName] = useState(user?.full_name || "");
   const [phone, setPhone] = useState(user?.phone || "");
   const [username, setUsername] = useState(user?.username || "");
+  const [email, setEmail] = useState(user?.email || "");
 
   // UI State
   const [loading, setLoading] = useState(false);
@@ -64,7 +65,7 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
       const res = await fetch("/api/profile/update", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ full_name: fullName, phone, username }),
+        body: JSON.stringify({ full_name: fullName, phone, username, email }),
       });
 
       const data = await res.json();
@@ -95,8 +96,13 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
       return;
     }
 
-    if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^_-])/.test(newPassword)) {
-      setError("Password harus mengandung kombinasi huruf besar, huruf kecil, angka, dan karakter khusus.");
+    const hasUpperCase = /[A-Z]/.test(newPassword);
+    const hasLowerCase = /[a-z]/.test(newPassword);
+    const hasNumbers = /\d/.test(newPassword);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(newPassword);
+
+    if (!hasUpperCase || !hasLowerCase || !hasNumbers || !hasSpecialChar) {
+      setError("Password baru harus mengandung huruf besar, huruf kecil, angka, dan karakter khusus.");
       return;
     }
 
@@ -176,7 +182,7 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
 
         <div className="p-6 md:p-8 bg-gray-50/10">
           <form onSubmit={handleSaveProfile} className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">
                   Nama Lengkap
@@ -212,7 +218,7 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
                 Username
               </label>
               <input
@@ -222,30 +228,40 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
                 placeholder="Kosongkan jika belum memiliki username"
                 className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 outline-none"
               />
-              <p className="text-[10px] text-gray-400 mt-1.5 ml-1">
-                Kosongkan jika belum memiliki username.
+              <p className="text-[10px] text-gray-400 mt-1.5 ml-1 italic">
+                Kosongkan jika belum memiliki username
               </p>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Email Saat Ini
+                {user?.role === "admin_super" && (
+                  <span className="ml-1 text-xs text-emerald-600 font-normal">(dapat diubah)</span>
+                )}
               </label>
               <input
-                type="text"
-                value={user?.email || ""}
-                disabled
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-500 cursor-not-allowed focus:ring-0"
+                type="email"
+                value={email}
+                onChange={user?.role === "admin_super" ? (e) => setEmail(e.target.value) : undefined}
+                disabled={user?.role !== "admin_super"}
+                placeholder="Email akun"
+                className={`w-full px-4 py-3 border border-gray-200 rounded-xl outline-none ${
+                  user?.role === "admin_super"
+                    ? "bg-white focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500"
+                    : "bg-gray-50 text-gray-500 cursor-not-allowed focus:ring-0"
+                }`}
               />
-              <p className="text-[10px] text-gray-400 mt-1.5 ml-1 italic">
-                Email tidak dapat diubah sendiri. Hubungi Admin Pusat jika ada
-                kesalahan data.
-              </p>
+              {user?.role !== "admin_super" && (
+                <p className="text-[10px] text-gray-400 mt-1.5 ml-1 italic">
+                  Email tidak dapat diubah sendiri. Hubungi Admin Pusat jika ada kesalahan data.
+                </p>
+              )}
             </div>
 
             <div className="pt-2 flex items-center justify-between">
               {profileSuccess && (
-                <p className="text-sm font-bold text-primary-600 flex items-center gap-1">
+                <p className="text-sm font-bold text-emerald-600 flex items-center gap-1">
                   <CheckCircle2 className="w-4 h-4" /> Profil diperbarui!
                 </p>
               )}
@@ -275,20 +291,20 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
             <h3 className="text-lg font-bold text-gray-900">Ubah Password</h3>
           </div>
           <p className="text-sm text-gray-500">
-            Gunakan kombinasi password yang kuat dan aman (Minimal 8 karakter, huruf besar, huruf kecil, angka, & simbol).
+            Gunakan kombinasi password yang kuat dan aman.
           </p>
         </div>
 
         <div className="p-6 md:p-8 bg-gray-50/30">
           {/* Success Alert */}
           {success && (
-            <div className="mb-6 p-4 rounded-xl bg-primary-50 text-primary-800 border border-primary-100 flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-primary-600" />
+            <div className="mb-6 p-4 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-100 flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-emerald-600" />
               <div>
                 <p className="text-sm font-bold">
                   Password Berhasil Diperbarui!
                 </p>
-                <p className="text-xs text-primary-700/80 mt-0.5">
+                <p className="text-xs text-emerald-700/80 mt-0.5">
                   Silakan gunakan password baru Anda saat login berikutnya.
                 </p>
               </div>
@@ -296,7 +312,7 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
           )}
 
           <form onSubmit={handleSavePassword} className="space-y-5">
-            <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-1.5">
                   Password Baru
