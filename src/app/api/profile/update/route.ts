@@ -21,13 +21,28 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { full_name, phone } = body;
+    const { full_name, phone, username } = body;
 
     if (!full_name) {
       return NextResponse.json(
         { error: "Nama lengkap wajib diisi" },
         { status: 400 },
       );
+    }
+
+    if (username) {
+      if (!/^[a-zA-Z0-9._]{4,}$/.test(username)) {
+        return NextResponse.json(
+          { error: "Username tidak valid (hanya huruf, angka, titik, underscore, minimal 4 karakter)" },
+          { status: 400 }
+        );
+      }
+      const existingUsername = await prisma.profile.findFirst({
+        where: { username, id: { not: session.id } }
+      });
+      if (existingUsername) {
+        return NextResponse.json({ error: "Username sudah digunakan" }, { status: 400 });
+      }
     }
 
     // Update profile using the ID from the session
@@ -37,6 +52,7 @@ export async function POST(request: Request) {
       data: {
         full_name,
         phone: phone || "",
+        username: username || null,
       },
     });
 
@@ -45,6 +61,7 @@ export async function POST(request: Request) {
       ...session,
       full_name: updatedProfile.full_name,
       phone: updatedProfile.phone,
+      username: updatedProfile.username,
     };
 
     const cookieStore = await cookies();
