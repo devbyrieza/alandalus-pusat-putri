@@ -1,10 +1,10 @@
-export const PDF_BRANDING = {
+﻿export const PDF_BRANDING = {
   template: "full_image" as "full_image" | "programmatic",
   institution: {
     name: "PESANTREN ISLAM INTERNASIONAL AL-ANDALUS PUTRI",
     subtitle: "Kaderisasi Umat Rabbani, Cendekia, dan Mandiri",
     committee: "PANITIA PENERIMAAN SANTRI BARU",
-    academic_year: "2027-2028",
+    academic_year: "2027/2028",
     address: "Jl. Transyogi KM 60, Cariu, Kec. Cariu, Kab. Bogor 16840",
     contact: "Website: https://pesantren-alandalus-putri.com | Email: info@pesantren-alandalus.com",
     phones: "WhatsApp: 0838-1151-5951",
@@ -47,3 +47,4 @@ export const PDF_BRANDING = {
     city: "Bogor",
   },
 };
+
