@@ -1,4 +1,4 @@
-﻿import { BRANDING, IS_PUTRA } from "@/config/branding";
+import { BRANDING, IS_PUTRA } from "@/config/branding";
 import Link from "next/link";
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
 import { FaInstagram, FaYoutube, FaFacebook, FaTiktok } from "react-icons/fa";
