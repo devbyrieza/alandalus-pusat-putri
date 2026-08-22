@@ -275,7 +275,7 @@ function DokumenCard({
         isDragging
           ? "border-primary-600 bg-primary-50 shadow-lg scale-[1.02] ring-4 ring-primary-600/10"
           : dokumen.status === "verified"
-            ? "border-emerald-200 bg-emerald-50/50"
+            ? "border-emerald-200 bg-primary-50/50"
             : dokumen.status === "rejected"
               ? "border-red-200 bg-red-50/50"
               : dokumen.status === "uploaded"
@@ -287,7 +287,7 @@ function DokumenCard({
       <div
         className={`absolute top-0 left-0 bottom-0 w-1.5 transition-colors ${
           dokumen.status === "verified"
-            ? "bg-emerald-500"
+            ? "bg-primary-500"
             : dokumen.status === "rejected"
               ? "bg-red-500"
               : dokumen.status === "uploaded"
@@ -306,7 +306,7 @@ function DokumenCard({
             <div
               className={`w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm transition-all ${
                 dokumen.status === "verified"
-                  ? "bg-emerald-100 text-emerald-600"
+                  ? "bg-primary-100 text-primary-600"
                   : dokumen.status === "rejected"
                     ? "bg-red-100 text-red-600"
                     : dokumen.status === "uploaded"
@@ -334,7 +334,7 @@ function DokumenCard({
               <p
                 className={`text-sm font-medium ${
                   dokumen.status === "verified"
-                    ? "text-emerald-700"
+                    ? "text-primary-700"
                     : dokumen.status === "rejected"
                       ? "text-red-700"
                       : dokumen.status === "uploaded"
@@ -509,13 +509,13 @@ function DokumenCard({
 
               {/* Info verifikasi */}
               {dokumen.status === "verified" && dokumen.verified_at && (
-                <div className="mt-4 p-4 bg-emerald-50 border border-emerald-100 rounded-xl flex gap-3 items-center">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0" />
+                <div className="mt-4 p-4 bg-primary-50 border border-primary-100 rounded-xl flex gap-3 items-center">
+                  <CheckCircle className="w-5 h-5 text-primary-500 shrink-0" />
                   <div>
-                    <p className="text-xs font-black text-emerald-800 uppercase tracking-wider mb-0.5">
+                    <p className="text-xs font-black text-primary-800 uppercase tracking-wider mb-0.5">
                       Terverifikasi
                     </p>
-                    <p className="text-sm text-emerald-700">
+                    <p className="text-sm text-primary-700">
                       Dokumen telah disetujui pada{" "}
                       {new Date(dokumen.verified_at).toLocaleDateString(
                         "id-ID",
@@ -561,7 +561,7 @@ function DokumenCard({
               ) : (
                 <div className="w-16 h-16 bg-surface-100 rounded-2xl flex items-center justify-center group-hover:bg-secondary-100 group-hover:scale-110 transition-all duration-300 shadow-inner">
                   {isLocked ? (
-                    <ShieldCheck className="w-8 h-8 text-emerald-500" />
+                    <ShieldCheck className="w-8 h-8 text-primary-500" />
                   ) : (
                     <Upload className="w-8 h-8 text-ink-400 group-hover:text-primary-700 transition-colors" />
                   )}
@@ -1003,8 +1003,8 @@ export default function UploadBerkasTab() {
 
           <div className="bg-white rounded-2xl p-5 border border-ink-100 shadow-sm hover:shadow-md transition-all">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center">
-                <FileCheck className="w-6 h-6 text-emerald-600" />
+              <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
+                <FileCheck className="w-6 h-6 text-primary-600" />
               </div>
               <div>
                 <p className="text-xs font-bold text-ink-400 uppercase tracking-wider">
@@ -1208,21 +1208,21 @@ export default function UploadBerkasTab() {
                   </span>
                 </div>
 
-                <div className="mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-3 text-left">
-                  <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                    <MessageCircle className="w-5 h-5 text-emerald-600" />
+                <div className="mt-4 p-4 bg-primary-50 border border-emerald-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-3 text-left">
+                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                    <MessageCircle className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-bold text-emerald-900 text-sm">
+                    <p className="font-bold text-primary-900 text-sm">
                       Ingin Verifikasi Lebih Cepat?
                     </p>
-                    <p className="text-emerald-700 text-xs mt-0.5 font-medium">
+                    <p className="text-primary-700 text-xs mt-0.5 font-medium">
                       Anda bisa menghubungi CS di nomor{" "}
                       <a
                         href="https://wa.me/6281285300800"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-black underline hover:text-emerald-900"
+                        className="font-black underline hover:text-primary-900"
                       >
                         0812-8530-0800
                       </a>{" "}
