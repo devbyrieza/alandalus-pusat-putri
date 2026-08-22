@@ -7,9 +7,9 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { login_type } = body;
 
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ═══════════════════════════════════════════
     // LOGIN PENDAFTAR (NIK + Nomor Pendaftaran)
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ═══════════════════════════════════════════
     if (login_type === "pendaftar") {
       const { nik, nomor_pendaftaran } = body;
 
@@ -83,9 +83,9 @@ export async function POST(request: NextRequest) {
       return responseJson;
     }
 
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ═══════════════════════════════════════════
     // LOGIN ADMIN/PENGUJI (Email + Password)
-    // â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+    // ═══════════════════════════════════════════
     else if (login_type === "admin") {
       const { email: rawEmail, password } = body;
       const identifier = rawEmail?.trim();
@@ -154,7 +154,7 @@ export async function POST(request: NextRequest) {
       // Check for multi-role: if secondary_roles exist, require role selection
       const secondaryRoles: string[] = profile.secondary_roles || [];
       if (secondaryRoles.length > 0) {
-        // Return role selection prompt â€” no cookie yet
+        // Return role selection prompt — no cookie yet
         return NextResponse.json({
           success: true,
           requires_role_selection: true,
@@ -166,7 +166,7 @@ export async function POST(request: NextRequest) {
 
       const isDefaultPassword = profile.must_change_password === true || password === "2026#@" || profile.plain_password === "2026#@";
 
-      // Single role â€” login normally
+      // Single role — login normally
       const responseJson = NextResponse.json({
         success: true,
         message: "Login berhasil",
@@ -176,6 +176,7 @@ export async function POST(request: NextRequest) {
           id: profile.id,
           full_name: profile.full_name,
           phone: profile.phone,
+          username: profile.username,
           role: profile.role,
           is_default_password: isDefaultPassword,
         },
@@ -187,6 +188,8 @@ export async function POST(request: NextRequest) {
           role: profile.role,
           id: profile.id,
           full_name: profile.full_name,
+          email: profile.email,
+          username: profile.username,
           is_default_password: isDefaultPassword,
         }),
         {
@@ -215,5 +218,6 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+
 
 
