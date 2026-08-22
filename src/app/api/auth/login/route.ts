@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
       });
 
       responseJson.cookies.set(
-        "app_session",
+        "al_session",
         JSON.stringify({
           role: "pendaftar",
           id: pendaftar.id,
@@ -182,7 +182,7 @@ export async function POST(request: NextRequest) {
       });
 
       responseJson.cookies.set(
-        "app_session",
+        "al_session",
         JSON.stringify({
           role: profile.role,
           id: profile.id,

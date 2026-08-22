@@ -19,7 +19,7 @@ export function DefaultPasswordModal({ profileUrl = "/dashboard/admin/profil" }:
     // Check if session has default password flag
     try {
       const cookies = document.cookie.split("; ");
-      const sessionCookie = cookies.find((row) => row.startsWith("app_session="));
+      const sessionCookie = cookies.find((row) => row.startsWith("al_session="));
       if (sessionCookie) {
         const value = decodeURIComponent(sessionCookie.split("=")[1]);
         const parsed = JSON.parse(value);
