@@ -631,20 +631,20 @@ function InputNilaiContent() {
   // RENDER: Seleksi Al Qur'an Form
   // ============================================================================
   const renderPesertaCard = (p: Peserta) => (
-    <div key={p.id} className="bg-white rounded-3xl sm:rounded-4xl p-5 sm:p-6 md:p-10 border border-secondary-100 shadow-sm shadow-primary-900/5 app-card">
+    <div key={p.id} className="bg-white rounded-xl sm:rounded-4xl p-5 sm:p-6 md:p-10 border border-secondary-100 shadow-sm shadow-primary-900/5 app-card">
       {/* Peserta Header */}
       <div className="flex items-center justify-between mb-6 sm:mb-8 pb-6 sm:pb-8 border-b border-ink-100/50">
         <div className="flex items-center gap-4 sm:gap-6">
-          <div className="w-14 h-14 sm:w-20 sm:h-20 bg-ink-50 rounded-2xl sm:rounded-3xl flex items-center justify-center border border-ink-100 shrink-0 shadow-inner">
+          <div className="w-14 h-14 sm:w-20 sm:h-20 bg-ink-50 rounded-xl sm:rounded-xl flex items-center justify-center border border-ink-100 shrink-0 shadow-inner">
             <User className="w-7 h-7 sm:w-10 sm:h-10 text-primary-300" />
           </div>
           <div>
             <h2 className="text-lg sm:text-2xl font-black text-primary-950 font-display tracking-tight leading-tight">{toTitleCase(p.nama_lengkap)}</h2>
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-2 sm:mt-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-primary-50 text-primary-700 text-[9px] sm:text-[10px] font-black uppercase tracking-widest border border-primary-100 shadow-xs">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:py-1.5 rounded-xl sm:rounded-xl bg-primary-50 text-primary-700 text-[9px] sm:text-[10px] font-black uppercase tracking-widest border border-primary-100 shadow-xs">
                 <Hash className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> {p.nomor_pendaftaran}
               </span>
-              <span className="inline-flex items-center px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-secondary-400 text-primary-950 text-[9px] sm:text-[10px] font-black uppercase tracking-widest shadow-sm">
+              <span className="inline-flex items-center px-3 py-1 sm:py-1.5 rounded-xl sm:rounded-xl bg-secondary-400 text-primary-950 text-[9px] sm:text-[10px] font-black uppercase tracking-widest shadow-sm">
                 {p.jenjang}
               </span>
             </div>
@@ -674,14 +674,14 @@ function InputNilaiContent() {
     const isEditing = editingId === p.id + "hafalan";
 
     return (
-      <div className="bg-teal-50/50 border border-teal-100 rounded-2xl sm:rounded-3xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
+      <div className="bg-teal-50/50 border border-teal-100 rounded-xl sm:rounded-xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
         <div className="flex items-center gap-3 mb-2">
           <div className="p-2 sm:p-2.5 bg-teal-100 rounded-xl">
             <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-teal-700" />
           </div>
           <h3 className="text-lg sm:text-xl font-black text-teal-900 tracking-tight">Tes Hafalan Al-Qur'an</h3>
           {isSaved && !isEditing && (
-            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-teal-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-lg sm:rounded-xl flex items-center gap-1.5 shadow-sm">
+            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-teal-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-xl sm:rounded-xl flex items-center gap-1.5 shadow-sm">
               <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Dinilai
             </span>
           )}
@@ -694,8 +694,8 @@ function InputNilaiContent() {
               return (
                 <>
                   {isInputtedByAdmin && (
-                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-2xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
-                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-lg sm:rounded-xl">
+                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
+                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-xl sm:rounded-xl">
                         <LockIcon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-700" />
                       </div>
                       <div>
@@ -708,7 +708,7 @@ function InputNilaiContent() {
             <div className="grid grid-cols-1 gap-5 sm:gap-6 text-sm">
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Nilai Hafalan (1-100) *</label>
-                <input type="number" min="1" max="100" value={hafalanForm.score_override || ""} onChange={(e) => setHafalanForm({ ...hafalanForm, score_override: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-teal-100 rounded-xl sm:rounded-2xl focus:border-teal-500 outline-none font-black text-teal-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
+                <input type="number" min="1" max="100" value={hafalanForm.score_override || ""} onChange={(e) => setHafalanForm({ ...hafalanForm, score_override: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-teal-100 rounded-xl sm:rounded-xl focus:border-teal-500 outline-none font-black text-teal-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
               </div>
             </div>
 
@@ -726,12 +726,12 @@ function InputNilaiContent() {
 
             <div>
               <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Catatan Penguji</label>
-              <textarea value={hafalanForm.catatan_tambahan || ""} onChange={(e) => setHafalanForm({ ...hafalanForm, catatan_tambahan: e.target.value })} className="w-full px-4 sm:px-5 py-4 bg-white border-2 border-teal-100 rounded-xl sm:rounded-2xl focus:border-teal-500 outline-none font-medium text-teal-950 min-h-[120px] transition-all resize-none" placeholder="Tuliskan catatan tambahan terkait hafalan santri..." />
+              <textarea value={hafalanForm.catatan_tambahan || ""} onChange={(e) => setHafalanForm({ ...hafalanForm, catatan_tambahan: e.target.value })} className="w-full px-4 sm:px-5 py-4 bg-white border-2 border-teal-100 rounded-xl sm:rounded-xl focus:border-teal-500 outline-none font-medium text-teal-950 min-h-[120px] transition-all resize-none" placeholder="Tuliskan catatan tambahan terkait hafalan santri..." />
             </div>
 
             <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t border-teal-100/60">
-              <button onClick={cancelEditing} disabled={!!saving} className="px-6 py-4 rounded-xl sm:rounded-2xl font-black text-xs uppercase tracking-widest text-ink-500 hover:bg-ink-100 transition-all flex-1 text-center">Batal</button>
-              <button onClick={() => saveForm(p, "hafalan")} disabled={isInputtedByAdmin || !!saving || !hafalanForm.score_override || !hafalanForm.rekomendasi} className="px-6 py-4 rounded-xl sm:rounded-2xl font-black text-xs uppercase tracking-widest bg-teal-600 text-white hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/20 disabled:opacity-50 disabled:cursor-not-allowed flex-1 text-center flex justify-center items-center gap-2">
+              <button onClick={cancelEditing} disabled={!!saving} className="px-6 py-4 rounded-xl sm:rounded-xl font-black text-xs uppercase tracking-widest text-ink-500 hover:bg-ink-100 transition-all flex-1 text-center">Batal</button>
+              <button onClick={() => saveForm(p, "hafalan")} disabled={isInputtedByAdmin || !!saving || !hafalanForm.score_override || !hafalanForm.rekomendasi} className="px-6 py-4 rounded-xl sm:rounded-xl font-black text-xs uppercase tracking-widest bg-teal-600 text-white hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/20 disabled:opacity-50 disabled:cursor-not-allowed flex-1 text-center flex justify-center items-center gap-2">
                 {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />} {saving ? 'Menyimpan...' : 'Simpan Nilai Hafalan'}
               </button>
             </div>
@@ -741,7 +741,7 @@ function InputNilaiContent() {
             })()}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 bg-white p-5 sm:p-6 rounded-2xl border border-teal-100/50">
+          <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 bg-white p-5 sm:p-6 rounded-xl border border-teal-100/50">
             {isSaved ? (
               <>
                 <div>
@@ -750,7 +750,7 @@ function InputNilaiContent() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-ink-400 mb-1.5">Rekomendasi</p>
-                  <span className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-black uppercase tracking-wider ${p.detail_hafalan?.rekomendasi === "Diterima" ? "bg-teal-100 text-teal-800" : p.detail_hafalan?.rekomendasi === "Cadangan" ? "bg-gold-100 text-gold-800" : "bg-red-100 text-red-800"}`}>{p.detail_hafalan?.rekomendasi || "-"}</span>
+                  <span className={`inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-black uppercase tracking-wider ${p.detail_hafalan?.rekomendasi === "Diterima" ? "bg-teal-100 text-teal-800" : p.detail_hafalan?.rekomendasi === "Cadangan" ? "bg-gold-100 text-gold-800" : "bg-red-100 text-red-800"}`}>{p.detail_hafalan?.rekomendasi || "-"}</span>
                 </div>
                 {p.catatan_hafalan && (
                   <div className="md:col-span-2 mt-2 pt-4 border-t border-teal-50">
@@ -770,11 +770,11 @@ function InputNilaiContent() {
         {!isEditing && (
           <div className="flex justify-end mt-4">
             {(!isSaved || !getLockInfo(p.input_at_hafalan).isLocked) ? (
-              <button onClick={() => startEditing(p, "hafalan")} className="px-5 md:px-8 py-3.5 sm:py-4 bg-teal-600 text-white rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/20 active:scale-95 leading-none">
+              <button onClick={() => startEditing(p, "hafalan")} className="px-5 md:px-8 py-3.5 sm:py-4 bg-teal-600 text-white rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-teal-700 transition-all shadow-lg shadow-teal-900/20 active:scale-95 leading-none">
                 {isSaved ? "Edit Nilai" : "Input Nilai Hafalan"}
               </button>
             ) : (
-              <div className="inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
+              <div className="inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
                 <LockIcon className="w-3.5 h-3.5" /> Edit Terkunci
               </div>
             )}
@@ -789,14 +789,14 @@ function InputNilaiContent() {
     const isEditing = editingId === p.id + "lisan_arab";
 
     return (
-      <div className="bg-primary-50/50 border border-primary-100 rounded-2xl sm:rounded-3xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
+      <div className="bg-primary-50/50 border border-primary-100 rounded-xl sm:rounded-xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
         <div className="flex items-center gap-3 mb-2">
           <div className="p-2 sm:p-2.5 bg-primary-100 rounded-xl">
             <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary-700" />
           </div>
           <h3 className="text-lg sm:text-xl font-black text-primary-900 tracking-tight">Tes Lisan Bahasa Arab</h3>
           {isSaved && !isEditing && (
-            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-primary-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-lg sm:rounded-xl flex items-center gap-1.5 shadow-sm">
+            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-primary-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-xl sm:rounded-xl flex items-center gap-1.5 shadow-sm">
               <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Dinilai
             </span>
           )}
@@ -809,8 +809,8 @@ function InputNilaiContent() {
               return (
                 <>
                   {isInputtedByAdmin && (
-                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-2xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
-                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-lg sm:rounded-xl">
+                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
+                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-xl sm:rounded-xl">
                         <LockIcon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-700" />
                       </div>
                       <div>
@@ -823,7 +823,7 @@ function InputNilaiContent() {
             <div className="grid grid-cols-1 gap-5 sm:gap-6 text-sm">
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Nilai Bahasa Arab (1-100) *</label>
-                <input type="number" min="1" max="100" value={lisanArabForm.score_override || ""} onChange={(e) => setLisanArabForm({ ...lisanArabForm, score_override: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-2xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
+                <input type="number" min="1" max="100" value={lisanArabForm.score_override || ""} onChange={(e) => setLisanArabForm({ ...lisanArabForm, score_override: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
               </div>
             </div>
 
@@ -841,12 +841,12 @@ function InputNilaiContent() {
 
             <div>
               <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Catatan Penguji</label>
-              <textarea value={lisanArabForm.catatan_tambahan || ""} onChange={(e) => setLisanArabForm({ ...lisanArabForm, catatan_tambahan: e.target.value })} className="w-full px-4 sm:px-5 py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-2xl focus:border-primary-500 outline-none font-medium text-primary-950 min-h-[120px] transition-all resize-none" placeholder="Tuliskan catatan tambahan terkait lisan arab santri..." />
+              <textarea value={lisanArabForm.catatan_tambahan || ""} onChange={(e) => setLisanArabForm({ ...lisanArabForm, catatan_tambahan: e.target.value })} className="w-full px-4 sm:px-5 py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-xl focus:border-primary-500 outline-none font-medium text-primary-950 min-h-[120px] transition-all resize-none" placeholder="Tuliskan catatan tambahan terkait lisan arab santri..." />
             </div>
 
             <div className="flex flex-col-reverse sm:flex-row gap-3 pt-4 border-t border-primary-100/60">
-              <button onClick={cancelEditing} disabled={!!saving} className="px-6 py-4 rounded-xl sm:rounded-2xl font-black text-xs uppercase tracking-widest text-ink-500 hover:bg-ink-100 transition-all flex-1 text-center">Batal</button>
-              <button onClick={() => saveForm(p, "lisan_arab")} disabled={isInputtedByAdmin || !!saving || !lisanArabForm.score_override || !lisanArabForm.rekomendasi} className="px-6 py-4 rounded-xl sm:rounded-2xl font-black text-xs uppercase tracking-widest bg-primary-600 text-white hover:bg-primary-700 transition-all shadow-lg shadow-sky-900/20 disabled:opacity-50 disabled:cursor-not-allowed flex-1 text-center flex justify-center items-center gap-2">
+              <button onClick={cancelEditing} disabled={!!saving} className="px-6 py-4 rounded-xl sm:rounded-xl font-black text-xs uppercase tracking-widest text-ink-500 hover:bg-ink-100 transition-all flex-1 text-center">Batal</button>
+              <button onClick={() => saveForm(p, "lisan_arab")} disabled={isInputtedByAdmin || !!saving || !lisanArabForm.score_override || !lisanArabForm.rekomendasi} className="px-6 py-4 rounded-xl sm:rounded-xl font-black text-xs uppercase tracking-widest bg-primary-600 text-white hover:bg-primary-700 transition-all shadow-lg shadow-sky-900/20 disabled:opacity-50 disabled:cursor-not-allowed flex-1 text-center flex justify-center items-center gap-2">
                 {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />} {saving ? 'Menyimpan...' : 'Simpan Nilai B. Arab'}
               </button>
             </div>
@@ -856,7 +856,7 @@ function InputNilaiContent() {
             })()}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 bg-white p-5 sm:p-6 rounded-2xl border border-primary-100/50">
+          <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 bg-white p-5 sm:p-6 rounded-xl border border-primary-100/50">
             {isSaved ? (
               <>
                 <div>
@@ -865,7 +865,7 @@ function InputNilaiContent() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-ink-400 mb-1.5">Rekomendasi</p>
-                  <span className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-black uppercase tracking-wider ${p.detail_lisan_arab?.rekomendasi === "Diterima" ? "bg-primary-100 text-primary-800" : p.detail_lisan_arab?.rekomendasi === "Cadangan" ? "bg-gold-100 text-gold-800" : "bg-red-100 text-red-800"}`}>{p.detail_lisan_arab?.rekomendasi || "-"}</span>
+                  <span className={`inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-black uppercase tracking-wider ${p.detail_lisan_arab?.rekomendasi === "Diterima" ? "bg-primary-100 text-primary-800" : p.detail_lisan_arab?.rekomendasi === "Cadangan" ? "bg-gold-100 text-gold-800" : "bg-red-100 text-red-800"}`}>{p.detail_lisan_arab?.rekomendasi || "-"}</span>
                 </div>
                 {p.catatan_lisan_arab && (
                   <div className="md:col-span-2 mt-2 pt-4 border-t border-primary-50">
@@ -885,11 +885,11 @@ function InputNilaiContent() {
         {!isEditing && (
           <div className="flex justify-end mt-4">
             {(!isSaved || !getLockInfo(p.input_at_lisan_arab).isLocked) ? (
-              <button onClick={() => startEditing(p, "lisan_arab")} className="px-5 md:px-8 py-3.5 sm:py-4 bg-primary-600 text-white rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-primary-700 transition-all shadow-lg shadow-sky-900/20 active:scale-95 leading-none">
+              <button onClick={() => startEditing(p, "lisan_arab")} className="px-5 md:px-8 py-3.5 sm:py-4 bg-primary-600 text-white rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-primary-700 transition-all shadow-lg shadow-sky-900/20 active:scale-95 leading-none">
                 {isSaved ? "Edit Nilai" : "Input Nilai B. Arab"}
               </button>
             ) : (
-              <div className="inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
+              <div className="inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
                 <LockIcon className="w-3.5 h-3.5" /> Edit Terkunci
               </div>
             )}
@@ -913,14 +913,14 @@ function InputNilaiContent() {
     const examinerList = isPutri ? PENGUJI_QURAN_LIST_PUTRI : PENGUJI_QURAN_LIST_PUTRA;
 
     return (
-      <div className="bg-primary-50/50 border border-primary-100 rounded-2xl sm:rounded-3xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
+      <div className="bg-primary-50/50 border border-primary-100 rounded-xl sm:rounded-xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
         <div className="flex items-center gap-3 mb-2">
           <div className="p-2 sm:p-2.5 bg-primary-100 rounded-xl">
             <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary-700" />
           </div>
           <h3 className="text-lg sm:text-xl font-black text-primary-900 tracking-tight">Tes Al-Qur&apos;an</h3>
           {isSaved && !isEditing && (
-            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-primary-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-lg sm:rounded-xl flex items-center gap-1.5 shadow-sm">
+            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-primary-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-xl sm:rounded-xl flex items-center gap-1.5 shadow-sm">
               <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Dinilai
             </span>
           )}
@@ -933,8 +933,8 @@ function InputNilaiContent() {
               return (
                 <>
                   {isInputtedByAdmin && (
-                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-2xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
-                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-lg sm:rounded-xl">
+                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
+                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-xl sm:rounded-xl">
                         <LockIcon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-700" />
                       </div>
                       <div>
@@ -947,11 +947,11 @@ function InputNilaiContent() {
             <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 text-sm">
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Nilai Tajwid (1-100) *</label>
-                <input type="number" min="1" max="100" value={quranForm.tajwid || ""} onChange={(e) => setQuranForm({ ...quranForm, tajwid: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-2xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
+                <input type="number" min="1" max="100" value={quranForm.tajwid || ""} onChange={(e) => setQuranForm({ ...quranForm, tajwid: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
               </div>
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Nilai Kelancaran (1-100) *</label>
-                <input type="number" min="1" max="100" value={quranForm.kelancaran || ""} onChange={(e) => setQuranForm({ ...quranForm, kelancaran: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-2xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
+                <input type="number" min="1" max="100" value={quranForm.kelancaran || ""} onChange={(e) => setQuranForm({ ...quranForm, kelancaran: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="0-100" />
               </div>
             </div>
 
@@ -969,17 +969,17 @@ function InputNilaiContent() {
 
             <div>
               <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Nama Penguji Al-Qur&apos;an (Otomatis)</label>
-              <input type="text" value={quranForm.nama_penguji || activeName} readOnly className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-primary-50/50 border-2 border-primary-100 rounded-xl sm:rounded-2xl font-black text-primary-950 outline-none cursor-not-allowed" />
+              <input type="text" value={quranForm.nama_penguji || activeName} readOnly className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-primary-50/50 border-2 border-primary-100 rounded-xl sm:rounded-xl font-black text-primary-950 outline-none cursor-not-allowed" />
             </div>
 
             <div>
               <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-2 sm:mb-3">Catatan Tambahan (opsional)</label>
-              <textarea value={quranForm.catatan || ""} onChange={(e) => setQuranForm({ ...quranForm, catatan: e.target.value })} rows={3} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-2xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Catatan tambahan penguji..." />
+              <textarea value={quranForm.catatan || ""} onChange={(e) => setQuranForm({ ...quranForm, catatan: e.target.value })} rows={3} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-white border-2 border-primary-100 rounded-xl sm:rounded-xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Catatan tambahan penguji..." />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-100 text-primary-700 rounded-xl sm:rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-emerald-200 transition-all active:scale-95">Batal</button>
-              <button onClick={() => saveForm(p, "quran")} disabled={isInputtedByAdmin || !quranForm.tajwid || !quranForm.kelancaran || !quranForm.rekomendasi || !quranForm.nama_penguji || saving === p.id + "quran"} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-600 text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-primary-700 transition-all shadow-xl shadow-primary-900/20 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95">
+              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-100 text-primary-700 rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-emerald-200 transition-all active:scale-95">Batal</button>
+              <button onClick={() => saveForm(p, "quran")} disabled={isInputtedByAdmin || !quranForm.tajwid || !quranForm.kelancaran || !quranForm.rekomendasi || !quranForm.nama_penguji || saving === p.id + "quran"} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-600 text-white rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-primary-700 transition-all shadow-lg shadow-primary-900/20 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95">
                 {saving === p.id + "quran" ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5" />} Simpan
               </button>
             </div>
@@ -991,7 +991,7 @@ function InputNilaiContent() {
         ) : (
           <div>
             {isSaved ? (
-              <div className="flex flex-col gap-3 py-4 sm:py-5 bg-white/50 rounded-xl sm:rounded-2xl px-5 sm:px-6 border border-primary-100/50 shadow-inner">
+              <div className="flex flex-col gap-3 py-4 sm:py-5 bg-white/50 rounded-xl sm:rounded-xl px-5 sm:px-6 border border-primary-100/50 shadow-inner">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-primary-600 shrink-0" />
                   <div className="flex-1">
@@ -1030,11 +1030,11 @@ function InputNilaiContent() {
             )}
             
             {(!isSaved || !getLockInfo(p.input_at_quran).isLocked) ? (
-              <button onClick={() => startEditing(p, "quran")} className="mt-5 sm:mt-6 px-5 md:px-8 py-4 bg-primary-600 text-white rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-primary-700 transition-all shadow-lg shadow-primary-900/20 active:scale-95 leading-none">
+              <button onClick={() => startEditing(p, "quran")} className="mt-5 sm:mt-6 px-5 md:px-8 py-4 bg-primary-600 text-white rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-primary-700 transition-all shadow-lg shadow-primary-900/20 active:scale-95 leading-none">
                 {isSaved ? "Edit Nilai" : "Input Nilai"}
               </button>
             ) : (
-              <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
+              <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
                 <LockIcon className="w-3.5 h-3.5" /> Edit Terkunci
               </div>
             )}
@@ -1059,14 +1059,14 @@ function InputNilaiContent() {
     const interviewerList = isPutri ? PEWAWANCARA_CALSAN_LIST_PUTRI : PEWAWANCARA_CALSAN_LIST_PUTRA;
 
     return (
-      <div className="bg-primary-50/50 border border-primary-100 rounded-2xl sm:rounded-3xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
+      <div className="bg-primary-50/50 border border-primary-100 rounded-xl sm:rounded-xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
         <div className="flex items-center gap-3 mb-2">
           <div className="p-2 sm:p-2.5 bg-primary-100 rounded-xl">
             <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6 text-primary-700" />
           </div>
           <h3 className="text-lg sm:text-xl font-black text-primary-900 tracking-tight">Seleksi Wawancara Calon Santri</h3>
           {isSaved && !isEditing && (
-            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-primary-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-lg sm:rounded-xl flex items-center gap-1.5 shadow-sm">
+            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-primary-600 text-white text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-xl sm:rounded-xl flex items-center gap-1.5 shadow-sm">
               <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Dinilai
             </span>
           )}
@@ -1079,8 +1079,8 @@ function InputNilaiContent() {
               return (
                 <>
                   {isInputtedByAdmin && (
-                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-2xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
-                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-lg sm:rounded-xl">
+                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
+                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-xl sm:rounded-xl">
                         <LockIcon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-700" />
                       </div>
                       <div>
@@ -1126,19 +1126,19 @@ function InputNilaiContent() {
 
                 <div className="space-y-3 sm:space-y-4">
                   <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Nama Pewawancara (Otomatis)</label>
-                  <input type="text" value={calsanForm.nama_pewawancara || activeName} readOnly className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-primary-50/50 border-2 border-primary-100 rounded-xl sm:rounded-2xl font-black text-primary-950 outline-none cursor-not-allowed" />
+                  <input type="text" value={calsanForm.nama_pewawancara || activeName} readOnly className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-primary-50/50 border-2 border-primary-100 rounded-xl sm:rounded-xl font-black text-primary-950 outline-none cursor-not-allowed" />
                 </div>
               </div>
 
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Catatan Pewawancara (opsional)</label>
-                <textarea value={calsanForm.catatan || ""} onChange={(e) => setSantriForm({ ...calsanForm, catatan: e.target.value })} rows={4} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/50 border-2 border-ink-100 rounded-xl sm:rounded-2xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Catatan pewawancara..." />
+                <textarea value={calsanForm.catatan || ""} onChange={(e) => setSantriForm({ ...calsanForm, catatan: e.target.value })} rows={4} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/50 border-2 border-ink-100 rounded-xl sm:rounded-xl focus:border-primary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Catatan pewawancara..." />
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-ink-100 text-ink-800 rounded-xl sm:rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-ink-200 transition-all active:scale-95">Batal</button>
-              <button onClick={() => saveForm(p, "wawancara")} disabled={isInputtedByAdmin || !criteria.every((c) => calsanForm[c.key]) || !calsanForm.rekomendasi || !calsanForm.nama_pewawancara || saving === p.id + "wawancara"} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-700 text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-primary-800 transition-all shadow-xl shadow-primary-900/20 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95">
+              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-ink-100 text-ink-800 rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-ink-200 transition-all active:scale-95">Batal</button>
+              <button onClick={() => saveForm(p, "wawancara")} disabled={isInputtedByAdmin || !criteria.every((c) => calsanForm[c.key]) || !calsanForm.rekomendasi || !calsanForm.nama_pewawancara || saving === p.id + "wawancara"} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-700 text-white rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-primary-800 transition-all shadow-lg shadow-primary-900/20 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95">
                 {saving === p.id + "wawancara" ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5" />} Simpan
               </button>
             </div>
@@ -1150,7 +1150,7 @@ function InputNilaiContent() {
         ) : (
           <div>
             {isSaved ? (
-              <div className="flex flex-col gap-3 py-4 sm:py-5 bg-white/50 rounded-xl sm:rounded-2xl px-5 sm:px-6 border border-primary-100/50 shadow-inner">
+              <div className="flex flex-col gap-3 py-4 sm:py-5 bg-white/50 rounded-xl sm:rounded-xl px-5 sm:px-6 border border-primary-100/50 shadow-inner">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-primary-600 shrink-0" />
                   <div>
@@ -1173,11 +1173,11 @@ function InputNilaiContent() {
             )}
 
             {(!isSaved || !getLockInfo(p.input_at_santri).isLocked) ? (
-              <button onClick={() => startEditing(p, "wawancara")} className="mt-5 sm:mt-6 px-5 md:px-8 py-4 bg-primary-700 text-white rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-primary-800 transition-all shadow-lg shadow-primary-900/20 active:scale-95 leading-none">
+              <button onClick={() => startEditing(p, "wawancara")} className="mt-5 sm:mt-6 px-5 md:px-8 py-4 bg-primary-700 text-white rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-primary-800 transition-all shadow-lg shadow-primary-900/20 active:scale-95 leading-none">
                 {isSaved ? "Edit Nilai" : "Input Nilai"}
               </button>
             ) : (
-              <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
+              <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
                 <LockIcon className="w-3.5 h-3.5" /> Edit Terkunci
               </div>
             )}
@@ -1200,14 +1200,14 @@ function InputNilaiContent() {
     const interviewerList = isPutri ? PEWAWANCARA_CAWALSAN_LIST_PUTRI : PEWAWANCARA_CAWALSAN_LIST_PUTRA;
 
     return (
-      <div className="bg-secondary-50/50 border border-secondary-100 rounded-2xl sm:rounded-3xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
+      <div className="bg-secondary-50/50 border border-secondary-100 rounded-xl sm:rounded-xl p-5 sm:p-5 md:p-8 space-y-5 sm:space-y-6 shadow-sm">
         <div className="flex items-center gap-3 mb-2">
           <div className="p-2 sm:p-2.5 bg-secondary-100 rounded-xl">
             <Users className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-700" />
           </div>
           <h3 className="text-lg sm:text-xl font-black text-primary-950 tracking-tight">Seleksi Wawancara Orang Tua/Wali</h3>
           {isSaved && !isEditing && (
-            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-secondary-400 text-primary-950 text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-lg sm:rounded-xl flex items-center gap-1.5 shadow-sm border border-secondary-500/20">
+            <span className="ml-auto px-3 py-1 sm:px-4 sm:py-1.5 bg-secondary-400 text-primary-950 text-[9px] sm:text-[10px] font-black uppercase tracking-widest rounded-xl sm:rounded-xl flex items-center gap-1.5 shadow-sm border border-secondary-500/20">
               <CheckCircle className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Dinilai
             </span>
           )}
@@ -1220,8 +1220,8 @@ function InputNilaiContent() {
               return (
                 <>
                   {isInputtedByAdmin && (
-                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-2xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
-                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-lg sm:rounded-xl">
+                    <div className="mb-4 sm:mb-6 p-4 sm:p-5 bg-amber-50 rounded-xl sm:rounded-xl border-2 border-amber-200 flex items-start gap-3 sm:gap-4">
+                      <div className="p-2 sm:p-2.5 bg-amber-100 rounded-xl sm:rounded-xl">
                         <LockIcon className="w-5 h-5 sm:w-6 sm:h-6 text-amber-700" />
                       </div>
                       <div>
@@ -1232,19 +1232,19 @@ function InputNilaiContent() {
                   )}
                   <div className={isInputtedByAdmin ? "opacity-60 pointer-events-none grayscale" : ""}>
             {/* Dasar Informasi */}
-            <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-secondary-100 shadow-xs">
+            <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 bg-white rounded-xl sm:rounded-xl p-5 sm:p-6 border border-secondary-100 shadow-xs">
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Nama Audiens/Orangtua *</label>
-                <input type="text" value={cawalsanForm.nama_orangtua || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, nama_orangtua: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-2xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="Nama orangtua/wali" />
+                <input type="text" value={cawalsanForm.nama_orangtua || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, nama_orangtua: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="Nama orangtua/wali" />
               </div>
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Asal Daerah *</label>
-                <input type="text" value={cawalsanForm.asal || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, asal: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-2xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="Contoh: Bogor, Jawa Barat" />
+                <input type="text" value={cawalsanForm.asal || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, asal: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all placeholder:text-ink-400" placeholder="Contoh: Bogor, Jawa Barat" />
               </div>
             </div>
 
             {/* Kategori & Sumber */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-secondary-100 shadow-xs space-y-5 sm:space-y-6">
+            <div className="bg-white rounded-xl sm:rounded-xl p-5 sm:p-6 border border-secondary-100 shadow-xs space-y-5 sm:space-y-6">
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-3 sm:mb-4">Kategori Calon Santri *</label>
                 <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
@@ -1259,7 +1259,7 @@ function InputNilaiContent() {
 
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Sumber Informasi *</label>
-                <select value={cawalsanForm.sumber_info || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, sumber_info: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-2xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all cursor-pointer">
+                <select value={cawalsanForm.sumber_info || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, sumber_info: e.target.value })} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all cursor-pointer">
                   <option value="">Pilih Sumber Informasi</option>
                   {SUMBER_INFO_OPTIONS.map((n) => <option key={n} value={n}>{n}</option>)}
                 </select>
@@ -1269,7 +1269,7 @@ function InputNilaiContent() {
             {/* 12 Pertanyaan */}
             <div className="space-y-3 sm:space-y-4">
               {CAWALSAN_QUESTIONS.map((q) => (
-                <div key={q.key} className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-secondary-100 shadow-xs">
+                <div key={q.key} className="bg-white rounded-xl sm:rounded-xl p-5 sm:p-6 border border-secondary-100 shadow-xs">
                   <label className="block text-xs sm:text-sm font-black text-primary-950 mb-3 sm:mb-4">{q.label} *</label>
                   <div className="space-y-2">
                     {q.options.map((opt) => (
@@ -1284,10 +1284,10 @@ function InputNilaiContent() {
             </div>
 
             {/* Karakter & SPP & Rekomendasi */}
-            <div className="bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-secondary-100 shadow-xs space-y-5 sm:space-y-6">
+            <div className="bg-white rounded-xl sm:rounded-xl p-5 sm:p-6 border border-secondary-100 shadow-xs space-y-5 sm:space-y-6">
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Karakter Santri (Positif & Negatif) *</label>
-                <textarea value={cawalsanForm.karakter || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, karakter: e.target.value })} rows={3} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-2xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Deskripsikan karakter santri yang menonjol..." />
+                <textarea value={cawalsanForm.karakter || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, karakter: e.target.value })} rows={3} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Deskripsikan karakter santri yang menonjol..." />
               </div>
 
               <div>
@@ -1316,18 +1316,18 @@ function InputNilaiContent() {
 
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Nama Pewawancara (Otomatis)</label>
-                <input type="text" value={cawalsanForm.nama_pewawancara || activeName} readOnly className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-secondary-50/50 border-2 border-ink-100 rounded-xl sm:rounded-2xl font-black text-primary-950 outline-none cursor-not-allowed" />
+                <input type="text" value={cawalsanForm.nama_pewawancara || activeName} readOnly className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-secondary-50/50 border-2 border-ink-100 rounded-xl sm:rounded-xl font-black text-primary-950 outline-none cursor-not-allowed" />
               </div>
 
               <div>
                 <label className="block text-[10px] sm:text-xs font-black text-ink-800 uppercase tracking-widest mb-2 sm:mb-3">Catatan Tambahan (opsional)</label>
-                <textarea value={cawalsanForm.catatan || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, catatan: e.target.value })} rows={3} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-2xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Catatan tambahan pewawancara..." />
+                <textarea value={cawalsanForm.catatan || ""} onChange={(e) => setOrangTuaForm({ ...cawalsanForm, catatan: e.target.value })} rows={3} className="w-full px-4 sm:px-5 py-3.5 sm:py-4 bg-ink-50/30 border-2 border-ink-100 rounded-xl sm:rounded-xl focus:border-secondary-500 outline-none font-black text-primary-950 transition-all resize-none placeholder:text-ink-400" placeholder="Catatan tambahan pewawancara..." />
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-secondary-100 text-secondary-900 rounded-xl sm:rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-secondary-200 transition-all active:scale-95">Batal</button>
-              <button onClick={() => saveForm(p, "ortu")} disabled={isInputtedByAdmin || !cawalsanForm.nama_orangtua || !cawalsanForm.asal || !cawalsanForm.kategori || !cawalsanForm.sumber_info || !cawalsanForm.karakter || !cawalsanForm.tahu_spp || !cawalsanForm.rekomendasi || !cawalsanForm.nama_pewawancara || !CAWALSAN_QUESTIONS.every((q) => cawalsanForm[q.key]) || saving === p.id + "ortu"} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-secondary-400 text-primary-950 rounded-xl sm:rounded-2xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-secondary-500 transition-all shadow-xl shadow-secondary-400/20 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95">
+              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-secondary-100 text-secondary-900 rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-secondary-200 transition-all active:scale-95">Batal</button>
+              <button onClick={() => saveForm(p, "ortu")} disabled={isInputtedByAdmin || !cawalsanForm.nama_orangtua || !cawalsanForm.asal || !cawalsanForm.kategori || !cawalsanForm.sumber_info || !cawalsanForm.karakter || !cawalsanForm.tahu_spp || !cawalsanForm.rekomendasi || !cawalsanForm.nama_pewawancara || !CAWALSAN_QUESTIONS.every((q) => cawalsanForm[q.key]) || saving === p.id + "ortu"} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-secondary-400 text-primary-950 rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-secondary-500 transition-all shadow-lg shadow-secondary-400/20 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95">
                 {saving === p.id + "ortu" ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5" />} Simpan
               </button>
             </div>
@@ -1339,7 +1339,7 @@ function InputNilaiContent() {
         ) : (
           <div>
             {isSaved ? (
-              <div className="flex flex-col gap-3 py-4 sm:py-5 bg-white/50 rounded-xl sm:rounded-2xl px-5 sm:px-6 border border-secondary-100/50 shadow-inner">
+              <div className="flex flex-col gap-3 py-4 sm:py-5 bg-white/50 rounded-xl sm:rounded-xl px-5 sm:px-6 border border-secondary-100/50 shadow-inner">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-secondary-600 shrink-0" />
                   <div>
@@ -1362,11 +1362,11 @@ function InputNilaiContent() {
             )}
 
             {(!isSaved || !getLockInfo(p.input_at_ortu).isLocked) ? (
-              <button onClick={() => startEditing(p, "ortu")} className="mt-5 sm:mt-6 px-5 md:px-8 py-4 bg-secondary-400 text-primary-950 rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-secondary-500 transition-all shadow-lg shadow-secondary-400/20 active:scale-95 leading-none">
+              <button onClick={() => startEditing(p, "ortu")} className="mt-5 sm:mt-6 px-5 md:px-8 py-4 bg-secondary-400 text-primary-950 rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest hover:bg-secondary-500 transition-all shadow-lg shadow-secondary-400/20 active:scale-95 leading-none">
                 {isSaved ? "Edit Hasil" : "Input Hasil"}
               </button>
             ) : (
-              <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-2xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
+              <div className="mt-5 sm:mt-6 inline-flex items-center gap-2 px-6 py-3.5 bg-stone-100 text-stone-400 rounded-xl sm:rounded-xl text-[10px] sm:text-xs font-black uppercase tracking-widest border border-stone-200">
                 <LockIcon className="w-3.5 h-3.5" /> Edit Terkunci
               </div>
             )}
@@ -1382,16 +1382,16 @@ function InputNilaiContent() {
   return (
     <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8 pb-32">
       {/* Header */}
-      <div className="bg-white rounded-3xl sm:rounded-4xl p-6 sm:p-6 md:p-10 border border-secondary-100 shadow-sm app-card overflow-hidden relative">
+      <div className="bg-white rounded-xl sm:rounded-4xl p-6 sm:p-6 md:p-10 border border-secondary-100 shadow-sm app-card overflow-hidden relative">
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary-600/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
         <div className="flex flex-col sm:flex-row sm:items-center justify-between relative z-10 gap-6">
           <div className="flex items-center gap-4 sm:gap-6">
-            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-50 rounded-2xl flex items-center justify-center border border-primary-100 shrink-0 shadow-sm">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary-50 rounded-xl flex items-center justify-center border border-primary-100 shrink-0 shadow-sm">
               <ClipboardCheck className="w-6 h-6 sm:w-8 sm:h-8 text-primary-700" />
             </div>
             <div>
               <h1 className="text-xl sm:text-3xl font-black text-primary-950 font-display tracking-tight leading-none">Input Nilai Ujian</h1>
-              <p className="text-xs sm:text-sm font-bold text-ink-700 mt-2">Total Terdaftar: <span className="text-primary-700 bg-primary-50 px-2 py-0.5 rounded-lg border border-primary-100/50">{peserta.length} peserta</span></p>
+              <p className="text-xs sm:text-sm font-bold text-ink-700 mt-2">Total Terdaftar: <span className="text-primary-700 bg-primary-50 px-2 py-0.5 rounded-xl border border-primary-100/50">{peserta.length} peserta</span></p>
             </div>
           </div>
         </div>
@@ -1399,7 +1399,7 @@ function InputNilaiContent() {
         {/* Search */}
         <div className="mt-8 relative z-10">
           <Search className="absolute left-4 sm:left-5 top-1/2 -translate-y-1/2 w-4 sm:w-5 h-4 sm:h-5 text-ink-500" />
-          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama atau nomor..." className="w-full pl-11 sm:pl-14 pr-6 py-3.5 sm:py-4.5 bg-ink-50/50 border border-ink-200 rounded-2xl sm:rounded-3xl focus:border-primary-500 focus:ring-8 focus:ring-primary-500/5 outline-none text-sm sm:text-base font-black text-primary-950 transition-all placeholder:text-ink-400" />
+          <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Cari nama atau nomor..." className="w-full pl-11 sm:pl-14 pr-6 py-3.5 sm:py-4.5 bg-ink-50/50 border border-ink-200 rounded-xl sm:rounded-xl focus:border-primary-500 focus:ring-8 focus:ring-primary-500/5 outline-none text-sm sm:text-base font-black text-primary-950 transition-all placeholder:text-ink-400" />
         </div>
       </div>
 

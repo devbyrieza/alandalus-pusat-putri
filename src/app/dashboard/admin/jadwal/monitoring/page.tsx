@@ -209,7 +209,7 @@ export default function MonitoringJadwalPage() {
             {/* Simplified Header */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary-600 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary-600/20">
+                    <div className="w-12 h-12 bg-primary-600 rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary-600/20">
                         <Calendar className="w-6 h-6" />
                     </div>
                     <div>
@@ -223,7 +223,7 @@ export default function MonitoringJadwalPage() {
 
             {/* Top Statistics - Split Wawancara */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
-                <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
+                <div className="bg-white rounded-xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-primary-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Total Terjadwal</p>
                     <p className="text-2xl md:text-3xl font-black text-slate-800 relative z-10">
@@ -232,17 +232,17 @@ export default function MonitoringJadwalPage() {
                         <span className="ml-2">{totalSesi}</span> <span className="text-[10px] text-slate-400 font-bold uppercase">Jadwal</span>
                     </p>
                 </div>
-                <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
+                <div className="bg-white rounded-xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-green-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Selesai Al-Qur&apos;an</p>
                     <p className="text-2xl md:text-3xl font-black text-primary-600 relative z-10">{selesaiQuran}</p>
                 </div>
-                <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
+                <div className="bg-white rounded-xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-indigo-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Selesai W. Santri</p>
                     <p className="text-2xl md:text-3xl font-black text-indigo-600 relative z-10">{selesaiWSantri}</p>
                 </div>
-                <div className="bg-white rounded-2xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
+                <div className="bg-white rounded-xl p-4 md:p-6 border border-slate-100 shadow-clay-sm relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-12 h-12 bg-primary-500/5 rounded-full -mr-6 -mt-6 transition-transform group-hover:scale-150"></div>
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1 relative z-10">Selesai W. Orang Tua</p>
                     <p className="text-2xl md:text-3xl font-black text-primary-600 relative z-10">{selesaiWOrangTua}</p>
@@ -254,7 +254,7 @@ export default function MonitoringJadwalPage() {
                 <motion.div 
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
-                    className="bg-primary-50 border border-primary-200 rounded-2xl p-5 flex items-start gap-4 shadow-sm shadow-primary-100"
+                    className="bg-primary-50 border border-primary-200 rounded-xl p-5 flex items-start gap-4 shadow-sm shadow-primary-100"
                 >
                     <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 shrink-0">
                         <XCircle className="w-6 h-6" />
@@ -294,13 +294,13 @@ export default function MonitoringJadwalPage() {
                                 placeholder="Cari santri/penguji Al-Qur'an..."
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
-                                className="w-full bg-white border border-slate-200 rounded-2xl pl-10 pr-4 py-2 text-sm focus:ring-4 focus:ring-primary-500/5 focus:border-primary-500 outline-none font-bold h-12 transition-all shadow-sm"
+                                className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-4 py-2 text-sm focus:ring-4 focus:ring-primary-500/5 focus:border-primary-500 outline-none font-bold h-12 transition-all shadow-sm"
                             />
                         </div>
                         <select 
                             value={filterJenjang}
                             onChange={(e) => setFilterJenjang(e.target.value)}
-                            className="w-32 bg-white border border-slate-200 rounded-2xl px-3 py-2 text-[11px] font-black text-ink-600 focus:ring-4 focus:ring-primary-500/5 focus:border-primary-500 outline-none h-12 shadow-sm appearance-none text-center uppercase tracking-wider"
+                            className="w-32 bg-white border border-slate-200 rounded-xl px-3 py-2 text-[11px] font-black text-ink-600 focus:ring-4 focus:ring-primary-500/5 focus:border-primary-500 outline-none h-12 shadow-sm appearance-none text-center uppercase tracking-wider"
                         >
                             <option value="ALL">SEMUA</option>
                             <option value="MTs">MTs</option>
@@ -310,7 +310,7 @@ export default function MonitoringJadwalPage() {
 
                     {/* View Switcher & Actions */}
                     <div className="flex items-center gap-2">
-                        <div className="flex-1 md:flex-none flex bg-slate-100 p-1.5 rounded-2xl h-12 min-w-fit">
+                        <div className="flex-1 md:flex-none flex bg-slate-100 p-1.5 rounded-xl h-12 min-w-fit">
                             {[
                                 { id: "flat", label: "List" },
                                 { id: "grouped", label: "Ustadz" },
@@ -327,14 +327,14 @@ export default function MonitoringJadwalPage() {
                         </div>
                         <button 
                             onClick={fetchMonitoringData}
-                            className="w-12 h-12 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-2xl shadow-sm transition-all flex items-center justify-center shrink-0"
+                            className="w-12 h-12 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-xl shadow-sm transition-all flex items-center justify-center shrink-0"
                             title="Refresh Data"
                         >
                             <Loader2 className={`w-4 h-4 ${loading ? 'animate-spin text-primary-500' : ''}`} />
                         </button>
                         <button 
                             onClick={() => setShowPast(!showPast)}
-                            className={`px-4 rounded-2xl text-[11px] font-bold uppercase tracking-wider transition-all border h-12 shadow-sm ${
+                            className={`px-4 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all border h-12 shadow-sm ${
                                 showPast 
                                 ? "bg-secondary-100 border-secondary-200 text-secondary-700" 
                                 : "bg-white border-slate-200 text-slate-400 hover:text-slate-600"
@@ -349,12 +349,12 @@ export default function MonitoringJadwalPage() {
             {/* Table Area */}
             <div className="space-y-6">
                 {loading ? (
-                    <div className="bg-white rounded-3xl shadow-clay-lg p-24 text-center border border-white/40">
+                    <div className="bg-white rounded-xl shadow-clay-lg p-24 text-center border border-white/40">
                         <Loader2 className="w-8 h-8 animate-spin text-primary-500 mx-auto mb-4" />
                         <p className="font-bold text-ink-400">Memuat data monitoring...</p>
                     </div>
                 ) : filteredSchedules.length === 0 ? (
-                    <div className="bg-white rounded-3xl shadow-clay-lg p-24 text-center border border-white/40">
+                    <div className="bg-white rounded-xl shadow-clay-lg p-24 text-center border border-white/40">
                         <div className="w-16 h-16 bg-slate-50 rounded-full flex items-center justify-center mx-auto mb-4">
                             <Calendar className="w-8 h-8 text-slate-200" />
                         </div>
@@ -405,7 +405,7 @@ export default function MonitoringJadwalPage() {
                                         ].filter(stat => stat.ustadz && stat.ustadz !== '-').map((stat, i) => (
                                             <div key={i} className="flex items-center justify-between px-2">
                                                 <div className="flex items-center gap-3">
-                                                    <div className={`p-1.5 rounded-lg border ${
+                                                    <div className={`p-1.5 rounded-xl border ${
                                                         stat.status === 'completed' ? 'bg-green-50 border-green-100' : 
                                                         stat.status === 'absent' ? 'bg-red-50 border-red-100' : 
                                                         'bg-primary-50 border-primary-100'
@@ -437,7 +437,7 @@ export default function MonitoringJadwalPage() {
                         </div>
 
                         {/* Desktop View: Table */}
-                        <div className="hidden md:block bg-white rounded-3xl shadow-clay-lg overflow-hidden border border-white/40">
+                        <div className="hidden md:block bg-white rounded-xl shadow-clay-lg overflow-hidden border border-white/40">
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse">
                                     <thead>
@@ -580,7 +580,7 @@ export default function MonitoringJadwalPage() {
                             <div key={group.name} className="bg-white rounded-[2rem] shadow-clay-m border border-slate-100 overflow-hidden flex flex-col transition-all hover:translate-y-[-4px] group">
                                 <div className="bg-slate-50 px-6 py-6 border-b border-slate-100 group-hover:bg-primary-50/50 transition-colors">
                                     <div className="flex items-center gap-4">
-                                        <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-slate-100">
+                                        <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm border border-slate-100">
                                             <Users className="w-6 h-6 text-primary-600" />
                                         </div>
                                         <div>
@@ -591,7 +591,7 @@ export default function MonitoringJadwalPage() {
                                 </div>
                                 <div className="p-5 flex-1 space-y-4">
                                     {group.items.map((s, idx) => (
-                                        <div key={`${s.id}-${idx}`} className="bg-slate-50/30 rounded-2xl p-4 border border-slate-100/50">
+                                        <div key={`${s.id}-${idx}`} className="bg-slate-50/30 rounded-xl p-4 border border-slate-100/50">
                                             <div className="flex items-center gap-2 mb-4">
                                                 <Calendar className="w-4 h-4 text-primary-500" />
                                                 <span className="text-[12px] font-bold text-slate-700">{formatDateTime(s.sesi.start)}</span>

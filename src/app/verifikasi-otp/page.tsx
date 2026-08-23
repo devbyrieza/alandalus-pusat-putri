@@ -260,7 +260,7 @@ function VerifikasiOTPContent() {
           } rounded-full flex items-center justify-center mx-auto mb-4 relative shadow-sm`}
         >
           {/* Icon WhatsApp only */}
-          <div className="p-3 bg-primary-700 rounded-2xl shadow-sm app-card">
+          <div className="p-3 bg-primary-700 rounded-xl shadow-sm app-card">
             <Smartphone className="w-10 h-10 text-white" />
           </div>
         </div>
@@ -285,7 +285,7 @@ function VerifikasiOTPContent() {
             </p>
             <p className="text-sm text-primary-950 font-medium">
               Masukkan kode berikut:{" "}
-              <span className="font-mono text-xl font-black bg-white px-2 py-0.5 rounded-lg border border-gold-100 shadow-sm ml-2">
+              <span className="font-mono text-xl font-black bg-white px-2 py-0.5 rounded-xl border border-gold-100 shadow-sm ml-2">
                 {sim_code}
               </span>
             </p>

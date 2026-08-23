@@ -309,7 +309,7 @@ export default function TrashPage() {
                             setRestoringItem(item);
                             setIsRestoreModalOpen(true);
                           }}
-                          className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg text-sm font-bold transition-all shadow-sm hover:shadow-md"
+                          className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-xl text-sm font-bold transition-all shadow-sm hover:shadow-md"
                         >
                           <RotateCcw className="w-4 h-4" />
                           <span>Restore</span>
@@ -343,7 +343,7 @@ export default function TrashPage() {
                     <button
                       onClick={() => handlePageChange(pagination.page - 1)}
                       disabled={pagination.page === 1}
-                      className="px-3 py-2 bg-white border-2 border-stone-200 rounded-lg disabled:opacity-50 hover:bg-red-50 transition-colors"
+                      className="px-3 py-2 bg-white border-2 border-stone-200 rounded-xl disabled:opacity-50 hover:bg-red-50 transition-colors"
                     >
                       <ChevronLeft className="w-5 h-5" />
                     </button>
@@ -353,7 +353,7 @@ export default function TrashPage() {
                     <button
                       onClick={() => handlePageChange(pagination.page + 1)}
                       disabled={pagination.page === pagination.totalPages}
-                      className="px-3 py-2 bg-white border-2 border-stone-200 rounded-lg disabled:opacity-50 hover:bg-red-50 transition-colors"
+                      className="px-3 py-2 bg-white border-2 border-stone-200 rounded-xl disabled:opacity-50 hover:bg-red-50 transition-colors"
                     >
                       <ChevronRight className="w-5 h-5" />
                     </button>
@@ -367,11 +367,11 @@ export default function TrashPage() {
 
       {/* Restore Confirmation Modal */}
       {isRestoreModalOpen && restoringItem && (
-        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-black/50 backdrop-blur-sm p-4 overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md border-2 border-green-100 animate-in fade-in zoom-in duration-200">
+        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-black/50  p-4 overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
+          <div className="bg-white rounded-xl shadow-lg w-full max-w-md border-2 border-green-100 animate-in fade-in zoom-in duration-200">
             <div className="flex justify-between items-center p-6 border-b border-green-100">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-100 rounded-lg">
+                <div className="p-2 bg-green-100 rounded-xl">
                   <RotateCcw className="w-6 h-6 text-green-600" />
                 </div>
                 <div>

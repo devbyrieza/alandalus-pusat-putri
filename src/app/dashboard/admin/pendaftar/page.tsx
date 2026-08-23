@@ -1225,7 +1225,7 @@ function AdminPendaftarContent() {
       {/* Refreshing Overlay */}
       {refreshing && (
         <div className="fixed inset-0 bg-white/40 backdrop-blur-[1px] z-[100] flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center pointer-events-none overflow-y-auto overflow-x-hidden p-4 overscroll-contain custom-scrollbar">
-          <div className="bg-white/80 px-6 py-3 rounded-2xl shadow-xl border border-stone-100 flex items-center gap-3 animate-in fade-in zoom-in duration-300">
+          <div className="bg-white px-6 py-3 rounded-xl shadow-lg border border-stone-100 flex items-center gap-3 animate-in fade-in zoom-in duration-300">
             <Loader2 className="w-5 h-5 animate-spin text-primary-600" />
             <span className="text-sm font-bold text-stone-700 tracking-tight">
               Memperbarui data...
@@ -1259,10 +1259,10 @@ function AdminPendaftarContent() {
       )}
 
       {/* Header */}
-      <div className="bg-white rounded-3xl shadow-sm p-4 md:p-8 border border-gold-100">
+      <div className="bg-white rounded-xl shadow-sm p-4 md:p-8 border border-gold-100">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 flex-wrap">
           <div className="flex flex-wrap items-center gap-3 md:gap-5">
-            <div className="p-2.5 md:p-4 bg-linear-to-br from-primary-600 to-primary-900 rounded-2xl shadow-xl shadow-primary-900/20 flex-shrink-0">
+            <div className="p-2.5 md:p-4 bg-linear-to-br from-primary-600 to-primary-900 rounded-xl shadow-lg shadow-primary-900/20 flex-shrink-0">
               <Users className="w-6 h-6 md:w-8 md:h-8 text-gold-300" />
             </div>
             <div className="min-w-0">
@@ -1281,7 +1281,7 @@ function AdminPendaftarContent() {
                 <>
                   <button
                     onClick={() => updateFilter("mengundurkan_diri")}
-                    className="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-500 hover:bg-slate-600 text-white rounded-lg transition-colors text-sm"
+                    className="flex items-center gap-2 px-3 md:px-4 py-2 bg-slate-500 hover:bg-slate-600 text-white rounded-xl transition-colors text-sm"
                     title="Lihat pendaftar yang mengundurkan diri"
                   >
                     <LogOut className="w-4 h-4" />
@@ -1294,7 +1294,7 @@ function AdminPendaftarContent() {
                   </button>
                   <Link
                     href="/dashboard/admin/pendaftar/trash"
-                    className="flex items-center gap-2 px-3 md:px-4 py-2 bg-stone-600 hover:bg-stone-700 text-white rounded-lg transition-colors text-sm"
+                    className="flex items-center gap-2 px-3 md:px-4 py-2 bg-stone-600 hover:bg-stone-700 text-white rounded-xl transition-colors text-sm"
                     title="Lihat data terhapus"
                   >
                     <Trash2 className="w-4 h-4" />
@@ -1317,7 +1317,7 @@ function AdminPendaftarContent() {
                   confirmButtonText: 'Mengerti'
                 });
               }}
-              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition-colors text-sm"
+              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl transition-colors text-sm"
               title="Broadcast WA Massal"
             >
               <Phone className="w-4 h-4" />
@@ -1326,7 +1326,7 @@ function AdminPendaftarContent() {
             <button
               onClick={() => handleExport("excel")}
               disabled={exporting}
-              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors disabled:opacity-50 text-sm"
+              className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-xl transition-colors disabled:opacity-50 text-sm"
               title="Download Excel"
             >
               {exporting ? (
@@ -1384,7 +1384,7 @@ function AdminPendaftarContent() {
       </div>
 
       {/* Filters */}
-      <div className="bg-white rounded-2xl shadow-sm p-6 border border-gold-100">
+      <div className="bg-white rounded-xl shadow-sm p-6 border border-gold-100">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Search */}
           <div className="md:col-span-2">
@@ -1617,7 +1617,7 @@ function AdminPendaftarContent() {
                   setKelurahanFilter("");
                   setPagination((prev) => ({ ...prev, page: 1 }));
                 }}
-                className="px-4 py-2 bg-stone-200 hover:bg-stone-300 text-stone-700 rounded-lg font-medium transition-colors"
+                className="px-4 py-2 bg-stone-200 hover:bg-stone-300 text-stone-700 rounded-xl font-medium transition-colors"
               >
                 Reset Filter
               </button>
@@ -1870,7 +1870,7 @@ function AdminPendaftarContent() {
       )}
 
       {/* Table */}
-      <div className="bg-white rounded-3xl shadow-sm border border-gold-100 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-gold-100 overflow-hidden">
         {loading ? (
           <div className="flex items-center justify-center py-20">
             <div className="text-center">
@@ -1955,7 +1955,7 @@ function AdminPendaftarContent() {
                                   100,
                                 );
                               }}
-                              className="px-2 py-1 bg-primary-50 text-primary-700 rounded-lg text-[9px] font-black uppercase flex items-center gap-1 border border-primary-100"
+                              className="px-2 py-1 bg-primary-50 text-primary-700 rounded-xl text-[9px] font-black uppercase flex items-center gap-1 border border-primary-100"
                             >
                               <UploadCloud className="w-3 h-3" /> KK
                             </button>
@@ -1968,7 +1968,7 @@ function AdminPendaftarContent() {
                                   100,
                                 );
                               }}
-                              className="px-2 py-1 bg-primary-50 text-primary-700 rounded-lg text-[9px] font-black uppercase flex items-center gap-1 border border-primary-100"
+                              className="px-2 py-1 bg-primary-50 text-primary-700 rounded-xl text-[9px] font-black uppercase flex items-center gap-1 border border-primary-100"
                             >
                               <UploadCloud className="w-3 h-3" /> Akta
                             </button>
@@ -1986,7 +1986,7 @@ function AdminPendaftarContent() {
                                   100,
                                 );
                               }}
-                              className="px-2 py-1 bg-gold-50 text-gold-700 rounded-lg text-[9px] font-black uppercase flex items-center gap-1 border border-gold-100"
+                              className="px-2 py-1 bg-gold-50 text-gold-700 rounded-xl text-[9px] font-black uppercase flex items-center gap-1 border border-gold-100"
                             >
                               <CreditCard className="w-3 h-3" /> Bayar
                             </button>
@@ -2242,7 +2242,7 @@ function AdminPendaftarContent() {
                   <button
                     onClick={() => handlePageChange(pagination.page - 1)}
                     disabled={pagination.page === 1}
-                    className="px-3 md:px-4 py-2 bg-white border-2 border-stone-200 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary-50 hover:border-primary-300 transition-colors"
+                    className="px-3 md:px-4 py-2 bg-white border-2 border-stone-200 rounded-xl font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary-50 hover:border-primary-300 transition-colors"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
@@ -2270,7 +2270,7 @@ function AdminPendaftarContent() {
                           )}
                           <button
                             onClick={() => handlePageChange(page)}
-                            className={`w-8 h-8 md:w-10 md:h-10 rounded-lg font-medium transition-colors text-sm md:text-base ${
+                            className={`w-8 h-8 md:w-10 md:h-10 rounded-xl font-medium transition-colors text-sm md:text-base ${
                               page === pagination.page
                                 ? "bg-primary-700 text-white"
                                 : "bg-white border-2 border-stone-200 hover:bg-primary-50 hover:border-primary-300"
@@ -2285,7 +2285,7 @@ function AdminPendaftarContent() {
                   <button
                     onClick={() => handlePageChange(pagination.page + 1)}
                     disabled={pagination.page === pagination.totalPages}
-                    className="px-3 md:px-4 py-2 bg-white border-2 border-stone-200 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary-50 hover:border-primary-300 transition-colors"
+                    className="px-3 md:px-4 py-2 bg-white border-2 border-stone-200 rounded-xl font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-primary-50 hover:border-primary-300 transition-colors"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -2297,8 +2297,8 @@ function AdminPendaftarContent() {
       </div>
       {/* Announcement Modal */}
       {isAnnouncementModalOpen && selectedPendaftar && (
-        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-black/50 backdrop-blur-sm p-4 overflow-y-auto overscroll-contain custom-scrollbar">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-lg border-2 border-stone-100 animate-in fade-in zoom-in duration-200">
+        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-black/50  p-4 overflow-y-auto overscroll-contain custom-scrollbar">
+          <div className="bg-white rounded-xl shadow-lg w-full max-w-lg border-2 border-stone-100 animate-in fade-in zoom-in duration-200">
             <div className="flex justify-between items-center p-6 border-b border-stone-100">
               <div>
                 <h3 className="text-xl font-bold text-stone-900">
@@ -2429,11 +2429,11 @@ function AdminPendaftarContent() {
 
       {/* Delete Confirmation Modal */}
       {isDeleteModalOpen && deletingPendaftar && (
-        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-black/50 backdrop-blur-sm p-4 overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
-          <div className="bg-white rounded-2xl shadow-xl w-full max-w-md border-2 border-red-100 animate-in fade-in zoom-in duration-200">
+        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-black/50  p-4 overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
+          <div className="bg-white rounded-xl shadow-lg w-full max-w-md border-2 border-red-100 animate-in fade-in zoom-in duration-200">
             <div className="flex justify-between items-center p-6 border-b border-red-100">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-red-100 rounded-lg">
+                <div className="p-2 bg-red-100 rounded-xl">
                   <Trash2 className="w-6 h-6 text-red-600" />
                 </div>
                 <div>

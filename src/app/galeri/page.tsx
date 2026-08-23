@@ -195,7 +195,7 @@ export default function GaleriPage() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setSelectedImage(item)}
-                className="group relative cursor-pointer rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-primary-500/50 shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group relative cursor-pointer rounded-xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-primary-500/50 shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
                   <Image
@@ -207,11 +207,11 @@ export default function GaleriPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-800 text-xs font-semibold text-primary-400">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80  border border-slate-800 text-xs font-semibold text-primary-400">
                     {item.categoryLabel}
                   </div>
 
-                  <div className="absolute top-3 right-3 p-2 rounded-full bg-slate-950/80 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute top-3 right-3 p-2 rounded-full bg-slate-950/80  text-white opacity-0 group-hover:opacity-100 transition-opacity">
                     <Maximize2 className="w-4 h-4" />
                   </div>
                 </div>
@@ -230,7 +230,7 @@ export default function GaleriPage() {
         </motion.div>
 
         {/* CTA BOTTOM SECTION */}
-        <div className="mt-20 p-8 rounded-3xl bg-gradient-to-r from-primary-950/60 via-slate-900 to-pink-950/60 border border-primary-500/30 text-center space-y-6">
+        <div className="mt-20 p-8 rounded-xl bg-gradient-to-r from-primary-950/60 via-slate-900 to-pink-950/60 border border-primary-500/30 text-center space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white">
             Ingin Kunjungan Langsung ke Pesantren Putri?
           </h2>
@@ -263,14 +263,14 @@ export default function GaleriPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-xl"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 "
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl"
+              className="relative max-w-4xl w-full bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg"
             >
               <button
                 onClick={() => setSelectedImage(null)}

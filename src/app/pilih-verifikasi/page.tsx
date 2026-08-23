@@ -103,7 +103,7 @@ function PilihVerifikasiContent() {
   };
 
   return (
-    <div className="max-w-lg w-full bg-white rounded-2xl shadow-2xl border-2 border-primary-200 p-5 md:p-8">
+    <div className="max-w-lg w-full bg-white rounded-xl shadow-lg border-2 border-primary-200 p-5 md:p-8">
       {/* Demo Mode Badge */}
       {DEMO_MODE && (
         <div className="mb-6 p-3 bg-primary-50 border-2 border-primary-100 rounded-xl app-card">
@@ -289,7 +289,7 @@ function PilihVerifikasiContent() {
       >
         <div className="flex items-center gap-3">
           <div
-            className={`p-2 rounded-lg ${
+            className={`p-2 rounded-xl ${
               selectedChannel === "whatsapp" ? "bg-primary-600" : "bg-primary-600"
             }`}
           >

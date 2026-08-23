@@ -152,7 +152,7 @@ export default function SendOtpPage() {
             >
               <div className="flex items-center">
                 <div
-                  className={`p-2 rounded-lg mr-3 transition-colors ${
+                  className={`p-2 rounded-xl mr-3 transition-colors ${
                     selectedChannel === "telegram"
                       ? "bg-primary-600"
                       : "bg-gold-100"
@@ -203,7 +203,7 @@ export default function SendOtpPage() {
             >
               <div className="flex items-center">
                 <div
-                  className={`p-2 rounded-lg mr-3 transition-colors ${
+                  className={`p-2 rounded-xl mr-3 transition-colors ${
                     selectedChannel === "email"
                       ? "bg-primary-600"
                       : "bg-gold-100"
@@ -243,7 +243,7 @@ export default function SendOtpPage() {
                     Kode dikirim ke email orang tua
                   </p>
                   {selectedChannel === "email" && (
-                    <div className="mt-2 p-2 bg-gold-100 border border-gold-200 rounded-lg">
+                    <div className="mt-2 p-2 bg-gold-100 border border-gold-200 rounded-xl">
                       <p className="text-[11px] text-primary-800 font-bold flex items-center gap-1">
                         <Check className="w-3 h-3 text-primary-700" />
                         <span>Akan dikirim ke: {email}</span>
@@ -265,7 +265,7 @@ export default function SendOtpPage() {
             >
               <div className="flex items-center">
                 <div
-                  className={`p-2 rounded-lg mr-3 transition-colors ${
+                  className={`p-2 rounded-xl mr-3 transition-colors ${
                     selectedChannel === "sms" ? "bg-primary-600" : "bg-gold-100"
                   }`}
                 >

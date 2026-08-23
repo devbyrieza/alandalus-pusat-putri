@@ -268,14 +268,14 @@ export default function WelcomeDayPage() {
     <div className="max-w-4xl mx-auto space-y-6">
 
       {/* ─── HERO BANNER ─── */}
-      <div className="relative bg-gradient-to-br from-primary-800 via-primary-900 to-primary-950 p-6 md:p-8 rounded-3xl overflow-hidden text-white shadow-xl">
+      <div className="relative bg-gradient-to-br from-primary-800 via-primary-900 to-primary-950 p-6 md:p-8 rounded-xl overflow-hidden text-white shadow-lg">
         {/* Decorative circles */}
         <div className="absolute -top-8 -right-8 w-48 h-48 bg-white/5 rounded-full" />
         <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-white/5 rounded-full" />
-        <div className="absolute top-4 right-4 w-16 h-16 bg-gold-400/20 rounded-2xl rotate-12" />
+        <div className="absolute top-4 right-4 w-16 h-16 bg-gold-400/20 rounded-xl rotate-12" />
 
         <div className="relative z-10">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1.5 rounded-full text-xs font-black mb-4 text-gold-300">
+          <div className="inline-flex items-center gap-2 bg-white/10  border border-white/20 px-3 py-1.5 rounded-full text-xs font-black mb-4 text-gold-300">
             <PartyPopper className="w-3.5 h-3.5" />
             INFORMASI RESMI PESANTREN
           </div>
@@ -289,21 +289,21 @@ export default function WelcomeDayPage() {
           </h1>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6">
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
+            <div className="flex items-center gap-3 bg-white/10  rounded-xl px-4 py-3 border border-white/10">
               <Calendar className="w-5 h-5 text-gold-300 flex-shrink-0" />
               <div>
                 <p className="text-[10px] text-white/60 uppercase tracking-wider font-bold">Hari & Tanggal</p>
                 <p className="text-sm font-black text-white">Sabtu, 18 Juli 2025</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
+            <div className="flex items-center gap-3 bg-white/10  rounded-xl px-4 py-3 border border-white/10">
               <Clock className="w-5 h-5 text-gold-300 flex-shrink-0" />
               <div>
                 <p className="text-[10px] text-white/60 uppercase tracking-wider font-bold">Jam Mulai</p>
                 <p className="text-sm font-black text-white">Pukul 06.30 WIB</p>
               </div>
             </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-2xl px-4 py-3 border border-white/10">
+            <div className="flex items-center gap-3 bg-white/10  rounded-xl px-4 py-3 border border-white/10">
               <MapPin className="w-5 h-5 text-gold-300 flex-shrink-0" />
               <div>
                 <p className="text-[10px] text-white/60 uppercase tracking-wider font-bold">Lokasi</p>
@@ -315,15 +315,15 @@ export default function WelcomeDayPage() {
       </div>
 
       {/* ─── INFO PENGINAPAN ─── */}
-      <div className="bg-blue-50 border border-blue-200 rounded-3xl p-5 md:p-6 shadow-sm">
+      <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 md:p-6 shadow-sm">
         <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
-          <div className="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0 text-blue-600">
+          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 text-blue-600">
             <Home className="w-6 h-6" />
           </div>
           <div>
             <h3 className="text-lg font-black text-blue-950 flex items-center gap-2">
               Informasi Penginapan
-              <span className="px-2.5 py-0.5 bg-blue-200 text-blue-800 text-[10px] uppercase tracking-widest rounded-lg">Rekomendasi</span>
+              <span className="px-2.5 py-0.5 bg-blue-200 text-blue-800 text-[10px] uppercase tracking-widest rounded-xl">Rekomendasi</span>
             </h3>
             <p className="text-sm text-blue-800 mt-2 leading-relaxed">
               Bagi Bapak/Ibu Wali Santri yang berasal dari luar daerah atau jaraknya jauh, acara dimulai <strong>Pukul 06.30 WIB</strong>. 
@@ -344,7 +344,7 @@ export default function WelcomeDayPage() {
           href="/documents/Surat Pemberitahuan Kedatangan Santri Baru 2027/2028.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 bg-white hover:bg-primary-50 rounded-2xl p-4 border border-ink-100 hover:border-emerald-200 transition-all shadow-sm group"
+          className="flex items-center gap-3 bg-white hover:bg-primary-50 rounded-xl p-4 border border-ink-100 hover:border-emerald-200 transition-all shadow-sm group"
         >
           <div className="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
             <Download className="w-5 h-5" />
@@ -358,7 +358,7 @@ export default function WelcomeDayPage() {
 
       {/* ─── PESAN SUKSES/ERROR ─── */}
       {message.text && (
-        <div className={`p-4 rounded-2xl border flex items-start gap-3 text-sm font-bold ${
+        <div className={`p-4 rounded-xl border flex items-start gap-3 text-sm font-bold ${
           message.type === "success"
             ? "bg-green-50 border-green-200 text-green-800"
             : "bg-red-50 border-red-200 text-red-800"
@@ -372,7 +372,7 @@ export default function WelcomeDayPage() {
 
       {/* ─── REMINDER SERAGAM (jika belum isi) ─── */}
       {!seragamStatus.sudahIsi && (
-        <div className="flex items-start gap-3 bg-orange-50 border border-orange-300 rounded-2xl px-4 py-4 shadow-sm">
+        <div className="flex items-start gap-3 bg-orange-50 border border-orange-300 rounded-xl px-4 py-4 shadow-sm">
           <div className="w-9 h-9 rounded-xl bg-orange-500 flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
             <Shirt className="w-5 h-5 text-white" />
           </div>
@@ -397,7 +397,7 @@ export default function WelcomeDayPage() {
 
       {/* ─── STATUS SERAGAM (jika sudah isi) ─── */}
       {seragamStatus.sudahIsi && (
-        <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-2xl px-4 py-3">
+        <div className="flex items-center gap-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3">
           <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
           <div className="flex-1">
             <p className="text-sm font-black text-green-800">✅ Ukuran Seragam Sudah Terisi</p>
@@ -415,12 +415,12 @@ export default function WelcomeDayPage() {
       )}
 
       {/* ─── FORM KONFIRMASI ─── */}
-      <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-ink-100/50 overflow-hidden relative">
+      <div className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-ink-100/50 overflow-hidden relative">
         {/* Dekorasi Background */}
         <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-primary-50 rounded-full blur-3xl opacity-50 pointer-events-none" />
         
         <div className="px-6 py-5 border-b border-ink-100/50 bg-gradient-to-r from-primary-50/50 to-transparent flex items-center gap-4 relative">
-          <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm border border-primary-100">
+          <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-sm border border-primary-100">
             <Users className="w-6 h-6 text-primary-600" />
           </div>
           <div>
@@ -439,7 +439,7 @@ export default function WelcomeDayPage() {
 
         {isEditing ? (
           <div className="p-6 relative">
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/60 rounded-2xl px-5 py-4 mb-8 flex items-start gap-3 shadow-sm">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/60 rounded-xl px-5 py-4 mb-8 flex items-start gap-3 shadow-sm">
               <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <Info className="w-4 h-4 text-blue-700" />
               </div>
@@ -459,7 +459,7 @@ export default function WelcomeDayPage() {
                   <button
                     type="button"
                     onClick={() => setFormData({ ...formData, statusKehadiran: "HADIR" })}
-                    className={`p-5 rounded-2xl border-2 text-left transition-all duration-300 flex items-center gap-4 group ${
+                    className={`p-5 rounded-xl border-2 text-left transition-all duration-300 flex items-center gap-4 group ${
                       formData.statusKehadiran === "HADIR"
                         ? "bg-gradient-to-br from-primary-500 to-primary-600 border-primary-500 text-white shadow-lg shadow-primary-500/25 scale-[1.02]"
                         : "bg-white border-ink-200 hover:border-primary-300 hover:shadow-md hover:bg-primary-50/30"
@@ -478,7 +478,7 @@ export default function WelcomeDayPage() {
                   <button
                     type="button"
                     onClick={() => setFormData({ ...formData, statusKehadiran: "TIDAK_HADIR" })}
-                    className={`p-5 rounded-2xl border-2 text-left transition-all duration-300 flex items-center gap-4 group ${
+                    className={`p-5 rounded-xl border-2 text-left transition-all duration-300 flex items-center gap-4 group ${
                       formData.statusKehadiran === "TIDAK_HADIR"
                         ? "bg-gradient-to-br from-primary-500 to-primary-600 border-primary-500 text-white shadow-lg shadow-primary-500/25 scale-[1.02]"
                         : "bg-white border-ink-200 hover:border-primary-300 hover:shadow-md hover:bg-primary-50/30"
@@ -509,7 +509,7 @@ export default function WelcomeDayPage() {
                       <select
                         value={formData.jumlahPendamping}
                         onChange={(e) => setFormData({ ...formData, jumlahPendamping: Number(e.target.value) })}
-                        className="w-full bg-white border-2 border-ink-200 px-5 py-4 rounded-2xl focus:ring-4 focus:ring-primary-500/10 focus:border-primary-400 outline-none font-bold text-ink-900 text-sm appearance-none transition-all shadow-sm"
+                        className="w-full bg-white border-2 border-ink-200 px-5 py-4 rounded-xl focus:ring-4 focus:ring-primary-500/10 focus:border-primary-400 outline-none font-bold text-ink-900 text-sm appearance-none transition-all shadow-sm"
                         required
                       >
                         <option value={1}>1 Pendamping — Total 2 orang (1 Santri + 1 Wali)</option>
@@ -542,7 +542,7 @@ export default function WelcomeDayPage() {
                       <button
                         type="button"
                         onClick={() => setFormData({ ...formData, totalPengantar: Math.max(formData.jumlahPendamping + 1, formData.totalPengantar - 1) })}
-                        className="w-14 h-14 rounded-2xl bg-white border-2 border-ink-200 hover:border-primary-300 hover:bg-primary-50 text-ink-700 font-black text-2xl flex items-center justify-center transition-all shadow-sm active:scale-95"
+                        className="w-14 h-14 rounded-xl bg-white border-2 border-ink-200 hover:border-primary-300 hover:bg-primary-50 text-ink-700 font-black text-2xl flex items-center justify-center transition-all shadow-sm active:scale-95"
                       >
                         −
                       </button>
@@ -552,7 +552,7 @@ export default function WelcomeDayPage() {
                           min={formData.jumlahPendamping + 1}
                           value={formData.totalPengantar}
                           onChange={(e) => setFormData({ ...formData, totalPengantar: Math.max(formData.jumlahPendamping + 1, Number(e.target.value)) })}
-                          className="w-full bg-white border-2 border-ink-200 px-5 py-4 rounded-2xl focus:ring-4 focus:ring-primary-500/10 focus:border-primary-400 outline-none font-black text-center text-ink-900 text-xl shadow-sm transition-all"
+                          className="w-full bg-white border-2 border-ink-200 px-5 py-4 rounded-xl focus:ring-4 focus:ring-primary-500/10 focus:border-primary-400 outline-none font-black text-center text-ink-900 text-xl shadow-sm transition-all"
                           required
                         />
                         <span className="absolute right-5 top-1/2 -translate-y-1/2 text-sm text-ink-400 font-bold bg-white pl-2">Orang</span>
@@ -560,7 +560,7 @@ export default function WelcomeDayPage() {
                       <button
                         type="button"
                         onClick={() => setFormData({ ...formData, totalPengantar: formData.totalPengantar + 1 })}
-                        className="w-14 h-14 rounded-2xl bg-white border-2 border-ink-200 hover:border-primary-300 hover:bg-primary-50 text-ink-700 font-black text-2xl flex items-center justify-center transition-all shadow-sm active:scale-95"
+                        className="w-14 h-14 rounded-xl bg-white border-2 border-ink-200 hover:border-primary-300 hover:bg-primary-50 text-ink-700 font-black text-2xl flex items-center justify-center transition-all shadow-sm active:scale-95"
                       >
                         +
                       </button>
@@ -575,7 +575,7 @@ export default function WelcomeDayPage() {
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
                       {/* Mobil */}
-                      <div className="bg-white border-2 border-ink-200 rounded-2xl p-5 relative flex items-center justify-between shadow-sm hover:border-primary-300 transition-colors">
+                      <div className="bg-white border-2 border-ink-200 rounded-xl p-5 relative flex items-center justify-between shadow-sm hover:border-primary-300 transition-colors">
                         <div>
                           <p className="font-black text-ink-900 text-base">Mobil</p>
                           <p className="text-xs text-ink-500 font-medium">Yang akan diparkir</p>
@@ -584,7 +584,7 @@ export default function WelcomeDayPage() {
                           <button
                             type="button"
                             onClick={() => setFormData({ ...formData, jumlahMobil: Math.max(0, formData.jumlahMobil - 1) })}
-                            className="w-8 h-8 rounded-lg bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
+                            className="w-8 h-8 rounded-xl bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
                           >
                             −
                           </button>
@@ -599,7 +599,7 @@ export default function WelcomeDayPage() {
                           <button
                             type="button"
                             onClick={() => setFormData({ ...formData, jumlahMobil: formData.jumlahMobil + 1 })}
-                            className="w-8 h-8 rounded-lg bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
+                            className="w-8 h-8 rounded-xl bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
                           >
                             +
                           </button>
@@ -607,7 +607,7 @@ export default function WelcomeDayPage() {
                       </div>
                       
                       {/* Motor */}
-                      <div className="bg-white border-2 border-ink-200 rounded-2xl p-5 relative flex items-center justify-between shadow-sm hover:border-primary-300 transition-colors">
+                      <div className="bg-white border-2 border-ink-200 rounded-xl p-5 relative flex items-center justify-between shadow-sm hover:border-primary-300 transition-colors">
                         <div>
                           <p className="font-black text-ink-900 text-base">Motor</p>
                           <p className="text-xs text-ink-500 font-medium">Yang akan diparkir</p>
@@ -616,7 +616,7 @@ export default function WelcomeDayPage() {
                           <button
                             type="button"
                             onClick={() => setFormData({ ...formData, jumlahMotor: Math.max(0, formData.jumlahMotor - 1) })}
-                            className="w-8 h-8 rounded-lg bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
+                            className="w-8 h-8 rounded-xl bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
                           >
                             −
                           </button>
@@ -631,7 +631,7 @@ export default function WelcomeDayPage() {
                           <button
                             type="button"
                             onClick={() => setFormData({ ...formData, jumlahMotor: formData.jumlahMotor + 1 })}
-                            className="w-8 h-8 rounded-lg bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
+                            className="w-8 h-8 rounded-xl bg-white shadow-sm hover:bg-ink-100 text-ink-700 font-black flex items-center justify-center transition-all active:scale-95"
                           >
                             +
                           </button>
@@ -654,7 +654,7 @@ export default function WelcomeDayPage() {
                   value={formData.catatanTambahan}
                   onChange={(e) => setFormData({ ...formData, catatanTambahan: e.target.value })}
                   placeholder="Misal: Rombongan kami menggunakan 1 unit bus..."
-                  className="w-full bg-white border-2 border-ink-200 px-5 py-4 rounded-2xl focus:ring-4 focus:ring-primary-500/10 focus:border-primary-400 outline-none font-medium text-sm min-h-[120px] resize-none shadow-sm transition-all"
+                  className="w-full bg-white border-2 border-ink-200 px-5 py-4 rounded-xl focus:ring-4 focus:ring-primary-500/10 focus:border-primary-400 outline-none font-medium text-sm min-h-[120px] resize-none shadow-sm transition-all"
                 />
               </div>
 
@@ -663,7 +663,7 @@ export default function WelcomeDayPage() {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-black px-6 py-4 rounded-2xl transition-all shadow-[0_8px_20px_rgb(0,0,0,0.12)] shadow-primary-700/30 flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed hover:-translate-y-0.5 text-sm"
+                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-black px-6 py-4 rounded-xl transition-all shadow-[0_8px_20px_rgb(0,0,0,0.12)] shadow-primary-700/30 flex items-center justify-center gap-3 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed hover:-translate-y-0.5 text-sm"
                 >
                   {saving ? (
                     <>
@@ -686,8 +686,8 @@ export default function WelcomeDayPage() {
         ) : (
           /* ─── SUMMARY CARD SETELAH KONFIRMASI ─── */
           <div className="p-6 space-y-5">
-            <div className="flex items-start gap-4 p-4 bg-green-50 border border-green-200 rounded-2xl">
-              <div className="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
+            <div className="flex items-start gap-4 p-4 bg-green-50 border border-green-200 rounded-xl">
+              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
                 <CheckCircle2 className="w-7 h-7 text-green-600" />
               </div>
               <div>
@@ -699,7 +699,7 @@ export default function WelcomeDayPage() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-1 gap-3">
-              <div className="p-4 bg-ink-50 rounded-2xl border border-ink-100">
+              <div className="p-4 bg-ink-50 rounded-xl border border-ink-100">
                 <p className="text-[10px] uppercase tracking-widest font-black text-ink-400 mb-2">Status Kehadiran</p>
                 <div className={`flex items-center gap-2 ${formData.statusKehadiran === "HADIR" ? "text-green-700" : "text-red-700"}`}>
                   {formData.statusKehadiran === "HADIR" ? <CheckCircle2 className="w-5 h-5" /> : <XCircle className="w-5 h-5" />}
@@ -709,7 +709,7 @@ export default function WelcomeDayPage() {
 
               {formData.statusKehadiran === "HADIR" && (
                 <>
-                  <div className="p-4 bg-ink-50 rounded-2xl border border-ink-100">
+                  <div className="p-4 bg-ink-50 rounded-xl border border-ink-100">
                     <p className="text-[10px] uppercase tracking-widest font-black text-ink-400 mb-2">Wali di Ruang Sarasehan</p>
                     <p className="font-black text-sm text-ink-900">
                       {formData.jumlahPendamping} Pendamping
@@ -719,13 +719,13 @@ export default function WelcomeDayPage() {
                     </p>
                   </div>
 
-                  <div className="p-4 bg-ink-50 rounded-2xl border border-ink-100">
+                  <div className="p-4 bg-ink-50 rounded-xl border border-ink-100">
                     <p className="text-[10px] uppercase tracking-widest font-black text-ink-400 mb-2">Total Rombongan</p>
                     <p className="font-black text-sm text-ink-900">{formData.totalPengantar} Orang</p>
                     <p className="text-xs text-ink-500 font-medium">Termasuk santri & seluruh pengantar</p>
                   </div>
 
-                  <div className="p-4 bg-ink-50 rounded-2xl border border-ink-100">
+                  <div className="p-4 bg-ink-50 rounded-xl border border-ink-100">
                     <p className="text-[10px] uppercase tracking-widest font-black text-ink-400 mb-2">Kendaraan</p>
                     <p className="font-black text-sm text-ink-900">
                       {formData.jumlahMobil} Mobil, {formData.jumlahMotor} Motor
@@ -736,7 +736,7 @@ export default function WelcomeDayPage() {
               )}
 
               {formData.catatanTambahan && (
-                <div className="p-4 bg-ink-50 rounded-2xl border border-ink-100 sm:col-span-2">
+                <div className="p-4 bg-ink-50 rounded-xl border border-ink-100 sm:col-span-2">
                   <p className="text-[10px] uppercase tracking-widest font-black text-ink-400 mb-2">Catatan Tambahan</p>
                   <p className="font-medium text-sm text-ink-900 whitespace-pre-wrap">{formData.catatanTambahan}</p>
                 </div>
@@ -745,9 +745,9 @@ export default function WelcomeDayPage() {
 
             {/* Warning Banner for Users who haven't updated vehicles */}
             {formData.statusKehadiran === "HADIR" && formData.jumlahMobil === 0 && formData.jumlahMotor === 0 && (
-              <div className="bg-gradient-to-br from-orange-500 to-amber-500 text-white p-5 rounded-2xl shadow-lg shadow-orange-500/25 flex flex-col md:flex-row items-center md:items-start justify-between gap-4 mt-6">
+              <div className="bg-gradient-to-br from-orange-500 to-amber-500 text-white p-5 rounded-xl shadow-lg shadow-orange-500/25 flex flex-col md:flex-row items-center md:items-start justify-between gap-4 mt-6">
                 <div className="flex gap-3 items-start">
-                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0 backdrop-blur-sm">
+                  <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0 ">
                     <AlertCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -782,7 +782,7 @@ export default function WelcomeDayPage() {
 
       
       {/* ─── KETENTUAN PENTING ─── */}
-      <div className="bg-amber-50 border border-amber-200 p-5 rounded-2xl space-y-4">
+      <div className="bg-amber-50 border border-amber-200 p-5 rounded-xl space-y-4">
         <h3 className="font-black text-amber-900 flex items-center gap-2 text-base">
           <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0" />
           Ketentuan Penting Tata Cara & Alur
@@ -829,7 +829,7 @@ export default function WelcomeDayPage() {
 
       
       {/* ─── INFOGRAFIS & PANDUAN VISUAL ─── */}
-      <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden mb-6">
+      <div className="bg-white rounded-xl border border-ink-100 shadow-sm overflow-hidden mb-6">
         <div className="px-6 py-4 border-b border-primary-100 bg-primary-50 flex items-center gap-3">
           <div className="w-9 h-9 bg-primary-100 rounded-xl flex items-center justify-center">
             <Calendar className="w-5 h-5 text-primary-700" />
@@ -849,7 +849,7 @@ export default function WelcomeDayPage() {
               <h3 className="font-black text-ink-900 text-sm">Alur Kedatangan</h3>
             </div>
             <div 
-              className="relative w-full aspect-[1/1.4] bg-ink-50 rounded-2xl border border-ink-100 overflow-hidden cursor-zoom-in group shadow-sm"
+              className="relative w-full aspect-[1/1.4] bg-ink-50 rounded-xl border border-ink-100 overflow-hidden cursor-zoom-in group shadow-sm"
               onClick={() => setLightbox('/documents/alur.jpeg')}
             >
               <Image 
@@ -881,7 +881,7 @@ export default function WelcomeDayPage() {
               <h3 className="font-black text-ink-900 text-sm">Rundown Acara</h3>
             </div>
             <div 
-              className="relative w-full aspect-[1/1.4] bg-ink-50 rounded-2xl border border-ink-100 overflow-hidden cursor-zoom-in group shadow-sm"
+              className="relative w-full aspect-[1/1.4] bg-ink-50 rounded-xl border border-ink-100 overflow-hidden cursor-zoom-in group shadow-sm"
               onClick={() => setLightbox('/documents/roundown-ke-pendaftar.jpeg')}
             >
               <Image 
@@ -895,7 +895,7 @@ export default function WelcomeDayPage() {
         </div>
       </div>
       {/* ─── JADWAL ACARA ─── */}
-      <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-xl border border-ink-100 shadow-sm overflow-hidden">
         <div className="px-6 py-4 border-b border-ink-100 bg-primary-50 flex items-center gap-3">
           <div className="w-9 h-9 bg-primary-100 rounded-xl flex items-center justify-center">
             <Calendar className="w-5 h-5 text-primary-700" />
@@ -912,7 +912,7 @@ export default function WelcomeDayPage() {
                 {/* Timeline line */}
                 <div className="flex flex-col items-center flex-shrink-0">
                   <div className="w-16 text-center">
-                    <span className="text-xs font-black text-primary-700 bg-primary-50 border border-primary-200 px-2 py-1 rounded-lg block">
+                    <span className="text-xs font-black text-primary-700 bg-primary-50 border border-primary-200 px-2 py-1 rounded-xl block">
                       {item.jam}
                     </span>
                   </div>
@@ -923,7 +923,7 @@ export default function WelcomeDayPage() {
                 {/* Content */}
                 <div className="flex-1 pb-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-2xl bg-white border border-primary-100 flex items-center justify-center flex-shrink-0 shadow-sm text-primary-600">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-primary-100 flex items-center justify-center flex-shrink-0 shadow-sm text-primary-600">
                       <item.icon className="w-5 h-5" />
                     </div>
                     <div className="mt-0.5">
@@ -943,7 +943,7 @@ export default function WelcomeDayPage() {
       </div>
 
       {/* ─── BERKAS PERSYARATAN ─── */}
-      <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden mt-6">
+      <div className="bg-white rounded-xl border border-ink-100 shadow-sm overflow-hidden mt-6">
         <div className="px-6 py-4 border-b border-ink-100 bg-blue-50 flex items-center gap-3">
           <div className="w-9 h-9 bg-blue-100 rounded-xl flex items-center justify-center">
             <FileCheck className="w-5 h-5 text-blue-700" />
@@ -971,7 +971,7 @@ export default function WelcomeDayPage() {
       </div>
 
       {/* ─── BERKAS PERSYARATAN ─── */}
-      <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden mt-6">
+      <div className="bg-white rounded-xl border border-ink-100 shadow-sm overflow-hidden mt-6">
         <div className="px-6 py-4 border-b border-ink-100 bg-blue-50 flex items-center gap-3">
           <div className="w-9 h-9 bg-blue-100 rounded-xl flex items-center justify-center">
             <FileCheck className="w-5 h-5 text-blue-700" />
@@ -999,7 +999,7 @@ export default function WelcomeDayPage() {
       </div>
 
       {/* ─── CHECKLIST BARANG BAWAAN ─── */}
-      <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden mt-6">
+      <div className="bg-white rounded-xl border border-ink-100 shadow-sm overflow-hidden mt-6">
         <div className="px-6 py-5 border-b border-ink-100 bg-primary-50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 bg-primary-100 rounded-xl flex items-center justify-center">
@@ -1081,7 +1081,7 @@ export default function WelcomeDayPage() {
       </div>
 
       {/* ─── FAQ ─── */}
-      <div className="bg-white rounded-3xl border border-ink-100 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-xl border border-ink-100 shadow-sm overflow-hidden">
         <div className="px-6 py-4 border-b border-ink-100 bg-blue-50 flex items-center gap-3">
           <div className="w-9 h-9 bg-blue-100 rounded-xl flex items-center justify-center">
             <MessageCircle className="w-5 h-5 text-blue-700" />
@@ -1098,7 +1098,7 @@ export default function WelcomeDayPage() {
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                 className="w-full flex items-start gap-3 px-5 py-4 text-left hover:bg-ink-50 transition-colors"
               >
-                <div className="w-7 h-7 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center flex-shrink-0 font-black text-xs mt-0.5">
+                <div className="w-7 h-7 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center flex-shrink-0 font-black text-xs mt-0.5">
                   {idx + 1}
                 </div>
                 <p className="flex-1 text-sm font-bold text-ink-900 leading-snug">{faq.q}</p>
@@ -1120,7 +1120,7 @@ export default function WelcomeDayPage() {
       </div>
 
       {/* ─── KONTAK PANITIA ─── */}
-      <div className="bg-gradient-to-r from-primary-50 to-primary-100 border border-primary-200 rounded-2xl p-5">
+      <div className="bg-gradient-to-r from-primary-50 to-primary-100 border border-primary-200 rounded-xl p-5">
         <h3 className="font-black text-primary-900 text-sm mb-3 flex items-center gap-2">
           <Phone className="w-4 h-4" />
           Ada Pertanyaan? Hubungi Panitia
@@ -1153,7 +1153,7 @@ export default function WelcomeDayPage() {
       </div>
 
       {/* ─── FOOTER INFO ─── */}
-      <div className="bg-primary-50 border border-primary-100 rounded-2xl px-5 py-4 flex items-start gap-3">
+      <div className="bg-primary-50 border border-primary-100 rounded-xl px-5 py-4 flex items-start gap-3">
         <Heart className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
         <p className="text-xs text-primary-700 font-medium leading-relaxed">
           Kami sangat antusias menyambut kehadiran Ananda tercinta di Pesantren kami. 
@@ -1166,7 +1166,7 @@ export default function WelcomeDayPage() {
       {/* Lightbox Modal */}
       {lightbox && (
         <div 
-          className="fixed inset-0 z-[100] bg-ink-950/95 flex flex-col items-center justify-center p-4 md:p-8 backdrop-blur-sm"
+          className="fixed inset-0 z-[100] bg-ink-950/95 flex flex-col items-center justify-center p-4 md:p-8 "
           onClick={() => setLightbox(null)}
         >
           <button className="absolute top-4 right-4 md:top-6 md:right-6 text-white p-2 hover:bg-white/10 rounded-full transition-colors">

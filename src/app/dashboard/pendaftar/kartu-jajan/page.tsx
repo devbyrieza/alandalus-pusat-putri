@@ -209,25 +209,25 @@ export default function KartuJajanPage() {
                     onChange={(e) => setNewLimit(Number(e.target.value))}
                     className="w-24 bg-transparent border-b border-white/50 text-white font-bold outline-hidden focus:border-white"
                   />
-                  <button onClick={handleSaveLimit} disabled={savingLimit} className="p-1.5 bg-green-500 hover:bg-green-600 rounded-lg text-white">
+                  <button onClick={handleSaveLimit} disabled={savingLimit} className="p-1.5 bg-green-500 hover:bg-green-600 rounded-xl text-white">
                     {savingLimit ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                   </button>
-                  <button onClick={() => setIsEditingLimit(false)} className="p-1.5 bg-red-500 hover:bg-red-600 rounded-lg text-white">
+                  <button onClick={() => setIsEditingLimit(false)} className="p-1.5 bg-red-500 hover:bg-red-600 rounded-xl text-white">
                     <X className="w-4 h-4" />
                   </button>
                 </div>
               ) : (
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1 bg-white/10 backdrop-blur-sm rounded-lg text-xs font-bold border border-white/20">
+                  <span className="px-3 py-1 bg-white/10  rounded-xl text-xs font-bold border border-white/20">
                     Limit Harian: Rp {Number(dompet.batas_jajan_harian).toLocaleString("id-ID")}
                   </span>
-                  <button onClick={() => { setIsEditingLimit(true); setNewLimit(Number(dompet.batas_jajan_harian)); }} className="p-1.5 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors" title="Ubah Limit Jajan">
+                  <button onClick={() => { setIsEditingLimit(true); setNewLimit(Number(dompet.batas_jajan_harian)); }} className="p-1.5 bg-white/10 hover:bg-white/20 rounded-xl text-white transition-colors" title="Ubah Limit Jajan">
                     <Edit2 className="w-3.5 h-3.5" />
                   </button>
                 </div>
               )}
               
-              <span className={`px-3 py-1 rounded-lg text-xs font-bold border ${dompet.status === "AKTIF" ? "bg-green-500/20 text-green-200 border-green-500/30" : "bg-red-500/20 text-red-200 border-red-500/30"}`}>
+              <span className={`px-3 py-1 rounded-xl text-xs font-bold border ${dompet.status === "AKTIF" ? "bg-green-500/20 text-green-200 border-green-500/30" : "bg-red-500/20 text-red-200 border-red-500/30"}`}>
                 Status: {dompet.status}
               </span>
             </div>
@@ -303,7 +303,7 @@ export default function KartuJajanPage() {
               </div>
             ) : (
               transaksiList.map((trx) => (
-                <div key={trx.id} className="flex items-center justify-between p-4 rounded-2xl bg-surface-50 border border-surface-100 hover:border-gold-200 transition-colors">
+                <div key={trx.id} className="flex items-center justify-between p-4 rounded-xl bg-surface-50 border border-surface-100 hover:border-gold-200 transition-colors">
                   <div className="flex items-center gap-4">
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${
                       trx.jenis_transaksi === "TOPUP" ? "bg-green-100 text-green-600" : "bg-red-100 text-red-600"

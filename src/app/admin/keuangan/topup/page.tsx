@@ -109,7 +109,7 @@ export default function FinanceTopupPage() {
 
       <div className="grid lg:grid-cols-3 gap-8 flex-1 items-start">
         {/* Kiri: Daftar Santri */}
-        <div className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-[600px]">
+        <div className="lg:col-span-2 bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-[600px]">
           <div className="bg-slate-50 p-4 border-b border-slate-200 flex justify-between items-center">
             <h3 className="font-bold text-slate-700">Daftar Santri Aktif</h3>
             <button onClick={fetchSantri} className="text-slate-400 hover:text-primary-600 transition-colors" title="Refresh Data">
@@ -150,7 +150,7 @@ export default function FinanceTopupPage() {
         </div>
 
         {/* Kanan: Panel Top Up */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 relative overflow-hidden">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 relative overflow-hidden">
           {/* Header Panel */}
           <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
             <div className="w-10 h-10 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center">
@@ -171,7 +171,7 @@ export default function FinanceTopupPage() {
             </div>
           ) : (
             <div className="animate-in fade-in duration-300">
-              <div className="bg-slate-900 rounded-2xl p-5 mb-6 text-white shadow-inner">
+              <div className="bg-slate-900 rounded-xl p-5 mb-6 text-white shadow-inner">
                 <p className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Penerima</p>
                 <p className="font-black text-lg line-clamp-1">{selectedSantri.nama_lengkap}</p>
                 <div className="flex justify-between items-end mt-4">
@@ -201,7 +201,7 @@ export default function FinanceTopupPage() {
                     <button 
                       key={val}
                       onClick={() => setNominal(val.toString())}
-                      className="py-2 text-xs font-bold rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-colors"
+                      className="py-2 text-xs font-bold rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-colors"
                     >
                       {val / 1000}k
                     </button>

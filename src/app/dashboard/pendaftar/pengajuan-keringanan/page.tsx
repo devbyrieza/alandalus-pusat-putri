@@ -166,7 +166,7 @@ export default function PengajuanKeringananPage() {
   if (pengajuan) {
     return (
       <div className="max-w-4xl mx-auto py-8">
-        <div className="bg-white rounded-[2rem] p-8 shadow-xl border border-primary-100 flex flex-col items-center text-center">
+        <div className="bg-white rounded-[2rem] p-8 shadow-lg border border-primary-100 flex flex-col items-center text-center">
           <div
             className={`w-24 h-24 rounded-[2rem] flex items-center justify-center mb-6 shadow-sm border ${
               pengajuan.status === "approved"
@@ -198,7 +198,7 @@ export default function PengajuanKeringananPage() {
               "Mohon maaf, pengajuan Anda saat ini tidak dapat kami setujui setelah melalui proses pertimbangan."}
           </p>
 
-          <div className="w-full max-w-md bg-slate-50 border border-slate-100 rounded-2xl p-6 text-left space-y-4">
+          <div className="w-full max-w-md bg-slate-50 border border-slate-100 rounded-xl p-6 text-left space-y-4">
             <div className="flex justify-between items-center border-b border-slate-200 pb-3">
               <span className="text-sm font-bold text-slate-500 uppercase tracking-wider">
                 Status
@@ -249,7 +249,7 @@ export default function PengajuanKeringananPage() {
   return (
     <div className="space-y-8 max-w-4xl mx-auto pb-12">
       {/* Header */}
-      <div className="bg-linear-to-br from-primary-700 to-primary-900 rounded-2xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
+      <div className="bg-linear-to-br from-primary-700 to-primary-900 rounded-xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
         <div className="absolute top-0 right-0 p-4 opacity-10">
           <ShieldCheck className="w-32 h-32" />
         </div>
@@ -272,7 +272,7 @@ export default function PengajuanKeringananPage() {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden"
+        className="bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden"
       >
         <div className="p-6 md:p-8 space-y-8">
           {/* Section 1: Rincian */}
@@ -351,7 +351,7 @@ export default function PengajuanKeringananPage() {
                   Dari RT/RW atau Kelurahan setempat.
                 </p>
                 {fileSktm && (
-                  <div className="flex items-center gap-2 mb-2 text-xs text-primary-700 bg-primary-50 rounded-lg px-3 py-2">
+                  <div className="flex items-center gap-2 mb-2 text-xs text-primary-700 bg-primary-50 rounded-xl px-3 py-2">
                     <File className="w-3.5 h-3.5" />
                     <span className="font-bold truncate">{fileSktm.name}</span>
                   </div>
@@ -376,7 +376,7 @@ export default function PengajuanKeringananPage() {
                   potongan yang diminta.
                 </p>
                 {filePermohonan && (
-                  <div className="flex items-center gap-2 mb-2 text-xs text-primary-700 bg-primary-50 rounded-lg px-3 py-2">
+                  <div className="flex items-center gap-2 mb-2 text-xs text-primary-700 bg-primary-50 rounded-xl px-3 py-2">
                     <File className="w-3.5 h-3.5" />
                     <span className="font-bold truncate">
                       {filePermohonan.name}

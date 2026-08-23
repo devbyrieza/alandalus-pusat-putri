@@ -73,7 +73,7 @@ export default function LaporanHarianPage() {
       </div>
 
       {/* PRINTABLE AREA */}
-      <div className="bg-white rounded-3xl border border-slate-200 shadow-sm p-8 print:shadow-none print:border-none print:p-0">
+      <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-8 print:shadow-none print:border-none print:p-0">
         
         {/* Laporan Header */}
         <div className="text-center border-b-2 border-slate-900 pb-6 mb-6">
@@ -86,7 +86,7 @@ export default function LaporanHarianPage() {
 
         {/* Ringkasan */}
         <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8">
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+          <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
             <h3 className="text-sm font-bold text-slate-500 uppercase mb-4 flex items-center gap-2">
               <TrendingUp className="w-4 h-4" /> Pemasukan Keuangan (SPP/Top-Up)
             </h3>
@@ -102,7 +102,7 @@ export default function LaporanHarianPage() {
             </div>
           </div>
 
-          <div className="bg-primary-50 p-6 rounded-2xl border border-primary-100">
+          <div className="bg-primary-50 p-6 rounded-xl border border-primary-100">
             <h3 className="text-sm font-bold text-primary-700 uppercase mb-4 flex items-center gap-2">
               <FileText className="w-4 h-4" /> Operasional Kantin (E-Money)
             </h3>
@@ -122,7 +122,7 @@ export default function LaporanHarianPage() {
         {/* Detail Penjualan */}
         <div>
           <h3 className="text-lg font-black text-slate-900 mb-4">Rincian Transaksi Terakhir</h3>
-          <div className="w-full overflow-x-auto rounded-2xl border border-slate-200 shadow-sm"><table className="w-full text-left text-sm border-collapse">
+          <div className="w-full overflow-x-auto rounded-xl border border-slate-200 shadow-sm"><table className="w-full text-left text-sm border-collapse">
             <thead>
               <tr className="bg-slate-900 text-white">
                 <th className="p-3 font-bold rounded-tl-xl">Waktu</th>

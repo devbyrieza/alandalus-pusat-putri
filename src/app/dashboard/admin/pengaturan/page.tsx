@@ -200,7 +200,7 @@ export default function PengaturanPage() {
           <button
             onClick={fetchTahunAjaran}
             disabled={loading}
-            className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-xl transition-colors disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
             Refresh
@@ -270,7 +270,7 @@ export default function PengaturanPage() {
                   </div>
                   <button
                     onClick={() => startEdit(activeTahunAjaran)}
-                    className="p-2 bg-white text-green-600 rounded-lg hover:shadow-md transition-all border border-green-100"
+                    className="p-2 bg-white text-green-600 rounded-xl hover:shadow-md transition-all border border-green-100"
                   >
                     <Edit3 className="w-5 h-5" />
                   </button>
@@ -362,7 +362,7 @@ export default function PengaturanPage() {
                           {!ta.is_active && (
                             <button
                               onClick={() => startEdit(ta)}
-                              className="p-2 bg-white text-stone-400 hover:text-primary-600 rounded-lg transition-colors border border-stone-200"
+                              className="p-2 bg-white text-stone-400 hover:text-primary-600 rounded-xl transition-colors border border-stone-200"
                             >
                               <Edit3 className="w-5 h-5" />
                             </button>
@@ -380,13 +380,13 @@ export default function PengaturanPage() {
 
       {/* Edit Modal Overlay */}
       {editingTa && (
-        <div className="fixed inset-0 z-[9999] flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-stone-900/50 backdrop-blur-sm p-4 overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
-          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden animate-in fade-in zoom-in duration-200">
+        <div className="fixed inset-0 z-[9999] flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center bg-stone-900/50  p-4 overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
+          <div className="bg-white rounded-xl shadow-lg w-full max-w-lg overflow-hidden animate-in fade-in zoom-in duration-200">
             <div className="px-6 py-4 bg-gradient-to-r from-primary-600 to-indigo-700 text-white flex items-center justify-between">
               <h3 className="text-lg font-bold">Edit Tahun Ajaran</h3>
               <button
                 onClick={() => setEditingTa(null)}
-                className="p-1 hover:bg-white/20 rounded-lg"
+                className="p-1 hover:bg-white/20 rounded-xl"
               >
                 <X className="w-6 h-6" />
               </button>
@@ -488,14 +488,14 @@ export default function PengaturanPage() {
                 <button
                   type="button"
                   onClick={() => setEditingTa(null)}
-                  className="flex-1 px-6 py-3 bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold rounded-2xl transition-all"
+                  className="flex-1 px-6 py-3 bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold rounded-xl transition-all"
                 >
                   Batal
                 </button>
                 <button
                   type="submit"
                   disabled={updating}
-                  className="flex-1 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-2xl shadow-lg shadow-purple-200 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="flex-1 px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-xl shadow-lg shadow-purple-200 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   {updating && <Loader2 className="w-4 h-4 animate-spin" />}
                   Simpan Perubahan

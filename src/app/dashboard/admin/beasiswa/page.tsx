@@ -186,25 +186,25 @@ export default function BantuanBiayaPage() {
 
       {/* -- Stats Cards -- */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-2xl p-4 border border-stone-100 shadow-sm">
+        <div className="bg-white rounded-xl p-4 border border-stone-100 shadow-sm">
           <p className="text-xs font-black text-stone-400 uppercase tracking-widest mb-2">Total Pengajuan</p>
           <p className="text-2xl font-black text-ink-900">{data.length}</p>
         </div>
-        <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 shadow-sm">
+        <div className="bg-primary-50 rounded-xl p-4 border border-primary-100 shadow-sm">
           <div className="flex items-center gap-1.5 mb-2">
             <GraduationCap className="w-4 h-4 text-primary-600" />
             <p className="text-xs font-black text-primary-600 uppercase tracking-widest">Beasiswa</p>
           </div>
           <p className="text-2xl font-black text-primary-900">{totalBeasiswa}</p>
         </div>
-        <div className="bg-amber-50 rounded-2xl p-4 border border-amber-100 shadow-sm">
+        <div className="bg-amber-50 rounded-xl p-4 border border-amber-100 shadow-sm">
           <div className="flex items-center gap-1.5 mb-2">
             <Coins className="w-4 h-4 text-amber-600" />
             <p className="text-xs font-black text-amber-600 uppercase tracking-widest">Keringanan</p>
           </div>
           <p className="text-2xl font-black text-amber-900">{totalKeringanan}</p>
         </div>
-        <div className="bg-primary-50 rounded-2xl p-4 border border-primary-100 shadow-sm">
+        <div className="bg-primary-50 rounded-xl p-4 border border-primary-100 shadow-sm">
           <div className="flex items-center gap-1.5 mb-2">
             <CheckCircle className="w-4 h-4 text-primary-600" />
             <p className="text-xs font-black text-primary-600 uppercase tracking-widest">Disetujui</p>
@@ -224,7 +224,7 @@ export default function BantuanBiayaPage() {
             <button
               key={t}
               onClick={() => setFilterTab(t)}
-              className={`flex items-center gap-1.5 px-4 py-2 text-sm font-bold rounded-lg transition-all whitespace-nowrap ${
+              className={`flex items-center gap-1.5 px-4 py-2 text-sm font-bold rounded-xl transition-all whitespace-nowrap ${
                 filterTab === t
                   ? t === "BEASISWA"
                     ? "bg-primary-100 text-primary-800"
@@ -247,7 +247,7 @@ export default function BantuanBiayaPage() {
             <button
               key={s}
               onClick={() => setFilterStatus(s)}
-              className={`px-4 py-2 text-xs font-bold rounded-lg transition-all whitespace-nowrap ${
+              className={`px-4 py-2 text-xs font-bold rounded-xl transition-all whitespace-nowrap ${
                 filterStatus === s
                   ? "bg-primary-50 text-primary-700 shadow-sm border border-primary-100"
                   : "text-stone-500 hover:bg-stone-50 border border-transparent"
@@ -272,7 +272,7 @@ export default function BantuanBiayaPage() {
       </div>
 
       {/* -- Table -- */}
-      <div className="bg-white border border-stone-200 shadow-sm rounded-2xl overflow-hidden">
+      <div className="bg-white border border-stone-200 shadow-sm rounded-xl overflow-hidden">
         {loading ? (
           <div className="p-12 flex justify-center">
             <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
@@ -370,7 +370,7 @@ export default function BantuanBiayaPage() {
                       {/* Status */}
                       <td className="px-6 py-4">
                         <span
-                          className={`flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-lg w-max ${
+                          className={`flex items-center gap-1.5 text-xs font-bold px-3 py-1.5 rounded-xl w-max ${
                             item.status === "DISETUJUI"
                               ? "bg-green-50 text-green-700 border border-green-100"
                               : item.status === "DITOLAK"
@@ -393,7 +393,7 @@ export default function BantuanBiayaPage() {
                       <td className="px-6 py-4">
                         <Link
                           href={`/dashboard/admin/pendaftar/${item.pendaftar_id}`}
-                          className="text-primary-600 hover:text-primary-800 font-bold text-xs px-4 py-2 border border-primary-200 hover:border-primary-300 rounded-lg bg-white shadow-sm inline-block transition-colors"
+                          className="text-primary-600 hover:text-primary-800 font-bold text-xs px-4 py-2 border border-primary-200 hover:border-primary-300 rounded-xl bg-white shadow-sm inline-block transition-colors"
                         >
                           Detail &amp; Edit
                         </Link>

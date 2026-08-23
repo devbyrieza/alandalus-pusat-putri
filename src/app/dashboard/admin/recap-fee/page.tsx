@@ -200,7 +200,7 @@ export default function RecapFeePage() {
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary-600/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
         <div className="relative flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-4 md:gap-6">
-            <div className="p-3 md:p-4 bg-linear-to-br from-primary-600 to-primary-800 rounded-2xl md:rounded-3xl shadow-xl shadow-primary-600/20 shrink-0">
+            <div className="p-3 md:p-4 bg-linear-to-br from-primary-600 to-primary-800 rounded-xl md:rounded-xl shadow-lg shadow-primary-600/20 shrink-0">
               <CreditCard className="w-7 h-7 md:w-8 md:h-8 text-white" />
             </div>
             <div>
@@ -216,13 +216,13 @@ export default function RecapFeePage() {
           <div className="flex gap-2 md:gap-3">
             <Button
               onClick={exportToExcel}
-              className="flex-1 md:flex-none bg-primary-50 text-primary-700 border-primary-100 hover:bg-primary-100 rounded-2xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm"
+              className="flex-1 md:flex-none bg-primary-50 text-primary-700 border-primary-100 hover:bg-primary-100 rounded-xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm"
             >
               <Download className="w-4 h-4 mr-1.5" /> Excel
             </Button>
             <Button
               onClick={exportToPDF}
-              className="flex-1 md:flex-none bg-red-50 text-red-700 border-red-100 hover:bg-red-100 rounded-2xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm"
+              className="flex-1 md:flex-none bg-red-50 text-red-700 border-red-100 hover:bg-red-100 rounded-xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm"
             >
               <FileText className="w-4 h-4 mr-1.5" /> PDF
             </Button>
@@ -230,7 +230,7 @@ export default function RecapFeePage() {
               onClick={fetchRecap}
               disabled={loading}
               variant="outline"
-              className="rounded-2xl h-11 md:h-12 px-4 md:px-6 border-ink-100 hover:bg-gold-50 font-black"
+              className="rounded-xl h-11 md:h-12 px-4 md:px-6 border-ink-100 hover:bg-gold-50 font-black"
             >
               <RefreshCcw
                 className={`w-4 h-4 ${loading ? "animate-spin" : ""}`}
@@ -293,7 +293,7 @@ export default function RecapFeePage() {
         <div className="lg:col-span-4 h-full">
           <div className="bg-white rounded-[2rem] p-6 shadow-clay-md border border-white/40 h-full">
             <div className="flex items-center gap-2 mb-4">
-              <div className="p-1.5 bg-gold-100 rounded-lg">
+              <div className="p-1.5 bg-gold-100 rounded-xl">
                 <DollarSign className="w-4 h-4 text-gold-700" />
               </div>
               <h3 className="text-sm font-black text-ink-900 uppercase tracking-tight">
@@ -404,7 +404,7 @@ export default function RecapFeePage() {
                   >
                     <td className="px-6 py-6">
                       <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-2xl bg-gold-100 flex items-center justify-center text-primary-900 font-black shadow-sm border border-gold-200">
+                        <div className="w-10 h-10 rounded-xl bg-gold-100 flex items-center justify-center text-primary-900 font-black shadow-sm border border-gold-200">
                           {item.name.charAt(0)}
                         </div>
                         <div>
@@ -507,7 +507,7 @@ export default function RecapFeePage() {
               >
                 {/* Name + Honor Row */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-2xl bg-gold-100 flex items-center justify-center text-primary-900 font-black text-lg border border-gold-200 shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-gold-100 flex items-center justify-center text-primary-900 font-black text-lg border border-gold-200 shrink-0">
                     {item.name.charAt(0)}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -521,7 +521,7 @@ export default function RecapFeePage() {
                 </div>
 
                 {/* Fee Badge — full width, prominent */}
-                <div className="mb-3 bg-linear-to-r from-primary-700 to-primary-800 rounded-2xl px-4 py-3 flex items-center justify-between">
+                <div className="mb-3 bg-linear-to-r from-primary-700 to-primary-800 rounded-xl px-4 py-3 flex items-center justify-between">
                   <div>
                     <p className="text-[9px] font-black text-white/60 uppercase tracking-widest">
                       Estimasi Honor

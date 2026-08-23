@@ -130,7 +130,7 @@ export default function AdminTambahPendaftar() {
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-stone-200 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-stone-200 overflow-hidden">
         <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-8">
           
           {/* Tipe Pendaftaran */}

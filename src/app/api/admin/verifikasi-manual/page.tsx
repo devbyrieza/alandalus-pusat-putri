@@ -133,7 +133,7 @@ export default function VerifikasiManualPage() {
             </div>
             <button
               onClick={fetchPending}
-              className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
+              className="px-4 py-2 bg-primary-600 text-white rounded-xl hover:bg-primary-700 flex items-center gap-2"
             >
               <RefreshCw
                 className={`w-4 h-4 ${refreshing ? "animate-spin" : ""}`}
@@ -179,7 +179,7 @@ export default function VerifikasiManualPage() {
                   </div>
 
                   {/* Kode OTP */}
-                  <div className="bg-primary-50 rounded-lg p-4 min-w-[200px]">
+                  <div className="bg-primary-50 rounded-xl p-4 min-w-[200px]">
                     <div className="text-sm text-primary-800 mb-1">
                       KODE VERIFIKASI
                     </div>
@@ -206,14 +206,14 @@ export default function VerifikasiManualPage() {
                         onClick={() =>
                           openWhatsApp(item.no_hp, item.kode_verifikasi)
                         }
-                        className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 flex items-center gap-2"
+                        className="px-4 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 flex items-center gap-2"
                       >
                         <MessageCircle className="w-4 h-4" />
                         Buka WhatsApp
                       </button>
                       <button
                         onClick={() => markAsSent(item.id)}
-                        className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
+                        className="px-4 py-2 bg-primary-600 text-white rounded-xl hover:bg-primary-700 flex items-center gap-2"
                       >
                         <CheckCircle className="w-4 h-4" />
                         Tandai Sudah Dikirim
@@ -222,7 +222,7 @@ export default function VerifikasiManualPage() {
                   ) : (
                     <button
                       onClick={() => sendSmsAuto(item.id, item.no_hp)}
-                      className="px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 flex items-center gap-2"
+                      className="px-4 py-2 bg-primary-600 text-white rounded-xl hover:bg-primary-700 flex items-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
                       Kirim via Wablas

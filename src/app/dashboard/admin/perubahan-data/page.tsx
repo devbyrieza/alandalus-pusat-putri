@@ -118,7 +118,7 @@ export default function PerubahanDataPage() {
           </p>
         </div>
 
-        <div className="flex bg-secondary-100 p-1.5 rounded-2xl gap-1 items-center">
+        <div className="flex bg-secondary-100 p-1.5 rounded-xl gap-1 items-center">
           {refreshing && (
             <Loader2 className="w-4 h-4 text-primary-700 animate-spin mx-2" />
           )}
@@ -148,12 +148,12 @@ export default function PerubahanDataPage() {
           filtreredRequests.map((req) => (
             <div
               key={req.id}
-              className="bg-white rounded-3xl border border-secondary-200 shadow-sm app-card p-6 group hover:border-primary-200 transition-all"
+              className="bg-white rounded-xl border border-secondary-200 shadow-sm app-card p-6 group hover:border-primary-200 transition-all"
             >
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 {/* Profile Info */}
                 <div className="flex items-center gap-4 min-w-[250px]">
-                  <div className="w-14 h-14 bg-primary-50 rounded-2xl flex items-center justify-center text-primary-700">
+                  <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center text-primary-700">
                     <User className="w-8 h-8" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -185,7 +185,7 @@ export default function PerubahanDataPage() {
                 </div>
 
                 {/* Reason */}
-                <div className="flex-1 bg-secondary-50 p-4 rounded-2xl border border-ink-100">
+                <div className="flex-1 bg-secondary-50 p-4 rounded-xl border border-ink-100">
                   <div className="flex items-center gap-2 mb-2 text-ink-400">
                     <MessageSquare className="w-4 h-4" />
                     <span className="text-xs font-bold uppercase tracking-widest">
@@ -265,7 +265,7 @@ export default function PerubahanDataPage() {
             </div>
           ))
         ) : (
-          <div className="bg-white rounded-3xl border border-secondary-200 shadow-sm app-card p-20 text-center">
+          <div className="bg-white rounded-xl border border-secondary-200 shadow-sm app-card p-20 text-center">
             <div className="w-20 h-20 bg-secondary-100 rounded-[2rem] flex items-center justify-center mx-auto mb-6">
               <Clock className="w-10 h-10 text-ink-300" />
             </div>

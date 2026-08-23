@@ -148,7 +148,7 @@ export default function ProfilPage() {
         {/* Request Status Banner */}
         {requestStatus && (
           <div
-            className={`px-5 py-4 rounded-2xl flex items-center gap-4 transition-all hover:scale-[1.02] shadow-sm ${
+            className={`px-5 py-4 rounded-xl flex items-center gap-4 transition-all hover:scale-[1.02] shadow-sm ${
               requestStatus.status === "pending"
                 ? "bg-secondary-50 border border-secondary-200 text-secondary-800"
                 : requestStatus.status === "approved_to_edit"
@@ -225,7 +225,7 @@ export default function ProfilPage() {
           {/* Identity Card */}
           <div className="glass-panel p-6 md:p-8 rounded-[2rem] shadow-clay-md">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-pine-100 flex items-center justify-center text-pine-600 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-pine-100 flex items-center justify-center text-pine-600 shadow-sm">
                 <User className="w-6 h-6" />
               </div>
               <div>
@@ -284,7 +284,7 @@ export default function ProfilPage() {
           {/* Address Card */}
           <div className="glass-panel p-6 md:p-8 rounded-[2rem] shadow-clay-md">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center text-primary-600 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-600 shadow-sm">
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
@@ -298,7 +298,7 @@ export default function ProfilPage() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-surface-50 p-4 rounded-2xl border border-ink-100">
+              <div className="bg-surface-50 p-4 rounded-xl border border-ink-100">
                 <p className="text-xs text-ink-400 uppercase font-bold tracking-widest mb-2">
                   Alamat Lengkap
                 </p>
@@ -327,13 +327,13 @@ export default function ProfilPage() {
               </div>
 
               <div className="pt-6 border-t border-ink-100/50 flex flex-wrap gap-4">
-                <div className="flex items-center gap-3 px-4 py-2 bg-green-50 text-green-700 rounded-lg border border-green-100">
+                <div className="flex items-center gap-3 px-4 py-2 bg-green-50 text-green-700 rounded-xl border border-green-100">
                   <Phone className="w-4 h-4" />
                   <span className="font-bold text-sm">
                     {data?.santri?.no_hp || "-"}
                   </span>
                 </div>
-                <div className="flex items-center gap-3 px-4 py-2 bg-primary-50 text-primary-700 rounded-lg border border-primary-100">
+                <div className="flex items-center gap-3 px-4 py-2 bg-primary-50 text-primary-700 rounded-xl border border-primary-100">
                   <Mail className="w-4 h-4" />
                   <span className="font-bold text-sm">
                     {data?.santri?.email || "-"}
@@ -346,7 +346,7 @@ export default function ProfilPage() {
           {/* School Card */}
           <div className="glass-panel p-6 md:p-8 rounded-[2rem] shadow-clay-md">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-secondary-100 flex items-center justify-center text-secondary-600 shadow-sm">
+              <div className="w-12 h-12 rounded-xl bg-secondary-100 flex items-center justify-center text-secondary-600 shadow-sm">
                 <School className="w-6 h-6" />
               </div>
               <div>
@@ -382,7 +382,7 @@ export default function ProfilPage() {
         <div className="space-y-6">
           {/* Request Edit Box */}
           <div className="bg-gradient-mesh p-1 rounded-[2.5rem] shadow-clay-lg">
-            <div className="bg-white/80 backdrop-blur-xl rounded-[2.3rem] p-6 lg:p-5 md:p-8">
+            <div className="bg-white  rounded-[2.3rem] p-6 lg:p-5 md:p-8">
               <div className="flex items-center gap-3 mb-4 text-ink-900">
                 <div className="w-10 h-10 bg-surface-100 rounded-xl flex items-center justify-center">
                   <Edit className="w-5 h-5 text-ink-700" />
@@ -402,7 +402,7 @@ export default function ProfilPage() {
                 !isRequesting ? (
                   <button
                     onClick={() => setIsRequesting(true)}
-                    className="w-full py-4 bg-white border border-ink-200 text-ink-700 font-bold rounded-2xl hover:bg-surface-50 hover:border-primary-300 hover:text-primary-700 transition-all shadow-sm hover:shadow-md"
+                    className="w-full py-4 bg-white border border-ink-200 text-ink-700 font-bold rounded-xl hover:bg-surface-50 hover:border-primary-300 hover:text-primary-700 transition-all shadow-sm hover:shadow-md"
                   >
                     Ajukan Perubahan
                   </button>
@@ -437,7 +437,7 @@ export default function ProfilPage() {
                   </div>
                 )
               ) : (
-                <div className="bg-surface-50 p-6 rounded-2xl border border-dashed border-ink-300 text-center">
+                <div className="bg-surface-50 p-6 rounded-xl border border-dashed border-ink-300 text-center">
                   <ShieldAlert className="w-8 h-8 text-ink-300 mx-auto mb-2" />
                   <p className="text-sm text-ink-500 font-bold">
                     Permintaan Sedang Aktif

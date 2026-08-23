@@ -50,7 +50,7 @@ function DaftarSuksesContent() {
 
       {/* Success Icon */}
       <div className="text-center relative z-10 mb-6 mt-4">
-        <div className="relative inline-flex items-center justify-center w-24 h-24 bg-secondary-50 rounded-3xl border border-secondary-200">
+        <div className="relative inline-flex items-center justify-center w-24 h-24 bg-secondary-50 rounded-xl border border-secondary-200">
           <CheckCircle2 className="w-14 h-14 text-primary-600 animate-bounce" />
           <Sparkles className="w-8 h-8 text-primary-200 absolute -top-3 -right-3 animate-pulse" />
         </div>
@@ -84,7 +84,7 @@ function DaftarSuksesContent() {
             Nomor Pendaftaran
           </p>
           <div className="flex items-center justify-between gap-3 flex-wrap">
-            <p className="text-2xl font-black text-primary-900 break-all bg-secondary-50/50 px-2 py-1 rounded-lg">
+            <p className="text-2xl font-black text-primary-900 break-all bg-secondary-50/50 px-2 py-1 rounded-xl">
               {nomor_pendaftaran}
             </p>
             <button
@@ -172,7 +172,7 @@ function DaftarSuksesContent() {
       <div className="relative z-10 w-full mb-6">
         <button
           onClick={() => router.push("/login")}
-          className="w-full py-4 md:py-5 rounded-pill bg-primary-600 text-white font-black text-lg hover:bg-primary-700 shadow-xl shadow-secondary-200 transition-all flex items-center justify-center gap-2.5 active:scale-95"
+          className="w-full py-4 md:py-5 rounded-pill bg-primary-600 text-white font-black text-lg hover:bg-primary-700 shadow-lg shadow-secondary-200 transition-all flex items-center justify-center gap-2.5 active:scale-95"
         >
           Lanjut ke Halaman Login
           <ArrowRight className="w-5 h-5" />

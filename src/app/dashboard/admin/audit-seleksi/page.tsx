@@ -231,7 +231,7 @@ export default function AuditSeleksiPage() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-black text-ink-900 tracking-tight flex items-center gap-3">
-            <div className="p-2.5 bg-primary-600 rounded-2xl shadow-lg shadow-primary-600/20">
+            <div className="p-2.5 bg-primary-600 rounded-xl shadow-lg shadow-primary-600/20">
               <Activity className="w-6 h-6 text-white" />
             </div>
             Audit <span className="text-primary-700">Hasil Seleksi</span>
@@ -245,14 +245,14 @@ export default function AuditSeleksiPage() {
           <Button
             onClick={handleExport}
             variant="outline"
-            className="rounded-2xl border-ink-200 font-bold bg-white"
+            className="rounded-xl border-ink-200 font-bold bg-white"
           >
             <Download className="w-4 h-4 mr-2" /> Export
           </Button>
           <Button
             onClick={fetchCandidates}
             variant="outline"
-            className="rounded-2xl border-ink-200 font-bold bg-white"
+            className="rounded-xl border-ink-200 font-bold bg-white"
           >
             <RefreshCcw className="w-4 h-4 mr-2" /> Refresh
           </Button>
@@ -338,7 +338,7 @@ export default function AuditSeleksiPage() {
                 <th className="px-6 py-5 text-center w-12">
                   <input
                     type="checkbox"
-                    className="w-5 h-5 rounded-lg border-ink-200 text-primary-600 focus:ring-primary-500"
+                    className="w-5 h-5 rounded-xl border-ink-200 text-primary-600 focus:ring-primary-500"
                     onChange={handleSelectAll}
                     checked={candidates.length > 0 && selectedIds.length === candidates.length}
                   />
@@ -404,7 +404,7 @@ export default function AuditSeleksiPage() {
                       <td className="px-6 py-4 text-center">
                         <input
                           type="checkbox"
-                          className="w-5 h-5 rounded-lg border-ink-200 text-primary-600 focus:ring-primary-500"
+                          className="w-5 h-5 rounded-xl border-ink-200 text-primary-600 focus:ring-primary-500"
                           checked={selectedIds.includes(c.id)}
                           onChange={() => handleSelectOne(c.id)}
                         />
@@ -420,7 +420,7 @@ export default function AuditSeleksiPage() {
                         </div>
                       </td>
                       <td className="px-4 py-4 text-center">
-                        <span className="px-2.5 py-1 bg-ink-100 text-ink-600 rounded-lg text-[10px] font-black uppercase">
+                        <span className="px-2.5 py-1 bg-ink-100 text-ink-600 rounded-xl text-[10px] font-black uppercase">
                           {c.jenjang}
                         </span>
                       </td>
@@ -437,7 +437,7 @@ export default function AuditSeleksiPage() {
                         return (
                           <td key={i} className="px-3 py-4 text-center">
                             <div className="flex flex-col items-center gap-1">
-                              <span className={`${g.color} text-white text-[10px] font-black w-6 h-6 flex items-center justify-center rounded-lg shadow-sm`}>
+                              <span className={`${g.color} text-white text-[10px] font-black w-6 h-6 flex items-center justify-center rounded-xl shadow-sm`}>
                                 {g.label}
                               </span>
                               <span className="text-[9px] font-bold text-ink-300">
@@ -488,7 +488,7 @@ export default function AuditSeleksiPage() {
       
       {/* Legend & Help */}
       <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-        <div className="bg-primary-950 rounded-3xl p-5 md:p-8 text-white relative overflow-hidden group shadow-xl shadow-primary-900/20">
+        <div className="bg-primary-950 rounded-xl p-5 md:p-8 text-white relative overflow-hidden group shadow-lg shadow-primary-900/20">
           <div className="absolute top-0 right-0 p-5 md:p-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
             <Activity className="w-40 h-40 text-white" />
           </div>
@@ -511,14 +511,14 @@ export default function AuditSeleksiPage() {
               </p>
             </div>
             <div className="mt-8 flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.2em] text-white/80">
-              <span className="px-3 py-1.5 border border-white/20 rounded-lg bg-white/5 backdrop-blur-sm">A: ≥ 80+</span>
-              <span className="px-3 py-1.5 border border-white/20 rounded-lg bg-white/5 backdrop-blur-sm">B: ≥ 65+</span>
-              <span className="px-3 py-1.5 border border-white/20 rounded-lg bg-white/5 backdrop-blur-sm">C: ≥ 50+</span>
+              <span className="px-3 py-1.5 border border-white/20 rounded-xl bg-white/5 ">A: ≥ 80+</span>
+              <span className="px-3 py-1.5 border border-white/20 rounded-xl bg-white/5 ">B: ≥ 65+</span>
+              <span className="px-3 py-1.5 border border-white/20 rounded-xl bg-white/5 ">C: ≥ 50+</span>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-3xl p-5 md:p-8 border border-ink-100 shadow-premium-sm flex flex-col justify-between">
+        <div className="bg-white rounded-xl p-5 md:p-8 border border-ink-100 shadow-premium-sm flex flex-col justify-between">
           <div>
             <h3 className="text-xl font-black text-ink-900 mb-2">Panduan Penerbitan</h3>
             <p className="text-ink-500 text-sm font-medium leading-relaxed">
@@ -526,7 +526,7 @@ export default function AuditSeleksiPage() {
               Sistem akan secara otomatis memperbarui dashboard santri dan mengirimkan notifikasi resmi via WhatsApp.
             </p>
           </div>
-          <div className="mt-8 flex items-center gap-4 p-4 bg-primary-50 rounded-2xl border border-primary-100">
+          <div className="mt-8 flex items-center gap-4 p-4 bg-primary-50 rounded-xl border border-primary-100">
              <div className="p-3 bg-white rounded-xl shadow-sm">
                 <RefreshCcw className="w-5 h-5 text-primary-600" />
              </div>

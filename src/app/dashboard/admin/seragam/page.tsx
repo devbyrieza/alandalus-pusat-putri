@@ -236,10 +236,10 @@ export default function RekapSeragamPage() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="bg-linear-to-br from-primary-700 to-primary-900 rounded-3xl p-5 md:p-8 text-white relative overflow-hidden shadow-xl">
+      <div className="bg-linear-to-br from-primary-700 to-primary-900 rounded-xl p-5 md:p-8 text-white relative overflow-hidden shadow-lg">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl pointer-events-none"></div>
         <div className="flex items-center gap-5 relative z-10">
-          <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center text-primary-100 shadow-inner">
+          <div className="w-16 h-16 bg-white/20  rounded-xl flex items-center justify-center text-primary-100 shadow-inner">
             <Shirt className="w-8 h-8" />
           </div>
           <div>
@@ -253,7 +253,7 @@ export default function RekapSeragamPage() {
         </div>
       </div>
 
-      <div className="bg-white rounded-3xl shadow-sm border border-ink-100 flex flex-col min-h-[500px]">
+      <div className="bg-white rounded-xl shadow-sm border border-ink-100 flex flex-col min-h-[500px]">
         {/* Toolbar */}
         <div className="p-6 border-b border-ink-100 flex flex-col md:flex-row gap-4 justify-between items-center bg-ink-50/50 rounded-t-3xl">
           <div className="relative w-full md:w-80">
@@ -348,7 +348,7 @@ export default function RekapSeragamPage() {
                         </td>
                         <td className="px-6 py-4 text-center">
                           {item.ukuran_seragam_baju ? (
-                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-50 text-blue-700 font-black text-xs border border-blue-100">
+                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-blue-50 text-blue-700 font-black text-xs border border-blue-100">
                               {item.ukuran_seragam_baju}
                             </span>
                           ) : (
@@ -357,7 +357,7 @@ export default function RekapSeragamPage() {
                         </td>
                         <td className="px-6 py-4 text-center">
                           {item.ukuran_seragam_celana ? (
-                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary-50 text-primary-700 font-black text-xs border border-primary-100">
+                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-primary-50 text-primary-700 font-black text-xs border border-primary-100">
                               {item.ukuran_seragam_celana}
                             </span>
                           ) : (
@@ -366,7 +366,7 @@ export default function RekapSeragamPage() {
                         </td>
                         <td className="px-6 py-4 text-center">
                           {item.ukuran_seragam_almamater ? (
-                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-primary-50 text-primary-700 font-black text-xs border border-primary-100">
+                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-xl bg-primary-50 text-primary-700 font-black text-xs border border-primary-100">
                               {item.ukuran_seragam_almamater}
                             </span>
                           ) : (
@@ -389,7 +389,7 @@ export default function RekapSeragamPage() {
                         <td className="px-6 py-4 text-center">
                           <button
                             onClick={() => handleEditClick(item)}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-primary-50 border border-ink-200 hover:border-primary-200 text-ink-700 hover:text-primary-700 rounded-lg text-xs font-black transition-all shadow-sm"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-primary-50 border border-ink-200 hover:border-primary-200 text-ink-700 hover:text-primary-700 rounded-xl text-xs font-black transition-all shadow-sm"
                           >
                             <Edit className="w-3.5 h-3.5" />
                             Ubah
@@ -443,8 +443,8 @@ export default function RekapSeragamPage() {
 
       {/* Edit Modal */}
       {editModalOpen && editingItem && (
-        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center p-4 bg-ink-950/50 backdrop-blur-sm overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
-          <div className="bg-white rounded-3xl shadow-xl w-full max-w-md overflow-hidden">
+        <div className="fixed inset-0 z-50 flex items-start md:items-center pt-10 md:pt-0 pb-20 md:pb-0 justify-center p-4 bg-ink-950/50  overflow-y-auto overflow-x-hidden overscroll-contain custom-scrollbar">
+          <div className="bg-white rounded-xl shadow-lg w-full max-w-md overflow-hidden">
             <div className="p-6 border-b border-ink-100 bg-ink-50/50">
               <h3 className="text-xl font-black text-ink-950">Ubah Ukuran Seragam</h3>
               <p className="text-sm font-medium text-ink-500 mt-1">{editingItem.nama_lengkap}</p>
