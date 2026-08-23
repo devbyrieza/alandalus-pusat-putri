@@ -26,8 +26,7 @@ export default function AdminTambahPendaftar() {
     asal_institusi: "",
     nisn: "",
     npsn: "",
-    catatan_pindahan: "",
-  });
+    catatan_pindahan: "" });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -66,8 +65,7 @@ export default function AdminTambahPendaftar() {
       const res = await fetch("/api/admin/pendaftar/tambah", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+        body: JSON.stringify(formData) });
 
       const data = await res.json();
 
@@ -91,8 +89,7 @@ export default function AdminTambahPendaftar() {
             <p class="font-medium">No HP: ${formData.no_hp}</p>
           </div>
         `,
-        confirmButtonColor: "#059669",
-      }).then(() => {
+        confirmButtonColor: "#059669" }).then(() => {
         router.push("/dashboard/admin/pendaftar");
         router.refresh();
       });

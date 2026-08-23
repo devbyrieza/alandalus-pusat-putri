@@ -13,8 +13,7 @@ import {
   School,
   ChevronDown,
   RefreshCw,
-  BookOpen,
-} from "lucide-react";
+  BookOpen } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { countries } from "@/lib/data/countries";
 import { formatNamaLengkap } from "@/lib/validations/registration";
@@ -42,8 +41,7 @@ interface FormData {
 const InputField = ({
   label,
   error,
-  children,
-}: {
+  children }: {
   label: string;
   error?: string;
   children: React.ReactNode;
@@ -99,8 +97,7 @@ export default function DaftarPindahanPage() {
     asal_institusi: "",
     nisn: "",
     npsn: "",
-    catatan_pindahan: "",
-  });
+    catatan_pindahan: "" });
 
   const [countryCode, setCountryCode] = useState("+62");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
@@ -115,16 +112,14 @@ export default function DaftarPindahanPage() {
           setFormData((prev) => ({
             ...prev,
             ...parsed,
-            jenjang: jenjangFromUrl || parsed.jenjang || "",
-          }));
+            jenjang: jenjangFromUrl || parsed.jenjang || "" }));
         } catch (error) {
           console.error("Error parsing saved data:", error);
         }
       } else if (jenjangFromUrl) {
         setFormData((prev) => ({
           ...prev,
-          jenjang: jenjangFromUrl,
-        }));
+          jenjang: jenjangFromUrl }));
       }
     }
   }, [jenjangFromUrl]);
@@ -252,9 +247,7 @@ export default function DaftarPindahanPage() {
           ...formData,
           no_hp: fullHp,
           otp_channel: "whatsapp",
-          tipe_pendaftaran: "PINDAHAN",
-        }),
-      });
+          tipe_pendaftaran: "PINDAHAN" }) });
 
       const data = await response.json();
       if (!response.ok) {
@@ -275,8 +268,7 @@ export default function DaftarPindahanPage() {
         npsn: formData.npsn,
         catatan_pindahan: formData.catatan_pindahan,
         tipe_pendaftaran: "PINDAHAN",
-        channel: "whatsapp",
-      });
+        channel: "whatsapp" });
 
       if (data.simulation_code || data.otp) {
         params.append("sim_code", data.simulation_code || data.otp);
@@ -368,8 +360,7 @@ export default function DaftarPindahanPage() {
                           showCancelButton: true,
                           confirmButtonColor: "#1e40af",
                           confirmButtonText: "Ya, Hapus",
-                          cancelButtonText: "Batal",
-                        });
+                          cancelButtonText: "Batal" });
 
                         if (result.isConfirmed) {
                           localStorage.removeItem("andalus_putri_daftar_pindahan_draft");
@@ -385,8 +376,7 @@ export default function DaftarPindahanPage() {
                             asal_institusi: "",
                             nisn: "",
     npsn: "",
-                            catatan_pindahan: "",
-                          });
+                            catatan_pindahan: "" });
                           setFieldErrors({});
                         }
                       }}
@@ -423,13 +413,11 @@ export default function DaftarPindahanPage() {
                     {
                       value: "MTs",
                       title: "Madrasah Tsanawiyah",
-                      subtitle: "Pindahan tingkat SMP/MTs",
-                    },
+                      subtitle: "Pindahan tingkat SMP/MTs" },
                     {
                       value: "MA",
                       title: "Madrasah Aliyah",
-                      subtitle: "Pindahan tingkat SMA/MA",
-                    },
+                      subtitle: "Pindahan tingkat SMA/MA" },
                   ].map((option) => {
                     const isPutra = formData.jenis_kelamin === "L";
                     const isPutri = formData.jenis_kelamin === "P";
@@ -445,8 +433,7 @@ export default function DaftarPindahanPage() {
                           if (isClosed) return;
                           setFormData((prev) => ({
                             ...prev,
-                            jenjang: option.value as any,
-                          }));
+                            jenjang: option.value as any }));
                         }}
                         className={`relative cursor-pointer rounded-[2rem] p-6 border-2 transition-all duration-300 app-card ${
                           isClosed
@@ -524,8 +511,7 @@ export default function DaftarPindahanPage() {
                         onChange={(e) =>
                           setFormData((prev) => ({
                             ...prev,
-                            nama_lengkap: formatNamaLengkap(e.target.value),
-                          }))
+                            nama_lengkap: formatNamaLengkap(e.target.value) }))
                         }
                         placeholder="Sesuai Akta Kelahiran santri"
                         className="w-full px-5 py-3 md:px-8 md:py-5 rounded-xl md:rounded-xl bg-secondary-50 border border-transparent focus:bg-white focus:border-primary-200 focus:ring-4 focus:ring-secondary-50 transition-all font-bold placeholder:text-ink-500 text-sm md:text-base text-ink-950"
@@ -542,8 +528,7 @@ export default function DaftarPindahanPage() {
                       onChange={(e) =>
                         setFormData((prev) => ({
                           ...prev,
-                          nik: e.target.value.replace(/\D/g, ""),
-                        }))
+                          nik: e.target.value.replace(/\D/g, "") }))
                       }
                       placeholder="16 Digit NIK"
                       className="w-full px-5 py-3 md:px-8 md:py-5 rounded-xl md:rounded-xl bg-secondary-50 border border-transparent focus:bg-white focus:border-primary-200 focus:ring-4 focus:ring-secondary-50 transition-all font-bold placeholder:text-ink-500 text-sm md:text-base text-ink-950"
@@ -557,8 +542,7 @@ export default function DaftarPindahanPage() {
                       onChange={(e) =>
                         setFormData((prev) => ({
                           ...prev,
-                          tanggal_lahir: e.target.value,
-                        }))
+                          tanggal_lahir: e.target.value }))
                       }
                       className="w-full px-5 py-3 md:px-8 md:py-5 rounded-xl md:rounded-xl bg-secondary-50 border border-transparent focus:bg-white focus:border-primary-200 focus:ring-4 focus:ring-secondary-50 transition-all font-bold text-sm md:text-base text-ink-950"
                     />
@@ -591,8 +575,7 @@ export default function DaftarPindahanPage() {
                               onChange={() =>
                                 setFormData((p) => ({
                                   ...p,
-                                  jenis_kelamin: jk.val as any,
-                                }))
+                                  jenis_kelamin: jk.val as any }))
                               }
                               className="hidden"
                             />
@@ -658,8 +641,7 @@ export default function DaftarPindahanPage() {
                       onChange={(e) =>
                         setFormData((prev) => ({
                           ...prev,
-                          nisn: e.target.value.replace(/\D/g, ""),
-                        }))
+                          nisn: e.target.value.replace(/\D/g, "") }))
                       }
                       placeholder="10 Digit NISN"
                       className="w-full px-5 py-3 md:px-8 md:py-5 rounded-xl md:rounded-xl bg-secondary-50 border border-transparent focus:bg-white focus:border-primary-200 focus:ring-4 focus:ring-secondary-50 transition-all font-bold placeholder:text-ink-500 text-sm md:text-base text-ink-950"
@@ -674,8 +656,7 @@ export default function DaftarPindahanPage() {
                       onChange={(e) =>
                         setFormData((prev) => ({
                           ...prev,
-                          npsn: e.target.value.replace(/\D/g, ""),
-                        }))
+                          npsn: e.target.value.replace(/\D/g, "") }))
                       }
                       placeholder="8 Digit NPSN"
                       className="w-full px-5 py-3 md:px-8 md:py-5 rounded-xl md:rounded-xl bg-secondary-50 border border-transparent focus:bg-white focus:border-primary-200 focus:ring-4 focus:ring-secondary-50 transition-all font-bold placeholder:text-ink-500 text-sm md:text-base text-ink-950"
@@ -690,8 +671,7 @@ export default function DaftarPindahanPage() {
                         onChange={(e) =>
                           setFormData((prev) => ({
                             ...prev,
-                            asal_institusi: e.target.value,
-                          }))
+                            asal_institusi: e.target.value }))
                         }
                         placeholder="Nama Pondok Pesantren atau Sekolah asal"
                         className="w-full px-5 py-3 md:px-8 md:py-5 rounded-xl md:rounded-xl bg-secondary-50 border border-transparent focus:bg-white focus:border-primary-200 focus:ring-4 focus:ring-secondary-50 transition-all font-bold placeholder:text-ink-500 text-sm md:text-base text-ink-950"
@@ -706,8 +686,7 @@ export default function DaftarPindahanPage() {
                         onChange={(e) =>
                           setFormData((prev) => ({
                             ...prev,
-                            catatan_pindahan: e.target.value,
-                          }))
+                            catatan_pindahan: e.target.value }))
                         }
                         rows={3}
                         placeholder="Alasan pindah sekolah, riwayat hafalan Quran, atau catatan penting lainnya..."

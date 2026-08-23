@@ -23,8 +23,7 @@ export const BRANDING = {
     instagram: "https://www.instagram.com/pp_alandalus/",
     youtube: "https://www.youtube.com/andalustv",
     tiktok: "https://www.tiktok.com/@pp.alandalus",
-    address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
-  },
+    address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor" },
   
   // Properties required by PPDB dashboard & layout backward compatibility
   address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
@@ -33,6 +32,5 @@ export const BRANDING = {
   igUrl: "https://www.instagram.com/pp_alandalus/",
   ytUrl: "https://www.youtube.com/andalustv",
   fbUrl: "https://www.facebook.com/pp.alandalus",
-  twitterUrl: "#",
-};
+  twitterUrl: "#" };
 
