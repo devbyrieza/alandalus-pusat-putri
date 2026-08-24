@@ -22,25 +22,25 @@ import { Container } from "@/components/layout/Container";
 
 const GALLERY_ITEMS = [
   {
-    image: "/images/revisi-4.jpg",
-    title: "Kajian Kitab Turots",
-    description: "Mengkaji Kitab Turots & Ulama Salaf",
-    icon: BookOpen },
+    image: "/images/Gerbang_01.JPG",
+    title: "Lingkungan Asri",
+    description: "Kampus khusus putri yang aman dan nyaman",
+    icon: School },
   {
-    image: "/images/revisi-6.jpg",
-    title: "Halaqoh Tahfidz",
-    description: "Setoran Hafalan & Muroja'ah",
-    icon: BookMarked },
-  {
-    image: "/images/revisi-5.jpg",
-    title: "Ekstrakurikuler",
-    description: "Bela Diri, Panahan & Lifeskill",
+    image: "/images/Upacara 17 Agustus_03.JPG",
+    title: "Kedisiplinan & Nasionalisme",
+    description: "Upacara Peringatan HUT Kemerdekaan RI",
     icon: Target },
   {
-    image: "/images/masjid.webp",
-    title: "Masjid Jami'",
-    description: "Pusat Ibadah & Tarbiyah Santri",
-    icon: School },
+    image: "/images/Lab IPA_02.JPG",
+    title: "Laboratorium IPA",
+    description: "Fasilitas praktikum modern & lengkap",
+    icon: BookOpen },
+  {
+    image: "/images/Thobur Shobah_06.JPG",
+    title: "Thobur Shobah",
+    description: "Pembiasaan rutinitas pagi santriwati",
+    icon: Sun },
 ] as const;
 
 const SCHEDULE_ITEMS = [

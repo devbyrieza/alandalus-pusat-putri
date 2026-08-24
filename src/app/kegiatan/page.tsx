@@ -350,7 +350,7 @@ export default function KegiatanPage() {
 
   const kegiatanUtama: KegiatanUtama[] = [
     {
-      image: "/images/revisi-4.jpg",
+      image: "/images/Thobur Shobah_02.JPG",
       title: "Pembelajaran Kitab Turots",
       description:
         "Bukan sekadar hafalan! Santri kami PAHAM isi kitab, mampu berdiskusi ilmiah, dan disiapkan menjadi ilmuwan muda.",
@@ -374,7 +374,7 @@ export default function KegiatanPage() {
           "Prioritas utama kami adalah pendidikan agama. Di sini, kami melihat langsung bagaimana anak dididik menjaga adab dan shalat berjamaah tepat waktu. Investasi akhirat yang luar biasa.",
         parent: "Bapak Surwanto (Wali Santri)" } },
     {
-      image: "/images/revisi-6.jpg",
+      image: "/images/Lab IPA_01.JPG",
       title: "Tahfidz Al-Qur'an Intensif",
       description:
         "Metode menghafal terukur sesuai kemampuan santri dengan target yang jelas setiap jenjang pendidikan.",
@@ -396,7 +396,7 @@ export default function KegiatanPage() {
           "Sinergi kurikulum nasional dan tahfidznya sangat menenangkan. Anak kami tidak hanya mengejar target hafalan, tapi juga PAHAM maknanya melalui bimbingan asatidz yang kompeten.",
         parent: "Ibu Siti Aminah (Wali Santri)" } },
     {
-      image: "/images/revisi-5.jpg",
+      image: "/images/Upacara 17 Agustus_04.JPG",
       title: "Pengembangan Bakat & Prestasi",
       description:
         "Menyiapkan santri multitalenta yang juara di bidang olimpiade, olahraga, hingga public speaking.",

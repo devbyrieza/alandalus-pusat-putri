@@ -278,22 +278,24 @@ export default function StatsSection() {
             transition={{ delay: 0.7, duration: 0.6 }}
             className="pt-4"
           >
-            <div className="divider-editorial mb-5">
-              <span>Jaringan Kemitraan Global</span>
-            </div>
-            <InfiniteMarquee
-              items={[
-                { text: "Universitas Islam Madinah, Arab Saudi" },
-                { text: "Universitas Al-Azhar, Kairo" },
-                { text: "LIPIA Jakarta" },
-                { text: "Universitas Gadjah Mada (UGM)" },
-                { text: "Universitas Jordan, Yordania" },
-                { text: "Universitas Yarmouk, Yordania" },
-                { text: "Universitas Mu'tah, Yordania" },
-                { text: "Universitas Istanbul, Turki" },
-                { text: "LPMQ Kementerian Agama RI" },
-                { text: "Universitas Yalova, Turki" },
-              ]}
+                          <div className="divider-editorial mb-5">
+                <span>Jaringan Kemitraan & Sebaran Alumni</span>
+              </div>
+              <InfiniteMarquee
+                items={[
+                  { text: "Universitas Islam Madinah, Arab Saudi" },
+                  { text: "Universitas Al-Azhar, Mesir" },
+                  { text: "Univ. Putra Malaysia (UPM)" },
+                  { text: "Universitas Indonesia (UI)" },
+                  { text: "Universitas Gadjah Mada (UGM)" },
+                  { text: "Institut Teknologi Bandung (ITB)" },
+                  { text: "IPB University" },
+                  { text: "Universitas Jordan, Yordania" },
+                  { text: "Universitas Yarmouk, Yordania" },
+                  { text: "Universitas Istanbul, Turki" },
+                  { text: "Universitas Yalova, Turki" },
+                  { text: "The Institute of Ibn Uthaimeen, KSA" },
+                ]}
               speed="normal"
               variant="transparent"
               separator="·"

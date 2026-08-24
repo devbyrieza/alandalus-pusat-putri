@@ -302,7 +302,7 @@ export default function HeroSection() {
                 overflow: "hidden" }}
             >
               <Image
-                src="/images/hero.jpg"
+                src="/images/Gerbang_02.JPG"
                 alt={`${BRANDING.schoolName} — Pesantren Al Fath`}
                 width={800}
                 height={600}

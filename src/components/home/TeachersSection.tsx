@@ -11,36 +11,16 @@ import { Container } from "@/components/layout/Container";
 import { motion } from "framer-motion";
 
 const TEACHER_BACKGROUNDS = [
-  {
-    institution: "Muhammad Ibn Saud Islamic University",
-    location: "Pascasarjana, Riyadh, KSA" },
-  {
-    institution: "Univ. Sidi Mohamed ben Abdellah",
-    location: "Pascasarjana, Fes, Maroko" },
-  {
-    institution: "Universitas Al-Azhar",
-    location: "Kairo, Mesir" },
-  {
-    institution: "Rabithah Al-Alam Al-Islami",
-    location: "Makkah Al-Mukarromah" },
-  {
-    institution: "Native Speaker",
-    location: "Timur Tengah" },
-  {
-    institution: "LIPIA Jakarta",
-    location: "Univ. Islam Imam Muhammad bin Saud" },
-  {
-    institution: "Universitas Negeri Yogyakarta",
-    location: "Pascasarjana" },
-  {
-    institution: "STIBA Ar-Raayah",
-    location: "Bogor" },
-  {
-    institution: "Lulusan Pondok Terkemuka",
-    location: "Nasional" },
-  {
-    institution: "Dosen & Praktisi Ahli",
-    location: "Tenaga Ahli" },
+  { institution: "Native Speaker", location: "Timur Tengah" },
+  { institution: "Universitas Islam Madinah", location: "KSA" },
+  { institution: "Universitas Al-Tayyibah", location: "Madinah, KSA" },
+  { institution: "Universitas Al-Azhar", location: "Mesir" },
+  { institution: "Univ. Islam Internasional", location: "Khartoum, Sudan" },
+  { institution: "LIPIA", location: "Jakarta" },
+  { institution: "Pascasarjana", location: "Perguruan Tinggi Dalam Negeri" },
+  { institution: "UGM, UNY, dll", location: "PTN & Swasta" },
+  { institution: "Pesantren Islam", location: "Terkemuka Nasional" },
+  { institution: "Pengajar Al-Qur'an", location: "Bersanad Qira'ah 'Asyrah" },
 ] as const;
 
 const EASE = [0.16, 1, 0.3, 1] as const;

@@ -14,7 +14,7 @@ import {
   Dumbbell,
   Play,
   Palette,
-  Sparkles } from "lucide-react";
+  Sparkles, BookOpen } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { motion } from "framer-motion";
 
@@ -25,23 +25,20 @@ interface ExtraItem {
 }
 
 const EXTRA_ACTIVITIES: ExtraItem[] = [
-  { name: "Karate", icon: Trophy, accent: "pink" },
-  { name: "Pramuka", icon: Shield, accent: "gold" },
-  { name: "Panahan", icon: Target, accent: "pink" },
-  { name: "Futsal", icon: Trophy, accent: "gold" },
-  { name: "Volly", icon: Trophy, accent: "pink" },
-
-  { name: "Komputer", icon: Monitor, accent: "gold" },
-  { name: "Design Grafis", icon: Palette, accent: "pink" },
-  { name: "Kaligrafi", icon: PenTool, accent: "gold" },
-  { name: "Jurnalistik", icon: FileText, accent: "pink" },
-  { name: "Konten Kreator", icon: Play, accent: "gold" },
-
-  { name: "Basket", icon: Dumbbell, accent: "pink" },
-  { name: "Bulutangkis", icon: Zap, accent: "gold" },
-  { name: "Pertanian", icon: TreePine, accent: "gold" },
-  { name: "Periklanan", icon: Waves, accent: "pink" },
-  { name: "Web Programming", icon: Rocket, accent: "gold" },
+  { name: "Tata Boga", icon: Sparkles, accent: "pink" },
+  { name: "Tata Busana", icon: Palette, accent: "gold" },
+  { name: "Modest Glow", icon: Sparkles, accent: "pink" },
+  { name: "Panahan", icon: Target, accent: "gold" },
+  { name: "Taekwondo", icon: Trophy, accent: "pink" },
+  { name: "Basket", icon: Dumbbell, accent: "gold" },
+  { name: "Pramuka", icon: Shield, accent: "pink" },
+  { name: "Fotografi & Kaligrafi", icon: PenTool, accent: "gold" },
+  { name: "Desain Grafis", icon: Palette, accent: "pink" },
+  { name: "Public Speaking", icon: Play, accent: "gold" },
+  { name: "Penulisan Kreatif", icon: FileText, accent: "pink" },
+  { name: "English & Science Club", icon: Monitor, accent: "gold" },
+  { name: "Qiroatul Kutub", icon: BookOpen, accent: "pink" },
+  { name: "Khitobah", icon: Zap, accent: "gold" },
 ] as const;
 
 const EASE = [0.16, 1, 0.3, 1] as const;
