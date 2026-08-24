@@ -51,7 +51,7 @@ const ACTIVITIES: Activity[] = [
     badge: "Spiritual",
     description:
       "Pembiasaan ibadah melalui sholat berjamaah tepat waktu dan halaqah tahfidz Al-Qur'an setiap hari secara konsisten.",
-    image: "/images/tahfidz.webp" },
+    image: "/images/revisi-6.jpg" },
   {
     name: "Ekstrakurikuler Unggulan",
     badge: "15+ Pilihan",

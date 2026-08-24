@@ -374,7 +374,7 @@ export default function KegiatanPage() {
           "Prioritas utama kami adalah pendidikan agama. Di sini, kami melihat langsung bagaimana anak dididik menjaga adab dan shalat berjamaah tepat waktu. Investasi akhirat yang luar biasa.",
         parent: "Bapak Surwanto (Wali Santri)" } },
     {
-      image: "/images/tahfidz.webp",
+      image: "/images/revisi-6.jpg",
       title: "Tahfidz Al-Qur'an Intensif",
       description:
         "Metode menghafal terukur sesuai kemampuan santri dengan target yang jelas setiap jenjang pendidikan.",

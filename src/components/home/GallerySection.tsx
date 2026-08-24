@@ -27,7 +27,7 @@ const GALLERY_ITEMS = [
     description: "Mengkaji Kitab Turots & Ulama Salaf",
     icon: BookOpen },
   {
-    image: "/images/tahfidz.webp",
+    image: "/images/revisi-6.jpg",
     title: "Halaqoh Tahfidz",
     description: "Setoran Hafalan & Muroja'ah",
     icon: BookMarked },

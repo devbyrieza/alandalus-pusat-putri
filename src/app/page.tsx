@@ -759,7 +759,7 @@ export default function Home() {
             {[
               { src: "/images/halaman-dekat-masjid.webp", label: "Area Masjid" },
               { src: "/images/asrama.webp", label: "Asrama Santri" },
-              { src: "/images/tahfidz.webp", label: "Halaqah Tahfizh" },
+              { src: "/images/revisi-6.jpg", label: "Halaqah Tahfizh" },
               { src: "/images/kelas-dari-dalam.webp", label: "Kelas Modern" },
               { src: "/images/lapangan-minisoccer.webp", label: "Lapangan Olahraga" },
               { src: "/images/gedung-utama-dan-lapangan-basket.webp", label: "Gedung Utama" },

@@ -30,7 +30,7 @@ const FEATURES = [
       "Konseling psikologi berkala",
       "Pengembangan kecerdasan emosional"
     ],
-    image: "/images/tahfidz.webp" },
+    image: "/images/revisi-6.jpg" },
   {
     id: "fasilitas",
     title: "Fasilitas Modern & Nyaman",
