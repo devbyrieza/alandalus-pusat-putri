@@ -612,7 +612,7 @@ export default function AdminBeasiswaBlock({
       {current ? (
         <div
           className={`rounded-xl p-4 border ${
-            isKeduanya ? "bg-primary-50 border-primary-200" : hasBeasiswa ? "bg-primary-50 border-emerald-200" : "bg-amber-50 border-amber-200"
+            isKeduanya ? "bg-primary-50 border-primary-200" : hasBeasiswa ? "bg-primary-50 border-pink-200" : "bg-amber-50 border-amber-200"
           }`}
         >
           <div className="flex items-center gap-2 mb-3">

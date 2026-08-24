@@ -321,7 +321,7 @@ export default function DaftarUlangTab() {
             <span
               className={`px-3 py-1.5 rounded-full text-xs font-black border ${
                 isTabLunas
-                  ? "bg-primary-100 text-primary-700 border-emerald-200"
+                  ? "bg-primary-100 text-primary-700 border-pink-200"
                   : totalPaid > 0
                   ? "bg-primary-100 text-primary-700 border-primary-200"
                   : "bg-slate-100 text-slate-700 border-slate-200"
@@ -403,7 +403,7 @@ export default function DaftarUlangTab() {
                   <span
                     className={`text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full border ${
                       p.status_pembayaran === "verified"
-                        ? "bg-primary-100 text-primary-700 border-emerald-200"
+                        ? "bg-primary-100 text-primary-700 border-pink-200"
                         : p.status_pembayaran === "rejected"
                         ? "bg-primary-100 text-primary-700 border-primary-200"
                         : "bg-amber-100 text-amber-700 border-amber-200 animate-pulse"
@@ -584,7 +584,7 @@ export default function DaftarUlangTab() {
       )}
 
       {message && message.type === "success" && (
-        <div className="p-5 bg-primary-50 border border-emerald-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-sm">
+        <div className="p-5 bg-primary-50 border border-pink-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-4 shadow-sm">
           <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
             <MessageCircle className="w-6 h-6 text-primary-600" />
           </div>
@@ -610,7 +610,7 @@ export default function DaftarUlangTab() {
 
       {/* Form Upload — Sembunyikan jika tab sudah LUNAS */}
       {isTabLunas ? (
-        <div className="bg-primary-50 border border-emerald-200 rounded-xl p-8 text-center shadow-sm">
+        <div className="bg-primary-50 border border-pink-200 rounded-xl p-8 text-center shadow-sm">
           <CheckCircle className="w-14 h-14 text-primary-500 mx-auto mb-3" />
           <h3 className="font-black text-primary-900 text-xl mb-2">
             {subTab === "uang_pangkal" ? "Uang Pangkal" : "SPP Bulan Pertama"}{" "}
@@ -794,7 +794,7 @@ export default function DaftarUlangTab() {
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-black border ${
                       tipeBayar === "LUNAS"
-                        ? "bg-primary-100 text-primary-700 border-emerald-200"
+                        ? "bg-primary-100 text-primary-700 border-pink-200"
                         : tipeBayar.includes("50% ATAU LEBIH")
                         ? "bg-primary-100 text-primary-700 border-primary-200"
                         : "bg-secondary-100 text-secondary-700 border-secondary-200"

@@ -1195,7 +1195,7 @@ export default function JadwalPengujiPage() {
                   {filteredAssignments.map((item) => (
                     <div
                       key={item.id}
-                      className={`bg-white rounded-xl p-5 md:p-8 border transition-all app-card ${isToday(item.tanggal_ujian) ? "border-emerald-200 shadow-md ring-4 ring-primary-50" : "border-secondary-200 shadow-sm hover:border-primary-200 hover:shadow-md"}`}
+                      className={`bg-white rounded-xl p-5 md:p-8 border transition-all app-card ${isToday(item.tanggal_ujian) ? "border-pink-200 shadow-md ring-4 ring-primary-50" : "border-secondary-200 shadow-sm hover:border-primary-200 hover:shadow-md"}`}
                     >
                       {/* Top section: Date badge + Name */}
                       <div className="flex items-start gap-5 mb-6">

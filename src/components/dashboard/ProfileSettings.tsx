@@ -338,7 +338,7 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Email Saat Ini
                 {user?.role === "admin_super" && (
-                  <span className="ml-1 text-xs text-emerald-600 font-normal">(dapat diubah)</span>
+                  <span className="ml-1 text-xs text-pink-600 font-normal">(dapat diubah)</span>
                 )}
               </label>
               <input
@@ -362,7 +362,7 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
 
             <div className="pt-2 flex items-center justify-between">
               {profileSuccess && (
-                <p className="text-sm font-bold text-emerald-600 flex items-center gap-1">
+                <p className="text-sm font-bold text-pink-600 flex items-center gap-1">
                   <CheckCircle2 className="w-4 h-4" /> Profil diperbarui!
                 </p>
               )}
@@ -399,13 +399,13 @@ export default function ProfileSettings({ user }: { user: UserSession }) {
         <div className="p-6 md:p-8 bg-gray-50/30">
           {/* Success Alert */}
           {success && (
-            <div className="mb-6 p-4 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-100 flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-emerald-600" />
+            <div className="mb-6 p-4 rounded-xl bg-pink-50 text-pink-800 border border-pink-100 flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5 text-pink-600" />
               <div>
                 <p className="text-sm font-bold">
                   Password Berhasil Diperbarui!
                 </p>
-                <p className="text-xs text-emerald-700/80 mt-0.5">
+                <p className="text-xs text-pink-700/80 mt-0.5">
                   Silakan gunakan password baru Anda saat login berikutnya.
                 </p>
               </div>

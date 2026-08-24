@@ -51,7 +51,7 @@ const ROLE_INFO: Record<
     label: "Admin Keuangan",
     icon: Coins,
     desc: "Verifikasi pembayaran",
-    color: "from-primary-50 to-primary-50 border-emerald-200" },
+    color: "from-primary-50 to-primary-50 border-pink-200" },
   pewawancara_cawalsan: {
     label: "Pewawancara Cawalsan",
     icon: Mic,

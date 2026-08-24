@@ -936,7 +936,7 @@ function InputNilaiContent() {
               <label className="block text-[10px] sm:text-xs font-black text-ink-700 uppercase tracking-widest mb-3 sm:mb-4">Rekomendasi Penguji Al-Qur&apos;an *</label>
               <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
                 {["Diterima", "Cadangan", "Ditolak"].map((opt) => (
-                  <label key={opt} className={`px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl cursor-pointer border-2 transition-all text-xs sm:text-sm font-black text-center ${quranForm.rekomendasi === opt ? (opt === "Diterima" ? "border-primary-500 bg-primary-50 text-primary-700 shadow-sm" : opt === "Cadangan" ? "border-secondary-500 bg-secondary-50 text-secondary-800 shadow-sm" : "border-red-500 bg-red-50 text-red-700 shadow-sm") : "border-primary-50 bg-white hover:border-emerald-200"}`}>
+                  <label key={opt} className={`px-4 sm:px-5 py-3.5 sm:py-4 rounded-xl cursor-pointer border-2 transition-all text-xs sm:text-sm font-black text-center ${quranForm.rekomendasi === opt ? (opt === "Diterima" ? "border-primary-500 bg-primary-50 text-primary-700 shadow-sm" : opt === "Cadangan" ? "border-secondary-500 bg-secondary-50 text-secondary-800 shadow-sm" : "border-red-500 bg-red-50 text-red-700 shadow-sm") : "border-primary-50 bg-white hover:border-pink-200"}`}>
                     <input type="radio" name={`rekom-quran-${p.id}`} value={opt} checked={quranForm.rekomendasi === opt} onChange={() => setQuranForm({ ...quranForm, rekomendasi: opt })} className="hidden" />
                     {opt}
                   </label>
@@ -955,7 +955,7 @@ function InputNilaiContent() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
-              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-100 text-primary-700 rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-emerald-200 transition-all active:scale-95">Batal</button>
+              <button onClick={cancelEditing} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-100 text-primary-700 rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-pink-200 transition-all active:scale-95">Batal</button>
               <button onClick={() => saveForm(p, "quran")} disabled={isInputtedByAdmin || !quranForm.tajwid || !quranForm.kelancaran || !quranForm.rekomendasi || !quranForm.nama_penguji || saving === p.id + "quran"} className="w-full sm:w-auto px-5 md:px-8 py-4 bg-primary-600 text-white rounded-xl sm:rounded-xl font-black uppercase tracking-widest text-[10px] sm:text-xs hover:bg-primary-700 transition-all shadow-lg shadow-primary-900/20 disabled:opacity-50 flex items-center justify-center gap-2 active:scale-95">
                 {saving === p.id + "quran" ? <Loader2 className="w-5 h-5 animate-spin" /> : <Save className="w-5 h-5" />} Simpan
               </button>

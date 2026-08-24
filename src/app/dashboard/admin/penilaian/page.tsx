@@ -721,7 +721,7 @@ export default function ExaminerDashboard() {
               <div className="flex flex-wrap gap-2 w-full lg:w-auto">
                 <Button
                   onClick={handleExportExcel}
-                  className="btn-secondary flex items-center gap-2 bg-emerald-50 text-[#550000] border-emerald-100 hover:bg-emerald-100 rounded-xl font-bold py-2"
+                  className="btn-secondary flex items-center gap-2 bg-pink-50 text-[#550000] border-pink-100 hover:bg-pink-100 rounded-xl font-bold py-2"
                 >
                   <Download className="w-4 h-4" /> Export Excel
                 </Button>
@@ -1521,7 +1521,7 @@ export default function ExaminerDashboard() {
                   </Button>
                 </div>
 
-                <div className="p-6 bg-emerald-50/30 rounded-xl border border-emerald-100/50 hover:bg-emerald-50 transition-colors">
+                <div className="p-6 bg-pink-50/30 rounded-xl border border-pink-100/50 hover:bg-pink-50 transition-colors">
                   <h4 className="font-black text-[#550000] mb-2">
                     Kirim Paksa Antrean (Flush)
                   </h4>
@@ -1532,7 +1532,7 @@ export default function ExaminerDashboard() {
                   <Button
                     onClick={handleFlushQueue}
                     disabled={isProcessingQueue || !queueStats?.pending}
-                    className="w-full bg-[#550000] hover:bg-[#550000] text-white rounded-xl py-6 font-black text-base shadow-lg shadow-emerald-600/20 disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
+                    className="w-full bg-[#550000] hover:bg-[#550000] text-white rounded-xl py-6 font-black text-base shadow-lg shadow-pink-600/20 disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
                   >
                     {isProcessingQueue
                       ? `Mengirim (${flushProgress}%)...`

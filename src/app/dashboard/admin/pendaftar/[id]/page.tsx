@@ -1551,7 +1551,7 @@ export default function PendaftarDetailPage() {
                     )}
                   </div>
                   {pendaftar.nilai_ujian?.catatan_quran && (
-                    <div className="mt-2 text-xs text-stone-600 line-clamp-2 italic border-t border-emerald-200/50 pt-2">
+                    <div className="mt-2 text-xs text-stone-600 line-clamp-2 italic border-t border-pink-200/50 pt-2">
                       &ldquo;{pendaftar.nilai_ujian.catatan_quran}&rdquo;
                     </div>
                   )}
@@ -1932,7 +1932,7 @@ export default function PendaftarDetailPage() {
                                 jumlahMotor: data.jumlahMotor || 0 });
                               setIsWdModalOpen(true);
                             }}
-                            className="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-emerald-200 text-primary-700 hover:bg-primary-50 rounded-xl text-xs font-black transition-colors"
+                            className="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-pink-200 text-primary-700 hover:bg-primary-50 rounded-xl text-xs font-black transition-colors"
                           >
                             <Edit className="w-3.5 h-3.5" />
                             Edit
@@ -1976,7 +1976,7 @@ export default function PendaftarDetailPage() {
                         <span
                           className={`px-3 py-1 rounded-xl text-[10px] font-black uppercase tracking-widest ${
                             payment.status_pembayaran === "verified"
-                              ? "bg-primary-100 text-primary-700 border border-emerald-200"
+                              ? "bg-primary-100 text-primary-700 border border-pink-200"
                               : payment.status_pembayaran === "rejected"
                                 ? "bg-primary-100 text-primary-700 border border-primary-200"
                                 : "bg-gold-100 text-gold-700 border border-gold-200"
@@ -2279,7 +2279,7 @@ export default function PendaftarDetailPage() {
                         className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
                           pendaftar.orang_tua.status_ayah === "Sudah Meninggal"
                             ? "bg-red-100 text-red-600 border border-red-200"
-                            : "bg-primary-100 text-primary-600 border border-emerald-200"
+                            : "bg-primary-100 text-primary-600 border border-pink-200"
                         }`}
                       >
                         {pendaftar.orang_tua.status_ayah}
@@ -2345,7 +2345,7 @@ export default function PendaftarDetailPage() {
                         className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider ${
                           pendaftar.orang_tua.status_ibu === "Sudah Meninggal"
                             ? "bg-red-100 text-red-600 border border-red-200"
-                            : "bg-primary-100 text-primary-600 border border-emerald-200"
+                            : "bg-primary-100 text-primary-600 border border-pink-200"
                         }`}
                       >
                         {pendaftar.orang_tua.status_ibu}
