@@ -760,7 +760,7 @@ export default function Home() {
               { src: "/images/DJI_0038.JPG", label: "Area Masjid" },
               { src: "/images/Gedung_05.JPG", label: "Asrama Santri" },
               { src: "/images/Lab IPA_01.JPG", label: "Halaqah Tahfizh" },
-              { src: "/images/Lab IPA_01.JPG", label: "Kelas Modern" },
+              { src: "/images/Gedung_06.JPG", label: "Kelas Modern" },
               { src: "/images/Upacara 17 Agustus_04.JPG", label: "Lapangan Olahraga" },
               { src: "/images/Gerbang_01.JPG", label: "Gedung Utama" },
             ].map((photo, i) => (
