@@ -334,7 +334,7 @@ export default function WelcomeDayPage() {
           href="/documents/Surat Pemberitahuan Kedatangan Santri Baru 2027/2028.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 bg-white hover:bg-primary-50 rounded-xl p-4 border border-ink-100 hover:border-pink-200 transition-all shadow-sm group"
+          className="flex items-center gap-3 bg-white hover:bg-primary-50 rounded-xl p-4 border border-ink-100 hover:border-emerald-200 transition-all shadow-sm group"
         >
           <div className="w-10 h-10 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
             <Download className="w-5 h-5" />
@@ -420,7 +420,7 @@ export default function WelcomeDayPage() {
 
           {/* Status badge jika sudah submit */}
           {!isEditing && (
-            <div className="ml-auto hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 text-xs font-black px-4 py-2 rounded-xl border border-pink-200/50 shadow-sm">
+            <div className="ml-auto hidden sm:flex items-center gap-2 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 text-xs font-black px-4 py-2 rounded-xl border border-emerald-200/50 shadow-sm">
               <CheckCircle2 className="w-4 h-4" />
               Sudah Dikonfirmasi
             </div>
@@ -455,7 +455,7 @@ export default function WelcomeDayPage() {
                         : "bg-white border-ink-200 hover:border-primary-300 hover:shadow-md hover:bg-primary-50/30"
                     }`}
                   >
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${formData.statusKehadiran === "HADIR" ? "bg-white/20" : "bg-primary-100 group-hover:bg-pink-200"}`}>
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${formData.statusKehadiran === "HADIR" ? "bg-white/20" : "bg-primary-100 group-hover:bg-emerald-200"}`}>
                       <CheckCircle2 className={`w-6 h-6 ${formData.statusKehadiran === "HADIR" ? "text-white" : "text-primary-600"}`} />
                     </div>
                     <div>

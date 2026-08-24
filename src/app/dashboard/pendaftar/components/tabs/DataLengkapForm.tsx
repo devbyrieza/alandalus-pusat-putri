@@ -906,7 +906,7 @@ export default function DataLengkapForm({
 
       {/* Info Box */}
       {isEditMode ? (
-        <div className="bg-primary-50 border border-pink-200 rounded-xl p-5 shadow-sm">
+        <div className="bg-primary-50 border border-emerald-200 rounded-xl p-5 shadow-sm">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center shrink-0">
               <CheckCircle className="w-6 h-6 text-primary-600" />

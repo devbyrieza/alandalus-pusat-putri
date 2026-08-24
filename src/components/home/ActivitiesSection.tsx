@@ -45,7 +45,7 @@ const ACTIVITIES: Activity[] = [
     badge: "Akademik & Syar'i",
     description:
       "Metode pembelajaran interaktif yang memadukan keunggulan akademik umum dengan pendalaman bahasa Arab dan ilmu syar'i secara komprehensif.",
-    image: "/images/pembelajaran-kitab-turotz.webp" },
+    image: "/images/revisi-4.jpg" },
   {
     name: "Kegiatan Rutin Harian",
     badge: "Spiritual",
@@ -57,7 +57,7 @@ const ACTIVITIES: Activity[] = [
     badge: "15+ Pilihan",
     description:
       "Tersedia 15+ pilihan kegiatan mulai dari beladiri hingga Desain Grafis untuk mengasah minat dan bakat santri.",
-    image: "/images/extra-karate.webp" },
+    image: "/images/revisi-5.jpg" },
   {
     name: "Kemandirian, Skill & Leadership",
     badge: "Life Skills",

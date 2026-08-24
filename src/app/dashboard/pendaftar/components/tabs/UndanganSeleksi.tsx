@@ -362,7 +362,7 @@ export default function UndanganSeleksiTab() {
 
           {/* Card Daftar Ulang */}
           {data.current_status === "enrolled" ? (
-            <div className="bg-primary-50 rounded-xl border-2 border-pink-200 p-6 shadow-sm">
+            <div className="bg-primary-50 rounded-xl border-2 border-emerald-200 p-6 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center">
                   <CheckCircle className="w-6 h-6 text-primary-600" />
@@ -488,7 +488,7 @@ export default function UndanganSeleksiTab() {
                 key={key}
                 className={`bg-white rounded-xl border-2 p-5 transition-all ${
                   item.completed
-                    ? "border-pink-200 bg-primary-50/50"
+                    ? "border-emerald-200 bg-primary-50/50"
                     : "border-stone-100 hover:border-primary-200 hover:shadow-md"
                 }`}
               >
@@ -557,7 +557,7 @@ export default function UndanganSeleksiTab() {
         {/* Condition: Already booked schedules */}
         {data.grupB.booked.length > 0 && (
           <div className="space-y-3">
-              <div className="bg-primary-50 border border-pink-200 p-4 rounded-xl flex items-center gap-3">
+              <div className="bg-primary-50 border border-emerald-200 p-4 rounded-xl flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-primary-600 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-primary-900 text-sm">

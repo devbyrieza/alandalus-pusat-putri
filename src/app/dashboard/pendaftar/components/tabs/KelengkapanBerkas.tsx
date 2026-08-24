@@ -212,7 +212,7 @@ function DokumenCard({
         isDragging
           ? "border-primary-600 bg-primary-50/50 scale-[1.02]"
           : dokumen.status === "verified"
-            ? "border-pink-200"
+            ? "border-emerald-200"
             : dokumen.status === "rejected"
               ? "border-red-200"
               : dokumen.status === "uploaded"
@@ -331,7 +331,7 @@ function DokumenCard({
               )}
 
               {dokumen.status === "verified" && dokumen.verified_at && (
-                <div className="mt-3 p-3 bg-primary-50 border border-pink-200 rounded-xl">
+                <div className="mt-3 p-3 bg-primary-50 border border-emerald-200 rounded-xl">
                   <p className="text-sm text-primary-700 font-medium">
                     ✓ Diverifikasi pada{" "}
                     {new Date(dokumen.verified_at).toLocaleDateString("id-ID", {
@@ -1218,7 +1218,7 @@ export default function KelengkapanBerkasTab() {
                   </div>
                 </div>
               ) : (
-                <div className="p-4 bg-primary-50 border border-pink-200 rounded-xl flex gap-3">
+                <div className="p-4 bg-primary-50 border border-emerald-200 rounded-xl flex gap-3">
                   <CheckCircle className="w-5 h-5 text-primary-600 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-sm font-bold text-primary-800">

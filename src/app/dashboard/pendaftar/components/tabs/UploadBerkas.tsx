@@ -272,7 +272,7 @@ function DokumenCard({
         isDragging
           ? "border-primary-600 bg-primary-50 shadow-lg scale-[1.02] ring-4 ring-primary-600/10"
           : dokumen.status === "verified"
-            ? "border-pink-200 bg-primary-50/50"
+            ? "border-emerald-200 bg-primary-50/50"
             : dokumen.status === "rejected"
               ? "border-red-200 bg-red-50/50"
               : dokumen.status === "uploaded"
@@ -1194,7 +1194,7 @@ export default function UploadBerkasTab() {
                   </span>
                 </div>
 
-                <div className="mt-4 p-4 bg-primary-50 border border-pink-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-3 text-left">
+                <div className="mt-4 p-4 bg-primary-50 border border-emerald-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-3 text-left">
                   <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center shrink-0 mt-0.5">
                     <MessageCircle className="w-5 h-5 text-primary-600" />
                   </div>

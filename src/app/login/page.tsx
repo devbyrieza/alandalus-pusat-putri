@@ -51,7 +51,7 @@ const ROLE_INFO: Record<
     label: "Admin Keuangan",
     icon: Coins,
     desc: "Verifikasi pembayaran",
-    color: "from-primary-50 to-primary-50 border-pink-200" },
+    color: "from-primary-50 to-primary-50 border-emerald-200" },
   pewawancara_cawalsan: {
     label: "Pewawancara Cawalsan",
     icon: Mic,
@@ -61,7 +61,7 @@ const ROLE_INFO: Record<
     label: "Pewawancara Calon Santri",
     icon: Mic,
     desc: "Wawancara calon santri",
-    color: "from-primary-50 to-pink-50 border-primary-200" },
+    color: "from-primary-50 to-emerald-50 border-primary-200" },
   penguji: {
     label: "Penguji Al-Qur'an",
     icon: BookOpen,
@@ -76,7 +76,7 @@ const ROLE_INFO: Record<
     label: "Penguji Lisan B. Arab",
     icon: Languages,
     desc: "Penguji tes Lisan Bahasa Arab",
-    color: "from-primary-50 to-blue-50 border-pink-200" },
+    color: "from-primary-50 to-blue-50 border-emerald-200" },
   admin: {
     label: "Admin",
     icon: Settings,

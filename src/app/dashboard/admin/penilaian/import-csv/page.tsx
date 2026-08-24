@@ -70,7 +70,7 @@ export default function ImportCsvPage() {
         </div>
 
         {file && (
-          <div className="flex items-center justify-center gap-2 text-pink-600 font-medium bg-pink-50 py-3 rounded-xl border border-pink-100">
+          <div className="flex items-center justify-center gap-2 text-emerald-600 font-medium bg-emerald-50 py-3 rounded-xl border border-emerald-100">
             <CheckCircle className="w-5 h-5" />
             File terpilih: {file.name}
           </div>

@@ -301,7 +301,7 @@ export default function AuditSeleksiPage() {
           <Button
             onClick={() => handleBatchPublish("accepted")}
             disabled={selectedIds.length === 0 || isPublishing}
-            className="flex-1 lg:flex-none bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-pink-200 transition-all active:scale-95"
+            className="flex-1 lg:flex-none bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-black text-[11px] px-6 py-2.5 shadow-lg shadow-emerald-200 transition-all active:scale-95"
           >
             DITERIMA ({selectedIds.length})
           </Button>
@@ -456,7 +456,7 @@ export default function AuditSeleksiPage() {
                         {(() => {
                           const s = c.status_pendaftaran || "";
                           const labels: any = {
-                            accepted: { l: "DITERIMA", c: "text-primary-700 bg-primary-100 border-pink-200" },
+                            accepted: { l: "DITERIMA", c: "text-primary-700 bg-primary-100 border-emerald-200" },
                             announced: { l: "PUBLISHED", c: "text-primary-700 bg-primary-100 border-primary-200" },
                             rejected: { l: "DITOLAK", c: "text-primary-700 bg-primary-100 border-primary-200" },
                             cadangan: { l: "CADANGAN", c: "text-secondary-700 bg-secondary-100 border-secondary-200" },

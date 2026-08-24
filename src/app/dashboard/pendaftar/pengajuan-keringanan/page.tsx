@@ -202,7 +202,7 @@ export default function PengajuanKeringananPage() {
               <span
                 className={`px-3 py-1 rounded-full text-xs font-black border ${
                   pengajuan.status === "approved"
-                    ? "bg-primary-100 text-primary-700 border-pink-200"
+                    ? "bg-primary-100 text-primary-700 border-emerald-200"
                     : pengajuan.status === "rejected"
                     ? "bg-primary-100 text-primary-700 border-primary-200"
                     : "bg-amber-100 text-amber-700 border-amber-200"

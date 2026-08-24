@@ -183,7 +183,7 @@ export function formatStatusDisplay(status: StatusProses) {
     tested: { label: "Proses Seleksi", color: "bg-violet-100 text-violet-700" },
     announced: { label: "Hasil Pengumuman", color: "bg-cyan-100 text-cyan-700" },
     accepted: { label: "Diterima", color: "bg-green-100 text-green-700" },
-    enrolled: { label: "Proses Daftar Ulang", color: "bg-pink-100 text-pink-700" },
+    enrolled: { label: "Proses Daftar Ulang", color: "bg-emerald-100 text-emerald-700" },
     enrolled_full: { label: "Lunas Daftar Ulang", color: "bg-primary-100 text-primary-700" },
     pindah_keluar: { label: "Pindah Keluar", color: "bg-slate-100 text-slate-600" } };
   return statusMap[status] || { label: status, color: "bg-stone-100 text-stone-700" };

@@ -21,7 +21,7 @@ BERIKUT ADALAH INFORMASI TENTANG Pesantren Islam Internasional Al-Andalus Putri:
 - Lokasi: Jl. Transyogi KM 60, Cariu, Kec. Cariu, Kab. Bogor 16840.
 - Dikelola oleh Al Andalus International Islamic Boarding School (IIBS) sejak Januari 2026.
 - Santri wajib asrama (boarding school).
-- Nomor WhatsApp CS: +62 851-1152-4441
+- Nomor WhatsApp CS: +62 851-7527-5085
 
 6 KEUNGGULAN PENGASUHAN:
 1. Berupaya maksimal menghidupkan fitrah santri, diiringi adab Islami dalam setiap interaksi.

@@ -251,7 +251,7 @@ export async function GET(request: NextRequest) {
     <div class="header">
       <h1>Pesantren Islam Internasional Al-Andalus Putri</h1>
       <p>Jl. Transyogi KM 60, Cariu, Kec. Cariu, Kab. Bogor 16840</p>
-      <p>Telp: +62 851-1152-4441 | Email: info@pesantren-alandalus.com</p>
+      <p>Telp: +62 851-7527-5085 | Email: info@pesantren-alandalus.com</p>
     </div>
 
     <div class="kwitansi-title">

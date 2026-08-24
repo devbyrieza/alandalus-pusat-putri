@@ -87,7 +87,7 @@ type ActiveTab = "pendaftaran" | "uang-pangkal" | "spp";
 
 function StatusBadge({ status, color }: { status: string; color: string }) {
   const colorMap: Record<string, string> = {
-    green: "bg-primary-100 text-primary-700 border-pink-200",
+    green: "bg-primary-100 text-primary-700 border-emerald-200",
     orange: "bg-secondary-100 text-secondary-700 border-secondary-200",
     red: "bg-red-100 text-red-600 border-red-200",
     gray: "bg-slate-100 text-slate-500 border-slate-200" };
@@ -767,7 +767,7 @@ export default function KeuanganPage() {
                                 <span
                                   className={`px-2 py-1 rounded-md text-xs font-bold border ${
                                     tipeCicilan === "LUNAS"
-                                      ? "bg-primary-100 text-primary-700 border-pink-200"
+                                      ? "bg-primary-100 text-primary-700 border-emerald-200"
                                       : tipeCicilan === "BELUM_BAYAR"
                                         ? "bg-red-50 text-red-600 border-red-100"
                                         : "bg-primary-50 text-primary-600 border-primary-100"

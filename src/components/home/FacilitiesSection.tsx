@@ -78,7 +78,7 @@ const iconClasses: Record<string, string> = {
   orange: "bg-orange-50 text-orange-600 ring-orange-100",
   indigo: "bg-indigo-50 text-indigo-600 ring-indigo-100",
   amber: "bg-secondary-50 text-secondary-600 ring-secondary-100",
-  pink: "bg-primary-50 text-primary-600 ring-primary-100",
+  emerald: "bg-primary-50 text-primary-600 ring-primary-100",
   cyan: "bg-cyan-50 text-cyan-600 ring-cyan-100",
   ink: "bg-secondary-50 text-ink-600 ring-secondary-200" };
 

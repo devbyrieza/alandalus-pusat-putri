@@ -77,7 +77,7 @@ export default function PengujiDashboardPage() {
       title: "Selesai",
       value: stats.selesai_dinilai,
       icon: CheckCircle,
-      accent: "pink",
+      accent: "emerald",
       bgColor: "bg-primary-50",
       iconColor: "text-primary-600" },
     {

@@ -112,7 +112,7 @@ export default function Navbar() {
             />
           </div>
           <div>
-            <div className="font-extrabold text-white text-base leading-tight tracking-tight group-hover:text-pink-300 transition-colors">
+            <div className="font-extrabold text-white text-base leading-tight tracking-tight group-hover:text-emerald-300 transition-colors">
               Al-Andalus Putri
             </div>
             <div className="text-[11px] font-bold text-amber-300 tracking-wide drop-shadow-sm">
@@ -135,7 +135,7 @@ export default function Navbar() {
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? "bg-pink-600 text-white font-bold shadow-md shadow-primary-500/20"
+                    ? "bg-emerald-600 text-white font-bold shadow-md shadow-primary-500/20"
                     : "text-slate-300 hover:text-white hover:bg-primary-800/80"
                 }`}
               >
@@ -155,7 +155,7 @@ export default function Navbar() {
             className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-primary-900/90 hover:bg-primary-800 border border-primary-700 text-xs font-semibold text-slate-300 hover:text-white transition-all shadow-sm"
             title="Kunjungi Website Utama Pesantren Al-Andalus"
           >
-            <Globe className="w-3.5 h-3.5 text-pink-300" />
+            <Globe className="w-3.5 h-3.5 text-emerald-300" />
             <span>Web Utama</span>
             <ExternalLink className="w-3 h-3 text-slate-500" />
           </a>
@@ -165,7 +165,7 @@ export default function Navbar() {
             <a
               href="/dashboard"
               onClick={(e) => handleNavClick(e, "/dashboard")}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold text-sm shadow-lg shadow-pink-600/30 transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all"
             >
               <UserCheck className="w-4 h-4" />
               <span>Dashboard</span>
@@ -182,7 +182,7 @@ export default function Navbar() {
               <a
                 href="/ppdb"
                 onClick={(e) => handleNavClick(e, "/ppdb")}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold text-sm shadow-lg shadow-pink-600/30 transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition-all"
               >
                 <span>Daftar PPDB</span>
                 <ArrowRight className="w-4 h-4" />
@@ -224,7 +224,7 @@ export default function Navbar() {
                 href="https://pesantren-alandalus.com"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-between px-4 py-3 rounded-xl text-pink-300 font-medium bg-primary-950/40 border border-primary-800/40"
+                className="flex items-center justify-between px-4 py-3 rounded-xl text-emerald-300 font-medium bg-primary-950/40 border border-primary-800/40"
               >
                 <span className="flex items-center gap-2">
                   <Globe className="w-4 h-4" />
@@ -238,7 +238,7 @@ export default function Navbar() {
               <a
                 href="/ppdb"
                 onClick={(e) => handleNavClick(e, "/ppdb", () => setIsMenuOpen(false))}
-                className="w-full text-center py-3 rounded-xl bg-pink-600 text-white font-bold text-sm shadow-lg"
+                className="w-full text-center py-3 rounded-xl bg-emerald-600 text-white font-bold text-sm shadow-lg"
               >
                 Daftar PPDB Online Sekarang
               </a>

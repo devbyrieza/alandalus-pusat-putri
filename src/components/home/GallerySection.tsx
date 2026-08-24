@@ -22,7 +22,7 @@ import { Container } from "@/components/layout/Container";
 
 const GALLERY_ITEMS = [
   {
-    image: "/images/pembelajaran-kitab-turotz.webp",
+    image: "/images/revisi-4.jpg",
     title: "Kajian Kitab Turots",
     description: "Mengkaji Kitab Turots & Ulama Salaf",
     icon: BookOpen },
@@ -32,7 +32,7 @@ const GALLERY_ITEMS = [
     description: "Setoran Hafalan & Muroja'ah",
     icon: BookMarked },
   {
-    image: "/images/extra-karate.webp",
+    image: "/images/revisi-5.jpg",
     title: "Ekstrakurikuler",
     description: "Bela Diri, Panahan & Lifeskill",
     icon: Target },

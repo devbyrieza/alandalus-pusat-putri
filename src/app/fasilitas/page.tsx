@@ -127,7 +127,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
 
     const encodedText = encodeURIComponent(message);
     // alandalus-pusat-putri CS number
-    const waNumber = "6285111524441"; 
+    const waNumber = "6285175275085"; 
     
     window.open(`https://wa.me/${waNumber}?text=${encodedText}`, '_blank');
     setFormStatus('success');

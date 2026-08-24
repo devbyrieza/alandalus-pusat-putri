@@ -509,8 +509,8 @@ export default function BankSoalPanitiaPage() {
                   <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2.5">
                     <p className="font-extrabold text-sm text-slate-900">{item.title}</p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">
-                      <div className="bg-pink-50 text-pink-950 p-3 rounded-xl border border-pink-200 leading-relaxed">
-                        <strong className="block text-pink-800 font-black mb-0.5">Skor 5 (Sangat Baik):</strong> {item.s5}
+                      <div className="bg-emerald-50 text-emerald-950 p-3 rounded-xl border border-emerald-200 leading-relaxed">
+                        <strong className="block text-emerald-800 font-black mb-0.5">Skor 5 (Sangat Baik):</strong> {item.s5}
                       </div>
                       <div className="bg-[#ddc192]/20 text-[#550000] p-3 rounded-xl border border-[#ddc192] leading-relaxed">
                         <strong className="block text-[#550000] font-black mb-0.5">Skor 3 (Cukup):</strong> {item.s3}
@@ -562,8 +562,8 @@ export default function BankSoalPanitiaPage() {
                 <div key={q.id} className="p-4 md:p-5 space-y-2.5 hover:bg-slate-50 transition-colors">
                   <p className="font-bold text-slate-900 text-sm leading-snug">{q.text}</p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">
-                    <div className="p-3 bg-pink-50 text-pink-950 rounded-xl border border-pink-200 leading-relaxed">
-                      <strong className="text-pink-800 font-black">Opsi A:</strong> {q.a}
+                    <div className="p-3 bg-emerald-50 text-emerald-950 rounded-xl border border-emerald-200 leading-relaxed">
+                      <strong className="text-emerald-800 font-black">Opsi A:</strong> {q.a}
                     </div>
                     <div className="p-3 bg-[#ddc192]/20 text-[#550000] rounded-xl border border-[#ddc192] leading-relaxed">
                       <strong className="text-[#550000] font-black">Opsi B:</strong> {q.b}
@@ -688,8 +688,8 @@ export default function BankSoalPanitiaPage() {
                 <ShieldCheck className="w-4 h-4 text-[#550000]" /> Kriteria Keputusan Sistem:
               </h4>
               <div className="space-y-2 text-xs md:text-sm font-medium">
-                <div className="p-3 bg-pink-50 text-pink-950 rounded-xl border border-pink-200 space-y-1">
-                  <strong className="block text-pink-800 font-black">DITERIMA:</strong>
+                <div className="p-3 bg-emerald-50 text-emerald-950 rounded-xl border border-emerald-200 space-y-1">
+                  <strong className="block text-emerald-800 font-black">DITERIMA:</strong>
                   <span>Jika Nilai Akhir &ge; 75 dan Rekomendasi Al-Qur'an Status A/B.</span>
                 </div>
                 <div className="p-3 bg-[#ddc192]/20 text-[#550000] rounded-xl border border-[#ddc192] space-y-1">

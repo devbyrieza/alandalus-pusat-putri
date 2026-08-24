@@ -18,7 +18,7 @@ const FEATURES = [
       "Matematika & Sains modern",
       "Program bahasa Arab & Inggris aktif"
     ],
-    image: "/images/pembelajaran-kitab-turotz.webp" },
+    image: "/images/revisi-4.jpg" },
   {
     id: "pengasuhan",
     title: "Pengasuhan Berbasis Keteladanan",
