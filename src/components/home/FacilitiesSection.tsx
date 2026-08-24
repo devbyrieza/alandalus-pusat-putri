@@ -36,13 +36,13 @@ const FACILITIES = [
 
 const FACILITY_IMAGES = [
   {
-    src: "/images/Masjid Bawah_01.HEIC",
+    src: "/images/DJI_0038.JPG",
     label: "Masjid Jami'",
     sub: "Kapasitas >1.500 Jamaah",
     span: "col-span-2 row-span-2",
     priority: true },
   {
-    src: "/images/Gedung_01.HEIC",
+    src: "/images/Gedung_05.JPG",
     label: "Gedung Utama",
     sub: "Representatif & Nyaman",
     span: "col-span-1 row-span-1",
@@ -60,7 +60,7 @@ const FACILITY_IMAGES = [
     span: "col-span-1 row-span-1",
     priority: false },
   {
-    src: "/images/Matham_01.HEIC",
+    src: "/images/restorasi.jpg",
     label: "Ruang Makan",
     sub: "Bersih & Kondusif",
     span: "col-span-1 row-span-1",

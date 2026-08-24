@@ -211,7 +211,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
               <div className="space-y-6 pt-12">
                 <div className="aspect-[4/5] max-h-[500px] w-full rounded-[3rem] overflow-hidden shadow-lg relative group border border-primary-100 bg-gradient-to-br from-primary-950 to-primary-900">
                   <Image
-                    src="/images/masjid.webp"
+                    src="/images/DJI_0038.JPG"
                     alt="Masjid"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -226,7 +226,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 </div>
                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-lg relative group border border-primary-100 bg-gradient-to-br from-primary-950 to-primary-900">
                   <Image
-                    src="/images/lapangan-minisoccer.webp"
+                    src="/images/Upacara 17 Agustus_04.JPG"
                     alt="Lapangan"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -243,7 +243,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
               <div className="space-y-6">
                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-lg relative group border border-primary-100 bg-gradient-to-br from-primary-950 to-primary-900">
                   <Image
-                    src="/images/asrama.webp"
+                    src="/images/Gedung_05.JPG"
                     alt="Asrama"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -258,7 +258,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 </div>
                 <div className="aspect-[4/5] max-h-[500px] w-full rounded-[3rem] overflow-hidden shadow-lg relative group border border-primary-100 bg-gradient-to-br from-primary-950 to-primary-900">
                   <Image
-                    src="/images/kelas-dari-dalam.webp"
+                    src="/images/Lab IPA_01.JPG"
                     alt="Kelas"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
@@ -387,7 +387,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 <div className="aspect-square rounded-[3rem] sm:rounded-[4rem] bg-white p-3 sm:p-6 sm:p-8 shadow-lg relative rotate-2 hover:rotate-0 transition-transform duration-700 border border-primary-100">
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
-                      src="/images/masjid.webp"
+                      src="/images/DJI_0038.JPG"
                       alt="Masjid Jami' Al Imam"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"
@@ -408,7 +408,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 <div className="aspect-square rounded-[3rem] sm:rounded-[4rem] bg-white p-3 sm:p-6 sm:p-8 shadow-lg relative -rotate-2 hover:rotate-0 transition-transform duration-700 border border-primary-100">
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
-                      src="/images/kelas-dari-dalam.webp"
+                      src="/images/Lab IPA_01.JPG"
                       alt="Ruang Kelas Modern"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"
@@ -539,7 +539,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 <div className="aspect-square rounded-[3rem] sm:rounded-[4rem] bg-white p-3 sm:p-6 sm:p-8 shadow-lg relative rotate-2 hover:rotate-0 transition-transform duration-700 border border-primary-100">
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
-                      src="/images/asrama.webp"
+                      src="/images/Gedung_05.JPG"
                       alt="Asrama Santri"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"
@@ -560,7 +560,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 <div className="aspect-square rounded-[3rem] sm:rounded-[4rem] bg-white p-3 sm:p-6 sm:p-8 shadow-lg relative -rotate-2 hover:rotate-0 transition-transform duration-700 border border-primary-100">
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
-                      src="/images/lapangan-minisoccer.webp"
+                      src="/images/Upacara 17 Agustus_04.JPG"
                       alt="Lapangan Minisoccer"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"
@@ -691,7 +691,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 <div className="aspect-square rounded-[3rem] sm:rounded-[4rem] bg-white p-3 sm:p-6 sm:p-8 shadow-lg relative rotate-2 hover:rotate-0 transition-transform duration-700 border border-primary-100">
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
-                      src="/images/gedung-utama-dan-lapangan-basket.webp"
+                      src="/images/Gerbang_01.JPG"
                       alt="Lapangan Basket"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"
@@ -712,7 +712,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 <div className="aspect-square rounded-[3rem] sm:rounded-[4rem] bg-white p-3 sm:p-6 sm:p-8 shadow-lg relative -rotate-2 hover:rotate-0 transition-transform duration-700 border border-primary-100">
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
-                      src="/images/depot-galon-gratis.webp"
+                      src="/images/restorasi.jpg"
                       alt="Depot Galon Gratis"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"
@@ -843,7 +843,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                 <div className="aspect-square rounded-[3rem] sm:rounded-[4rem] bg-white p-3 sm:p-6 sm:p-8 shadow-lg relative rotate-2 hover:rotate-0 transition-transform duration-700 border border-primary-100">
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
-                      src="/images/kantor-ppdb-tamu.webp"
+                      src="/images/Gedung_06.JPG"
                       alt="Kantor PPDB Al Imam"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"

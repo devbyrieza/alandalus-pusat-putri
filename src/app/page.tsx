@@ -757,11 +757,11 @@ export default function Home() {
           </header>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { src: "/images/halaman-dekat-masjid.webp", label: "Area Masjid" },
-              { src: "/images/asrama.webp", label: "Asrama Santri" },
+              { src: "/images/DJI_0038.JPG", label: "Area Masjid" },
+              { src: "/images/Gedung_05.JPG", label: "Asrama Santri" },
               { src: "/images/Lab IPA_01.JPG", label: "Halaqah Tahfizh" },
-              { src: "/images/kelas-dari-dalam.webp", label: "Kelas Modern" },
-              { src: "/images/lapangan-minisoccer.webp", label: "Lapangan Olahraga" },
+              { src: "/images/Lab IPA_01.JPG", label: "Kelas Modern" },
+              { src: "/images/Upacara 17 Agustus_04.JPG", label: "Lapangan Olahraga" },
               { src: "/images/Gerbang_01.JPG", label: "Gedung Utama" },
             ].map((photo, i) => (
               <div key={i} className="relative group overflow-hidden rounded-xl aspect-video">
