@@ -43,7 +43,7 @@ const PROGRAMS = [
       "Kurikulum Nasional Lengkap",
     ],
     image: "/images/mts.webp",
-    theme: "maroon",
+    theme: "pink",
     accent: "text-primary-600",
     bg: "bg-primary-50" },
   {
@@ -155,7 +155,7 @@ export default function ProgramPage() {
                 className={`px-8 py-3 rounded-pill font-black text-sm transition-all border shadow-md
                                 ${
                                   activeSection === program.id
-                                    ? program.theme === "maroon"
+                                    ? program.theme === "pink"
                                       ? "bg-primary-700 text-white border-primary-700"
                                       : "bg-gold-500 text-white border-gold-500"
                                     : "bg-white text-ink-500 border-primary-100 hover:border-primary-300 hover:text-primary-700"
@@ -214,7 +214,7 @@ export default function ProgramPage() {
                   {/* Decorative Blob */}
                   <div
                     className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full blur-[120px] -z-10 opacity-30
-                                        ${program.theme === "maroon" ? "bg-primary-100" : "bg-secondary-200"}
+                                        ${program.theme === "pink" ? "bg-primary-100" : "bg-secondary-200"}
                                     `}
                   />
                 </motion.div>
@@ -244,7 +244,7 @@ export default function ProgramPage() {
                       >
                         <div
                           className={`w-10 h-10 rounded-xl mx-auto mb-3 flex items-center justify-center transition-transform group-hover:scale-110 border border-primary-100
-                                                    ${program.theme === "maroon" ? "bg-primary-50 text-primary-600" : "bg-secondary-100 text-gold-700"}
+                                                    ${program.theme === "pink" ? "bg-primary-50 text-primary-600" : "bg-secondary-100 text-gold-700"}
                                                 `}
                         >
                           <stat.icon className="w-5 h-5" />
@@ -274,7 +274,7 @@ export default function ProgramPage() {
 
                     <h3 className="text-2xl font-black text-ink-950 mb-8 flex items-center gap-3">
                       <div
-                        className={`w-3 h-10 rounded-full ${program.theme === "maroon" ? "bg-primary-600" : "bg-gold-500"}`}
+                        className={`w-3 h-10 rounded-full ${program.theme === "pink" ? "bg-primary-600" : "bg-gold-500"}`}
                       />
                       Kurikulum & Fokus
                     </h3>
@@ -287,7 +287,7 @@ export default function ProgramPage() {
                         >
                           <div
                             className={`w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 shadow-md
-                                                        ${program.theme === "maroon" ? "bg-primary-600 text-white" : "bg-gold-500 text-white"}
+                                                        ${program.theme === "pink" ? "bg-primary-600 text-white" : "bg-gold-500 text-white"}
                                                     `}
                           >
                             <CheckCircle2 className="w-4 h-4" />
@@ -308,7 +308,7 @@ export default function ProgramPage() {
                     <Link href={`/daftar?program=${program.id}`}>
                       <button
                         className={`w-full sm:w-auto px-14 py-5 rounded-pill font-black text-white text-lg shadow-lg transition-all hover:-translate-y-1
-                                                ${program.theme === "maroon" ? "bg-primary-700 hover:bg-primary-800" : "bg-gold-600 hover:bg-gold-700"}
+                                                ${program.theme === "pink" ? "bg-primary-700 hover:bg-primary-800" : "bg-gold-600 hover:bg-gold-700"}
                                             `}
                       >
                         Daftarkan Sekarang

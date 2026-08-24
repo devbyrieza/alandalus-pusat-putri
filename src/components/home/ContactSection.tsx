@@ -11,13 +11,13 @@ const CONTACT_INFO = [
     title: "Lokasi Pesantren",
     content: "Jl. Pelabuhan II KM 18",
     detail: "Kampung Cariu, Cariu, Bogor",
-    accent: "maroon" as const },
+    accent: "pink" as const },
   {
     icon: Phone,
     title: "Layanan Telepon",
     content: "+62 851-7527-5085",
     detail: "Senin-Sabtu (08.00 - 16.00)",
-    accent: "maroon" as const },
+    accent: "pink" as const },
   {
     icon: Mail,
     title: "Email Resmi",
@@ -80,7 +80,7 @@ export default function ContactSection() {
                 >
                   <div
                     className={`w-11 h-11 rounded-[12px] flex items-center justify-center mb-4 transition-transform shadow-xs group-hover:scale-105 duration-400 shrink-0 ${
-                      item.accent === "maroon"
+                      item.accent === "pink"
                         ? "bg-primary-50 text-primary-600"
                         : "bg-gold-50 text-gold-700"
                     }`}

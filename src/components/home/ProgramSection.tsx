@@ -14,7 +14,7 @@ import { motion, Variants } from "framer-motion";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-type ProgramVariant = "maroon" | "gold" | "cream";
+type ProgramVariant = "pink" | "gold" | "cream";
 
 interface ProgramItem {
   title: string;
@@ -40,7 +40,7 @@ const PROGRAMS: ProgramItem[] = [
     ],
     quotaLabel: "Putra 25 · Putri Belum Dibuka",
     icon: School,
-    variant: "maroon" },
+    variant: "pink" },
   {
     title: "I'dad Lughowi (IL)",
     subtitle: "Persiapan + Menengah Atas · Total 4 Tahun",
@@ -80,7 +80,7 @@ const featureVariants: Variants = {
 
 function getTokens(variant: ProgramVariant) {
   switch (variant) {
-    case "maroon":
+    case "pink":
       return {
         accentBar:
           "bg-gradient-to-r from-primary-700 via-primary-500 to-primary-300",

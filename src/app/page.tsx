@@ -102,7 +102,7 @@ function StatCard({
   }, [started, delay]);
   const count = useCountUp(value, 2000, active);
   const primaryColor = IS_PUTRA ? "text-primary-400" : "text-primary-400";
-  const primaryBg = IS_PUTRA ? "bg-primary-500/10" : "bg-emerald-500/10";
+  const primaryBg = IS_PUTRA ? "bg-primary-500/10" : "bg-pink-500/10";
   return (
     <div className="text-center group">
       <div className={`w-14 h-14 rounded-xl ${primaryBg} flex items-center justify-center mx-auto mb-4`}>
@@ -143,7 +143,7 @@ function InfiniteMarquee() {
   const primaryBorder = IS_PUTRA ? "border-primary-800/60" : "border-primary-800/60";
   const primaryBg = IS_PUTRA ? "bg-primary-950/60" : "bg-primary-950/60";
   const primaryText = IS_PUTRA ? "text-primary-300" : "text-primary-300";
-  const iconColor = IS_PUTRA ? "text-primary-500" : "text-emerald-500";
+  const iconColor = IS_PUTRA ? "text-primary-500" : "text-pink-500";
 
   return (
     <div className="relative overflow-hidden py-4" aria-hidden="true">

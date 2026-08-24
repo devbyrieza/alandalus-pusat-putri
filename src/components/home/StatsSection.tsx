@@ -15,7 +15,7 @@ import { BRANDING } from "@/config/branding";
 import InfiniteMarquee from "@/components/ui/InfiniteMarquee";
 
 // ─── Types ───────────────────────────────────────────
-type StatColor = "maroon" | "cream";
+type StatColor = "pink" | "cream";
 
 interface Stat {
   id: string;
@@ -35,7 +35,7 @@ const STATS: Stat[] = [
     label: "Angkatan Pertama",
     value: 1,
     icon: Calendar,
-    color: "maroon",
+    color: "pink",
     suffix: "",
     sublabel: "Tahun Ajaran 2027/2028",
     description: "Momen bersejarah pembukaan" },
@@ -53,7 +53,7 @@ const STATS: Stat[] = [
     label: "Jenjang Pendidikan",
     value: 2,
     icon: GraduationCap,
-    color: "maroon",
+    color: "pink",
     suffix: "",
     sublabel: "MTs · IL",
     description: "Pendidikan menengah lengkap" },
@@ -109,7 +109,7 @@ function StatCard({
   trigger: boolean;
 }) {
   const Icon = stat.icon;
-  const isMaroon = stat.color === "maroon";
+  const isMaroon = stat.color === "pink";
   const isCream = stat.color === "cream";
 
   return (
@@ -258,7 +258,7 @@ export default function StatsSection() {
             </div>
 
             {/* Badge 2 — Akreditasi */}
-            <div className="section-label section-label-maroon border-secondary-200 text-ink-700 bg-secondary-50/50 hover:bg-secondary-100/50 cursor-default">
+            <div className="section-label section-label-pink border-secondary-200 text-ink-700 bg-secondary-50/50 hover:bg-secondary-100/50 cursor-default">
               <ShieldCheck className="w-3 h-3 shrink-0 text-primary-600" strokeWidth={2} />
               <span>Terakreditasi B — BAN-PDM</span>
             </div>

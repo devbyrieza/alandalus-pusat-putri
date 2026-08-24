@@ -109,7 +109,7 @@ const STATUS_CONFIG: Record<
     label: "Pembayaran Terverifikasi",
     color: "text-primary-700",
     bgColor: "bg-primary-50",
-    borderColor: "border-emerald-200",
+    borderColor: "border-pink-200",
     icon: CheckCircle,
     description: "Alhamdulillah! Pembayaran Anda telah terverifikasi" },
   rejected: {
@@ -868,7 +868,7 @@ export default function PembayaranPendaftaranTab({
             </div>
             <PaymentTimeline paymentStatus={data.status} />
             {isPaymentPending && (
-              <div className="mt-8 p-5 bg-primary-50 border border-emerald-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-4">
+              <div className="mt-8 p-5 bg-primary-50 border border-pink-200 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-4">
                 <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center shrink-0">
                   <MessageCircle className="w-6 h-6 text-primary-600" />
                 </div>
@@ -1187,7 +1187,7 @@ export default function PembayaranPendaftaranTab({
 
           {/* Success View (hanya di halaman Pembayaran) */}
           {!isStatusOnly && isPaymentCompleted && (
-            <div className="bg-primary-50 border border-emerald-200 rounded-[2rem] p-5 md:p-8 text-center">
+            <div className="bg-primary-50 border border-pink-200 rounded-[2rem] p-5 md:p-8 text-center">
               <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-in zoom-in duration-300">
                 <CheckCircle className="w-10 h-10 text-primary-600" />
               </div>

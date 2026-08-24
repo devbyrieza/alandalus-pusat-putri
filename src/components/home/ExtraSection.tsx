@@ -21,26 +21,26 @@ import { motion } from "framer-motion";
 interface ExtraItem {
   name: string;
   icon: any;
-  accent: "maroon" | "gold" | "cream";
+  accent: "pink" | "gold" | "cream";
 }
 
 const EXTRA_ACTIVITIES: ExtraItem[] = [
-  { name: "Karate", icon: Trophy, accent: "maroon" },
+  { name: "Karate", icon: Trophy, accent: "pink" },
   { name: "Pramuka", icon: Shield, accent: "gold" },
-  { name: "Panahan", icon: Target, accent: "maroon" },
+  { name: "Panahan", icon: Target, accent: "pink" },
   { name: "Futsal", icon: Trophy, accent: "gold" },
-  { name: "Volly", icon: Trophy, accent: "maroon" },
+  { name: "Volly", icon: Trophy, accent: "pink" },
 
   { name: "Komputer", icon: Monitor, accent: "gold" },
-  { name: "Design Grafis", icon: Palette, accent: "maroon" },
+  { name: "Design Grafis", icon: Palette, accent: "pink" },
   { name: "Kaligrafi", icon: PenTool, accent: "gold" },
-  { name: "Jurnalistik", icon: FileText, accent: "maroon" },
+  { name: "Jurnalistik", icon: FileText, accent: "pink" },
   { name: "Konten Kreator", icon: Play, accent: "gold" },
 
-  { name: "Basket", icon: Dumbbell, accent: "maroon" },
+  { name: "Basket", icon: Dumbbell, accent: "pink" },
   { name: "Bulutangkis", icon: Zap, accent: "gold" },
   { name: "Pertanian", icon: TreePine, accent: "gold" },
-  { name: "Periklanan", icon: Waves, accent: "maroon" },
+  { name: "Periklanan", icon: Waves, accent: "pink" },
   { name: "Web Programming", icon: Rocket, accent: "gold" },
 ] as const;
 
@@ -111,7 +111,7 @@ export default function ExtraSection() {
 
               <div
                 className={`w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 shadow-xs group-hover:scale-105 transition-transform duration-400 relative z-10 ${
-                  item.accent === "maroon"
+                  item.accent === "pink"
                     ? "bg-primary-50 text-primary-600"
                     : item.accent === "gold"
                       ? "bg-gold-50 text-gold-700"

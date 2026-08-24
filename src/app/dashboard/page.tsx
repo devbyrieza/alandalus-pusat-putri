@@ -75,7 +75,7 @@ const STATUS_LABELS: Record<
       "Tinggal satu langkah lagi! Silakan lakukan pembayaran untuk melanjutkan." },
   payment_verification: {
     label: "Verifikasi Pembayaran",
-    color: "maroon",
+    color: "pink",
     bg: "bg-primary-50",
     border: "border-primary-200",
     text: "text-primary-700",
@@ -84,23 +84,23 @@ const STATUS_LABELS: Record<
       "Pembayaran Anda sedang kami verifikasi. Harap menunggu dengan sabar ya!" },
   data_lengkap: {
     label: "Data Lengkap",
-    color: "emerald",
+    color: "pink",
     bg: "bg-primary-50",
-    border: "border-emerald-200",
+    border: "border-pink-200",
     text: "text-primary-700",
     icon: CheckCircle,
     message: "Luar biasa! Semua data sudah lengkap. Menunggu verifikasi admin." },
   verified: {
     label: "Terverifikasi",
-    color: "emerald",
+    color: "pink",
     bg: "bg-primary-50",
-    border: "border-emerald-200",
+    border: "border-pink-200",
     text: "text-primary-700",
     icon: CheckCircle,
     message: "Alhamdulillah! Pendaftaran Anda telah diverifikasi." },
   tes_tertulis: {
     label: "Tes Tertulis",
-    color: "maroon",
+    color: "pink",
     bg: "bg-primary-50",
     border: "border-primary-200",
     text: "text-primary-700",
@@ -108,9 +108,9 @@ const STATUS_LABELS: Record<
     message: "Persiapkan diri untuk tes tertulis. Semangat!" },
   lulus_tes_tertulis: {
     label: "Lulus Tes Tertulis",
-    color: "emerald",
+    color: "pink",
     bg: "bg-primary-50",
-    border: "border-emerald-200",
+    border: "border-pink-200",
     text: "text-primary-700",
     icon: CheckCircle,
     message: "Selamat! Anda lulus tes tertulis. Lanjutkan ke tahap berikutnya!" },
@@ -125,7 +125,7 @@ const STATUS_LABELS: Record<
       "Jangan berkecil hati. Tetap semangat untuk kesempatan berikutnya!" },
   scheduled: {
     label: "Dijadwalkan Ujian",
-    color: "maroon",
+    color: "pink",
     bg: "bg-primary-50",
     border: "border-primary-200",
     text: "text-primary-700",
@@ -133,17 +133,17 @@ const STATUS_LABELS: Record<
     message: "Ujian Anda telah dijadwalkan. Cek detail jadwal ya!" },
   tested: {
     label: "Selesai Ujian",
-    color: "emerald",
+    color: "pink",
     bg: "bg-primary-50",
-    border: "border-emerald-200",
+    border: "border-pink-200",
     text: "text-primary-700",
     icon: CheckCircle,
     message: "Ujian selesai! Menunggu hasil pengumuman. Do'akan yang terbaik!" },
   accepted: {
     label: "Diterima",
-    color: "emerald",
+    color: "pink",
     bg: "bg-primary-50",
-    border: "border-emerald-200",
+    border: "border-pink-200",
     text: "text-primary-700",
     icon: Trophy,
     message:
@@ -315,7 +315,7 @@ export default function DashboardPage() {
 
   const statusInfo = STATUS_LABELS[pendaftar.status_pendaftaran] || {
     label: pendaftar.status_pendaftaran,
-    color: "maroon",
+    color: "pink",
     bg: "bg-primary-50",
     border: "border-primary-200",
     text: "text-primary-700",
@@ -464,7 +464,7 @@ export default function DashboardPage() {
                   title="Biaya Pendaftaran"
                   description="Selesaikan pembayaran administrasi sebesar Rp 200.000 untuk mengaktifkan formulir."
                   step="01"
-                  color="maroon"
+                  color="pink"
                   disabled={false}
                   delay={0.5}
                 />
@@ -474,7 +474,7 @@ export default function DashboardPage() {
                   title="Lengkapi Biodata"
                   description="Isi formulir lengkap mulai dari data diri, keluarga, hingga riwayat kesehatan santri."
                   step="02"
-                  color="maroon"
+                  color="pink"
                   disabled={
                     !hasReachedStatus(pendaftar.status_pendaftaran, "verified")
                   }
@@ -486,7 +486,7 @@ export default function DashboardPage() {
                   title="Upload Dokumen"
                   description="Unggah dokumen persyaratan (Akte, KK, KTP) untuk diverifikasi oleh tim panitia."
                   step="03"
-                  color="maroon"
+                  color="pink"
                   disabled={
                     !hasReachedStatus(
                       pendaftar.status_pendaftaran,
@@ -501,7 +501,7 @@ export default function DashboardPage() {
                   title="Jadwal Seleksi"
                   description="Lihat jadwal seleksi Al-Qur'an dan wawancara setelah berkasmu dinyatakan lengkap."
                   step="04"
-                  color="maroon"
+                  color="pink"
                   disabled={
                     !hasReachedStatus(
                       pendaftar.status_pendaftaran,
@@ -516,7 +516,7 @@ export default function DashboardPage() {
                   title="Hasil Kelulusan"
                   description="Pengumuman hasil akhir seleksi penerimaan santri baru T.A 2027/2028."
                   step="05"
-                  color="maroon"
+                  color="pink"
                   disabled={
                     !hasReachedStatus(pendaftar.status_pendaftaran, "tested")
                   }
@@ -528,7 +528,7 @@ export default function DashboardPage() {
                     title="Daftar Ulang"
                     description="Konfirmasi kedatangan dan penyelesaian administrasi bagi santri yang dinyatakan lulus."
                     step="06"
-                    color="maroon"
+                    color="pink"
                     disabled={
                       !hasReachedStatus(pendaftar.status_pendaftaran, "accepted")
                     }
@@ -540,7 +540,7 @@ export default function DashboardPage() {
                     title="Pengajuan Keringanan"
                     description="Ajukan Beasiswa atau Keringanan (khusus Uang Pangkal) bagi yang memenuhi syarat."
                     step="07"
-                    color="maroon"
+                    color="pink"
                     disabled={
                       !hasReachedStatus(pendaftar.status_pendaftaran, "accepted")
                     }

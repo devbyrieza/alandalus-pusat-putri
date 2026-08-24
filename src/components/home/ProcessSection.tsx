@@ -20,7 +20,7 @@ const STEPS = [
     title: "Buat Akun",
     description:
       "Daftarkan data diri awal dan buat akun pendaftaran santri baru.",
-    accent: "maroon" as const },
+    accent: "pink" as const },
   {
     icon: CreditCard,
     title: "Pembayaran",
@@ -32,7 +32,7 @@ const STEPS = [
     title: "Lengkapi Berkas",
     description:
       "Isi form biodata lengkap dan unggah dokumen persyaratan digital.",
-    accent: "maroon" as const },
+    accent: "pink" as const },
   {
     icon: ClipboardCheck,
     title: "Seleksi",
@@ -43,7 +43,7 @@ const STEPS = [
     icon: BellRing,
     title: "Pengumuman",
     description: "Lihat hasil kelulusan seleksi melalui dashboard & WhatsApp.",
-    accent: "maroon" as const },
+    accent: "pink" as const },
   {
     icon: GraduationCap,
     title: "Daftar Ulang",
@@ -55,7 +55,7 @@ const STEPS = [
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const ACCENT_MAP = {
-  maroon: {
+  pink: {
     icon: "bg-primary-50 text-primary-600 border-primary-100 group-hover:bg-primary-100 group-hover:border-primary-200",
     badge: "bg-primary-600 text-white",
     title: "group-hover:text-primary-700" },

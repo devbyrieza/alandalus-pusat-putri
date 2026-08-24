@@ -83,7 +83,7 @@ export default function KontakPage() {
               href={BRANDING.igUrl}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-3 px-6 py-3 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold border border-emerald-200 transition-colors"
+              className="flex items-center gap-3 px-6 py-3 rounded-xl bg-pink-50 hover:bg-pink-100 text-pink-700 font-semibold border border-pink-200 transition-colors"
             >
               <Instagram className="w-5 h-5" />
               <span>Instagram</span>

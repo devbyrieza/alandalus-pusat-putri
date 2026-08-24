@@ -9,7 +9,7 @@ export const BRANDING = {
   schoolLegalName: "Pesantren Islam Internasional Al-Andalus",
   schoolTagline: "Kaderisasi Umat Rabbani, Cendekia, dan Mandiri",
   schoolNetwork: "Perpaduan Kurikulum Nasional dan Khas Andalus",
-  primaryColor: "#10b981",
+  primaryColor: "#ec4899",
   secondaryColor: "#fde68a",
   logoPath: "/images/logo-putri.png",
   faviconPath: "/favicon.ico",

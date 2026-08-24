@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    BUTTON — Al-Andalus Putri Edition
    Token-aligned dengan globals.css alimam:
-   · Warna   : maroon, cream, gold, ink
+   · Warna   : pink, cream, gold, ink
    · Shadow  : --shadow-primary, --shadow-primary-lg, --shadow-gold, --shadow-secondary
    · Radius  : --radius-full (pill), --radius-md, --radius-lg
    · Easing  : --ease-spring, --ease-smooth
@@ -23,7 +23,7 @@ const buttonVariants = cva(
     "transition-all",
     "duration-[var(--duration-base)]",
     "[transition-timing-function:var(--ease-spring)]",
-    /* Focus ring — branded maroon */
+    /* Focus ring — branded pink */
     "focus-visible:outline-none",
     "focus-visible:ring-2",
     "focus-visible:ring-[var(--color-primary-600)]",
@@ -53,7 +53,7 @@ const buttonVariants = cva(
           "active:translate-y-0",
         ].join(" "),
 
-        /* ─── SECONDARY — Putih + border maroon ─── */
+        /* ─── SECONDARY — Putih + border pink ─── */
         secondary: [
           "bg-[var(--color-white)]",
           "text-[var(--color-primary-800)]",
@@ -97,7 +97,7 @@ const buttonVariants = cva(
           "active:translate-y-0",
         ].join(" "),
 
-        /* ─── OUTLINE — Border maroon, fill on hover ─── */
+        /* ─── OUTLINE — Border pink, fill on hover ─── */
         outline: [
           "bg-transparent",
           "text-[var(--color-primary-700)]",

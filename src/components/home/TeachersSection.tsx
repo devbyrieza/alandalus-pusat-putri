@@ -91,7 +91,7 @@ export default function TeachersSection() {
                   icon: Globe,
                   label: "Lulusan Luar Negeri",
                   sub: "Timur Tengah, Mesir & Maroko",
-                  accent: "maroon" },
+                  accent: "pink" },
                 {
                   icon: Users,
                   label: "Native Speakers",
@@ -106,7 +106,7 @@ export default function TeachersSection() {
                   icon: Award,
                   label: "Dosen & Pakar",
                   sub: "Tenaga Pendidik Profesional",
-                  accent: "maroon" },
+                  accent: "pink" },
               ].map((feature, i) => (
                 <div
                   key={i}
@@ -114,7 +114,7 @@ export default function TeachersSection() {
                 >
                   <div
                     className={`w-11 h-11 rounded-[12px] flex items-center justify-center shrink-0 shadow-xs transition-transform duration-400 group-hover:scale-105 ${
-                      feature.accent === "maroon"
+                      feature.accent === "pink"
                         ? "bg-primary-50 text-primary-600"
                         : feature.accent === "gold"
                           ? "bg-gold-50 text-gold-700 border border-gold-100"

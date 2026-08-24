@@ -134,7 +134,7 @@ export default function GaleriPage() {
             className="text-4xl md:text-2xl sm:text-3xl lg:text-5xl font-extrabold tracking-tight text-white"
           >
             Galeri Pesantren & Fasilitas <br />
-            <span className="bg-gradient-to-r from-primary-400 to-emerald-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary-400 to-pink-300 bg-clip-text text-transparent">
               {BRANDING.schoolName}
             </span>
           </motion.h1>
@@ -221,7 +221,7 @@ export default function GaleriPage() {
         </motion.div>
 
         {/* CTA BOTTOM SECTION */}
-        <div className="mt-20 p-8 rounded-xl bg-gradient-to-r from-primary-950/60 via-slate-900 to-emerald-950/60 border border-primary-500/30 text-center space-y-6">
+        <div className="mt-20 p-8 rounded-xl bg-gradient-to-r from-primary-950/60 via-slate-900 to-pink-950/60 border border-primary-500/30 text-center space-y-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white">
             Ingin Kunjungan Langsung ke Pesantren Putri?
           </h2>

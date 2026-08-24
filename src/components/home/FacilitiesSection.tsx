@@ -22,18 +22,18 @@ import { Container } from "@/components/layout/Container";
 import { motion, type Variants, type Transition } from "framer-motion";
 
 const FACILITIES = [
-  { name: "Masjid Kapasitas 1000 Jamaah", icon: Home, color: "maroon" },
+  { name: "Masjid Kapasitas 1000 Jamaah", icon: Home, color: "pink" },
   { name: "Gedung Sekolah Terpadu", icon: School, color: "cream" },
   { name: "Asrama Representatif", icon: Building2, color: "ink" },
   { name: "Fasilitas Olahraga", icon: Dumbbell, color: "gold" },
-  { name: "Laboratorium IPA", icon: Beaker, color: "maroon" },
+  { name: "Laboratorium IPA", icon: Beaker, color: "pink" },
   { name: "UKS (Unit Kesehatan Santri)", icon: HeartPulse, color: "red" },
   { name: "Mini Market", icon: ShoppingCart, color: "orange" },
   { name: "Lab. Komputer", icon: Monitor, color: "indigo" },
   { name: "Ruang Makan Bersama", icon: UtensilsCrossed, color: "amber" },
   { name: "Perpustakaan Digital", icon: Library, color: "gold" },
   { name: "Area Kemandirian", icon: Waves, color: "cream" },
-  { name: "Kantin Sehat", icon: Coffee, color: "maroon" },
+  { name: "Kantin Sehat", icon: Coffee, color: "pink" },
 ] as const;
 
 const FACILITY_IMAGES = [
@@ -71,14 +71,14 @@ const FACILITY_IMAGES = [
 
 /* ── Icon colour mapping ── */
 const iconClasses: Record<string, string> = {
-  maroon: "bg-primary-50 text-primary-700 ring-primary-100",
+  pink: "bg-primary-50 text-primary-700 ring-primary-100",
   cream: "bg-secondary-100 text-primary-800 ring-secondary-200",
   gold: "bg-gold-50 text-gold-700 ring-gold-200",
   red: "bg-red-50 text-red-600 ring-red-100",
   orange: "bg-orange-50 text-orange-600 ring-orange-100",
   indigo: "bg-indigo-50 text-indigo-600 ring-indigo-100",
   amber: "bg-secondary-50 text-secondary-600 ring-secondary-100",
-  emerald: "bg-primary-50 text-primary-600 ring-primary-100",
+  pink: "bg-primary-50 text-primary-600 ring-primary-100",
   cyan: "bg-cyan-50 text-cyan-600 ring-cyan-100",
   ink: "bg-secondary-50 text-ink-600 ring-secondary-200" };
 

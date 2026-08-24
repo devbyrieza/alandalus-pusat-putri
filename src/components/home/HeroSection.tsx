@@ -127,11 +127,11 @@ export default function HeroSection() {
                   Kaderisasi Ummat
                 </span>
                 <span className="block mt-1 text-[var(--color-primary-700)]">
-                  <span className="gradient-text-maroon">
+                  <span className="gradient-text-pink">
                     Hanif, Kontributif,
                   </span>
                   <br className="hidden sm:block" />
-                  <span className="gradient-text-maroon">
+                  <span className="gradient-text-pink">
                     dan Adaptif
                   </span>
                 </span>

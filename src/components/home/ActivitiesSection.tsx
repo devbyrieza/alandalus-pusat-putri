@@ -23,7 +23,7 @@ import { Container } from "@/components/layout/Container";
 import { motion } from "framer-motion";
 
 // ─── Types ───────────────────────────────────────────
-type ActivityColor = "maroon" | "cream" | "gold";
+type ActivityColor = "pink" | "cream" | "gold";
 
 interface Activity {
   name: string;
@@ -67,20 +67,20 @@ const ACTIVITIES: Activity[] = [
 ];
 
 const EXTRA_ACTIVITIES: ExtraActivity[] = [
-  { name: "Karate", icon: Trophy, color: "maroon" },
+  { name: "Karate", icon: Trophy, color: "pink" },
   { name: "Pramuka", icon: Shield, color: "cream" },
-  { name: "Panahan", icon: Target, color: "maroon" },
+  { name: "Panahan", icon: Target, color: "pink" },
   { name: "Futsal", icon: Trophy, color: "gold" },
-  { name: "Volly", icon: Trophy, color: "maroon" },
+  { name: "Volly", icon: Trophy, color: "pink" },
   { name: "Komputer", icon: Monitor, color: "cream" },
-  { name: "Design Grafis", icon: Palette, color: "maroon" },
+  { name: "Design Grafis", icon: Palette, color: "pink" },
   { name: "Kaligrafi", icon: PenTool, color: "gold" },
-  { name: "Jurnalistik", icon: FileText, color: "maroon" },
+  { name: "Jurnalistik", icon: FileText, color: "pink" },
   { name: "Konten Kreator", icon: Play, color: "cream" },
-  { name: "Basket", icon: Dumbbell, color: "maroon" },
+  { name: "Basket", icon: Dumbbell, color: "pink" },
   { name: "Bulutangkis", icon: Zap, color: "gold" },
   { name: "Pertanian", icon: TreePine, color: "cream" },
-  { name: "Periklanan", icon: Waves, color: "maroon" },
+  { name: "Periklanan", icon: Waves, color: "pink" },
   { name: "Coding & AI", icon: Sparkles, color: "gold" },
 ];
 
@@ -147,7 +147,7 @@ function ActivityCard({
 function ExtraChip({ item, index }: { item: ExtraActivity; index: number }) {
   const Icon = item.icon;
   const colorMap = {
-    maroon:
+    pink:
       "bg-primary-50 text-primary-600 group-hover:bg-primary-100 ring-primary-200",
     cream:
       "bg-secondary-100 text-primary-700 group-hover:bg-secondary-200 ring-secondary-300",
