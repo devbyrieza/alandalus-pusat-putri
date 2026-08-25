@@ -24,7 +24,7 @@ const GALLERY_ITEMS = [
   {
     image: "/images/Gerbang_01.JPG",
     title: "Lingkungan Asri",
-    description: "Kampus khusus putri yang aman dan nyaman",
+    description: "Pesantren khusus putri yang aman dan nyaman",
     icon: School },
   {
     image: "/images/Upacara 17 Agustus_03.JPG",

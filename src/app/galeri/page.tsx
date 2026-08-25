@@ -36,7 +36,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "1",
     src: "/images/DJI_0046.JPG",
-    title: "Panorama Kompleks Kampus Putri (Foto Drone)",
+    title: "Panorama Kompleks Pesantren Putri (Foto Drone)",
     category: "gedung",
     categoryLabel: "Gedung & Kompleks",
     description: "Pemandangan lanskap udara kawasan terpadu dan lingkungan hijau asri Al-Andalus Putri."
@@ -44,7 +44,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "2",
     src: "/images/Gerbang_01.JPG",
-    title: "Gerbang Utama Kampus Putri",
+    title: "Gerbang Utama Pesantren Putri",
     category: "gedung",
     categoryLabel: "Gedung & Kompleks",
     description: "Akses gerbang masuk utama dengan arsitektur gerbang megah khas Al-Andalus."
@@ -54,7 +54,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "3",
     src: "/images/DJI_0039.JPG",
-    title: "Lapangan Olahraga Kampus Putri",
+    title: "Lapangan Olahraga Pesantren Putri",
     category: "lapangan",
     categoryLabel: "Lapangan Olahraga",
     description: "Sarana lapangan serbaguna untuk olahraga, upacara, dan kegiatan kebugaran santriwati."
@@ -187,7 +187,7 @@ export default function GaleriPage() {
             transition={{ delay: 0.2 }}
             className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-medium"
           >
-            Koleksi dokumentasi visual resmi kawasan kampus, masjid, asrama, sarana olahraga, laboratorium sains, dan aktivitas santriwati.
+            Koleksi dokumentasi visual resmi kawasan pesantren, masjid, asrama, sarana olahraga, laboratorium sains, dan aktivitas santriwati.
           </motion.p>
         </div>
 

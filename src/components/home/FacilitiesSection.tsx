@@ -22,7 +22,7 @@ import { Container } from "@/components/layout/Container";
 import { motion, type Variants, type Transition } from "framer-motion";
 
 const FACILITIES = [
-  { name: "Kampus Putra Putri Terpisah", icon: Building2, color: "pink" },
+  { name: "Pesantren Putra & Putri Terpisah", icon: Building2, color: "pink" },
   { name: "Masjid Kapasitas 1.500 Jamaah", icon: Home, color: "cream" },
   { name: "Gedung Sekolah & Asrama", icon: School, color: "ink" },
   { name: "Perpustakaan & Lab Komputer", icon: Monitor, color: "gold" },
