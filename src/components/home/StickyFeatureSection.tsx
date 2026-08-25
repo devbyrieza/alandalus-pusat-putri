@@ -38,7 +38,7 @@ const FEATURES = [
     icon: Star,
     points: [
       "Ruang kelas ber-AC & Multimedia",
-      "Masjid jami' yang luas & nyaman",
+      "Masjid area putri yang luas & nyaman",
       "Asrama bersih standar hotel",
       "Area olahraga lengkap"
     ],
@@ -143,4 +143,5 @@ export default function StickyFeatureSection() {
     </section>
   );
 }
+
 

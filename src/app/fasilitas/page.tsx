@@ -219,7 +219,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                   <div className="absolute bottom-5 left-5 z-10">
                     <div className="bg-white/95  px-4 py-1.5 rounded-xl shadow-lg border border-white/40 transition-transform duration-300 group-hover:translate-y-[-4px]">
                       <span className="text-ink-950 font-black text-sm md:text-[15px] tracking-tight">
-                        Masjid Jami' Al Imam
+                        Masjid Khusus Putri
                       </span>
                     </div>
                   </div>
@@ -339,7 +339,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                   </div>
 
                   <h3 className="text-3xl sm:text-2xl md:text-4xl lg:text-3xl font-black text-primary-950 mb-6 leading-[1.1]">
-                    Masjid Jami' <br className="hidden sm:block" /> Al Imam
+                    Masjid Khusus <br className="hidden sm:block" /> Putri
                   </h3>
                   <p className="text-base sm:text-lg lg:text-xl text-primary-950/70 mb-8 sm:mb-10 leading-relaxed font-medium">
                     Pusat peribadatan santri yang mampu menampung 1000 jamaah.
@@ -388,7 +388,7 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
                   <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3.2rem] overflow-hidden">
                     <Image
                       src="/images/DJI_0038.JPG"
-                      alt="Masjid Jami' Al Imam"
+                      alt="Masjid Khusus Putri"
                       fill
                       className="object-cover transition-transform duration-700 hover:scale-110"
                     />
@@ -1236,3 +1236,4 @@ Mohon konfirmasi kesediaan waktu kunjungan tersebut. Terima kasih.`;
     </main>
   );
 }
+

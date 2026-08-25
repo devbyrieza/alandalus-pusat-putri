@@ -31,7 +31,7 @@ export default function BentoGridSection() {
               <div className="w-12 h-12 bg-white/20  rounded-xl flex items-center justify-center mb-4 text-white">
                 <BookOpen className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Masjid Jami' Pusat Hafalan</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Masjid Khusus Area Putri</h3>
               <p className="text-white/80 max-w-md">Pusat kegiatan ibadah dan halaqah tahfidz Al-Qur'an dengan suasana yang tenang dan kondusif.</p>
             </div>
           </motion.div>
@@ -99,3 +99,4 @@ export default function BentoGridSection() {
     </section>
   );
 }
+

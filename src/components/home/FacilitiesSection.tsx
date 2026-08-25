@@ -37,7 +37,7 @@ const FACILITIES = [
 const FACILITY_IMAGES = [
   {
     src: "/images/DJI_0038.JPG",
-    label: "Masjid Jami'",
+    label: "Masjid Putri",
     sub: "Kapasitas >1.500 Jamaah",
     span: "col-span-2 row-span-2",
     priority: true },
@@ -272,4 +272,5 @@ export default function FacilitiesSection() {
     </section>
   );
 }
+
 
