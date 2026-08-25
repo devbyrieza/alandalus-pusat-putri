@@ -232,16 +232,17 @@ export default function GaleriPage() {
                     src={item.src}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    unoptimized
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
-                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80  border border-slate-800 text-xs font-semibold text-primary-400">
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 border border-slate-800 text-xs font-semibold text-primary-400">
                     {item.categoryLabel}
                   </div>
 
-                  <div className="absolute top-3 right-3 p-2 rounded-full bg-slate-950/80  text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute top-3 right-3 p-2 rounded-full bg-slate-950/80 text-white opacity-0 group-hover:opacity-100 transition-opacity">
                     <Maximize2 className="w-4 h-4" />
                   </div>
                 </div>
@@ -293,7 +294,7 @@ export default function GaleriPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedImage(null)}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 "
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -314,8 +315,9 @@ export default function GaleriPage() {
                   src={selectedImage.src}
                   alt={selectedImage.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 1024px"
                   className="object-contain"
-                  unoptimized
+                  priority
                 />
               </div>
 
@@ -337,4 +339,3 @@ export default function GaleriPage() {
     </div>
   );
 }
-
