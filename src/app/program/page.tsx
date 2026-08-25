@@ -200,17 +200,17 @@ export default function ProgramPage() {
                 >
                   <div className={`rounded-[2.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-10 shadow-2xl relative z-10 border ${
                     program.theme === "pink"
-                      ? "bg-gradient-to-br from-pink-800 via-rose-900 to-pink-950 border-pink-500/40 text-white shadow-2xl shadow-pink-900/40"
-                      : "bg-gradient-to-br from-rose-800 via-amber-900 to-pink-950 border-amber-400/50 text-white shadow-2xl shadow-rose-900/40"
+                      ? "bg-gradient-to-br from-pink-600 via-primary-700 to-rose-800 border-pink-400/40 text-white shadow-2xl shadow-primary-700/30"
+                      : "bg-gradient-to-br from-rose-600 via-primary-700 to-pink-700 border-pink-400/40 text-white shadow-2xl shadow-rose-700/30"
                   }`}>
                     {/* Header Badge */}
                     <div className="flex items-center justify-between gap-4 mb-6">
-                      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-wider text-secondary-300">
-                        <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+                      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/25 text-xs font-bold uppercase tracking-wider text-white">
+                        <Sparkles className="w-3.5 h-3.5 text-secondary-200" />
                         <span>{program.badge}</span>
                       </div>
-                      <div className="w-10 h-10 rounded-2xl bg-white/10 flex items-center justify-center border border-white/15">
-                        <GraduationCap className="w-5 h-5 text-gold-300" />
+                      <div className="w-10 h-10 rounded-2xl bg-white/15 flex items-center justify-center border border-white/20">
+                        <GraduationCap className="w-5 h-5 text-white" />
                       </div>
                     </div>
 
@@ -218,7 +218,7 @@ export default function ProgramPage() {
                     <h3 className="text-2xl md:text-3xl font-display font-black text-white mb-3">
                       {program.heroTitle}
                     </h3>
-                    <p className="text-sm text-white/80 leading-relaxed mb-8 font-medium">
+                    <p className="text-sm text-white/90 leading-relaxed mb-8 font-medium">
                       {program.graduateProfile}
                     </p>
 
@@ -229,25 +229,25 @@ export default function ProgramPage() {
                         return (
                           <div
                             key={hIdx}
-                            className="bg-white/5 hover:bg-white/10 transition-colors p-4 rounded-2xl border border-white/10"
+                            className="bg-white/10 hover:bg-white/20 transition-colors p-4 rounded-2xl border border-white/15"
                           >
-                            <div className="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center text-gold-400 mb-2.5">
+                            <div className="w-8 h-8 rounded-xl bg-white/15 flex items-center justify-center text-secondary-200 mb-2.5">
                               <HlIcon className="w-4 h-4" />
                             </div>
                             <h4 className="font-bold text-sm text-white mb-1">{hl.title}</h4>
-                            <p className="text-xs text-white/70 leading-relaxed">{hl.desc}</p>
+                            <p className="text-xs text-white/80 leading-relaxed">{hl.desc}</p>
                           </div>
                         );
                       })}
                     </div>
 
                     {/* Trust Banner / Akreditasi Footer */}
-                    <div className="pt-5 border-t border-white/15 flex flex-wrap items-center justify-between gap-2 text-xs text-white/80">
+                    <div className="pt-5 border-t border-white/20 flex flex-wrap items-center justify-between gap-2 text-xs text-white/90">
                       <span className="flex items-center gap-1.5 font-medium">
-                        <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                        <ShieldCheck className="w-4 h-4 text-emerald-300" />
                         Ijazah Formal & Syahadah Pesantren
                       </span>
-                      <span className="font-bold text-gold-300">
+                      <span className="font-bold text-secondary-200">
                         Al-Andalus Standard
                       </span>
                     </div>
@@ -256,7 +256,7 @@ export default function ProgramPage() {
                   {/* Decorative Glow Blob */}
                   <div
                     className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full blur-[100px] -z-10 opacity-30 ${
-                      program.theme === "pink" ? "bg-primary-600" : "bg-gold-600"
+                      program.theme === "pink" ? "bg-primary-500" : "bg-rose-500"
                     }`}
                   />
                 </motion.div>
