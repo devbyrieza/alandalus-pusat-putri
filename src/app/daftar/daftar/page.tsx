@@ -370,7 +370,7 @@ export default function DaftarPage() {
                   {[
                     {
                       value: "MTs",
-                      title: "Madrasah Tsanawiyah",
+                      title: "SMPIT",
                       subtitle: "Lulusan SD/Sederajat",
                       desc: "Jenjang pendidikan dasar setingkat SMP." },
                     {
