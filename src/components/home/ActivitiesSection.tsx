@@ -45,25 +45,25 @@ const ACTIVITIES: Activity[] = [
     badge: "Akademik & Syar'i",
     description:
       "Metode pembelajaran interaktif yang memadukan keunggulan akademik umum dengan pendalaman bahasa Arab dan ilmu syar'i secara komprehensif.",
-    image: "/images/Thobur Shobah_02.JPG" },
+    image: "/images/Lab IPA_01.JPG" },
   {
     name: "Kegiatan Rutin Harian",
     badge: "Spiritual",
     description:
       "Pembiasaan ibadah melalui sholat berjamaah tepat waktu dan halaqah tahfidz Al-Qur'an setiap hari secara konsisten.",
-    image: "/images/Lab IPA_01.JPG" },
+    image: "/images/Thobur Shobah_02.JPG" },
   {
     name: "Ekstrakurikuler Unggulan",
     badge: "15+ Pilihan",
     description:
       "Tersedia 15+ pilihan kegiatan mulai dari beladiri hingga Desain Grafis untuk mengasah minat dan bakat santri.",
-    image: "/images/Upacara 17 Agustus_04.JPG" },
+    image: "/images/Gedung_05.JPG" },
   {
     name: "Kemandirian, Skill & Leadership",
     badge: "Life Skills",
     description:
       "Program pelatihan entrepreneurship, leadership, dan keterampilan hidup mandiri guna mencetak santri yang siap berdikari di masa depan.",
-    image: "/images/Gedung_06.JPG" },
+    image: "/images/Upacara 17 Agustus_04.JPG" },
 ];
 
 const EXTRA_ACTIVITIES: ExtraActivity[] = [
@@ -339,3 +339,5 @@ export default function ActivitiesSection() {
     </section>
   );
 }
+
+

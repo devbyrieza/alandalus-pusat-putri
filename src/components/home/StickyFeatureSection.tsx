@@ -18,7 +18,7 @@ const FEATURES = [
       "Matematika & Sains modern",
       "Program bahasa Arab & Inggris aktif"
     ],
-    image: "/images/Thobur Shobah_02.JPG" },
+    image: "/images/Lab IPA_01.JPG" },
   {
     id: "pengasuhan",
     title: "Pengasuhan Berbasis Keteladanan",
@@ -30,7 +30,7 @@ const FEATURES = [
       "Konseling psikologi berkala",
       "Pengembangan kecerdasan emosional"
     ],
-    image: "/images/Lab IPA_01.JPG" },
+    image: "/images/Thobur Shobah_02.JPG" },
   {
     id: "fasilitas",
     title: "Fasilitas Modern & Nyaman",
@@ -143,3 +143,4 @@ export default function StickyFeatureSection() {
     </section>
   );
 }
+
