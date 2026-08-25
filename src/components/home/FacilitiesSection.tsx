@@ -36,13 +36,13 @@ const FACILITIES = [
 
 const FACILITY_IMAGES = [
   {
-    src: "/images/DJI_0038.JPG",
-    label: "Masjid Putri",
+    src: "/images/Masjid Bawah_01.jpg",
+    label: "Masjid Area Putri",
     sub: "Kapasitas >1.500 Jamaah",
     span: "col-span-2 row-span-2",
     priority: true },
   {
-    src: "/images/Gedung_05.JPG",
+    src: "/images/Gedung_01.jpg",
     label: "Gedung Utama",
     sub: "Representatif & Nyaman",
     span: "col-span-1 row-span-1",
@@ -54,13 +54,13 @@ const FACILITY_IMAGES = [
     span: "col-span-1 row-span-1",
     priority: false },
   {
-    src: "/images/Gedung_05.JPG",
+    src: "/images/Gedung_02.jpg",
     label: "Asrama Santriwati",
     sub: "Nyaman & Teratur",
     span: "col-span-1 row-span-1",
     priority: false },
   {
-    src: "/images/restorasi.jpg",
+    src: "/images/Matham_01.jpg",
     label: "Ruang Makan",
     sub: "Bersih & Kondusif",
     span: "col-span-1 row-span-1",
