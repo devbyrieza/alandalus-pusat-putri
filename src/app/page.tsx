@@ -757,11 +757,11 @@ export default function Home() {
           </header>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { src: "/images/DJI_0038.JPG", label: "Area Kampus Putri" },
-              { src: "/images/Gedung_05.JPG", label: "Asrama & Panahan" },
+              { src: "/images/DJI_0038.JPG", label: "Kompleks Pesantren Putri" },
+              { src: "/images/Gedung_05.JPG", label: "Gedung Asrama dan Lapangan Panahan" },
               { src: "/images/Lab IPA_01.JPG", label: "Laboratorium IPA" },
-              { src: "/images/Gedung_06.JPG", label: "Area Masjid Jami'" },
-              { src: "/images/Upacara 17 Agustus_04.JPG", label: "Upacara & Olahraga" },
+              { src: "/images/Gedung_06.JPG", label: "Masjid Area Putri" },
+              { src: "/images/Upacara 17 Agustus_04.JPG", label: "Kegiatan Upacara Santriwati" },
               { src: "/images/Gerbang_01.JPG", label: "Gerbang Utama" },
             ].map((photo, i) => (
               <div key={i} className="relative group overflow-hidden rounded-xl aspect-video">
@@ -897,6 +897,7 @@ export default function Home() {
     </div>
   );
 }
+
 
 
 

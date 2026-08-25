@@ -33,14 +33,14 @@ const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "1",
     src: "/images/DJI_0038.JPG",
-    title: "Masjid Jami' Al-Andalus Putri",
+    title: "Kompleks Pesantren Putri dari Udara",
     category: "gedung",
     categoryLabel: "Gedung & Kampus",
     description: "Pusat kegiatan ibadah, kajian, dan tarbiyah santriwati." },
   {
     id: "2",
     src: "/images/Gedung_05.JPG",
-    title: "Gedung Asrama Santriwati",
+    title: "Gedung Asrama dan Lapangan Panahan",
     category: "asrama",
     categoryLabel: "Asrama & Kamar",
     description: "Gedung asrama bertingkat dengan lingkungan yang aman dan asri." },
@@ -93,6 +93,34 @@ const GALLERY_ITEMS: GalleryItem[] = [
     category: "restorasi",
     categoryLabel: "Restorasi & Layanan",
     description: "Ruang makan higienis dengan sajian menu gizi seimbang harian." },
+  { id: "100", src: "/images/DJI_0039.JPG", title: "DJI 0039", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "101", src: "/images/DJI_0046.JPG", title: "DJI 0046", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "102", src: "/images/DJI_0529.JPG", title: "DJI 0529", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "103", src: "/images/DJI_0543.JPG", title: "DJI 0543", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "104", src: "/images/DJI_0544.JPG", title: "DJI 0544", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "105", src: "/images/DJI_0590.JPG", title: "DJI 0590", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "106", src: "/images/DJI_0600.JPG", title: "DJI 0600", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "107", src: "/images/Gedung_07.JPG", title: "Gedung 07", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "108", src: "/images/Gerbang_01.JPG", title: "Gerbang 01", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "109", src: "/images/Gerbang_02.JPG", title: "Gerbang 02", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "110", src: "/images/Gerbang_03.JPG", title: "Gerbang 03", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "111", src: "/images/Gerbang_04.JPG", title: "Gerbang 04", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "112", src: "/images/Thobur Shobah_01.JPG", title: "Thobur Shobah 01", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "113", src: "/images/Thobur Shobah_02.JPG", title: "Thobur Shobah 02", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "114", src: "/images/Thobur Shobah_03.JPG", title: "Thobur Shobah 03", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "115", src: "/images/Thobur Shobah_04.JPG", title: "Thobur Shobah 04", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "116", src: "/images/Thobur Shobah_05.JPG", title: "Thobur Shobah 05", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "117", src: "/images/Thobur Shobah_06.JPG", title: "Thobur Shobah 06", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "118", src: "/images/Thobur Shobah_07.JPG", title: "Thobur Shobah 07", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "119", src: "/images/Thobur Shobah_08.JPG", title: "Thobur Shobah 08", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "120", src: "/images/Thobur Shobah_09.JPG", title: "Thobur Shobah 09", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "121", src: "/images/Upacara 17 Agustus_01.JPG", title: "Upacara 17 Agustus 01", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "122", src: "/images/Upacara 17 Agustus_02.JPG", title: "Upacara 17 Agustus 02", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "123", src: "/images/Upacara 17 Agustus_03.JPG", title: "Upacara 17 Agustus 03", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "124", src: "/images/Upacara 17 Agustus_05.JPG", title: "Upacara 17 Agustus 05", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "125", src: "/images/Upacara 17 Agustus_06.JPG", title: "Upacara 17 Agustus 06", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "126", src: "/images/Upacara 17 Agustus_07.JPG", title: "Upacara 17 Agustus 07", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "127", src: "/images/Upacara 17 Agustus_08.JPG", title: "Upacara 17 Agustus 08", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
 ];
 
 const CATEGORIES = [
@@ -298,3 +326,4 @@ export default function GaleriPage() {
     </div>
   );
 }
+
