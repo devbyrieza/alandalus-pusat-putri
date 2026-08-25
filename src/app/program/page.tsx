@@ -26,22 +26,22 @@ const PROGRAMS = [
     heroTitle: "Pondasi Rabbani, Cendekia & Mandiri",
     graduateProfile: "Membentuk karakter santriwati berakhlak mulia, hafalan Al-Qur'an mutqin (pilihan Takhassus 30 Juz atau Reguler 5 Juz), serta kesiapan akademik prima menuju jenjang Aliyah / SMA unggulan.",
     description:
-      "Kami menerapkan Kurikulum Terpadu yang menggabungkan standar Nasional Kemendikbudristek dengan ciri khas Pesantren Al-Andalus, berfokus pada penguasaan Tahfidz Al-Qur'an (Program Takhassus 30 Juz & Reguler 5 Juz) serta pembentukan karakter Leadership yang kokoh sejak usia dini.",
+      "Kami menerapkan Kurikulum TICE terpadu yang menggabungkan standar Nasional Kemendikbudristek dengan ciri khas Pesantren Al-Andalus, berfokus pada penguasaan Tahfidz Al-Qur'an (Program Takhassus 30 Juz & Reguler 5 Juz) serta pembentukan Adab Islami dan Karakter Rabbani yang kokoh sejak usia dini.",
     stats: [
       { label: "Tahfidz", value: "30 Juz / 5 Juz", icon: BookOpen },
-      { label: "Prioritas", value: "Leadership", icon: ShieldCheck },
+      { label: "Karakter", value: "Adab & Mandiri", icon: ShieldCheck },
       { label: "Bahasa", value: "Dwi-Bahasa", icon: Globe },
     ],
     highlights: [
       { icon: BookOpen, title: "Tahfidz Takhassus & Reguler", desc: "Pilihan program Tahfidz Takhassus 30 Juz Mutqin atau Tahfidz Reguler 5 Juz dengan sanad tajwid." },
-      { icon: ShieldCheck, title: "Karakter & Adab", desc: "Penanaman adab islami dan kemandirian melalui pembinaan asrama 24 jam." },
+      { icon: ShieldCheck, title: "Karakter & Adab Rabbani", desc: "Penanaman adab islami, akhlak karimah, dan kemandirian melalui pembinaan asrama 24 jam." },
       { icon: Globe, title: "Bahasa Arab & Inggris", desc: "Pembiasaan percakapan dwi-bahasa aktif dalam aktivitas keseharian." },
       { icon: Award, title: "Ijazah Formal & Syahadah", desc: "Lulusan memperoleh Ijazah Resmi SMPIT Kemendikbudristek & Syahadah Pesantren Al-Andalus." },
     ],
     curriculum: [
       "Program Tahfidz Takhassus (Target 30 Juz Mutqin)",
       "Program Tahfidz Reguler (Target 5 Juz Berstandar)",
-      "Leadership & Character Building santriwati",
+      "Pembinaan Adab, Karakter Rabbani & Kemandirian santriwati",
       "Bahasa Arab & Inggris Yaumiyah (Active Speaking)",
       "Kajian Kitab Turots Dasar & Aqidah Ahlussunnah",
       "Kurikulum Nasional SMPIT Terakreditasi Lengkap",
@@ -59,22 +59,22 @@ const PROGRAMS = [
     heroTitle: "Kaderisasi Da'iyah & Cendekia Muslimah",
     graduateProfile: "Mencetak santriwati berkemampuan bahasa Arab fasih, pemahaman syar'i mendalam, dan siap bersaing di PTN maupun Universitas Luar Negeri.",
     description:
-      "Program persiapan intensif menuju jenjang Aliyah, berfokus pada percepatan pemantapan Bahasa Arab, penguasaan Turots, Tahfidz Al-Qur'an (Takhassus 30 Juz & Reguler 5 Juz), dan kematangan leadership organisasi untuk mencetak kader da'iyah dan muslimah cendekia yang kontributif.",
+      "Program persiapan intensif menuju jenjang Aliyah, berfokus pada percepatan pemantapan Bahasa Arab, penguasaan Turots, Tahfidz Al-Qur'an (Takhassus 30 Juz & Reguler 5 Juz), dan pembinaan karakter muslimah cendekia yang beradab dan kontributif.",
     stats: [
       { label: "Tahfidz", value: "30 Juz / 5 Juz", icon: BookOpen },
-      { label: "Kekhasan", value: "Kader Leadership", icon: Users },
+      { label: "Kekhasan", value: "Kader Da'iyah", icon: Users },
       { label: "Fokus", value: "Bahasa & Syar'i", icon: Sparkles },
     ],
     highlights: [
       { icon: BookOpen, title: "Tahfidz Takhassus & Reguler", desc: "Penguatan hafalan Tahfidz Takhassus 30 Juz atau Reguler 5 Juz dengan sanad tajwid." },
       { icon: Sparkles, title: "Intensif Bahasa & Turots", desc: "Pendalaman nahwu, shorof, balaghah, dan pengkajian kitab para ulama." },
-      { icon: Users, title: "Manajemen & Leadership", desc: "Pengasuhan kepemimpinan organisasi dan dakwah kemasyarakatan." },
+      { icon: Users, title: "Organisasi & Kemandirian", desc: "Pengasuhan kepemimpinan organisasi dakwah dan kemandirian santriwati." },
       { icon: Award, title: "Akses Studi Lanjut Global", desc: "Jalur persiapan studi ke Timur Tengah (Madinah, Al-Azhar) & PTN Favorit." },
     ],
     curriculum: [
       "Tahun I'dad: Intensif Bahasa Arab & Qowaid",
       "Program Tahfidz Takhassus 30 Juz & Tahfidz Reguler 5 Juz",
-      "Manajemen Organisasi & Kepemimpinan Dakwah",
+      "Manajemen Organisasi Dakwah & Kemandirian santriwati",
       "Kajian Kitab Turots Lanjutan & Fiqih Perbandingan",
       "Bimbingan Persiapan Masuk Perguruan Tinggi Favorit",
     ],
@@ -168,41 +168,8 @@ export default function ProgramPage() {
                 className={`px-8 py-3 rounded-full font-black text-sm transition-all border shadow-xs cursor-pointer ${
                   activeSection === program.id
                     ? program.theme === "pink"
-                      ? "bg-primary-700 text-white border-primary-700 shadow-primary-700/20"
-                      : "bg-gold-500 text-white border-gold-500 shadow-gold-500/20"
-                    : "bg-white text-ink-500 border-primary-100 hover:border-primary-300 hover:text-primary-700"
-                }`}
-              >
-                {program.name}
-              </button>
-            ))}
-          </div>
-        </Container>
-      </div>
-
-      {/* 3. Program Content Sections */}
-      <div className="py-12">
-        {PROGRAMS.map((program, idx) => (
-          <section
-            key={program.id}
-            id={program.id}
-            className="py-20 md:py-28 scroll-mt-32 overflow-hidden"
-          >
-            <Container>
-              <div
-                className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${idx % 2 === 1 ? "lg:grid-flow-dense" : ""}`}
-              >
-                {/* Infographic Bento Highlight Card */}
-                <motion.div
-                  initial={{ opacity: 0, x: idx % 2 === 0 ? -40 : 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className={`relative ${idx % 2 === 1 ? "lg:col-start-2" : ""}`}
-                >
-                  <div className={`rounded-[2.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-10 shadow-2xl relative z-10 border ${
-                    program.theme === "pink"
-                      ? "bg-gradient-to-br from-pink-600 via-primary-700 to-rose-800 border-pink-400/40 text-white shadow-2xl shadow-primary-700/30"
-                      : "bg-gradient-to-br from-rose-600 via-primary-700 to-pink-700 border-pink-400/40 text-white shadow-2xl shadow-rose-700/30"
+                      ? "bg-gradient-to-br from-[#831843] via-[#701a35] to-[#4c0519] border-pink-300/30 text-white shadow-2xl shadow-pink-950/30"
+                      : "bg-gradient-to-br from-[#701a35] via-[#831843] to-[#500724] border-pink-300/30 text-white shadow-2xl shadow-pink-950/30"
                   }`}>
                     {/* Header Badge */}
                     <div className="flex items-center justify-between gap-4 mb-6">
@@ -257,7 +224,7 @@ export default function ProgramPage() {
                   {/* Decorative Glow Blob */}
                   <div
                     className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] rounded-full blur-[100px] -z-10 opacity-30 ${
-                      program.theme === "pink" ? "bg-primary-500" : "bg-rose-500"
+                      program.theme === "pink" ? "bg-pink-900/50" : "bg-rose-900/50"
                     }`}
                   />
                 </motion.div>
