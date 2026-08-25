@@ -55,10 +55,10 @@ const PROGRAMS = [
     buttonLabel: "Daftar IL",
     fullName: "Program I'dad Lughowi (SMA)",
     badge: "Persiapan Intensif Aliyah & Jamiah (SMA)",
-    heroTitle: "Kaderisasi Dai & Cendekia Muslim",
+    heroTitle: "Kaderisasi Da'iyah & Cendekia Muslimah",
     graduateProfile: "Mencetak santriwati berkemampuan bahasa Arab fasih, pemahaman syar'i mendalam, dan siap bersaing di PTN maupun Universitas Luar Negeri.",
     description:
-      "Program persiapan intensif menuju jenjang Aliyah, berfokus pada percepatan pemantapan Bahasa Arab, penguasaan Turots, Tahfidz Al-Qur'an, dan kematangan leadership organisasi untuk mencetak kader ulama yang kontributif.",
+      "Program persiapan intensif menuju jenjang Aliyah, berfokus pada percepatan pemantapan Bahasa Arab, penguasaan Turots, Tahfidz Al-Qur'an, dan kematangan leadership organisasi untuk mencetak kader da'iyah dan muslimah cendekia yang kontributif.",
     stats: [
       { label: "Tahfidz", value: "Target 16 Juz", icon: BookOpen },
       { label: "Kekhasan", value: "Kader Leadership", icon: Users },
@@ -200,8 +200,8 @@ export default function ProgramPage() {
                 >
                   <div className={`rounded-[2.5rem] md:rounded-[3rem] p-6 sm:p-8 md:p-10 shadow-2xl relative z-10 border ${
                     program.theme === "pink"
-                      ? "bg-gradient-to-br from-primary-950 via-primary-900 to-primary-950 border-primary-800/50 text-white shadow-primary-950/30"
-                      : "bg-gradient-to-br from-amber-950 via-stone-900 to-primary-950 border-gold-800/40 text-white shadow-stone-950/30"
+                      ? "bg-gradient-to-br from-pink-800 via-rose-900 to-pink-950 border-pink-500/40 text-white shadow-2xl shadow-pink-900/40"
+                      : "bg-gradient-to-br from-rose-800 via-amber-900 to-pink-950 border-amber-400/50 text-white shadow-2xl shadow-rose-900/40"
                   }`}>
                     {/* Header Badge */}
                     <div className="flex items-center justify-between gap-4 mb-6">
