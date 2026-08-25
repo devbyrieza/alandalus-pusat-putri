@@ -761,10 +761,10 @@ export default function Home() {
             {[
               { src: "/images/Gerbang_01.JPG", label: "Gerbang Utama" },
               { src: "/images/Gedung_04.jpg", label: "Gedung Kelas" },
-              { src: "/images/Gedung_05.JPG", label: "Gedung Asrama Putri & Lapangan Panahan" },
-              { src: "/images/Masjid Bawah_01.jpg", label: "Masjid Area Putri" },
+              { src: "/images/Gedung_01.jpg", label: "Gedung Asrama Putri & Lapangan Panahan" },
+              { src: "/images/Masjid Bawah_04.jpg", label: "Masjid Area Putri" },
               { src: "/images/Matham_01.jpg", label: "Math'am (Ruang Makan)" },
-              { src: "/images/Lab IPA_01.JPG", label: "Laboratorium IPA" },
+              { src: "/images/Lab IPA_03.JPG", label: "Laboratorium IPA" },
             ].map((photo, i) => (
               <div key={i} className="relative group overflow-hidden rounded-xl aspect-video">
                 <Image
