@@ -121,6 +121,17 @@ const GALLERY_ITEMS: GalleryItem[] = [
   { id: "125", src: "/images/Upacara 17 Agustus_06.JPG", title: "Upacara 17 Agustus 06", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
   { id: "126", src: "/images/Upacara 17 Agustus_07.JPG", title: "Upacara 17 Agustus 07", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
   { id: "127", src: "/images/Upacara 17 Agustus_08.JPG", title: "Upacara 17 Agustus 08", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
+  { id: "200", src: "/images/Gedung_01.jpg", title: "Gedung 01", category: "asrama", categoryLabel: "Asrama & Kamar", description: "Fasilitas Al-Andalus Putri." },
+  { id: "201", src: "/images/Gedung_02.jpg", title: "Gedung 02", category: "asrama", categoryLabel: "Asrama & Kamar", description: "Fasilitas Al-Andalus Putri." },
+  { id: "202", src: "/images/Gedung_03.jpg", title: "Gedung 03", category: "asrama", categoryLabel: "Asrama & Kamar", description: "Fasilitas Al-Andalus Putri." },
+  { id: "203", src: "/images/Gedung_04.jpg", title: "Gedung 04", category: "asrama", categoryLabel: "Asrama & Kamar", description: "Fasilitas Al-Andalus Putri." },
+  { id: "204", src: "/images/Masjid Bawah_01.jpg", title: "Masjid Bawah 01", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Fasilitas Al-Andalus Putri." },
+  { id: "205", src: "/images/Masjid Bawah_02.jpg", title: "Masjid Bawah 02", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Fasilitas Al-Andalus Putri." },
+  { id: "206", src: "/images/Masjid Bawah_03.jpg", title: "Masjid Bawah 03", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Fasilitas Al-Andalus Putri." },
+  { id: "207", src: "/images/Masjid Bawah_04.jpg", title: "Masjid Bawah 04", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Fasilitas Al-Andalus Putri." },
+  { id: "208", src: "/images/Masjid Bawah_05.jpg", title: "Masjid Bawah 05", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Fasilitas Al-Andalus Putri." },
+  { id: "209", src: "/images/Matham_01.jpg", title: "Matham 01", category: "restorasi", categoryLabel: "Restorasi & Layanan", description: "Fasilitas Al-Andalus Putri." },
+  { id: "210", src: "/images/Matham_02.jpg", title: "Matham 02", category: "restorasi", categoryLabel: "Restorasi & Layanan", description: "Fasilitas Al-Andalus Putri." },
 ];
 
 const CATEGORIES = [
