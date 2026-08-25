@@ -11,11 +11,12 @@ import {
   X,
   Building,
   Home,
-  BookOpen,
-  Trophy,
+  Beaker,
   Utensils,
   Sparkles,
-  Maximize2
+  Maximize2,
+  CalendarCheck,
+  Landmark
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { BRANDING } from "@/config/branding";
@@ -24,123 +25,80 @@ interface GalleryItem {
   id: string;
   src: string;
   title: string;
-  category: "gedung" | "asrama" | "belajar" | "olahraga" | "restorasi";
+  category: "gedung" | "masjid" | "asrama" | "lab" | "kegiatan" | "restorasi";
   categoryLabel: string;
   description: string;
 }
 
 const GALLERY_ITEMS: GalleryItem[] = [
-  {
-    id: "1",
-    src: "/images/DJI_0038.JPG",
-    title: "Kompleks Pesantren Putri dari Udara",
-    category: "gedung",
-    categoryLabel: "Gedung & Kampus",
-    description: "Pusat kegiatan ibadah, kajian, dan tarbiyah santriwati." },
-  {
-    id: "2",
-    src: "/images/Gedung_05.JPG",
-    title: "Gedung Asrama dan Lapangan Panahan",
-    category: "asrama",
-    categoryLabel: "Asrama & Kamar",
-    description: "Gedung asrama bertingkat dengan lingkungan yang aman dan asri." },
-  {
-    id: "3",
-    src: "/images/Gedung_06.JPG",
-    title: "Area Halaman & Kompleks Asrama",
-    category: "asrama",
-    categoryLabel: "Asrama & Kamar",
-    description: "Halaman asrama yang luas untuk kegiatan rutin dan ukhuwah santriwati." },
-  {
-    id: "4",
-    src: "/images/Lab IPA_01.JPG",
-    title: "Gedung Pembelajaran & Ruang Kelas",
-    category: "belajar",
-    categoryLabel: "Ruang Belajar",
-    description: "Fasilitas kelas modern ber-AC pendukung Kurikulum TICE." },
-  {
-    id: "5",
-    src: "/images/Lab IPA_02.JPG",
-    title: "Ruang Kelas & Halaqah Al-Qur'an",
-    category: "belajar",
-    categoryLabel: "Ruang Belajar",
-    description: "Ruang bimbingan tahfidz intensif dan kajian syar'i santriwati." },
-  {
-    id: "6",
-    src: "/images/Gedung_05.JPG",
-    title: "Kamar Santriwati & Ranjang Susun",
-    category: "asrama",
-    categoryLabel: "Asrama & Kamar",
-    description: "Kamar bersih dan tertata rapi untuk kenyamanan istirahat santriwati." },
-  {
-    id: "7",
-    src: "/images/Lab IPA_03.JPG",
-    title: "Laboratorium Komputer",
-    category: "belajar",
-    categoryLabel: "Ruang Belajar",
-    description: "Fasilitas IT terpadu untuk pembelajaran akademik dan riset." },
-  {
-    id: "8",
-    src: "/images/Upacara 17 Agustus_04.JPG",
-    title: "Sarana Olahraga Terbuka",
-    category: "olahraga",
-    categoryLabel: "Sarana Olahraga",
-    description: "Lapangan olahraga indoor/outdoor khusus area santriwati." },
-  {
-    id: "9",
-    src: "/images/restorasi.jpg",
-    title: "Ruang Restorasi (Makan Bersama)",
-    category: "restorasi",
-    categoryLabel: "Restorasi & Layanan",
-    description: "Ruang makan higienis dengan sajian menu gizi seimbang harian." },
-  { id: "100", src: "/images/DJI_0039.JPG", title: "DJI 0039", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "101", src: "/images/DJI_0046.JPG", title: "DJI 0046", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "102", src: "/images/DJI_0529.JPG", title: "DJI 0529", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "103", src: "/images/DJI_0543.JPG", title: "DJI 0543", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "104", src: "/images/DJI_0544.JPG", title: "DJI 0544", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "105", src: "/images/DJI_0590.JPG", title: "DJI 0590", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "106", src: "/images/DJI_0600.JPG", title: "DJI 0600", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "107", src: "/images/Gedung_07.JPG", title: "Gedung 07", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "108", src: "/images/Gerbang_01.JPG", title: "Gerbang 01", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "109", src: "/images/Gerbang_02.JPG", title: "Gerbang 02", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "110", src: "/images/Gerbang_03.JPG", title: "Gerbang 03", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "111", src: "/images/Gerbang_04.JPG", title: "Gerbang 04", category: "gedung", categoryLabel: "Gedung & Fasilitas", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "112", src: "/images/Thobur Shobah_01.JPG", title: "Thobur Shobah 01", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "113", src: "/images/Thobur Shobah_02.JPG", title: "Thobur Shobah 02", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "114", src: "/images/Thobur Shobah_03.JPG", title: "Thobur Shobah 03", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "115", src: "/images/Thobur Shobah_04.JPG", title: "Thobur Shobah 04", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "116", src: "/images/Thobur Shobah_05.JPG", title: "Thobur Shobah 05", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "117", src: "/images/Thobur Shobah_06.JPG", title: "Thobur Shobah 06", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "118", src: "/images/Thobur Shobah_07.JPG", title: "Thobur Shobah 07", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "119", src: "/images/Thobur Shobah_08.JPG", title: "Thobur Shobah 08", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "120", src: "/images/Thobur Shobah_09.JPG", title: "Thobur Shobah 09", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "121", src: "/images/Upacara 17 Agustus_01.JPG", title: "Upacara 17 Agustus 01", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "122", src: "/images/Upacara 17 Agustus_02.JPG", title: "Upacara 17 Agustus 02", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "123", src: "/images/Upacara 17 Agustus_03.JPG", title: "Upacara 17 Agustus 03", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "124", src: "/images/Upacara 17 Agustus_05.JPG", title: "Upacara 17 Agustus 05", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "125", src: "/images/Upacara 17 Agustus_06.JPG", title: "Upacara 17 Agustus 06", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "126", src: "/images/Upacara 17 Agustus_07.JPG", title: "Upacara 17 Agustus 07", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "127", src: "/images/Upacara 17 Agustus_08.JPG", title: "Upacara 17 Agustus 08", category: "olahraga", categoryLabel: "Kegiatan & Olahraga", description: "Dokumentasi Al-Andalus Putri." },
-  { id: "200", src: "/images/Gedung_01.jpg", title: "Gedung Pembelajaran Putri", category: "gedung", categoryLabel: "Gedung & Kampus", description: "Gedung kelas dan fasilitas belajar santriwati." },
-  { id: "201", src: "/images/Gedung_02.jpg", title: "Gedung Asrama Santriwati", category: "asrama", categoryLabel: "Asrama & Kamar", description: "Hunian asrama putri yang nyaman dan asri." },
-  { id: "202", src: "/images/Gedung_03.jpg", title: "Kompleks Asrama Putri", category: "asrama", categoryLabel: "Asrama & Kamar", description: "Lingkungan asrama putri terpadu." },
-  { id: "203", src: "/images/Gedung_04.jpg", title: "Fasilitas Gedung Putri", category: "gedung", categoryLabel: "Gedung & Kampus", description: "Fasilitas pendukung di area putri." },
-  { id: "204", src: "/images/Masjid Bawah_01.jpg", title: "Masjid Area Putri", category: "gedung", categoryLabel: "Gedung & Kampus", description: "Pusat ibadah dan kajian harian santriwati." },
-  { id: "205", src: "/images/Masjid Bawah_02.jpg", title: "Masjid Area Putri (Tampak Luar)", category: "gedung", categoryLabel: "Gedung & Kampus", description: "Suasana sekitar Masjid Area Putri." },
-  { id: "206", src: "/images/Masjid Bawah_03.jpg", title: "Masjid Area Putri (Sisi Depan)", category: "gedung", categoryLabel: "Gedung & Kampus", description: "Fasilitas ibadah di kompleks putri." },
-  { id: "207", src: "/images/Masjid Bawah_04.jpg", title: "Masjid Area Putri (Halaman)", category: "gedung", categoryLabel: "Gedung & Kampus", description: "Halaman sekitar masjid santriwati." },
-  { id: "208", src: "/images/Masjid Bawah_05.jpg", title: "Masjid Area Putri (Area Wudhu & Sekitar)", category: "gedung", categoryLabel: "Gedung & Kampus", description: "Fasilitas pendukung peribadatan santriwati." },
-  { id: "209", src: "/images/Matham_01.jpg", title: "Ruang Makan Santriwati (Math'am)", category: "restorasi", categoryLabel: "Restorasi & Layanan", description: "Ruang makan bersih dan higienis untuk santriwati." },
-  { id: "210", src: "/images/Matham_02.jpg", title: "Fasilitas Restorasi (Math'am)", category: "restorasi", categoryLabel: "Restorasi & Layanan", description: "Penyajian makanan dengan standar gizi terjamin." },
+  // 1. Gedung & Kompleks (Drone & Gerbang)
+  { id: "1", src: "/images/DJI_0038.JPG", title: "Kompleks Kampus Putri dari Udara", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Dokumentasi udara panorama kampus Al-Andalus Putri." },
+  { id: "2", src: "/images/DJI_0039.JPG", title: "Area Kampus Putri (Aerial Shot)", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Tata ruang dan lingkungan asri kompleks putri." },
+  { id: "3", src: "/images/DJI_0046.JPG", title: "Kompleks Bangunan Putri", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Gedung-gedung terpadu di kawasan santriwati." },
+  { id: "4", src: "/images/DJI_0529.JPG", title: "Pemandangan Udara Kampus", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Lingkungan hijau dan asri di sekitar area putri." },
+  { id: "5", src: "/images/DJI_0543.JPG", title: "Zona Belajar & Asrama", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Kawasan terpadu kegiatan harian santriwati." },
+  { id: "6", src: "/images/DJI_0544.JPG", title: "Panorama Kompleks Pesantren", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Fasilitas kampus terpadu dari ketinggian." },
+  { id: "7", src: "/images/DJI_0590.JPG", title: "Halaman & Area Terbuka", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Halaman terbuka untuk berbagai agenda santriwati." },
+  { id: "8", src: "/images/DJI_0600.JPG", title: "Kawasan Al-Andalus Putri", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Dokumentasi visual lingkungan pesantren." },
+  { id: "9", src: "/images/Gerbang_01.JPG", title: "Gerbang Utama Kampus Putri", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Akses gerbang masuk utama kawasan santriwati." },
+  { id: "10", src: "/images/Gerbang_02.JPG", title: "Area Gerbang Masuk", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Pintu gerbang dengan arsitektur khas Andalus." },
+  { id: "11", src: "/images/Gerbang_03.JPG", title: "Akses Keamanan Gerbang", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Pos keamanan dan gerbang terpadu 24 jam." },
+  { id: "12", src: "/images/Gerbang_04.JPG", title: "Gerbang & Lingkungan Depan", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Suasana pintu masuk area pesantren putri." },
+  { id: "13", src: "/images/Gedung_01.jpg", title: "Gedung Fasilitas Putri", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Bangunan representatif penunjang aktivitas santriwati." },
+  { id: "14", src: "/images/Gedung_04.jpg", title: "Gedung Penunjang Kampus", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Fasilitas gedung di area pesantren putri." },
+  { id: "15", src: "/images/Gedung_06.JPG", title: "Area Gedung Kampus", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Lingkungan bersih dan tertata rapi di area putri." },
+  { id: "16", src: "/images/Gedung_07.JPG", title: "Bangunan Fasilitas Santriwati", category: "gedung", categoryLabel: "Gedung & Kompleks", description: "Infrastruktur gedung pesantren putri." },
+
+  // 2. Masjid Area Putri
+  { id: "20", src: "/images/Masjid Bawah_01.jpg", title: "Masjid Area Putri (Tampak Depan)", category: "masjid", categoryLabel: "Masjid Area Putri", description: "Pusat ibadah dan kajian harian santriwati." },
+  { id: "21", src: "/images/Masjid Bawah_02.jpg", title: "Masjid Area Putri (Sisi Halaman)", category: "masjid", categoryLabel: "Masjid Area Putri", description: "Lingkungan sekitar masjid khusus santriwati." },
+  { id: "22", src: "/images/Masjid Bawah_03.jpg", title: "Bangunan Masjid Area Putri", category: "masjid", categoryLabel: "Masjid Area Putri", description: "Fasilitas peribadatan dan tarbiyah santriwati." },
+  { id: "23", src: "/images/Masjid Bawah_04.jpg", title: "Halaman Masjid Area Putri", category: "masjid", categoryLabel: "Masjid Area Putri", description: "Akses dan pelataran masjid di kawasan putri." },
+  { id: "24", src: "/images/Masjid Bawah_05.jpg", title: "Masjid & Area Sekitar", category: "masjid", categoryLabel: "Masjid Area Putri", description: "Tempat ibadah yang tenang dan representatif." },
+
+  // 3. Asrama & Lapangan Panahan
+  { id: "30", src: "/images/Gedung_05.JPG", title: "Gedung Asrama & Area Lapangan Panahan", category: "asrama", categoryLabel: "Asrama & Panahan", description: "Gedung asrama dengan area sasaran panahan santriwati." },
+  { id: "31", src: "/images/Gedung_02.jpg", title: "Kompleks Gedung Asrama Putri", category: "asrama", categoryLabel: "Asrama & Panahan", description: "Hunian asrama santriwati yang nyaman dan kondusif." },
+  { id: "32", src: "/images/Gedung_03.jpg", title: "Lingkungan Asrama Santriwati", category: "asrama", categoryLabel: "Asrama & Panahan", description: "Area lingkungan asrama putri yang asri dan aman." },
+
+  // 4. Laboratorium IPA (Hanya yang benar-benar foto Lab)
+  { id: "40", src: "/images/Lab IPA_01.JPG", title: "Laboratorium IPA (Ruang Praktikum)", category: "lab", categoryLabel: "Laboratorium IPA", description: "Meja praktikum dan peralatan sains untuk praktikum santriwati." },
+  { id: "41", src: "/images/Lab IPA_02.JPG", title: "Laboratorium IPA (Alat Peraga & Riset)", category: "lab", categoryLabel: "Laboratorium IPA", description: "Fasilitas alat peraga biologi, kimia, dan fisika modern." },
+  { id: "42", src: "/images/Lab IPA_03.JPG", title: "Laboratorium IPA (Sudut Laboratorium)", category: "lab", categoryLabel: "Laboratorium IPA", description: "Sarana pembelajaran sains dan eksperimen akademik." },
+
+  // 5. Kegiatan Santriwati (Thobur Shobah & Upacara)
+  { id: "50", src: "/images/Thobur Shobah_01.JPG", title: "Thobur Shobah (Apel Pagi Santriwati)", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Kegiatan rutin apel pagi pembinaan kedisiplinan dan adab." },
+  { id: "51", src: "/images/Thobur Shobah_02.JPG", title: "Thobur Shobah (Pengarahan Pagi)", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Pengarahan dan nasehat harian bersama asatidzah." },
+  { id: "52", src: "/images/Thobur Shobah_03.JPG", title: "Barisan Santriwati Thobur Shobah", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Kerapian dan keteraturan barisan santriwati setiap pagi." },
+  { id: "53", src: "/images/Thobur Shobah_04.JPG", title: "Dokumentasi Apel Pagi", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Kesiapan santriwati mengawali aktivitas belajar harian." },
+  { id: "54", src: "/images/Thobur Shobah_05.JPG", title: "Thobur Shobah di Halaman", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Pembiasaan kedisiplinan dan pembentukan karakter santriwati." },
+  { id: "55", src: "/images/Thobur Shobah_06.JPG", title: "Suasana Apel Pagi Santriwati", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Kebersamaan dan ukhuwah santriwati di pagi hari." },
+  { id: "56", src: "/images/Thobur Shobah_07.JPG", title: "Thobur Shobah Santriwati", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Kegiatan harian penanaman tata tertib dan motivasi." },
+  { id: "57", src: "/images/Thobur Shobah_08.JPG", title: "Aktivitas Pagi Santriwati", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Momen pengarahan pagi santriwati Al-Andalus." },
+  { id: "58", src: "/images/Thobur Shobah_09.JPG", title: "Thobur Shobah Bersama Asatidzah", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Pendampingan ustadzah dalam apel pagi santriwati." },
+  { id: "59", src: "/images/Upacara 17 Agustus_01.JPG", title: "Upacara Santriwati (Persiapan Barisan)", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Persiapan barisan santriwati pada upacara bendera." },
+  { id: "60", src: "/images/Upacara 17 Agustus_02.JPG", title: "Upacara Santriwati (Khidmat & Tertib)", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Pelaksanaan upacara peringatan hari kemerdekaan." },
+  { id: "61", src: "/images/Upacara 17 Agustus_03.JPG", title: "Suasana Upacara Santriwati", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Santriwati berbaris rapi mengikuti jalannya upacara." },
+  { id: "62", src: "/images/Upacara 17 Agustus_04.JPG", title: "Upacara Santriwati (Foto Udara)", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Formasi barisan santriwati dari ketinggian udara." },
+  { id: "63", src: "/images/Upacara 17 Agustus_05.JPG", title: "Dokumentasi Upacara Bendera", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Penanaman jiwa nasionalisme dan disiplin santriwati." },
+  { id: "64", src: "/images/Upacara 17 Agustus_06.JPG", title: "Barisan Upacara Santriwati", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Kekhidmatan jalannya prosesi upacara di lapangan putri." },
+  { id: "65", src: "/images/Upacara 17 Agustus_07.JPG", title: "Upacara Santriwati di Halaman Kampus", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Kegiatan upacara bendera santriwati Al-Andalus Putri." },
+  { id: "66", src: "/images/Upacara 17 Agustus_08.JPG", title: "Formasi Rapi Upacara Santriwati", category: "kegiatan", categoryLabel: "Kegiatan Santriwati", description: "Keteraturan santriwati saat mengikuti jalannya upacara." },
+
+  // 6. Restorasi & Ruang Makan (Math'am)
+  { id: "70", src: "/images/Matham_01.jpg", title: "Ruang Makan Santriwati (Math'am)", category: "restorasi", categoryLabel: "Ruang Makan (Math'am)", description: "Ruang makan bersih dan higienis khusus santriwati." },
+  { id: "71", src: "/images/Matham_02.jpg", title: "Fasilitas Restorasi Math'am", category: "restorasi", categoryLabel: "Ruang Makan (Math'am)", description: "Area penyajian makan dengan standar kebersihan terjaga." },
+  { id: "72", src: "/images/restorasi.jpg", title: "Area Restorasi Santriwati", category: "restorasi", categoryLabel: "Ruang Makan (Math'am)", description: "Layanan makan bergizi seimbang untuk santriwati harian." },
 ];
 
 const CATEGORIES = [
   { key: "semua", label: "Semua Foto", icon: Images },
-  { key: "gedung", label: "Gedung & Kampus", icon: Building },
-  { key: "asrama", label: "Asrama & Kamar", icon: Home },
-  { key: "belajar", label: "Ruang Belajar", icon: BookOpen },
-  { key: "olahraga", label: "Sarana Olahraga", icon: Trophy },
-  { key: "restorasi", label: "Restorasi & Layanan", icon: Utensils },
+  { key: "gedung", label: "Gedung & Kompleks", icon: Building },
+  { key: "masjid", label: "Masjid Area Putri", icon: Landmark },
+  { key: "asrama", label: "Asrama & Panahan", icon: Home },
+  { key: "lab", label: "Laboratorium IPA", icon: Beaker },
+  { key: "kegiatan", label: "Kegiatan Santriwati", icon: CalendarCheck },
+  { key: "restorasi", label: "Ruang Makan (Math'am)", icon: Utensils },
 ];
 
 export default function GaleriPage() {
@@ -184,12 +142,12 @@ export default function GaleriPage() {
             transition={{ delay: 0.2 }}
             className="text-slate-300 text-lg"
           >
-            Dokumentasi resmi lingkungan asrama, ruang kelas, masjid, dan sarana prasarana khusus santriwati.
+            Dokumentasi resmi sarana gedung, masjid, laboratorium, asrama, dan kegiatan harian santriwati.
           </motion.p>
         </div>
 
         {/* CATEGORY FILTER TABS */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12">
           {CATEGORIES.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeCategory === cat.key;
@@ -197,7 +155,7 @@ export default function GaleriPage() {
               <button
                 key={cat.key}
                 onClick={() => setActiveCategory(cat.key)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition-all duration-300 border ${
+                className={`flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300 border cursor-pointer ${
                   isActive
                     ? "bg-primary-500 text-white border-primary-400 shadow-lg shadow-primary-500/25 scale-105"
                     : "bg-slate-900/80 text-slate-300 border-slate-800 hover:border-slate-700 hover:bg-slate-800"
@@ -277,10 +235,10 @@ export default function GaleriPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/fasilitas"
+              href="/program"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-slate-700 transition-all"
             >
-              <span>Lihat Detail Fasilitas</span>
+              <span>Lihat Program Pendidikan</span>
             </Link>
           </div>
         </div>
