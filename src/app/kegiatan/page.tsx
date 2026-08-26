@@ -607,10 +607,10 @@ export default function KegiatanPage() {
       desc: "Belajar strategi komunikasi visual dan pemasaran.",
       benefit: "Jiwa Entrepreneur" },
     {
-      name: "Coding & AI",
+      name: "Tata Boga & Baking",
       icon: Zap,
-      desc: "Belajar membangun website, aplikasi modern, serta implementasi & integrasi Artificial Intelligence (AI).",
-      benefit: "Inovator Digital" },
+      desc: "Pelatihan seni kuliner, pengolahan makanan halal, dan keterampilan baking modern.",
+      benefit: "Kemandirian Santriwati" },
   ];
 
   return (
