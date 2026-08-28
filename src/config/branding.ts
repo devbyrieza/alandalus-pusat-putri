@@ -14,7 +14,7 @@ export const BRANDING = {
   logoPath: "/images/logo-putri.png",
   faviconPath: "/favicon.ico",
   websiteUrl: "https://pesantren-alandalus.com",
-  dashboardTitle: "Panel Admin PPDB Putri",
+  dashboardTitle: "Panel Admin SPMB Putri",
   
   contact: {
     whatsapp: "+62 811-2802-1035",
@@ -25,7 +25,7 @@ export const BRANDING = {
     tiktok: "https://www.tiktok.com/@pp.alandalus",
     address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor" },
   
-  // Properties required by PPDB dashboard & layout backward compatibility
+  // Properties required by SPMB dashboard & layout backward compatibility
   address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
   phone: "+62 811-2802-1035",
   email: "info@pesantren-alandalus.com",
