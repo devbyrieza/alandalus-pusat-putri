@@ -168,7 +168,7 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-pink-600 hover:bg-pink-500 text-white font-bold text-sm shadow-lg shadow-pink-600/30 transition-all"
             >
               <UserCheck className="w-4 h-4" />
-              <span>Dashboard</span>
+              <span>Masuk ke Akun</span>
             </a>
           ) : (
             <div className="flex items-center gap-2">
@@ -247,7 +247,7 @@ export default function Navbar() {
                 onClick={(e) => handleNavClick(e, "/login", () => setIsMenuOpen(false))}
                 className="w-full text-center py-3 rounded-xl bg-primary-900 border border-primary-800 text-slate-300 font-semibold text-sm"
               >
-                Masuk Akun Santri / Wali
+                Masuk
               </a>
             </div>
           </motion.div>
