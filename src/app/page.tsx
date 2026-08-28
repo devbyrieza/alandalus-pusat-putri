@@ -386,7 +386,7 @@ export default function Home() {
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-2xl font-black text-slate-900 mt-3 mb-4 text-balance">
               Kurikulum{" "}
-              <span className="text-rose-700 font-black">TICE</span>
+              <span className="text-pink-600 font-black">TICE</span>
               <span className="block mt-1 text-2xl sm:text-3xl md:text-4xl font-bold text-slate-500">Empat Pilar Pendidikan Unggul</span>
             </h2>
             <p className="text-slate-500 max-w-xl mx-auto text-base md:text-lg">
@@ -396,7 +396,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* T — Tahfizh (large) */}
-            <div className="md:col-span-2 rounded-xl p-8 bg-rose-900 border border-rose-500/30 text-white relative overflow-hidden group hover:-translate-y-2 hover:shadow-lg transition-all duration-300 shadow-md" style={{ background: "linear-gradient(135deg, #831843 0%, #be123c 50%, #500724 100%)" }}>
+            <div className="md:col-span-2 rounded-xl p-8 bg-pink-900 border border-pink-500/30 text-white relative overflow-hidden group hover:-translate-y-2 hover:shadow-lg transition-all duration-300 shadow-md" style={{ background: "linear-gradient(135deg, #831843 0%, #db2777 50%, #9d174d 100%)" }}>
               <div className="absolute top-0 right-0 w-56 h-56 rounded-full bg-white/10 -translate-y-1/2 translate-x-1/2 blur-2xl" />
               <BookOpen className="w-10 h-10 mb-6 opacity-90" />
               <h3 className="text-2xl font-black mb-3 text-white">T — Tahfizh Al-Qur'an</h3>
@@ -527,7 +527,7 @@ export default function Home() {
               </span>
               <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl font-black text-slate-900 mt-3 mb-8 md:mb-12">
                 Daftar dalam{" "}
-                <span className="text-rose-700 font-black">7 Langkah</span>{" "}Mudah
+                <span className="text-pink-600 font-black">7 Langkah</span>{" "}Mudah
               </h2>
 
               <ol className="space-y-0">
@@ -665,7 +665,7 @@ export default function Home() {
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mt-3">
               Semua yang Dibutuhkan Santri,{" "}
-              <span className="text-rose-700 font-black">Tersedia</span>
+              <span className="text-pink-600 font-black">Tersedia</span>
             </h2>
           </header>
 
