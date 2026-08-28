@@ -46,9 +46,9 @@ const PROGRAMS = [
       "Kajian Kitab Turots Dasar & Aqidah Ahlussunnah",
       "Kurikulum Nasional SMPIT Terakreditasi Lengkap",
     ],
-    accentBadge: "bg-pink-50 text-pink-800 border-pink-200/80",
-    iconBg: "bg-pink-100/80 text-pink-700",
-    buttonBg: "bg-pink-700 hover:bg-pink-800 shadow-pink-900/20",
+    accentBadge: "bg-pink-50 text-pink-700 border-pink-200",
+    iconBg: "bg-pink-100 text-pink-600",
+    buttonBg: "bg-pink-600 hover:bg-pink-700 shadow-pink-500/30",
     borderHighlight: "hover:border-pink-300"
   },
   {
@@ -126,7 +126,7 @@ export default function ProgramPage() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-50 border border-pink-200/80 text-pink-800 text-xs font-bold uppercase tracking-widest mb-6 shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold uppercase tracking-widest mb-6 shadow-xs"
           >
             <GraduationCap className="w-3.5 h-3.5" />
             <span>Jenjang Pendidikan Pesantren Putri</span>
@@ -139,7 +139,7 @@ export default function ProgramPage() {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black mb-6 tracking-tight text-slate-950 leading-tight"
           >
             Program Pendidikan <br />
-            <span className="bg-gradient-to-r from-pink-700 via-pink-700 to-pink-900 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500 bg-clip-text text-transparent">
               Al-Andalus Putri
             </span>
           </motion.h1>
@@ -169,8 +169,8 @@ export default function ProgramPage() {
                 }}
                 className={`px-6 sm:px-8 py-2.5 rounded-full font-bold text-xs sm:text-sm transition-all border cursor-pointer ${
                   activeSection === program.id
-                    ? "bg-pink-700 text-white border-pink-700 shadow-md shadow-pink-700/20 scale-105"
-                    : "bg-white text-slate-600 border-slate-200 hover:border-pink-300 hover:text-pink-700 shadow-xs"
+                    ? "bg-pink-600 text-white border-pink-600 shadow-md shadow-pink-500/30 scale-105"
+                    : "bg-white text-slate-600 border-slate-200 hover:border-pink-300 hover:text-pink-600 shadow-xs"
                 }`}
               >
                 {program.name}
