@@ -208,7 +208,7 @@ function PPDBContent() {
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-surface-200 text-primary-700 text-xs font-black uppercase tracking-widest mb-10 shadow-premium-sm"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-pink-700 text-xs font-black uppercase tracking-widest mb-10 shadow-premium-sm"
             >
               <Sparkles className="w-3.5 h-3.5" />
               <span>Penerimaan Santri Baru T.A 2027/2028</span>
@@ -221,7 +221,7 @@ function PPDBContent() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-black mb-6 md:mb-8 tracking-tight text-slate-950"
             >
               <span className="block leading-tight text-slate-900">Siapkan Generasi</span>
-              <span className="block mt-1 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary-700 via-pink-600 to-rose-600">
+              <span className="block mt-1 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500">
                 Terbaik Kita
               </span>
             </motion.h1>

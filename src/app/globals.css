@@ -1934,7 +1934,7 @@
   /* â”€â”€â”€ Text Gradients — semua brand â”€â”€â”€ */
   /* â”€â”€â”€ Text Gradients — semua brand â”€â”€â”€ */
   .text-gradient-primary {
-    background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-900) 100%);
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

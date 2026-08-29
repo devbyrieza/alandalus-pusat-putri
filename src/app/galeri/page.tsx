@@ -174,7 +174,7 @@ export default function GaleriPage() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-50 border border-primary-100 text-primary-700 text-xs font-bold uppercase tracking-widest mb-6 shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-50 border border-pink-200 text-pink-700 text-xs font-bold uppercase tracking-widest mb-6 shadow-xs"
           >
             <Camera className="w-3.5 h-3.5" />
             <span>Dokumentasi Resmi Pesantren</span>
@@ -187,7 +187,7 @@ export default function GaleriPage() {
             className="text-3xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight text-slate-900"
           >
             Galeri &amp; Fasilitas <br />
-            <span className="text-primary-700">Pesantren Al-Andalus Putri</span>
+            <span className="bg-gradient-to-r from-pink-500 via-pink-600 to-pink-500 bg-clip-text text-transparent">Pesantren Al-Andalus Putri</span>
           </motion.h1>
 
           <motion.p
@@ -206,7 +206,7 @@ export default function GaleriPage() {
         <Container>
           <div className="flex items-center justify-between mb-10">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center text-primary-700 border border-primary-100 shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-pink-50 flex items-center justify-center text-pink-600 border border-pink-200 shadow-xs">
                 <Images className="w-5 h-5" />
               </div>
               <div>
