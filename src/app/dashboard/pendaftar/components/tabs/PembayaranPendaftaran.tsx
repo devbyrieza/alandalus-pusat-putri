@@ -880,12 +880,12 @@ export default function PembayaranPendaftaranTab({
                   <p className="text-primary-700 text-sm leading-relaxed">
                     Anda bisa menghubungi CS di nomor{" "}
                     <a
-                      href="https://wa.me/6285175275085"
+                      href="https://wa.me/6281128021035"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-black underline hover:text-primary-900 transition-colors"
                     >
-                      0851-1152-4441
+                      0811-2802-1035
                     </a>{" "}
                     jika ingin cepat diverifikasi oleh tim panitia.
                   </p>
@@ -1273,7 +1273,7 @@ export default function PembayaranPendaftaranTab({
               kami.
             </p>
             <a
-              href="https://wa.me/6281285300800"
+              href="https://wa.me/6281128021035"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 p-3 bg-white rounded-xl border border-ink-100 hover:border-secondary-200 transition-colors group"
@@ -1285,7 +1285,7 @@ export default function PembayaranPendaftaranTab({
                 <p className="text-xs font-bold text-ink-400 uppercase">
                   WhatsApp Admin
                 </p>
-                <p className="font-bold text-ink-900 text-sm">0851-1152-4441</p>
+                <p className="font-bold text-ink-900 text-sm">0811-2802-1035</p>
               </div>
             </a>
           </div>

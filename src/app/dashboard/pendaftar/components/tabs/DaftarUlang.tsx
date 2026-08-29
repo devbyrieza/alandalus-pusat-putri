@@ -545,7 +545,7 @@ export default function DaftarUlangTab() {
             </span>
             <div className="grid grid-cols-1 md:grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
               <a
-                href="https://wa.me/6281220636945?text=Assalamualaikum%20Admin%20Finance%2C%20saya%20wali%20dari%20calon%20santri%20ingin%20berkonsultasi%2Fmengajukan%20keringanan%20terkait%20biaya%20Daftar%20Ulang."
+                href="https://wa.me/628113920135?text=Assalamualaikum%20Admin%20Finance%2C%20saya%20wali%20dari%20calon%20santri%20ingin%20berkonsultasi%2Fmengajukan%20keringanan%20terkait%20biaya%20Daftar%20Ulang."
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-bold text-[11px] sm:text-xs transition-all shadow-md hover:shadow-lg active:scale-95 group"
@@ -560,7 +560,7 @@ export default function DaftarUlangTab() {
                 <span>Finance</span>
               </a>
               <a
-                href="https://wa.me/6285175275085?text=Assalamualaikum%20Admin%20CS%2C%20saya%20wali%20dari%20calon%20santri%20ingin%20bertanya%20terkait%20biaya%20Daftar%20Ulang."
+                href="https://wa.me/6281128021035?text=Assalamualaikum%20Admin%20CS%2C%20saya%20wali%20dari%20calon%20santri%20ingin%20bertanya%20terkait%20biaya%20Daftar%20Ulang."
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-xl font-bold text-[11px] sm:text-xs transition-all shadow-md hover:shadow-lg active:scale-95 group"
@@ -595,12 +595,12 @@ export default function DaftarUlangTab() {
             <p className="text-primary-700 text-sm leading-relaxed">
               Hubungi CS di nomor{" "}
               <a
-                href="https://wa.me/6285175275085"
+                href="https://wa.me/6281128021035"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-black underline hover:text-primary-900 transition-colors"
               >
-                0851-1152-4441
+                0811-2802-1035
               </a>{" "}
               jika ingin cepat diverifikasi.
             </p>

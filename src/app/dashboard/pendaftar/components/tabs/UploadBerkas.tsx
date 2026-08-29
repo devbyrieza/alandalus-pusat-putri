@@ -1205,12 +1205,12 @@ export default function UploadBerkasTab() {
                     <p className="text-primary-700 text-xs mt-0.5 font-medium">
                       Anda bisa menghubungi CS di nomor{" "}
                       <a
-                        href="https://wa.me/6281285300800"
+                        href="https://wa.me/6281128021035"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="font-black underline hover:text-primary-900"
                       >
-                        0812-8530-0800
+                        0811-2802-1035
                       </a>{" "}
                       jika ingin cepat diverifikasi.
                     </p>

@@ -3,7 +3,7 @@ export const PPDB_CONFIG = {
     nama: "Pesantren Islam Internasional Al-Andalus Putri",
     singkatan: "Al-Andalus Putri",
     alamat: "Jl. Transyogi KM 60, Cariu, Kec. Cariu, Kab. Bogor 16840",
-    telepon: "+62 838-1151-5951",
+    telepon: "+62 811-2802-1035",
     email: "info@pesantren-alandalus.com",
     emailPpdb: "ppdb@pesantren-alandalus.com",
     website: "https://pesantren-alandalus-putri.com" },

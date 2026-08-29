@@ -211,7 +211,7 @@ Kode OTP: ${item.otp}
 Untuk: ${item.nama}
 
 Jangan bagikan kode ini.
-Hubungi 0851-1152-4441 jika ada masalah.`}
+Hubungi 0811-2802-1035 jika ada masalah.`}
                     </pre>
                   </div>
 
