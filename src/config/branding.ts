@@ -18,12 +18,14 @@ export const BRANDING = {
   
   contact: {
     whatsapp: "+62 811-2802-1035",
-    whatsapp2: "+62 811-3920-135",
+    whatsapp2: "+62 851-7527-5085",
+    finance: "+62 858-8387-3000",
     facebook: "https://www.facebook.com/pp.alandalus",
     instagram: "https://www.instagram.com/pp_alandalus/",
     youtube: "https://www.youtube.com/andalustv",
     tiktok: "https://www.tiktok.com/@pp.alandalus",
-    address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor" },
+    address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor"
+  },
   
   // Properties required by SPMB dashboard & layout backward compatibility
   address: "Jl. Raya Menteng KM. 6 Dusun Kadupandak, Desa Balekambang, Kec. Jonggol, Kab. Bogor",
