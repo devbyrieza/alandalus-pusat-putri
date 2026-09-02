@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
@@ -257,7 +257,7 @@ export default function ExamCardPage() {
                     year: "numeric" })}
                 </p>
                 <p className="font-bold underline uppercase">
-                  Panitia SPMB Al-Andalus Putri
+                  Panitia PPDB Al-Andalus Putri
                 </p>
               </div>
             </div>
@@ -270,3 +270,4 @@ export default function ExamCardPage() {
     </div>
   );
 }
+
