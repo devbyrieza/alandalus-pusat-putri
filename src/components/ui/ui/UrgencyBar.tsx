@@ -93,7 +93,7 @@ export default function UrgencyBar() {
         {/* Row 2 (mobile) / Right section (desktop): hint + CTA */}
         <div className="flex items-center gap-2">
           <span className="text-[9px] sm:text-xs text-primary-300 whitespace-nowrap">
-            lagi â€¢ Kuota terbatas
+            lagi • Kuota terbatas
           </span>
 
           {/* CTA Button */}
