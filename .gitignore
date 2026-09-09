@@ -176,10 +176,11 @@ fix-502-commands.md
 *.jpg
 *.jpeg
 !public/**
+!public/templates/**
 !src/**
 !scripts/**
 !prisma/**
-temp*/
-temp_*/
+/temp*/
+/temp_*/
 stempel_*/
 ~$*
