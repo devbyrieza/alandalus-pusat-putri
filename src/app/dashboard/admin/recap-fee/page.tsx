@@ -209,7 +209,7 @@ export default function RecapFeePage() {
           <div className="flex gap-2 md:gap-3">
             <Button
               onClick={exportToExcel}
-              className="flex-1 md:flex-none bg-primary-50 text-primary-700 border-primary-100 hover:bg-primary-100 rounded-xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm"
+              className="flex-1 md:flex-none bg-primary-50 text-primary-700 border-primary-100 hover:bg-primary-100 rounded-xl h-11 md:h-12 px-4 md:px-6 font-black shadow-none transition-all text-sm whitespace-nowrap inline-block shrink-0"
             >
               <Download className="w-4 h-4 mr-1.5" /> Excel
             </Button>

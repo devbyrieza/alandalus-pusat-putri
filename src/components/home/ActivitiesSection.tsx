@@ -189,7 +189,7 @@ export function ActivitiesSection() {
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-primary-100/30 blur-[100px]"
+        className="pointer-events-none absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-primary-100/30 blur-[100px] whitespace-nowrap inline-block shrink-0"
       />
 
       <Container className="relative z-10">
