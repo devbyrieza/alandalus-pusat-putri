@@ -370,7 +370,7 @@ export default function DaftarPage() {
                   {[
                     {
                       value: "MTs",
-                      title: "SMPIT",
+                      title: "SMP",
                       subtitle: "Lulusan SD/Sederajat",
                       desc: "Jenjang pendidikan dasar setingkat SMP." },
                     {
@@ -386,7 +386,7 @@ export default function DaftarPage() {
                   ].map((option) => {
                     const isPutra = formData.jenis_kelamin === "L";
                     const isPutri = formData.jenis_kelamin === "P";
-                    // Al-Andalus Putri: Hanya MTs Putra dan IL Putra yang buka. MA Putra tutup, semua Putri tutup.
+                    // Al-Andalus Putri: Hanya SMP Putra dan IL Putra yang buka. MA Putra tutup, semua Putri tutup.
                     const isClosed = isPutri || (option.value === "MA" && isPutra);
                     const closedLabel = isPutri
                       ? "Pendaftaran Putri Belum Dibuka"
