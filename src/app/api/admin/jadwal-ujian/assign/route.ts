@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { pendaftar_id, exam_session_id, tahun_ajaran_id } = await req.json();
+    const { pendaftar_id, exam_session_id, tahun_ajaran_id, penguji_ortu_id, penguji_santri_id, penguji_quran_id } = await req.json();
 
     // Get session details
     const examSession = await prisma.examSession.findUnique({
@@ -22,6 +22,24 @@ export async function POST(req: NextRequest) {
 
     if (examSession.booked_count >= examSession.quota) {
       return NextResponse.json({ error: "Session is full" }, { status: 400 });
+    }
+
+    // Fetch Penguji Google Meet links if explicit IDs passed
+    let gmeetOrtu: string | null = null;
+    let gmeetSantri: string | null = null;
+    let gmeetQuran: string | null = null;
+
+    if (penguji_ortu_id) {
+      const p = await prisma.profile.findUnique({ where: { id: penguji_ortu_id }, select: { google_meet_link: true } });
+      if (p?.google_meet_link) gmeetOrtu = p.google_meet_link;
+    }
+    if (penguji_santri_id) {
+      const p = await prisma.profile.findUnique({ where: { id: penguji_santri_id }, select: { google_meet_link: true } });
+      if (p?.google_meet_link) gmeetSantri = p.google_meet_link;
+    }
+    if (penguji_quran_id) {
+      const p = await prisma.profile.findUnique({ where: { id: penguji_quran_id }, select: { google_meet_link: true } });
+      if (p?.google_meet_link) gmeetQuran = p.google_meet_link;
     }
 
     // Create or update JadwalUjian
@@ -40,10 +58,14 @@ export async function POST(req: NextRequest) {
           tanggal_ujian: examSession.start_time,
           waktu_mulai_santri: examSession.start_time,
           waktu_selesai_santri: examSession.end_time,
-          tempat_santri: examSession.location || "Pesantren Islam Internasional Al-Andalus Putri",
+          metode_ujian: "online",
+          tempat_santri: examSession.location || "Online (Google Meet)",
+          ...(penguji_ortu_id ? { penguji_ortu_id, zoom_link_ortu: gmeetOrtu } : {}),
+          ...(penguji_santri_id ? { penguji_santri_id, zoom_link_santri: gmeetSantri } : {}),
+          ...(penguji_quran_id ? { penguji_quran_id, zoom_link_quran: gmeetQuran } : {}),
           waktu_mulai_ortu: examSession.start_time,
           waktu_selesai_ortu: examSession.end_time,
-          tempat_ortu: examSession.location || "Pesantren Islam Internasional Al-Andalus Putri" },
+          tempat_ortu: examSession.location || "Online (Google Meet)" },
         create: {
           pendaftar_id,
           tahun_ajaran_id,
