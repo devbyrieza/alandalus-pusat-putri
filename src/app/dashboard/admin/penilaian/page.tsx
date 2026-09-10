@@ -743,7 +743,7 @@ export default function ExaminerDashboard() {
                       Swal.fire("Error", "Gagal menghitung ulang", "error");
                     }
                   }}
-                  className="btn-secondary flex items-center gap-2 bg-purple-50 text-purple-700 border-purple-100 hover:bg-purple-100 rounded-xl font-bold py-2 whitespace-nowrap inline-block shrink-0"
+                  className="btn-secondary flex items-center gap-2 bg-purple-50 text-purple-700 border-purple-100 hover:bg-purple-100 rounded-xl font-bold py-2 whitespace-nowrap shrink-0"
                 >
                   <RefreshCcw className="w-4 h-4" /> Hitung Ulang
                 </Button>

@@ -153,7 +153,7 @@ export default function FinanceTopupPage() {
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 relative overflow-hidden">
           {/* Header Panel */}
           <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
-            <div className="w-10 h-10 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center whitespace-nowrap inline-block shrink-0">
+            <div className="w-10 h-10 bg-primary-100 text-primary-700 rounded-xl flex items-center justify-center whitespace-nowrap shrink-0">
               <Wallet className="w-5 h-5" />
             </div>
             <div>
