@@ -13,6 +13,18 @@ interface DefaultPasswordModalProps {
 export function DefaultPasswordModal({ profileUrl = "/dashboard/admin/profil" }: DefaultPasswordModalProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   const router = useRouter();
 
   useEffect(() => {
