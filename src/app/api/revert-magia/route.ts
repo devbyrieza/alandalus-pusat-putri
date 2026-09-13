@@ -1,48 +1,51 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const magia = await prisma.pendaftar.findFirst({
-      where: { nama_lengkap: { contains: "Magia", mode: "insensitive" } },
-      include: { pengumuman: true },
-    });
+    const { searchParams } = new URL(request.url);
+    const confirm = searchParams.get("confirm");
 
-    if (!magia) {
-      return NextResponse.json({ success: false, message: "Magia not found in the database." });
+    if (confirm !== "yes") {
+      return NextResponse.json({ 
+        message: "Warning: This will revert ALL published pendaftar back to 'tested' (Draft). Add ?confirm=yes to the URL to execute." 
+      });
     }
 
-    // Revert status_pendaftaran to 'tested'
-    await prisma.pendaftar.update({
-      where: { id: magia.id },
+    // Find all pendaftar that are already accepted, rejected, cadangan, or announced
+    const affectedPendaftar = await prisma.pendaftar.findMany({
+      where: {
+        status_pendaftaran: { in: ["accepted", "rejected", "cadangan", "announced"] }
+      },
+      select: { id: true, nama_lengkap: true }
+    });
+
+    const affectedIds = affectedPendaftar.map(p => p.id);
+
+    if (affectedIds.length === 0) {
+      return NextResponse.json({ success: true, message: "No pendaftar found to revert." });
+    }
+
+    // 1. Revert status_pendaftaran in Pendaftar table
+    await prisma.pendaftar.updateMany({
+      where: { id: { in: affectedIds } },
       data: { status_pendaftaran: "tested" },
     });
 
-    // Update or Create Pengumuman Draft
-    if (magia.pengumuman) {
-      await prisma.pengumuman.update({
-        where: { pendaftar_id: magia.id },
-        data: {
-          is_published: false,
-          published_at: null,
-          published_by: null,
-          status_kelulusan: "Cadangan",
-        },
-      });
-    } else {
-      await prisma.pengumuman.create({
-        data: {
-          pendaftar_id: magia.id,
-          status_kelulusan: "Cadangan",
-          is_published: false,
-          tahun_ajaran_id: magia.tahun_ajaran_id || "TA2627",
-        },
-      });
-    }
+    // 2. Revert Pengumuman to Draft (is_published = false)
+    await prisma.pengumuman.updateMany({
+      where: { pendaftar_id: { in: affectedIds } },
+      data: {
+        is_published: false,
+        published_at: null,
+      },
+    });
 
     return NextResponse.json({
       success: true,
-      message: `Successfully reverted data for ${magia.nama_lengkap} (ID: ${magia.id}) to tested/draft.`,
+      revertedCount: affectedIds.length,
+      message: `Successfully reverted ${affectedIds.length} pendaftar back to 'tested' (Draft).`,
+      names: affectedPendaftar.map(p => p.nama_lengkap)
     });
   } catch (error: any) {
     return NextResponse.json({ success: false, error: error.message });
