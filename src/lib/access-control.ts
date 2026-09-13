@@ -85,7 +85,7 @@ export const STEP_REQUIREMENTS: Record<TabName, { minimumStatus: StatusProses | 
   "upload-berkas": { minimumStatus: "data_completed", label: "Upload Berkas", description: "Isi data terlebih dahulu" },
   "download-berkas": { minimumStatus: "docs_uploaded", label: "Download Berkas", description: "Unggah berkas terlebih dahulu" },
   "undangan-seleksi": { minimumStatus: "docs_verified", label: "Jadwal Seleksi", description: "Menunggu verifikasi dokumen" },
-  pengumuman: { minimumStatus: "announced", label: "Pengumuman", description: "Selesaikan semua tahapan seleksi terlebih dahulu" },
+  pengumuman: { minimumStatus: "tested", label: "Pengumuman", description: "Selesaikan semua tahapan seleksi terlebih dahulu" },
   "daftar-ulang": { minimumStatus: "accepted", label: "Daftar Ulang", description: "Hanya tersedia bagi pendaftar yang diterima" },
   "ukuran-seragam": { minimumStatus: "accepted", label: "Ukuran Seragam", description: "Hanya tersedia bagi pendaftar yang diterima" },
   "welcome-day": { minimumStatus: "accepted", label: "Welcome Day", description: "Hanya tersedia bagi pendaftar yang diterima" } };
