@@ -179,7 +179,7 @@ function ExtraChip({ item, index }: { item: ExtraActivity; index: number }) {
 }
 
 // ─── Main Section ─────────────────────────────────────
-export function ActivitiesSection() {
+export default function ActivitiesSection() {
   return (
     <section className="section-alt relative py-20 md:py-28 overflow-hidden">
       {/* Background Decorative Blur */}
