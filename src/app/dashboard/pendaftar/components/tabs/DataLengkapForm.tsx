@@ -305,7 +305,7 @@ function SectionHeader({
       }}
       className={`w-full flex items-center justify-between p-5 rounded-xl transition-all duration-300 border ${
         disabled
-          ? "bg-slate-50 border-slate-200 opacity-60 cursor-not-allowed"
+          ? "bg-slate-50/50 border-slate-100 opacity-70 cursor-not-allowed"
           : isOpen
             ? "bg-white border-secondary-200 shadow-sm border border-secondary-200 app-card"
             : "bg-surface-50 border-white/50 hover:bg-white hover:border-secondary-100"
