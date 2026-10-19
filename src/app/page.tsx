@@ -59,6 +59,8 @@ import {
 import { HiAcademicCap, HiOutlineBookOpen } from "react-icons/hi";
 import { HiOutlineCpuChip } from "react-icons/hi2";
 import { PiCertificateBold, PiPlantBold, PiBookOpenTextBold } from "react-icons/pi";
+import FaqSection from "@/components/home/FaqSection";
+import FloatingCta from "@/components/home/FloatingCta";
 
 // ─── Animated Counter Hook ───────────────────────────────────────────────────
 function useCountUp(target: number, duration = 2000, start = false) {
@@ -264,22 +266,56 @@ export default function Home() {
                   Karakter Mulia, dan Entrepreneurship. Bergabung bersama{" "}
                   <strong className="text-white">Ribuan santri berprestasi</strong> di lingkungan asrama terbaik.
                 </p>
+
+                {/* Quick-Value Objection / Confidence Pills */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+                  <div className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <ShieldCheck className="w-4 h-4 text-pink-400 shrink-0" />
+                    <div className="text-left">
+                      <div className="text-xs font-bold text-white leading-tight">100% Kampus Putri</div>
+                      <div className="text-[10px] text-slate-400">Aman, asri &amp; terjaga</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <Heart className="w-4 h-4 text-pink-400 shrink-0" />
+                    <div className="text-left">
+                      <div className="text-xs font-bold text-white leading-tight">Mendidik Tanpa Luka</div>
+                      <div className="text-[10px] text-slate-400">Ustadzah 24 jam santun</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md">
+                    <Star className="w-4 h-4 text-amber-400 shrink-0" />
+                    <div className="text-left">
+                      <div className="text-xs font-bold text-white leading-tight">Cambridge &amp; Keputrian</div>
+                      <div className="text-[10px] text-slate-400">Tata boga, rajut &amp; sanad</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* CTA */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 items-center">
                 <Link
                   href="/ppdb"
                   className={`inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-base ${c.bg600} ${c.bgHover} shadow-lg ${c.shadow} transition-all hover:-translate-y-1 hover:shadow-lg group`}
                 >
-                  Daftar Sekarang
+                  Daftar PPDB 2027
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                <a
+                  href="https://wa.me/6281128021035?text=Halo%20Panitia%20PPDB%20Pesantren%20Al-Andalus%20Putri%2C%20saya%20ingin%20konsultasi%20pendaftaran%20santriwati%20baru"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl font-bold text-white text-base bg-[#25D366] hover:bg-[#20ba59] shadow-lg shadow-emerald-500/20 transition-all hover:-translate-y-1"
+                >
+                  <FaWhatsapp className="w-5 h-5" />
+                  Konsultasi Panitia
+                </a>
                 <a
                   href="https://pesantren-alandalus.com/profile/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-white text-base bg-white/10 hover:bg-white/20 border border-white/20 transition-all hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl font-bold text-white text-base bg-white/10 hover:bg-white/20 border border-white/20 transition-all hover:-translate-y-1"
                 >
                   <PiBookOpenTextBold className="w-5 h-5" />
                   Profil Pesantren
@@ -798,6 +834,8 @@ export default function Home() {
         </div>
       </section>
 
+      <FaqSection />
+
       {/* ═══ §10 FINAL CTA ══════════════════════════════════════════════════ */}
       <section className="py-24 bg-rose-900 relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -852,6 +890,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <FloatingCta />
     </div>
   );
 }
