@@ -239,7 +239,7 @@ export async function PATCH(request: NextRequest) {
         const pendaftarData = await prisma.pendaftar.findUnique({
           where: { id: pembayaran.pendaftar_id },
           select: { data_lengkap: true } });
-        let expectedDU = 30000000;
+        let expectedDU = 35000000;
         if (pendaftarData?.data_lengkap) {
           try {
             const dl = typeof pendaftarData.data_lengkap === "string"
@@ -257,7 +257,7 @@ export async function PATCH(request: NextRequest) {
         const duLunas = totalDUPaid >= expectedDU;
         const sppLunas = totalSPPPaid >= 1000000;
 
-        if (duLunas && sppLunas) {
+        if (duLunas) {
           newPendaftarStatus = "enrolled_full";
         } else if (totalDUPaid > 0 || totalSPPPaid > 0) {
           newPendaftarStatus = "enrolled";
@@ -283,6 +283,16 @@ export async function PATCH(request: NextRequest) {
         data: {
           status_pendaftaran: newPendaftarStatus,
           updated_at: new Date() } });
+
+      try {
+        const { delCache } = await import("@/lib/redis");
+        await delCache("admin_stats_all");
+        if (pembayaran.tahun_ajaran_id) {
+          await delCache(`admin_stats_${pembayaran.tahun_ajaran_id}`);
+        }
+      } catch (cacheErr) {
+        console.warn("Failed to invalidate stats cache:", cacheErr);
+      }
     }
 
     // Logging audit action
