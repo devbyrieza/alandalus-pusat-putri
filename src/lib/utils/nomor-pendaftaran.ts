@@ -105,10 +105,10 @@ export async function generateNomorPendaftaran(
  */
 export function generatePrefix(jenjang: string, jenis_kelamin?: string): string {
   const normJenjang = (jenjang || "").toUpperCase().replace(/[\s\-_]/g, "");
-  if (normJenjang.includes("SMP") || normJenjang.includes("MTS")) return "SPI";
+  if (normJenjang.includes("SMP") || normJenjang.includes("MTS")) return "MTI";
   if (normJenjang.includes("IL") || normJenjang.includes("IDAD") || normJenjang.includes("LUGHAW")) return "ILI";
   if (normJenjang.includes("SMA") || normJenjang.includes("MA")) return "SMI";
-  return "SPI";
+  return "MTI";
 }
 
 // ===================================
