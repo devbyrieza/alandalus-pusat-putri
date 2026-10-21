@@ -38,9 +38,14 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^_-])/.test(newPassword)) {
+    const hasUpperCase = /[A-Z]/.test(newPassword);
+    const hasLowerCase = /[a-z]/.test(newPassword);
+    const hasNumbers = /\d/.test(newPassword);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(newPassword);
+
+    if (!hasUpperCase || !hasLowerCase || !hasNumbers || !hasSpecialChar) {
       return NextResponse.json(
-        { error: "Password harus mengandung kombinasi huruf besar, huruf kecil, angka, dan karakter khusus." },
+        { error: "Password baru harus mengandung huruf besar, huruf kecil, angka, dan karakter khusus." },
         { status: 400 },
       );
     }
@@ -58,7 +63,7 @@ export async function POST(request: Request) {
 
     if (user.username && newPassword.toLowerCase().includes(user.username.toLowerCase())) {
       return NextResponse.json(
-        { error: "Password tidak boleh mengandung username Anda." },
+        { error: "Password baru tidak boleh mengandung username." },
         { status: 400 },
       );
     }
