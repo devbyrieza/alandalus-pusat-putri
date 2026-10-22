@@ -116,8 +116,6 @@ export async function GET(request: NextRequest) {
     } catch (syncErr) {
       console.error("AUTO_RESTORE_PUTRI_PREFIX_ERROR:", syncErr);
     }
-      console.error("AUTO_SYNC_PUTRI_MISMATCH_ERROR:", syncErr);
-    }
 
     // Get query params
     const searchParams = request.nextUrl.searchParams;
