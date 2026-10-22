@@ -6,21 +6,22 @@ export const dynamic = "force-dynamic";
 /**
  * Endpoint Sinkronisasi Awalan Nomor Pendaftaran Al-Andalus Pusat Putri (Khusus Putri)
  * Standar Prefix:
- * - MTs/SMP Putri -> MTI
+ * - SMP IT Putri -> SPI
  * - IL Putri      -> ILI
- * - SMA/MA Putri  -> SMI
+ * - SMA IT Putri  -> SMI
  */
 export async function GET(request: NextRequest) {
   try {
     const list = await prisma.pendaftar.findMany({
       where: {
         OR: [
+          { nomor_pendaftaran: { startsWith: "MTI" } },
           { nomor_pendaftaran: { startsWith: "MTA" } },
           { nomor_pendaftaran: { startsWith: "ILA" } },
           { nomor_pendaftaran: { startsWith: "MAA" } },
           { nomor_pendaftaran: { startsWith: "SMA" } },
           { nomor_pendaftaran: { startsWith: "SPA" } },
-          { nomor_pendaftaran: { startsWith: "SPI" } },
+          { nomor_pendaftaran: { startsWith: "MAI" } },
           { jenis_kelamin: "L" },
         ],
       },
@@ -39,14 +40,14 @@ export async function GET(request: NextRequest) {
     const reservedNomor = new Set<string>();
 
     for (const item of list) {
-      let targetPrefix = "MTI";
+      let targetPrefix = "SPI";
       const normJ = (item.jenjang || "").toUpperCase();
       if (normJ.includes("IL")) targetPrefix = "ILI";
       else if (normJ.includes("SMA") || normJ.includes("MA")) targetPrefix = "SMI";
-      else targetPrefix = "MTI";
+      else targetPrefix = "SPI";
 
       let newNomor = item.nomor_pendaftaran;
-      if (item.nomor_pendaftaran && /^(MTA|ILA|MAA|SMA|SPA|SPI)/.test(item.nomor_pendaftaran)) {
+      if (item.nomor_pendaftaran && /^(MTI|MTA|ILA|MAA|SMA|SPA|MAI)/.test(item.nomor_pendaftaran)) {
         const tahun = item.nomor_pendaftaran.slice(3, 5);
         const candidate = `${targetPrefix}${item.nomor_pendaftaran.slice(3)}`;
 
@@ -103,7 +104,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       institution: "Al-Andalus Pusat Putri (Khusus Putri)",
-      message: `Berhasil menyinkronkan ${updates.length} data pendaftar ke format Putri (MTI, ILI, SMI)`,
+      message: `Berhasil menyinkronkan ${updates.length} data pendaftar ke format Putri (SPI, ILI, SMI)`,
       updated_count: updates.length,
       updates,
     });
