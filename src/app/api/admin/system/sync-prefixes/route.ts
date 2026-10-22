@@ -6,9 +6,9 @@ export const dynamic = "force-dynamic";
 /**
  * Endpoint Sinkronisasi Awalan Nomor Pendaftaran Al-Andalus Pusat Putri (Khusus Putri)
  * Standar Prefix:
- * - SMP IT Putri -> SPI
- * - IL Putri      -> ILI
- * - SMA IT Putri  -> SMI
+ * - SMP IT Putri   -> SPI
+ * - IL Putri       -> ILI
+ * - SMA IT Putri   -> SMI (tapi Al-Andalus Pusat hanya membuka SMP IT dan IL)
  */
 export async function GET(request: NextRequest) {
   try {

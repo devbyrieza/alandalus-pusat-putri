@@ -9,9 +9,9 @@ import { prisma } from "@/lib/prisma";
  * Format: [PREFIX][YY][NNNNN]
  *
  * Prefixes:
- * - SPI = SMP IT Putri (Perempuan)
- * - ILI = I'dad Lughowi Putri
- * - SMI = SMA IT Putri
+ * - SPI = SMP IT Putri
+ * - ILI = IL Putri (I'dad Lughowi Putri)
+ * - SMI = SMA IT Putri (tapi Al-Andalus Pusat hanya membuka SMP IT dan IL)
  *
  * Example: SPI2700001, ILI2700045, SMI2700123
  *
