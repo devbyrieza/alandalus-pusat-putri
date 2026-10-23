@@ -7,7 +7,7 @@ import {
   buildMessagePaymentRejected } from "@/lib/whatsapp-queue";
 import { getServerSession } from "@/lib/session";
 import { logAdminAction } from "@/lib/audit";
-import { getAdminWhereClause } from "@/lib/utils/admin";
+import { getAdminWhereClause, resolveTahunAjaran } from "@/lib/utils/admin";
 import { createHmac } from "crypto";
 
 // GET: List pembayaran yang perlu diverifikasi
@@ -33,6 +33,7 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const status = searchParams.get("status") || "pending";
     const jenis = searchParams.get("jenis"); // PENDAFTARAN, DAFTAR_ULANG, or SPP
+    const tahunAjaran = searchParams.get("tahun_ajaran") || "2027/2028";
 
     // Build filter
     const where: any = {
@@ -78,6 +79,8 @@ export async function GET(request: NextRequest) {
             jenis_kelamin: true,
             tipe_pendaftaran: true,
             data_lengkap: true,
+            created_at: true,
+            tahun_ajaran: { select: { id: true, nama: true } },
             pembayaran: {
               where: {
                 status_pembayaran: "verified",
@@ -86,7 +89,16 @@ export async function GET(request: NextRequest) {
       orderBy: { created_at: "desc" } });
 
     // Generate URLs (Mock for now as we removed Supabase Storage)
-    const dataWithUrls = data.map((pembayaran) => {
+    // Filter by Tahun Ajaran
+    const filteredData = (tahunAjaran === "ALL" || tahunAjaran === "all")
+      ? data
+      : data.filter((p) => {
+          if (!p.pendaftar) return false;
+          const ta = resolveTahunAjaran(p.pendaftar);
+          return ta === tahunAjaran;
+        });
+
+    const dataWithUrls = filteredData.map((pembayaran) => {
       let bukti_transfer_url: string | null = null;
       if (pembayaran.bukti_transfer_path) {
         bukti_transfer_url = `/api/files/${pembayaran.bukti_transfer_path}`;
@@ -111,44 +123,46 @@ export async function GET(request: NextRequest) {
           no_hp: pembayaran.pendaftar?.no_hp,
           jenis_kelamin: pembayaran.pendaftar?.jenis_kelamin,
           tipe_pendaftaran: pembayaran.pendaftar?.tipe_pendaftaran,
-          data_lengkap: pembayaran.pendaftar?.data_lengkap },
+          data_lengkap: pembayaran.pendaftar?.data_lengkap,
+          tahun_ajaran: pembayaran.pendaftar ? resolveTahunAjaran(pembayaran.pendaftar) : "2027/2028" },
         tipe_cicilan: pembayaran.tipe_cicilan,
         cicilan_ke: pembayaran.cicilan_ke,
         total_tagihan: pembayaran.total_tagihan,
         verified_count: pembayaran.pendaftar?.pembayaran.length || 0 };
     });
 
-    // Fetch counts for pending status explicitly
+    // Fetch counts for pending status explicitly filtered by selected Tahun Ajaran
     const baseWhere = await getAdminWhereClause() as any;
     
-    const countPendaftaran = await prisma.pembayaran.count({
+    const pendingList = await prisma.pembayaran.findMany({
       where: {
         status_pembayaran: { notIn: ["verified", "rejected"] },
-        jenis_pembayaran: "PENDAFTARAN",
-        pendaftar: baseWhere
-      }
+        pendaftar: baseWhere,
+      },
+      select: {
+        jenis_pembayaran: true,
+        pendaftar: {
+          select: {
+            nomor_pendaftaran: true,
+            created_at: true,
+            tahun_ajaran: { select: { nama: true } },
+          },
+        },
+      },
     });
 
-    const countDaftarUlang = await prisma.pembayaran.count({
-      where: {
-        status_pembayaran: { notIn: ["verified", "rejected"] },
-        jenis_pembayaran: "DAFTAR_ULANG",
-        pendaftar: baseWhere
-      }
-    });
+    const filteredPending = (tahunAjaran === "ALL" || tahunAjaran === "all")
+      ? pendingList
+      : pendingList.filter((pay) => {
+          if (!pay.pendaftar) return false;
+          return resolveTahunAjaran(pay.pendaftar) === tahunAjaran;
+        });
 
-    const countSpp = await prisma.pembayaran.count({
-      where: {
-        status_pembayaran: { notIn: ["verified", "rejected"] },
-        jenis_pembayaran: "SPP" as any,
-        pendaftar: baseWhere
-      }
-    });
-    
     const counts = {
-      PENDAFTARAN: countPendaftaran,
-      DAFTAR_ULANG: countDaftarUlang,
-      SPP: countSpp };
+      PENDAFTARAN: filteredPending.filter((p) => p.jenis_pembayaran === "PENDAFTARAN").length,
+      DAFTAR_ULANG: filteredPending.filter((p) => p.jenis_pembayaran === "DAFTAR_ULANG").length,
+      SPP: filteredPending.filter((p) => (p.jenis_pembayaran as any) === "SPP").length,
+    };
 
     return NextResponse.json({ data: dataWithUrls, counts });
   } catch (error) {
@@ -285,10 +299,12 @@ export async function PATCH(request: NextRequest) {
           updated_at: new Date() } });
 
       try {
-        const { delCache } = await import("@/lib/redis");
-        await delCache("admin_stats_all");
-        if (pembayaran.tahun_ajaran_id) {
-          await delCache(`admin_stats_${pembayaran.tahun_ajaran_id}`);
+        const { redis } = await import("@/lib/redis");
+        if (redis && typeof redis.del === "function") {
+          await redis.del("admin_stats_all");
+          if (pembayaran.tahun_ajaran_id) {
+            await redis.del(`admin_stats_${pembayaran.tahun_ajaran_id}`);
+          }
         }
       } catch (cacheErr) {
         console.warn("Failed to invalidate stats cache:", cacheErr);
