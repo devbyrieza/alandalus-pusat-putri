@@ -76,7 +76,7 @@ export function DefaultPasswordModal({ profileUrl = "/dashboard/admin/profil" }:
             <div className="absolute top-0 right-0 w-32 h-32 bg-red-400/10 rounded-full blur-2xl pointer-events-none" />
 
             {/* Icon Header */}
-            <div className="w-14 h-14 bg-red-50 rounded-xl border border-red-200 flex items-center justify-center mb-5 text-red-600 shadow-inner">
+            <div className="w-14 h-14 bg-red-50 rounded-xl border border-red-200 flex items-center justify-center mb-5 text-red-700 shadow-inner">
               <ShieldAlert className="w-8 h-8 animate-pulse" />
             </div>
 

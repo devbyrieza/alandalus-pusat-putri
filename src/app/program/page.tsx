@@ -47,7 +47,7 @@ const PROGRAMS = [
       "Kurikulum Nasional SMPIT Terakreditasi Lengkap",
     ],
     accentBadge: "bg-pink-50 text-pink-700 border-pink-200",
-    iconBg: "bg-pink-100 text-pink-600",
+    iconBg: "bg-pink-100 text-pink-700",
     buttonBg: "bg-pink-600 hover:bg-pink-700 shadow-pink-500/30",
     borderHighlight: "hover:border-pink-300"
   },

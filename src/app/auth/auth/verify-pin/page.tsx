@@ -147,9 +147,9 @@ function VerifyPinContent() {
                   className={`w-12 h-16 sm:w-14 sm:h-18 text-center text-2xl sm:text-3xl font-black bg-stone-50 border-2 rounded-xl transition-all duration-300 outline-none
                                         ${
                                           success
-                                            ? "border-primary-500 text-primary-600 bg-primary-50"
+                                            ? "border-primary-500 text-primary-900 bg-primary-50"
                                             : error
-                                              ? "border-red-300 bg-red-50 text-red-600 focus:border-red-500"
+                                              ? "border-red-300 bg-red-50 text-red-700 focus:border-red-500"
                                               : "border-stone-100 focus:border-indigo-500 focus:bg-white focus:shadow-md"
                                         }`}
                   placeholder="•"

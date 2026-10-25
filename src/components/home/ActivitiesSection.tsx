@@ -147,10 +147,10 @@ function ExtraChip({ item, index }: { item: ExtraActivity; index: number }) {
   const Icon = item.icon;
   const colorMap = {
     pink:
-      "bg-primary-50 text-primary-600 group-hover:bg-primary-100 ring-primary-200",
+      "bg-primary-50 text-primary-900 group-hover:bg-primary-100 ring-primary-200",
     cream:
-      "bg-secondary-100 text-primary-700 group-hover:bg-secondary-200 ring-secondary-300",
-    gold: "bg-gold-50 text-gold-600 group-hover:bg-gold-100 ring-gold-200" };
+      "bg-secondary-100 text-primary-900 group-hover:bg-secondary-200 ring-secondary-300",
+    gold: "bg-gold-50 text-gold-700 group-hover:bg-gold-100 ring-gold-200" };
 
   return (
     <motion.div

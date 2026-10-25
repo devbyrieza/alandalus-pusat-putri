@@ -115,7 +115,7 @@ export default function KontakPage() {
               href={`https://wa.me/${BRANDING.phone.replace(/[^0-9]/g, "")}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-bold shadow-lg transition-all"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary-600 hover:bg-primary-500 text-ink-950 font-bold shadow-lg transition-all"
             >
               <MessageSquare className="w-5 h-5" />
               <span>Chat WhatsApp Panitia</span>
