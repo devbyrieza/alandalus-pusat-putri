@@ -185,11 +185,11 @@ export function ActivitiesSection() {
       {/* Background Decorative Blur */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 right-0 w-[500px] h-[500px] rounded-full bg-secondary-100/60 blur-[100px]"
+        className="pointer-events-none absolute -top-40 right-0 w-[500px] h-[500px] rounded-full bg-secondary-100/60 blur-[100px] max-w-full"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-primary-100/30 blur-[100px] whitespace-nowrap inline-block shrink-0"
+        className="pointer-events-none absolute -bottom-40 left-0 w-[500px] h-[500px] rounded-full bg-primary-100/30 blur-[100px] whitespace-nowrap inline-block shrink-0 max-w-full"
       />
 
       <Container className="relative z-10">
