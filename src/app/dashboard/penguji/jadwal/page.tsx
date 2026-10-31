@@ -98,9 +98,9 @@ const ROLE_TO_JADWAL_TYPES: Record<string, string[]> = {
     "Seleksi Hafalan Al-Qur'an",
   ],
   penguji_bahasa_arab: ["Tes Lisan Bahasa Arab", "Seleksi Lisan Bahasa Arab"],
-  pewawancara: ["Seleksi Wawancara Calon Santri", "Seleksi Wawancara Orang Tua", "Seleksi Wawancara Calon Orangtua/Wali Santri"],
+  pewawancara: ["Seleksi Wawancara Calon Santri", "Seleksi Wawancara Orang Tua", "Seleksi Wawancara Calon Orang Tua/Wali Santri"],
   pewawancara_calsan: ["Seleksi Wawancara Calon Santri"],
-  pewawancara_cawalsan: ["Seleksi Wawancara Orang Tua", "Seleksi Wawancara Calon Orangtua/Wali Santri"],
+  pewawancara_cawalsan: ["Seleksi Wawancara Orang Tua", "Seleksi Wawancara Calon Orang Tua/Wali Santri"],
   admin: [
     "Seleksi Al Qur'an",
     "Tes Al-Qur'an",
@@ -111,7 +111,7 @@ const ROLE_TO_JADWAL_TYPES: Record<string, string[]> = {
     "Seleksi Lisan Bahasa Arab",
     "Seleksi Wawancara Calon Santri",
     "Seleksi Wawancara Orang Tua",
-    "Seleksi Wawancara Calon Orangtua/Wali Santri",
+    "Seleksi Wawancara Calon Orang Tua/Wali Santri",
   ],
   admin_super: [
     "Seleksi Al Qur'an",
@@ -123,7 +123,7 @@ const ROLE_TO_JADWAL_TYPES: Record<string, string[]> = {
     "Seleksi Lisan Bahasa Arab",
     "Seleksi Wawancara Calon Santri",
     "Seleksi Wawancara Orang Tua",
-    "Seleksi Wawancara Calon Orangtua/Wali Santri",
+    "Seleksi Wawancara Calon Orang Tua/Wali Santri",
   ],
   head_of_it: [
     "Seleksi Al Qur'an",
@@ -135,7 +135,7 @@ const ROLE_TO_JADWAL_TYPES: Record<string, string[]> = {
     "Seleksi Lisan Bahasa Arab",
     "Seleksi Wawancara Calon Santri",
     "Seleksi Wawancara Orang Tua",
-    "Seleksi Wawancara Calon Orangtua/Wali Santri",
+    "Seleksi Wawancara Calon Orang Tua/Wali Santri",
   ],
 };
 
@@ -1236,7 +1236,7 @@ export default function JadwalPengujiPage() {
                 "Seleksi Al Qur'an",
                 "Seleksi Wawancara Calon Santri",
                 "Seleksi Wawancara Orang Tua",
-                "Seleksi Wawancara Calon Orangtua/Wali Santri",
+                "Seleksi Wawancara Calon Orang Tua/Wali Santri",
               ];
               const filteredAssignments = assignments.filter((item) => {
                 // Check if any of the item's jenis_tugas matches the visible types
