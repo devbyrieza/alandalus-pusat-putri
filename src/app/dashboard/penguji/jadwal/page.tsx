@@ -1150,6 +1150,7 @@ export default function JadwalPengujiPage() {
   const formatDate = (dateString: string) => {
     return new Date(dateString)
       .toLocaleDateString("id-ID", {
+        timeZone: "Asia/Jakarta",
         weekday: "long",
         day: "numeric",
         month: "long",
@@ -1159,6 +1160,7 @@ export default function JadwalPengujiPage() {
 
   const formatTime = (dateString: string) => {
     return new Date(dateString).toLocaleTimeString("id-ID", {
+        timeZone: "Asia/Jakarta",
       hour: "2-digit",
       minute: "2-digit" });
   };
@@ -1290,7 +1292,8 @@ export default function JadwalPengujiPage() {
                         >
                           <div className="text-[10px] uppercase tracking-[0.2em] font-black opacity-80 mb-1">
                             {new Date(item.tanggal_ujian)
-                              .toLocaleDateString("id-ID", { weekday: "short" })
+                              .toLocaleDateString("id-ID", {
+        timeZone: "Asia/Jakarta", weekday: "short" })
                               .replace("Min", "Ahd")}
                           </div>
                           <div className="text-3xl font-black font-display leading-none">
@@ -1299,7 +1302,8 @@ export default function JadwalPengujiPage() {
                           <div className="text-[10px] uppercase tracking-widest font-black mt-1 opacity-80">
                             {new Date(item.tanggal_ujian).toLocaleDateString(
                               "id-ID",
-                              { month: "short" },
+                              {
+        timeZone: "Asia/Jakarta", month: "short" },
                             )}
                           </div>
                         </div>
