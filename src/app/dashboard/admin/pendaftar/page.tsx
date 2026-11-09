@@ -52,10 +52,10 @@ const FILTER_LABELS: Record<string, string> = {
   menunggu_verifikasi_dokumen: "Menunggu Verifikasi Dokumen",
   dokumen_terverifikasi: "Dokumen Terverifikasi",
   dokumen_ditolak: "Dokumen Ditolak",
-  terjadwal_ujian: "Terjadwal Ujian & Wawancara",
-  belum_ujian: "Belum Ujian & Wawancara",
-  sudah_ujian: "Sedang Seleksi",
-  hasil_ujian: "Hasil Ujian & Wawancara",
+  terjadwal_ujian: "Terjadwal Ujian",
+  belum_ujian: "Belum Ujian",
+  sudah_ujian: "Siap Dirapatkan (Ujian Selesai)",
+  hasil_ujian: "Hasil Ujian (Sudah Ditetapkan)",
   diterima: "Diterima",
   belum_daftar_ulang: "Belum Daftar Ulang",
   sudah_daftar_ulang: "Daftar Ulang",
@@ -1125,20 +1125,20 @@ function AdminPendaftarContent() {
         label: "Berkas Lengkap",
         color: "bg-primary-50 text-primary-800 border border-primary-100" },
       selection: {
-        label: "Proses Seleksi",
-        color: "bg-primary-50 text-primary-800 border border-primary-100" },
+        label: "Sedang Ujian",
+        color: "bg-amber-50 text-amber-800 border border-amber-200" },
       scheduled: {
-        label: "Proses Seleksi",
-        color: "bg-primary-50 text-primary-800 border border-primary-100" },
+        label: "Terjadwal Ujian",
+        color: "bg-indigo-50 text-indigo-800 border border-indigo-200" },
       testing: {
-        label: "Proses Seleksi",
-        color: "bg-primary-50 text-primary-800 border border-primary-100" },
+        label: "Sedang Ujian",
+        color: "bg-amber-50 text-amber-800 border border-amber-200" },
       tested: {
-        label: "Proses Seleksi",
-        color: "bg-primary-100 text-primary-800 border border-primary-200 shadow-sm" },
+        label: "Siap Dirapatkan",
+        color: "bg-emerald-100 text-emerald-900 border border-emerald-300 font-extrabold shadow-xs" },
       exam_completed: {
-        label: "Proses Seleksi",
-        color: "bg-primary-100 text-primary-800 border border-primary-200 shadow-sm" },
+        label: "Siap Dirapatkan",
+        color: "bg-emerald-100 text-emerald-900 border border-emerald-300 font-extrabold shadow-xs" },
       announced: {
         label: "Cadangan",
         color: "bg-gold-100 text-gold-800 border border-gold-200" },
@@ -2112,7 +2112,7 @@ function AdminPendaftarContent() {
                       )}
                       <td className="px-4 py-3">
                         <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-bold whitespace-nowrap inline-block shrink-0">
-                          {item.jenjang === "IL" ? "IL" : "SMP IT"}
+                          {item.jenjang === "IL" ? "IL" : item.jenjang === "SMA" ? "SMA IT" : "SMP IT"}
                         </span>
                       </td>
                       <td className="px-4 py-3">

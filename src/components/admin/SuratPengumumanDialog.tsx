@@ -80,6 +80,18 @@ export function SuratPengumumanDialog({
     };
   }, []);
 
+  // Auto-detect jenjang dari data pendaftar
+  useEffect(() => {
+    const j = (pendaftar.jenjang || "").toUpperCase();
+    if (j === "IL" || j.includes("IL") || j.includes("I'DAD") || j.includes("IDAD")) {
+      setKelas("IL");
+      setRingkasan("Ananda berprestasi baik dan layak diterima di program I'dad Lughawiy Pesantren Al-Andalus Putri.");
+    } else {
+      setKelas("VII");
+      setRingkasan("Ananda berprestasi baik dan layak diterima di SMP IT Al-Andalus Putri.");
+    }
+  }, [pendaftar.jenjang]);
+
   async function loadPreview() {
     setLoadingPreview(true);
     try {
@@ -399,6 +411,41 @@ export function SuratPengumumanDialog({
                     berikutnya (001, 002, ...). Nomor baru terkunci saat finalisasi. Isi dulu data
                     penilaian di bawah, lalu generate draft untuk dicek.
                   </p>
+
+                  {/* Quick Preset Buttons */}
+                  <div className="flex items-center gap-2 my-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200">
+                    <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider shrink-0">
+                      Pilihan Cepat:
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setKelas("VII");
+                        setRingkasan("Ananda berprestasi baik dan layak diterima di SMP IT Al-Andalus Putri.");
+                      }}
+                      className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all ${
+                        kelas === "VII"
+                          ? "bg-primary-600 text-white shadow-xs"
+                          : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
+                      }`}
+                    >
+                      VII SMP IT Putri
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setKelas("IL");
+                        setRingkasan("Ananda berprestasi baik dan layak diterima di program I'dad Lughawiy Pesantren Al-Andalus Putri.");
+                      }}
+                      className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all ${
+                        kelas === "IL"
+                          ? "bg-amber-600 text-white shadow-xs"
+                          : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
+                      }`}
+                    >
+                      IL (I&apos;dad Lughawiy)
+                    </button>
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                     <label className="block">
                       Tanggal Terbit:
