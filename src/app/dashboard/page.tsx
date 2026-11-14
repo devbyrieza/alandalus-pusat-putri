@@ -573,9 +573,9 @@ export default function DashboardPage() {
               <div className="flex items-center gap-3">
                 <Star className="w-6 h-6 text-gold-500 fill-gold-500 animate-pulse" />
                 <span className="font-black text-sm text-primary-700 uppercase tracking-widest leading-none">
-                  {pendaftar.jenjang === "MTs"
-                    ? "SMPIT"
-                    : "I'dad Lughowi"}
+                  {pendaftar.jenjang?.includes("IL")
+                    ? "I'dad Lughowi"
+                    : "SMP IT"}
                 </span>
               </div>
             </motion.div>

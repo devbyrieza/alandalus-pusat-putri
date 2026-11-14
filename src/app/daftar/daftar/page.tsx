@@ -27,7 +27,7 @@ interface FormData {
   tanggal_lahir: string;
   no_hp: string;
   jenis_kelamin: "L" | "P" | "";
-  jenjang: "MTs" | "IL" | "MA" | "";
+  jenjang: "SMP IT" | "SMP" | "MTs" | "IL" | "MA" | "";
 }
 
 // ========================================
@@ -69,12 +69,12 @@ export default function DaftarPage() {
   }, []);
 
   const router = useRouter();
-  const [jenjangFromUrl, setJenjangFromUrl] = useState<"MTs" | "IL" | "MA" | "">("");
+  const [jenjangFromUrl, setJenjangFromUrl] = useState<"SMP IT" | "SMP" | "MTs" | "IL" | "MA" | "">("");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
-      const jenjang = params.get("jenjang") as "MTs" | "IL" | "MA" | null;
+      const jenjang = params.get("jenjang") as "SMP IT" | "SMP" | "MTs" | "IL" | "MA" | null;
       if (jenjang) {
         setJenjangFromUrl(jenjang);
       }
@@ -369,10 +369,10 @@ export default function DaftarPage() {
                 >
                   {[
                     {
-                      value: "MTs",
-                      title: "SMP",
+                      value: "SMP IT",
+                      title: "SMP IT",
                       subtitle: "Lulusan SD/Sederajat",
-                      desc: "Jenjang pendidikan dasar setingkat SMP." },
+                      desc: "Jenjang pendidikan dasar setingkat SMP IT." },
                     {
                       value: "IL",
                       title: "I'dad Lughowi",
@@ -466,7 +466,7 @@ export default function DaftarPage() {
                       Pendaftaran Santri Pindahan
                     </p>
                     <p className="text-sm text-amber-700 font-bold leading-relaxed mb-3">
-                      Khusus calon santri pindahan yang akan masuk ke kelas <strong>8 MTs, 9 MTs, 11 MA, atau 12 MA</strong>, mohon <strong>TIDAK</strong> mengisi formulir reguler ini agar penempatan tidak salah.
+                      Khusus calon santri pindahan yang akan masuk ke kelas <strong>8 SMP IT, 9 SMP IT, 11 SMA IT, atau 12 SMA IT</strong>, mohon <strong>TIDAK</strong> mengisi formulir reguler ini agar penempatan tidak salah.
                     </p>
                     <Link
                       href="/daftar-pindahan"
