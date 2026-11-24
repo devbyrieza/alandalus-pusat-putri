@@ -189,12 +189,9 @@ export default function DaftarPindahanPage() {
 
     if (!formData.jenis_kelamin) {
       errors.jenis_kelamin = "Pilih jenis kelamin santri";
-    } else if (formData.jenis_kelamin === "P") {
+    } else if (formData.jenis_kelamin !== "P") {
       errors.jenis_kelamin =
-        "Mohon maaf, pendaftaran Santri Putri dilakukan melalui Pesantren Ulul Albaab.";
-    } else if (formData.jenis_kelamin === "L") {
-      errors.jenis_kelamin =
-        "Mohon maaf, pendaftaran Santri Pindahan Al-Imam Belum Dibuka.";
+        "Pendaftaran santri pindahan di sini khusus Santriwati Putri. Untuk Santri Putra, silakan mendaftar di Al-Andalus Putra.";
     }
 
     if (!formData.jenjang) {
@@ -578,19 +575,19 @@ export default function DaftarPindahanPage() {
                               Khusus Santriwati Putri (Perempuan)
                             </p>
                             <p className="text-xs text-slate-500 font-medium">
-                              Pesantren Al-Imam Al-Islami khusus mendidik santriwati Putri
+                              Pesantren Islam Internasional Al-Andalus Putri khusus mendidik santriwati Putri
                             </p>
                           </div>
                         </div>
                         <div className="sm:text-right text-xs text-slate-500 font-medium border-t sm:border-t-0 sm:border-l border-pink-200/80 pt-2 sm:pt-0 sm:pl-4">
                           <span>Untuk calon santri putra?</span>
                           <a
-                            href="https://spmb.pesantren-ululalbaab.com/daftar"
+                            href="https://pesantren-alandalus-putra.com/daftar"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block font-bold text-blue-600 hover:text-blue-700 hover:underline"
+                            className="block font-bold text-emerald-700 hover:text-emerald-800 hover:underline"
                           >
-                            Daftar di Ulul Albaab (Putra) →
+                            Daftar di Al-Andalus Putra (Putra) →
                           </a>
                         </div>
                       </div>
